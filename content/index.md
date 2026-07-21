@@ -20,26 +20,6 @@ C++ 教程
 ::card-group
   :::card
   ---
-  icon: i-lucide-book-open
-  target: _blank
-  title: 前言
-  to: /preface
-  ---
-  了解这份教程的写作背景、目标读者和联系方式。
-  :::
-
-  :::card
-  ---
-  icon: i-lucide-monitor
-  target: _blank
-  title: 第〇章 基本概念
-  to: /ch00
-  ---
-  计算机、编程和编程语言的基础知识概述。
-  :::
-
-  :::card
-  ---
   icon: i-lucide-code
   target: _blank
   title: 第一章 感性认识 C++ 程序
@@ -90,6 +70,16 @@ C++ 教程
 
   :::card
   ---
+  icon: i-lucide-file-text
+  target: _blank
+  title: 第六章 运算符重载
+  to: /ch06
+  ---
+  运算符重载入门。
+  :::
+
+  :::card
+  ---
   icon: i-lucide-git-branch
   target: _blank
   title: 第七章 继承与多态
@@ -127,16 +117,6 @@ C++ 教程
   ---
   Lambda 表达式、闭包和 STL 算法。
   :::
-
-  :::card
-  ---
-  icon: i-lucide-bookmark
-  target: _blank
-  title: 附录
-  to: /appendix
-  ---
-  运算符、关键字、预处理器和编码风格参考。
-  ::
 ::
 
 ::tip
