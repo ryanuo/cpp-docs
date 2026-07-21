@@ -21,6 +21,13 @@ export default defineNuxtConfig({
       markdown: {
         toc: {
           searchDepth: 1
+        },
+        highlight: {
+          langs: [
+            'c',
+            'cpp',
+            'java'
+          ]
         }
       }
     },
