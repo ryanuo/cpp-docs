@@ -1,62 +1,40 @@
-# Nuxt Docs Template
+# C++ 教程
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+[![Nuxt UI](https://img.shields.io/badge/Built%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+[![C++2b](https://img.shields.io/badge/Standard-C++2b-00599C?logo=cplusplus&logoColor=white)](https://isocpp.org/)
 
-Use this template to build your own documentation with [Nuxt UI](https://ui.nuxt.com) quickly.
+一份循序渐进、面向初学者的 C++ 语法教程，基于 C++2b 标准编写。
 
-- [Live demo](https://docs-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+## 内容概览
 
-<a href="https://docs-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/docs-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/docs-light.png">
-    <img alt="Nuxt Docs Template" src="https://ui.nuxt.com/assets/templates/nuxt/docs-light.png">
-  </picture>
-</a>
+- **第〇章 ~ 第四章**：C++ 基础语法（数据类型、运算符、控制语句、数组、指针、结构体）
+- **第五章 ~ 第八章**：面向对象与模板（构造函数、继承、多态、函数模板、类模板、STL 容器）
+- **第九 ~ 第十一章**：进阶主题（链接、文件读写、智能指针、Lambda 表达式、STL 算法）
+- **附录**：运算符、关键字、预处理器和编码风格参考
 
-## Quick Start
-
-```bash [Terminal]
-npm create nuxt@latest -- -t ui/docs
-```
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=docs&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fdocs&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fdocs-dark.png&demo-url=https%3A%2F%2Fdocs-template.nuxt.dev%2F&demo-title=Nuxt%20Docs%20Template&demo-description=A%20documentation%20template%20powered%20by%20Nuxt%20Content.)
-
-## Setup
-
-Make sure to install the dependencies:
+## 快速开始
 
 ```bash
+# 安装依赖
 pnpm install
-```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
+# 开发模式
 pnpm dev
-```
 
-## Production
-
-Build the application for production:
-
-```bash
+# 构建
 pnpm build
-```
 
-Locally preview production build:
-
-```bash
+# 预览构建结果
 pnpm preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 技术栈
 
-## Renovate integration
+- [Nuxt 4](https://nuxt.com) - Vue 全栈框架
+- [Nuxt Content](https://content.nuxt.com) - Markdown 内容管理
+- [Nuxt UI](https://ui.nuxt.com) - UI 组件库
+- [Tailwind CSS](https://tailwindcss.com) - 样式框架
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+## 许可
+
+本项目仅用于学习交流。
