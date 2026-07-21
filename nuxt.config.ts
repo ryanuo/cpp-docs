@@ -10,11 +10,6 @@ export default defineNuxtConfig({
     '@nuxtjs/mcp-toolkit'
   ],
 
-  // Disable font fetching (offline-safe)
-  fonts: {
-    families: []
-  },
-
   devtools: {
     enabled: true
   },
@@ -56,6 +51,11 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  // Disable font fetching (offline-safe)
+  fonts: {
+    families: []
   },
 
   llms: {

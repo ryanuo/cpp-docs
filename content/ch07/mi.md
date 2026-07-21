@@ -1,11 +1,11 @@
 ---
-title: 多重继承 <Badge type="warning" text="TBC" /> <Badge type="tip" text="选读" />
+title: 多重继承
 description: "C++ 中提供了多重继承（Multiple Inheritance, MI）的特性，其含义是一个派生类可以从多个基类继承。"
 navigation:
   icon: i-lucide-git-branch
 ---
 
-# 多重继承 <Badge type="warning" text="TBC" /> <Badge type="tip" text="选读" />
+# 多重继承
 
 C++ 中提供了**多重继承**（Multiple Inheritance, MI）的特性，其含义是一个派生类可以从多个基类继承。
 

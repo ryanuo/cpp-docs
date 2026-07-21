@@ -1,11 +1,11 @@
 ---
-title: 迁移到 C 语言 <Badge type="tip" text="选读" />
+title: 迁移到 C 语言
 description: "事实上，我们目前所学的内容仍不超出 C 语言的范畴。所以，我们只需通过适当的改写，就能够将 C++ 程序改写为 C 程序。这一节我们先列出一些必要的不同："
 navigation:
   icon: i-lucide-arrow-right-left
 ---
 
-# 迁移到 C 语言 <Badge type="tip" text="选读" />
+# 迁移到 C 语言
 
 事实上，我们目前所学的内容仍不超出 C 语言的范畴。所以，我们只需通过适当的改写，就能够将 C++ 程序改写为 C 程序。这一节我们先列出一些必要的不同：
 

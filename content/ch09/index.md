@@ -1,11 +1,11 @@
 ---
-title: 第九章 链接 <Badge type="tip" text="选读" />
+title: 第九章 链接
 description: "我们在第三章的重新认识 C++ 程序和第六章的类外定义成员函数提到了关于 C++..."
 navigation:
   icon: i-lucide-link
 ---
 
-# 第九章 链接 <Badge type="tip" text="选读" />
+# 第九章 链接
 
 我们在第三章的[重新认识 C++ 程序](/ch03/review_cpp)和第六章的[类外定义成员函数](/ch06/noninline_member_function)提到了关于 C++ 翻译过程的内容。在我们有了充足的知识准备之后，我打算在这一章重点来展开这个翻译过程。如无特殊说明，本章中的所有“编译”都指代从源代码到二进制指令序列这一翻译阶段，而非整个翻译过程。
 

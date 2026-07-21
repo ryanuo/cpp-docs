@@ -1,11 +1,11 @@
 ---
-title: C 风格输入输出 <Badge type="tip" text="选读" />
+title: C 风格输入输出
 description: "为兼容 C 语言，C++ 仍然提供了 C 风格的输入输出库。"
 navigation:
   icon: i-lucide-file-text
 ---
 
-# C 风格输入输出 <Badge type="tip" text="选读" />
+# C 风格输入输出
 
 为兼容 C 语言，C++ 仍然提供了 C 风格的输入输出库。
 

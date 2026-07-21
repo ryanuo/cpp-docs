@@ -1,11 +1,11 @@
 ---
-title: 归约 <Badge type="tip" text="待更新" />
+title: 归约
 description: "::: warning"
 navigation:
   icon: i-lucide-sort-asc
 ---
 
-# 归约 <Badge type="tip" text="待更新" />
+# 归约
 
 ::: warning
 
