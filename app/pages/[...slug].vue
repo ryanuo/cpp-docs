@@ -110,3 +110,10 @@ const links = computed(() => {
     </template>
   </UPage>
 </template>
+
+<style>
+/* Hide the first h1 in content since it's already shown in UPageHeader */
+.content-renderer h1:first-child {
+  display: none;
+}
+</style>

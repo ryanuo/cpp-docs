@@ -100,6 +100,16 @@ C++ 教程
 
   :::card
   ---
+  icon: i-lucide-file-text
+  target: _blank
+  title: 第九章 链接
+  to: /ch09
+  ---
+  静态链接和动态链接。
+  :::
+
+  :::card
+  ---
   icon: i-lucide-hard-drive
   target: _blank
   title: 第十章 常用库介绍
