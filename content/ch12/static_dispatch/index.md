@@ -1,87 +1,43 @@
----
-title: 静态派发
-description: "静态派发"
-navigation:
-  icon: i-lucide-route
----
-
 # 静态派发
 
-这一部分的主题是“静态派发”（Static dispatch）。这个词不是 C++ 的术语，在 Rust、Swift 中更加常见。它的意思，简单来说就是**静态的虚函数**。所谓“静态的”，就是编译期间能确定的意思。
+派发（Dispatch）指决定调用哪个函数或代码路径的机制。
 
-我们在第七章所谈到的“多态”，是指一个对象在运行期间，其真正的类型是不固定的。那么，调用一个虚函数名字的时候，编译器可以通过这个动态的类型来决定调用哪一个类型（基类或派生类）的成员函数。这个“决定”的过程就称为“派发”。
+- **动态派发**（Dynamic dispatch）：运行时通过虚表选择函数，如虚函数。
+- **静态派发**（Static dispatch）：编译期确定调用目标，没有运行时开销。
 
-多态系统是动态派发（Dynamic dispatch）的。因为，程序是在运行的过程中去判断类型并决定用哪个函数的。但是，我们现在要讨论静态派发——也就是说，我们可能有若干个相同名字的函数，然后编译器在编译期间将这个名字“分发”到不同的定义上去。
+模板是 C++ 实现静态派发的主要手段。
 
-静态派发在宏观上也是“多态”的一种形式，可以称为“静态多态”。最简单的静态多态又包含特设多态和参数多态，我们在第七章开头提到过；在 C++ 的语境下，就是指函数重载和函数模板。
-
-那重载和模板都讲过了，这一节还要说什么呢？
-
-是这样一种常见的情形：标准库提供了某个函数，但库（用户）希望针对某个类型，对这个函数做重新实现。比如，交换函数`std::swap`。假设我们有一个 `String`，没有实现移动语义（从而标准库的三次赋值版本会很慢），我们希望 `String` 的交换能够通过直接交换指针来快速操作。
+## 示例：通过模板实现静态多态
 
 ```cpp
-#include <utility>
-// 我们希望：
-int main() {
-    int a, b;
-    std::swap(a, b); // 标准库的实现：三次赋值
-    String c, d;
-    std::swap(c, d); // 调用我们自己的快速 swap
-}
-// 注：这只是一个例子，更好的做法应当是实现移动语义而不是自定义 swap
+template <typename Derived>
+struct Base {
+    void interface() {
+        static_cast<Derived*>(this)->implementation();
+    }
+};
+
+struct A : Base<A> {
+    void implementation() { std::cout << "A\n"; }
+};
+
+struct B : Base<B> {
+    void implementation() { std::cout << "B\n"; }
+};
+
+A a; a.interface(); // 输出 A
+B b; b.interface(); // 输出 B
 ```
 
-这就是一个“静态派发”的表现。编译器通过传入的实参，判断要调用标准的实现还是用户定义的实现。那么，它可以通过我们之前说的重载或者模板来实现吗？
+这种模式称为 **CRTP**（Curiously Recurring Template Pattern，奇异递归模板模式）。它让派生类在编译期就确定基类行为，避免了虚函数开销。
 
-模板是不可以的。因为模板的本意是通用性的实现，而这里的需求是提供单独的特殊实现。那么重载呢？貌似是可以的：
+## 与动态派发的对比
 
-```cpp
-#include <utility>
+| 特性 | 动态派发 | 静态派发 |
+|------|----------|----------|
+| 决策时机 | 运行时 | 编译期 |
+| 开销 | 虚表指针 + 间接调用 | 无额外开销 |
+| 灵活性 | 运行时替换对象 | 类型在编译期确定 |
+| 典型应用 | 运行时多态 | 泛型算法、类型萃取 |
 
-namespace std {
-void swap(String& a, String& b) {
-    // [...] 特殊实现
-}
-}
-
-int main() {
-    int a, b;
-    std::swap(a, b); // 重载选择标准库的模板实现
-    String c, d;
-    std::swap(c, d); // 重载选择接受 String 的 swap
-}
-```
-
-当我们重新打开 `std` 命名空间的时候，意味着某些不妙的事情会开始发生。事实上，大多数向 `std` 命名空间添加声明的操作都是未定义行为，其中就包括添加重载。所以刚才的代码其实是不正确的。
-
-更严重的问题是，如果我们自定义的类型是一个类模板呢？比如我们实现了类型 `Vector`，接受一个类型模板参数 `T`。
-
-```cpp
-#include <utility>
-
-namespace std {
-// 错误：重复定义 std::swap 模板
-template<typename T>
-void swap(Vector<T> a, Vector<T> b) {
-    // [...]
-}
-}
-
-int main() {
-    Vector<int> a, b;
-    std::swap(a, b);
-}
-```
-
-偏特化？不好意思，函数模板不能偏特化。
-```cpp
-namespace std {
-// 错误：函数不允许偏特化
-template<typename T>
-void swap<Vector<T>>(Vector<T> a, Vector<T> b) {
-    // [...]
-}
-}
-```
-
-于是这个问题就这样停滞下来了。
+静态派发更适合性能敏感或类型完全确定的场景。

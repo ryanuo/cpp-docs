@@ -20,6 +20,7 @@ const chapters = [
   { icon: "i-lucide-link", title: "第九章 链接", to: "/ch09", desc: "编译器、链接器和 Makefile 的使用。" },
   { icon: 'i-lucide-hard-drive', title: '第十章 常用库介绍', to: '/ch10', desc: '文件读写、随机数、智能指针和代数数据类型。' },
   { icon: 'i-lucide-sparkles', title: '第十一章 函数式编程', to: '/ch11', desc: 'Lambda 表达式、闭包和 STL 算法。' },
+  { icon: 'i-lucide-git-fork', title: '第十二章 模板进阶', to: '/ch12', desc: '偏特化、定制点、概念与模板元编程。' },
 ]
 </script>
 

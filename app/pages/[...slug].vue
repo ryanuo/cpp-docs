@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { OgImageComponents } from '#og-image/components'
 import type { ContentNavigationItem } from '@nuxt/content'
 import { findPageHeadline } from '@nuxt/content/utils'
 
@@ -33,7 +34,7 @@ useSeoMeta({
 
 const headline = computed(() => findPageHeadline(navigation?.value, page.value?.path))
 
-defineOgImage('Docs', { title, description, headline: headline.value })
+defineOgImage('Docs' as keyof OgImageComponents, { title, description, headline: headline.value })
 
 const links = computed(() => {
   const links = []
