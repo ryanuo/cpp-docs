@@ -1,6 +1,6 @@
 ---
 title: 初识函数
-description: "数学上的函数读者应当都有所了解。我们先陈述一下数学上函数的定义： 设有两个数的集合 $A$ 和 $B$，并存在一种对应关系 $f$ 使得对于集合 $A$ 中任意一个元素 $a$，在集合 $B$..."
+description: "数学上的函数读者应当都有所了解。我们先陈述一下数学上函数的定义"
 navigation:
   icon: i-lucide-function-square
 ---

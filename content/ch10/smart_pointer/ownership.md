@@ -1,6 +1,6 @@
 ---
 title: 所有权
-description: "终于将移动语义相关的基本语法梳理完了。拥有移动语义后，我们可以开始讨论一个现代的编程概念——所有权（Ownership）。所有权是一个抽象的概念，它不存在于 C++..."
+description: "所有权"
 navigation:
   icon: i-lucide-pointer
 ---

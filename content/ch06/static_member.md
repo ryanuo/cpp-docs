@@ -1,6 +1,6 @@
 ---
 title: 静态成员
-description: "接下来这一节又是一个小知识点——静态成员。"
+description: "静态成员"
 navigation:
   icon: i-lucide-component
 ---

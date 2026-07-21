@@ -1,6 +1,6 @@
 ---
 title: STL 算法
-description: "STL 分为容器、迭代器和算法三个部分；我在第八章中简单介绍了容器和迭代器。STL 算法的部分，则是包装了在容器上的一些常见操作。"
+description: "STL 算法"
 navigation:
   icon: i-lucide-sort-asc
 ---

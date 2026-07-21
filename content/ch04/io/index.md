@@ -1,6 +1,6 @@
 ---
 title: 输入输出成分
-description: "计算机的四大功能是存储、运算、控制和输入输出，我们在第二章细致地讲解了 C++..."
+description: "输入输出成分"
 navigation:
   icon: i-lucide-terminal
 ---

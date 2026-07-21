@@ -1,6 +1,6 @@
 ---
 title: Lambda 表达式
-description: "之前的代码中，我为了用不同方式使用 sum，定义了额外的若干个函数 identity square 和..."
+description: "Lambda 表达式"
 navigation:
   icon: i-lucide-book-text
 ---

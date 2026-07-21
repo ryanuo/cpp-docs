@@ -1,6 +1,6 @@
 ---
 title: 其它常用运算符
-description: "最后我们列举一些其它我们现在需要掌握得其它运算符。实际上，还有许多其它的运算符我们尚未学习。"
+description: "其它常用运算符"
 navigation:
   icon: i-lucide-calculator
 ---

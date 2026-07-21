@@ -1,6 +1,6 @@
 ---
 title: 第七章 继承与多态
-description: "面向对象的思想是将现实世界中的概念抽象为“类”，而把复合这些概念的东西抽象为“对象”。前两章我们花费了很大的力气来搞清楚 C++..."
+description: "继承与多态"
 navigation:
   icon: i-lucide-git-branch
 ---

@@ -1,6 +1,6 @@
 ---
 title: 模板中的友元
-description: "假设类模板 C 需要有一个友元函数 f。你可能打算这样写："
+description: "模板中的友元"
 navigation:
   icon: i-lucide-link
 ---

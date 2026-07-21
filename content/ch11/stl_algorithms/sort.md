@@ -1,6 +1,6 @@
 ---
 title: 排序
-description: "我们在刚刚已经见过了排序算法的基本使用。看上去很简单，就是将一个容器/数组传到 rg::sort 里面，然后这个容器/数组就从小到大排好序了。"
+description: "我们在刚刚已经见过了排序算法的基本使用。"
 navigation:
   icon: i-lucide-sort-asc
 ---

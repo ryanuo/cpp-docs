@@ -1,6 +1,6 @@
 ---
 title: 算术运算符
-description: "算术表达式顾名思义，就是进行算术运算的表达式。算术运算符包含下列五个："
+description: "算术表达式顾名思义，就是进行算术运算的表达式。算术运算符包含下列五个"
 navigation:
   icon: i-lucide-calculator
 ---

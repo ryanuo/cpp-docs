@@ -1,6 +1,6 @@
 ---
 title: 总结
-description: "这一章我们引入了模板这一概念。模板是生成代码的语法。函数模板有能力生成一系列函数，类模板有能力生成一系列类。从模板生成代码的过程称为模板的实例化。模板实例化所做的事情就是将模板声明中出现的模板形参替换..."
+description: "本章总结"
 navigation:
   icon: i-lucide-layout-template
 ---

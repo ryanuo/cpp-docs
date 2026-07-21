@@ -1,6 +1,6 @@
 ---
 title: 引用
-description: "<h6 id=\"idx_左值引用\"></h6> <h6 id=\"idx_引用\"></h6>"
+description: "在讲解面向对象相关的知识前，我不得不补充一个非常重要且有用的概念——左值引用（lvalue reference），现阶段简称引用。"
 navigation:
   icon: i-lucide-copy
 ---

@@ -1,6 +1,6 @@
 ---
 title: `this` 指针
-description: "在上一节中我们为 String 重载了运算符 []，含义是取出字符串的某一位。现在我们打算重载 + 这个运算符。它的含义是字符串拼接，也就是 \"abc\" + \"def\" 得到..."
+description: "this 指针"
 navigation:
   icon: i-lucide-component
 ---

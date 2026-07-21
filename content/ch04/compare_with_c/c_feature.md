@@ -1,6 +1,6 @@
 ---
 title: 需要注意的 C 特性
-description: "就目前而言 C 和 C++ 的语法大致上相似，唯有如下不同："
+description: "就目前而言 C 和 C++ 的语法大致上相似，唯有如下不同"
 navigation:
   icon: i-lucide-arrow-right-left
 ---

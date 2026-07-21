@@ -1,6 +1,6 @@
 ---
 title: type_erasure
-description: ""
+description: type_erasure
 navigation:
   icon: i-lucide-route
 ---

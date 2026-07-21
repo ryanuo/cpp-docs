@@ -1,6 +1,6 @@
 ---
 title: 友元
-description: "终于，我们的 String 之旅马上就要结束了。目前最后一件需要做的事情就是把 str 成员改为私有的：因为唯一需要用到 str 的地方——输出已经通过非成员运算符重载解决了。"
+description: "友元"
 navigation:
   icon: i-lucide-component
 ---

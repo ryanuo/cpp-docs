@@ -1,6 +1,6 @@
 ---
 title: 语法进阶
-description: "介绍完 STL 算法后，我在这里再补充一些更深层次的语法知识。它们和函数式编程关系不大，但有助于写出更高质量的函数式代码。"
+description: "语法进阶"
 navigation:
   icon: i-lucide-graduation-cap
 ---

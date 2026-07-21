@@ -1,6 +1,6 @@
 ---
 title: 语法基础
-description: "C++ 最初设计的时候并不是为函数式编程服务的，所以写出函数式风格的代码非常困难。但老话说得好：“千里之行始于足下”；在这一部分中，我先讲一讲基础的语法，顺带简要地演示函数式思想。"
+description: "语法基础"
 navigation:
   icon: i-lucide-book-text
 ---

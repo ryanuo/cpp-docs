@@ -1,6 +1,6 @@
 ---
 title: 代数数据类型
-description: "代数数据类型（Algebraic Data Type, ADT）是指一系列特殊的、与数学理论（如范畴论）强烈相关的类型。"
+description: "代数数据类型"
 navigation:
   icon: i-lucide-shapes
 ---

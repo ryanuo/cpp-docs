@@ -1,6 +1,6 @@
 ---
 title: 第 2 部分 运算成分
-description: "我们关于 C++ 的数据和存储就暂且只学这么多。其余的数据类型如指针和结构体将留到后续的章节继续完成。"
+description: "运算成分"
 navigation:
   icon: i-lucide-calculator
 ---

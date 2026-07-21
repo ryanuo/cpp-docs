@@ -1,6 +1,6 @@
 ---
 title: 何为指针
-description: "上节提到了，C++ 中每一个变量都拥有一个地址（类似网址的存在）。比如："
+description: "上节提到了，C++ 中每一个变量都拥有一个地址（类似网址的存在）。比如"
 navigation:
   icon: i-lucide-dot
 ---

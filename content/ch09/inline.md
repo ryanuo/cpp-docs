@@ -1,6 +1,6 @@
 ---
 title: 内联
-description: "开门见山：内联（Inline）是符号的一种属性。内联的符号允许在链接过程中多次出现定义，而非内联的不允许。当一个符号是内联的时，其定义可以在多个翻译单元中分别给出。但标准要求此时每个翻译单元给出的内联..."
+description: "内联"
 navigation:
   icon: i-lucide-link
 ---

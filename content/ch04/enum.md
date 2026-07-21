@@ -1,6 +1,6 @@
 ---
 title: 枚举
-description: "我之前讲了一些整数类型，如 int long long 等等，它们的取值范围都比较大。比如 int 可以取到数十亿的范围，long long 则高达 $10^{18}$。即便是最小的..."
+description: "我之前讲了一些整数类型，如 int long long 等等，它们的取值范围都比较大。"
 navigation:
   icon: i-lucide-layers
 ---

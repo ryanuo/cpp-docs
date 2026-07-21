@@ -1,6 +1,6 @@
 ---
 title: 浮点类型
-description: "如果想要表示一些有限小数，可以使用浮点类型（Floating point type）。"
+description: "浮点类型"
 navigation:
   icon: i-lucide-dna
 ---

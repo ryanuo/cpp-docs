@@ -1,6 +1,6 @@
 ---
 title: 技术信息
-description: "目前，本项目基于 VuePress 系统。项目将由 Vercel 自动构建并托管。"
+description: "本项目的构建、部署与技术栈说明"
 navigation:
   icon: i-lucide-info
 ---

@@ -1,6 +1,6 @@
 ---
 title: 高阶函数
-description: "让我们继续“函数也即对象”的讨论。这一次，尝试利用 Lambda 表达式的语法在函数中返回函数。"
+description: "高阶函数"
 navigation:
   icon: i-lucide-book-text
 ---

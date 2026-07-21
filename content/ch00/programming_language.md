@@ -1,6 +1,6 @@
 ---
 title: 编程语言
-description: "首先，计算机最能直接理解的就是二进制信息；或者说计算机只能直接理解二进制信息。比如计算机接收到了这样的一串二进制信息："
+description: "编程语言"
 navigation:
   icon: i-lucide-monitor
 ---

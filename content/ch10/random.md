@@ -1,6 +1,6 @@
 ---
 title: 伪随机数生成
-description: "伪随机数（Pseudo-random number）是指用确定性算法生成的一系列数。对于较好的算法，所有数出现的频率都是均匀的，且整个序列没有明显的规律可循。"
+description: "伪随机数（Pseudo-random number）是指用确定性算法生成的一系列数。"
 navigation:
   icon: i-lucide-hard-drive
 ---

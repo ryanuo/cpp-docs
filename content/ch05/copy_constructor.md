@@ -1,6 +1,6 @@
 ---
 title: 复制构造函数
-description: "这一节开头，仍然先抛开面向对象不谈。假想我们有一个特别大的结构体："
+description: "复制构造函数"
 navigation:
   icon: i-lucide-copy
 ---

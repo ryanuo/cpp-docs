@@ -1,6 +1,6 @@
 ---
 title: 类型转换重载
-description: "这一节我们要讨论的是如何重载类型转换运算符。不过在此之前，我们首先总结一下类型转换的相关知识。"
+description: "类型转换重载"
 navigation:
   icon: i-lucide-component
 ---

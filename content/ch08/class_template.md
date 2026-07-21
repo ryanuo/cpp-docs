@@ -1,6 +1,6 @@
 ---
 title: 类模板
-description: "类似地，类模板是能够生成类的语法。换而言之，一个类模板可以提供一簇类。"
+description: "类模板"
 navigation:
   icon: i-lucide-layout-template
 ---

@@ -1,6 +1,6 @@
 ---
 title: 指针的定义 Ⅰ
-description: "上节提到了，指针是存放地址的变量。下面我们来学习如何声明并定义一个指针："
+description: "上节提到了，指针是存放地址的变量。下面我们来学习如何声明并定义一个指针"
 navigation:
   icon: i-lucide-dot
 ---

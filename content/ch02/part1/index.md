@@ -1,6 +1,6 @@
 ---
 title: 第 1 部分 数据成分
-description: "在讲这一部分前，首先请务必熟悉什么是变量（Variable）。"
+description: "数据成分"
 navigation:
   icon: i-lucide-database
 ---

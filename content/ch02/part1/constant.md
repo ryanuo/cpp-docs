@@ -1,6 +1,6 @@
 ---
 title: 常量
-description: "现在我们需要接触一个新的术语叫做“常量”。在 C++ 中，常量（Constant）的定义是指那些在编译期间就能确定的值，且在运行期间这个确定的值不会发生变化。"
+description: "常量"
 navigation:
   icon: i-lucide-database
 ---

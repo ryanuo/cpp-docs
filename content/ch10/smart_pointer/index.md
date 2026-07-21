@@ -1,6 +1,6 @@
 ---
 title: 移动语义与智能指针
-description: "接下来这一部分内容，是现代 C++ 中非常重要的一环，但也是非常难以理解的部分。我会尽量把它讲明白，但也有可能讲不明白。"
+description: "移动语义与智能指针"
 navigation:
   icon: i-lucide-pointer
 ---

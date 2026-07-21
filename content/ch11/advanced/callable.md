@@ -1,6 +1,6 @@
 ---
 title: 可调用
-description: "之前我们在闭包一节中提到了“可调用对象”这个概念；当时列出了函数、函数指针、函数对象（含 Lambda..."
+description: "可调用"
 navigation:
   icon: i-lucide-graduation-cap
 ---

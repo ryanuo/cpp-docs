@@ -54,7 +54,6 @@ const links = computed(() => {
   <UPage v-if="page">
     <UPageHeader
       :title="page.title"
-      :description="page.description"
       :headline="headline"
     >
       <template #links>
@@ -72,6 +71,7 @@ const links = computed(() => {
       <ContentRenderer
         v-if="page"
         :value="page"
+        class="content-renderer"
       />
 
       <USeparator v-if="surround?.length" />
@@ -113,7 +113,7 @@ const links = computed(() => {
 
 <style>
 /* Hide the first h1 in content since it's already shown in UPageHeader */
-.content-renderer h1:first-child {
+.content-renderer h1:first-of-type {
   display: none;
 }
 </style>

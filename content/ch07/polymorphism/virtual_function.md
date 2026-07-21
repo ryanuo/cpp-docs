@@ -1,6 +1,6 @@
 ---
 title: 虚函数
-description: "按照上一节引入的子类型多态，首先来尝试一个现实的例子："
+description: "虚函数"
 navigation:
   icon: i-lucide-refresh
 ---

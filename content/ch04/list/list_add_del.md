@@ -1,6 +1,6 @@
 ---
 title: 链表的增删
-description: "如果我们插入的位置不是头部，那么首先需要拿到插入位置前面的结构体，并令指针 prev 指向它。随后，用 temp 指向一个新生成的结构体，调整它们 next 指向的位置即可。"
+description: "链表的增删"
 navigation:
   icon: i-lucide-list
 ---

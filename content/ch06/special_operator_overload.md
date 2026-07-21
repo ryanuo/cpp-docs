@@ -1,6 +1,6 @@
 ---
 title: 特殊运算符重载
-description: "最后有一些运算符的重载方式比较特殊，或者说需要更多文字说明的，我在本节列出。内容会比较琐碎，烦请谅解。"
+description: "特殊运算符重载"
 navigation:
   icon: i-lucide-component
 ---

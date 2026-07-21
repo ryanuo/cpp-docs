@@ -1,6 +1,6 @@
 ---
 title: 底类型
-description: "在范畴论中经常会谈起这种特殊的类型—— 0 类型。在 TypeScript 中它被称为 never，在 Rust 中被称为 !，在 Haskell 中则被称为 Void。它并不是 C++ 的..."
+description: "在范畴论中经常会谈起这种特殊的类型—— 0 类型。"
 navigation:
   icon: i-lucide-shapes
 ---

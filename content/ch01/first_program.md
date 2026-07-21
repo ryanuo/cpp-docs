@@ -1,6 +1,6 @@
 ---
 title: 第一个 C++ 程序
-description: "如果你成功地编译并运行了上一章节中提供的那段代码，那么恭喜你，你已经攻克了学习 C++ 最麻烦的部分（一点也不夸张！）。现在我们回过头来看看这段代码吧。"
+description: "第一个 C++ 程序"
 navigation:
   icon: i-lucide-book-open
 ---

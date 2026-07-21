@@ -1,6 +1,6 @@
 ---
 title: 赋值和分支
-description: "赋值是各种编程语言中最常见的一种操作。那么什么是赋值呢？就是让一个变量的值变成我们想要的那个值。看看下面这个例子："
+description: "赋值是各种编程语言中最常见的一种操作。"
 navigation:
   icon: i-lucide-book-open
 ---

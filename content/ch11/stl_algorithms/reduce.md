@@ -1,6 +1,6 @@
 ---
 title: 归约
-description: "::: warning"
+description: "归约"
 navigation:
   icon: i-lucide-sort-asc
 ---

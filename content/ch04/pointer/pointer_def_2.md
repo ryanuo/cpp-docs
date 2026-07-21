@@ -1,6 +1,6 @@
 ---
 title: 指针的定义 Ⅱ
-description: "上一节提到了一种指针拥有“指向 int[5] 的指针类型”。这种指针类型还出现在下面的代码中："
+description: "指针的定义 Ⅱ"
 navigation:
   icon: i-lucide-dot
 ---

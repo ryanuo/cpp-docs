@@ -1,6 +1,6 @@
 ---
 title: 更多的输出
-description: "上一章讲述了如何输出一句话和输出一个数（整数或小数）。但是这样未免太无聊了。尝试下面这段代码："
+description: "上一章讲述了如何输出一句话和输出一个数（整数或小数）。"
 navigation:
   icon: i-lucide-book-open
 ---

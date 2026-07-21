@@ -1,6 +1,6 @@
 ---
 title: 模板特化
-description: ""
+description: 模板特化
 navigation:
   icon: i-lucide-git-fork
 ---

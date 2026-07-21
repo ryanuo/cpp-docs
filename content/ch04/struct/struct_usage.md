@@ -1,6 +1,6 @@
 ---
 title: 结构体的使用
-description: "访问一个结构体的成员需要通过成员运算符 . 来实现："
+description: "访问一个结构体的成员需要通过成员运算符 . 来实现"
 navigation:
   icon: i-lucide-box
 ---

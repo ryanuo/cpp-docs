@@ -1,6 +1,6 @@
 ---
 title: 再谈作用域
-description: "我们一直以来都将变量定义在函数的函数体里。要么是 main 函数，要么是其它自己定义的函数。因此这些变量的名字的作用域只停留在函数体内部；到了函数体结尾的 } 就无法再使用了。请看下例："
+description: "我们一直以来都将变量定义在函数的函数体里。"
 navigation:
   icon: i-lucide-function-square
 ---

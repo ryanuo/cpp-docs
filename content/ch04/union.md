@@ -1,6 +1,6 @@
 ---
 title: 联合体
-description: "联合体（Union type，又译共用体）类型是一种很奇怪的类型。在介绍其含义之前，我们首先来看联合体类型的声明方式："
+description: "联合体（Union type，又译共用体）类型是一种很奇怪的类型。"
 navigation:
   icon: i-lucide-layers
 ---

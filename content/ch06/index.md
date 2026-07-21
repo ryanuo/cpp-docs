@@ -1,6 +1,6 @@
 ---
 title: 第六章 运算符重载
-description: "然而，C++..."
+description: "运算符重载"
 navigation:
   icon: i-lucide-component
 ---

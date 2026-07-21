@@ -1,6 +1,6 @@
 ---
 title: 复制
-description: "接下来继续介绍 STL 算法 rg::copy。它可以用来复制一个范围到别的地方，比如："
+description: "复制"
 navigation:
   icon: i-lucide-sort-asc
 ---

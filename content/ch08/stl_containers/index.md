@@ -1,6 +1,6 @@
 ---
 title: STL 容器和迭代器
-description: "C++ 标准分为两大部分：一是核心语言（Core language），二是库（Library）。所谓核心语言指的就是 C++ 的语法，我们已经花了将近八章的篇幅来讲解它。而现在我将第一次正式介绍..."
+description: "STL 容器和迭代器"
 navigation:
   icon: i-lucide-container
 ---

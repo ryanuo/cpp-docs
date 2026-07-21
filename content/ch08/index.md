@@ -1,6 +1,6 @@
 ---
 title: 第八章 模板基础
-description: "C++ 最具特色的语言特性就是模板（Template）。最常见的模板是函数模板（Function template）类模板（Class template）。"
+description: "模板基础"
 navigation:
   icon: i-lucide-layout-template
 ---

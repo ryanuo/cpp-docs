@@ -1,6 +1,6 @@
 ---
 title: 闭包
-description: "假设有这样的需求：计算 $\displaystyle\sum_{i=a}^bi^n$，但 $n$ 是一个不固定的数，需要用户输入。按照之前的想法，我们可以向 sum 传入一个 Lambda 表达式："
+description: "闭包"
 navigation:
   icon: i-lucide-book-text
 ---

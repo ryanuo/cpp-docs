@@ -1,6 +1,6 @@
 ---
 title: 其它算法
-description: "现在总结一下我们学习了哪些 STL 算法。首先，我们以 rg::sort 和 rg::copy 这两个常用的算法作为引入，了解了 STL（主要是..."
+description: "现在总结一下我们学习了哪些 STL 算法。"
 navigation:
   icon: i-lucide-sort-asc
 ---

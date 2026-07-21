@@ -1,6 +1,6 @@
 ---
 title: 总结
-description: "恭喜你，第二章的学习已经完成了。我们来总结一下："
+description: "本章总结"
 navigation:
   icon: i-lucide-code
 ---

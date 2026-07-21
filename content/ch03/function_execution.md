@@ -1,6 +1,6 @@
 ---
 title: 函数的执行
-description: "聪明的你可能已经发现，我们第一章、第二章写的代码一直都写在"
+description: "函数的执行"
 navigation:
   icon: i-lucide-function-square
 ---

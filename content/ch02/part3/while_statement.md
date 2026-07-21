@@ -1,6 +1,6 @@
 ---
 title: while 语句
-description: "循环语句（Iteration statement）是控制程序重复执行某个动作的语句。循环语句大致可以分为 while 语句和 for 语句两部分，本节介绍其中最基础的 while 语句。"
+description: "循环语句（Iteration statement）是控制程序重复执行某个动作的语句。"
 navigation:
   icon: i-lucide-git-branch
 ---

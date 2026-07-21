@@ -1,6 +1,6 @@
 ---
 title: 函数也即对象
-description: "考虑一个函数，传入整数类型 $a$、$b$ 作为参数，返回 $a+(a+1)+\cdots+(b-1)+b=\displaystyle\sum_{i=a}^bi$。那么，这个函数可以这样实现："
+description: "函数也即对象"
 navigation:
   icon: i-lucide-book-text
 ---

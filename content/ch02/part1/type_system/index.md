@@ -1,6 +1,6 @@
 ---
 title: 类型系统
-description: "C++ 是一门静态类型语言。静态类型（Static typing）是指，任何引入的名字都需要拥有一个确定的、无法更改的类型。因此当我们写下 int a{42}; 的时候，变量 a..."
+description: "类型系统"
 navigation:
   icon: i-lucide-dna
 ---

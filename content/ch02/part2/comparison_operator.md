@@ -1,6 +1,6 @@
 ---
 title: 关系运算符
-description: "关系（比较）表达式用于求出两个值之间的大小关系。C++ 中规定了 7 个关系（比较）运算符，我们需要学习的有这 6 个："
+description: "关系（比较）表达式用于求出两个值之间的大小关系。"
 navigation:
   icon: i-lucide-calculator
 ---

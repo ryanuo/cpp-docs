@@ -1,6 +1,6 @@
 ---
 title: 第九章 链接
-description: "我们在第三章的重新认识 C++ 程序和第六章的类外定义成员函数提到了关于 C++..."
+description: "链接"
 navigation:
   icon: i-lucide-link
 ---

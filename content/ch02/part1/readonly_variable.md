@@ -1,6 +1,6 @@
 ---
 title: 只读变量
-description: "之前说过，变量的含义是拥有类型和名字的一段存储空间，因此变量不一定可变，也有可能是无法发生变化的。这一节介绍的就是限定无法变化的变量，称为只读变量（Readonly variable）。"
+description: "只读变量"
 navigation:
   icon: i-lucide-database
 ---

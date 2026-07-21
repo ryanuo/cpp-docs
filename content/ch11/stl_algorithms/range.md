@@ -1,6 +1,6 @@
 ---
 title: 初识范围
-description: "这一部分开头曾讲过，STL 算法大多作用在序列上。这个序列的正式称呼是范围（Ranges）。C++ 为了让范围有更广泛和灵活的含义，便用迭代器来定义它。"
+description: "这一部分开头曾讲过，STL 算法大多作用在序列上。"
 navigation:
   icon: i-lucide-sort-asc
 ---

@@ -1,6 +1,6 @@
 ---
 title: 逻辑运算符
-description: "逻辑运算符其实对应了逻辑电路里的与门、或门和非门，也可以对应数学命题上的且（$\wedge$）、或（$\vee$）和非（$\neg$）。所以逻辑运算符一共有下面三个："
+description: "逻辑运算符其实对应了逻辑电路里的与门、或门和非门，也可以对应数学命题上的且（）、或（）和非（）。"
 navigation:
   icon: i-lucide-calculator
 ---

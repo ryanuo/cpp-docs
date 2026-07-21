@@ -1,6 +1,6 @@
 ---
 title: 迭代器的用途
-description: "我们介绍了迭代器之后，便不停地在用迭代器来逐个访问容器中的元素。这种遍历的代码非常常见，以至于 C++ 提供了一种新语法来做这件事情：基于范围的 for 循环，简称范围 for。"
+description: "我们介绍了迭代器之后，便不停地在用迭代器来逐个访问容器中的元素。"
 navigation:
   icon: i-lucide-container
 ---

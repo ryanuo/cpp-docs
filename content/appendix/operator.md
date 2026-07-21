@@ -1,6 +1,6 @@
 ---
 title: 运算符优先级和结合方向
-description: C++ 运算符的完整优先级与结合性速查表，包含作用域、算术、逻辑、位运算、比较、赋值等各类运算符。
+description: 运算符优先级和结合方向
 navigation:
   icon: i-lucide-bookmark
 ---

@@ -1,6 +1,6 @@
 ---
 title: 筛选
-description: "现在说说 STL 中带有函数式特点的东西。第一个就是筛选（Filter），即只保留一个范围中符合特点的元素。"
+description: "现在说说 STL 中带有函数式特点的东西。"
 navigation:
   icon: i-lucide-sort-asc
 ---

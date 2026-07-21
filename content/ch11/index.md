@@ -1,6 +1,6 @@
 ---
 title: 第十一章 函数式编程
-description: "函数式编程（Functional..."
+description: "函数式编程"
 navigation:
   icon: i-lucide-sparkles
 ---

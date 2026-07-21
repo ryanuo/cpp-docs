@@ -1,6 +1,6 @@
 ---
 title: 非成员的运算符重载
-description: "还是熟悉的 String类，我们之前一直通过调用成员 .str 的方法来输出："
+description: "还是熟悉的 String类，我们之前一直通过调用成员 .str 的方法来输出"
 navigation:
   icon: i-lucide-component
 ---

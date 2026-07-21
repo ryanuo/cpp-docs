@@ -1,6 +1,6 @@
 ---
 title: `std::move` 与转发引用
-description: "有的时候，我们知道某个变量已经“快死了”，比如："
+description: "有的时候，我们知道某个变量已经“快死了”，比如"
 navigation:
   icon: i-lucide-pointer
 ---

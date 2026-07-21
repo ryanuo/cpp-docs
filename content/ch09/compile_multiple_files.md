@@ -1,6 +1,6 @@
 ---
 title: 多文件编译实践
-description: "本节介绍多文件参与编译的实践层面的问题，即如何配置你的编译环境使得其可接受多个源文件。"
+description: "多文件编译实践"
 navigation:
   icon: i-lucide-link
 ---

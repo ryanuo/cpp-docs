@@ -1,6 +1,6 @@
 ---
 title: 命令行界面
-description: "大部分的操作系统都是默认以图形界面（Graphical User Interface,..."
+description: "命令行界面"
 navigation:
   icon: i-lucide-bookmark
 ---

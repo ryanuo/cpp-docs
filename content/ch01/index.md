@@ -1,6 +1,6 @@
 ---
 title: 第一章 感性认识 C++ 程序
-description: "经过第〇章的铺垫，我们已经了解了计算机是什么，计算机如何通过编程和特定的编程语言受人类的控制。那么我现在正式来介绍 C++ 语言："
+description: "感性认识 C++ 程序"
 navigation:
   icon: i-lucide-book-open
 ---

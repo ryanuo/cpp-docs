@@ -1,6 +1,6 @@
 ---
 title: 符号和连接
-description: "我们知道，声明是用于向代码中引入名字的语法，而定义是一种特殊的声明形式。我们目前学过的声明有变量声明、函数声明、类声明和别名声明等。"
+description: "符号和连接"
 navigation:
   icon: i-lucide-link
 ---

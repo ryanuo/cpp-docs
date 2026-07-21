@@ -1,6 +1,6 @@
 ---
 title: 关键字列表
-description: "<table> <thead> <tr> <th class=\"keyword\">关键字</th> <th class=\"info\">说明与用法</th> <th..."
+description: "关键字列表"
 navigation:
   icon: i-lucide-bookmark
 ---

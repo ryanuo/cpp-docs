@@ -1,6 +1,6 @@
 ---
 title: 输入
-description: "学会这么多输出，如果加上输入就完美了。下面就来看看怎么输入吧。先编译运行一下下面的代码，看看什么结果……"
+description: "学会这么多输出，如果加上输入就完美了。"
 navigation:
   icon: i-lucide-book-open
 ---

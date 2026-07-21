@@ -1,6 +1,6 @@
 ---
 title: 数组的定义和初始化
-description: "首先来看下边这段代码。请问它有问题吗？"
+description: "数组的定义和初始化"
 navigation:
   icon: i-lucide-grid
 ---

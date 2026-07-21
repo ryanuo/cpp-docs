@@ -1,6 +1,6 @@
 ---
 title: `std::sort`
-description: "?> 本文是为了解释 std::sort 而撰写的。之后，本文将拆分到本书第十一章的其它部分。"
+description: "std::sort"
 navigation:
   icon: i-lucide-sparkles
 ---

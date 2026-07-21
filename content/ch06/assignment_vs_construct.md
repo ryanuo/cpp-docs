@@ -1,6 +1,6 @@
 ---
 title: 赋值与初始化
-description: "我们在这里停一下。或许读者已经注意到了，复制构造和复制赋值长得非常像："
+description: "赋值与初始化"
 navigation:
   icon: i-lucide-component
 ---

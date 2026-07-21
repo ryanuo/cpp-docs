@@ -1,6 +1,6 @@
 ---
 title: 字符类型
-description: "字符类型（Character type）变量，顾名思义是用来存储字符的变量。它也包括许多分类，不过我们只需要掌握其中一种就够了。这一种就是之前提到过的 char 型变量。"
+description: "字符类型（Character type）变量，顾名思义是用来存储字符的变量。"
 navigation:
   icon: i-lucide-dna
 ---

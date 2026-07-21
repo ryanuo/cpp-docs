@@ -1,6 +1,6 @@
 ---
 title: 继承关系
-description: "继承关系指的就是“是”这种关系。比如，“学生是人”，那么就可以说学生和人之间是继承关系。为了演示继承关系的代码，我首先定义“人”的类描述："
+description: "继承关系"
 navigation:
   icon: i-lucide-share
 ---

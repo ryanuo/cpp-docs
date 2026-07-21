@@ -1,6 +1,6 @@
 ---
 title: Lambda 表达式捕获
-description: "这一节介绍 Lambda 表达式的捕获语法。首先，完整的 Lambda 表达式语法是："
+description: "Lambda 表达式捕获"
 navigation:
   icon: i-lucide-book-text
 ---

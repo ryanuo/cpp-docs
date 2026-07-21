@@ -1,6 +1,6 @@
 ---
 title: 只读成员函数
-description: "回到我们的运算符重载。这一次我们要给 String 重载 == 这个运算符，指明两个字符串是相等的。"
+description: "只读成员函数"
 navigation:
   icon: i-lucide-component
 ---

@@ -1,6 +1,6 @@
 ---
 title: 初识迭代器
-description: "考虑数组和指针的关系。由于数组在内存中总是连续存放它的元素，而指针每次递增都会跨过一个元素的距离。因此，可以通过这样的写法来遍历数组："
+description: "初识迭代器"
 navigation:
   icon: i-lucide-container
 ---

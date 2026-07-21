@@ -1,6 +1,6 @@
 ---
 title: 第三章 过程式编程
-description: "现在我们审视前两章学过的内容。请思考一下，当我们写一段 C++..."
+description: "过程式编程"
 navigation:
   icon: i-lucide-square-function
 ---

@@ -1,6 +1,6 @@
 ---
 title: 递归
-description: "首先从一个简单的例子入手。编写这样一个程序：输入一个大于 1 的整数，判断它是否为质数。那么根据质数的定义，你可以写出这样的代码。"
+description: "递归"
 navigation:
   icon: i-lucide-function-square
 ---

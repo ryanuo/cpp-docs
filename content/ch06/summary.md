@@ -1,6 +1,6 @@
 ---
 title: 总结
-description: "这一章，我们基于给 String 添加若干个操作符重载这件事情为主线，学习了一些琐碎的面向对象基础知识。作为总结，我将我们最终的 String..."
+description: "本章总结"
 navigation:
   icon: i-lucide-component
 ---

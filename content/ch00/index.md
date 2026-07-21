@@ -1,6 +1,6 @@
 ---
 title: 第〇章 基本概念
-description: "学习 C++ 之前（也许有人还不知道什么是 C++），必须要掌握一些最最基本的概念。我这里将说明以下内容："
+description: "基本概念"
 navigation:
   icon: i-lucide-monitor
 ---

@@ -1,6 +1,6 @@
 ---
 title: C 风格字符串
-description: "我们一直在输出中使用一种语法："
+description: "我们一直在输出中使用一种语法"
 navigation:
   icon: i-lucide-grid
 ---

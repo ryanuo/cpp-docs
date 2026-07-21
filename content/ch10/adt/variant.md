@@ -1,6 +1,6 @@
 ---
 title: 通用和类型 `std::variant`
-description: ""
+description: "通用和类型 std::variant"
 navigation:
   icon: i-lucide-shapes
 ---

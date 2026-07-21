@@ -1,6 +1,6 @@
 ---
 title: 预处理指令
-description: "预处理指令又称预编译指令，是在 C++ 源文件编译前执行的指令。预处理指令可以定义或取消定义宏、条件编译、包含文件、引发错误、设置编译器等等。预处理指令永远以..."
+description: "预处理指令"
 navigation:
   icon: i-lucide-bookmark
 ---

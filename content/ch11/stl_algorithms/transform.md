@@ -1,6 +1,6 @@
 ---
 title: 变换
-description: "下一个函数式特性是变换（Transform），别的编程语言习惯叫做映射（Map）。所谓的变换，就是让一个范围内的每个值都通过一个函数转换为另一个值，最后再把转换后的值收集起来。"
+description: "下一个函数式特性是变换（Transform），别的编程语言习惯叫做映射（Map）。"
 navigation:
   icon: i-lucide-sort-asc
 ---

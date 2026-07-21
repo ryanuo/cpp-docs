@@ -1,6 +1,6 @@
 ---
 title: 自增减运算符
-description: "自增、自减表达式及其运算符可以算是 C/C++ 里最难的运算符。不过不用太在意，我们并不会特别深地讲解它们，在实际的使用中也用不上过深的知识。"
+description: "自增、自减表达式及其运算符可以算是 C/C++ 里最难的运算符。"
 navigation:
   icon: i-lucide-calculator
 ---

@@ -1,6 +1,6 @@
 ---
 title: 存储期
-description: "在学习如何建立一个链表之前，我们首先要学习一个叫做存储期（Storage duration）的概念。每个变量都拥有一个存储期，指出在什么时候为这个变量分配内存，在什么时候将这个变量的内存释放。"
+description: "在学习如何建立一个链表之前，我们首先要学习一个叫做存储期（Storage duration）的概念。"
 navigation:
   icon: i-lucide-list
 ---

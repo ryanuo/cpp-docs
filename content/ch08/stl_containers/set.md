@@ -1,6 +1,6 @@
 ---
 title: `std::set`
-description: "关联容器（Associative container）是另一种 STL 容器。之前的 STL..."
+description: "关联容器（Associative container）是另一种 STL 容器。"
 navigation:
   icon: i-lucide-container
 ---

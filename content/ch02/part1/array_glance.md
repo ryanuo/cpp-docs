@@ -1,6 +1,6 @@
 ---
 title: 初识数组
-description: "如果想要表示一系列变量的时候，数组可以帮你完成这个任务。在了解数组之前，先来看看这个例子："
+description: "初识数组"
 navigation:
   icon: i-lucide-database
 ---

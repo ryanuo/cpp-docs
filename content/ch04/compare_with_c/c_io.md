@@ -1,6 +1,6 @@
 ---
 title: C 输入输出
-description: "在 C++ 中，我们用 cin 和 cout 来控制输入输出；然而在 C 中，我们需要用两个函数"
+description: "在 C++ 中，我们用 cin 和 cout 来控制输入输出；然而在 C 中，我..."
 navigation:
   icon: i-lucide-arrow-right-left
 ---

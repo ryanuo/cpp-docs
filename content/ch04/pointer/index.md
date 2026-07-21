@@ -1,6 +1,6 @@
 ---
 title: 指针
-description: "指针是 C/C++ 的最大难点，但也是不得不经过的一个门槛。正因为有了指针，才让 C/C++ 和其它高级编程语言（如 Java, C 等）有了显著的不同之处。"
+description: "指针"
 navigation:
   icon: i-lucide-dot
 ---

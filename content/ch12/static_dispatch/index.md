@@ -1,6 +1,6 @@
 ---
 title: 静态派发
-description: "这一部分的主题是“静态派发”（Static dispatch）。这个词不是 C++ 的术语，在 Rust、Swift..."
+description: "静态派发"
 navigation:
   icon: i-lucide-route
 ---

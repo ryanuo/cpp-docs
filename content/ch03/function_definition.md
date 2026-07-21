@@ -1,6 +1,6 @@
 ---
 title: 函数的定义、声明和调用
-description: "上一节正式地介绍了什么是函数，并简单了解了形式参数和返回值。这一节主要从语法出发来讲解如何使用函数。"
+description: "函数的定义、声明和调用"
 navigation:
   icon: i-lucide-function-square
 ---

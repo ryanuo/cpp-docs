@@ -1,6 +1,6 @@
 ---
 title: 指针和数组
-description: "首先来看指向元素的指针："
+description: "指针和数组"
 navigation:
   icon: i-lucide-dot
 ---

@@ -1,6 +1,6 @@
 ---
 title: 算术类型隐式转换
-description: "有人说，C++ 是一门弱类型语言，因为它允许自由的隐式转换。我们姑且不对这种说法作评价，但是 C++..."
+description: "有人说，C++ 是一门弱类型语言，因为它允许自由的隐式转换。"
 navigation:
   icon: i-lucide-calculator
 ---

@@ -1,6 +1,6 @@
 ---
 title: `std::vector`
-description: "首先介绍最容易理解的 std::vector 容器。简单说，std::vector 代表一个长度可变化的数组。首先，它是一个类模板，接受一个类型参数做为其元素类型。你可以像数组一样初始化..."
+description: "std::vector"
 navigation:
   icon: i-lucide-container
 ---

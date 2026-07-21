@@ -1,6 +1,6 @@
 ---
 title: 结构体
-description: "我们已经学习了许多类型：算术类型、数组类型、指针类型等等；但是我觉得还不够。考虑这样的情形，如果我想用一种数据类型来存储编号，我会考虑用 unsigned..."
+description: "结构体"
 navigation:
   icon: i-lucide-box
 ---

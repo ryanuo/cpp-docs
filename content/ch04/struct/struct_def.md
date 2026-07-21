@@ -1,6 +1,6 @@
 ---
 title: 结构体的定义
-description: "结构体是由若干个数据“合起来”组成的一种新类型。这些数据被称为结构体的成员（Member）。若想定义一个新的结构体类型，你需要这样写："
+description: "结构体是由若干个数据“合起来”组成的一种新类型。"
 navigation:
   icon: i-lucide-box
 ---

@@ -1,6 +1,6 @@
 ---
 title: 其它小问题
-description: "最后，继承中有一些小的语法限制和规则。我简单过一下："
+description: "其它小问题"
 navigation:
   icon: i-lucide-share
 ---

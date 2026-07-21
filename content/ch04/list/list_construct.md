@@ -1,6 +1,6 @@
 ---
 title: 链表的构建
-description: "我们尝试来构造一个链表。因为我们需要手动控制每一个节点的增删，所以每一个节点都得是动态存储期存储的。因此每一个节点都需要通过 new 表达式来创建。"
+description: "链表的构建"
 navigation:
   icon: i-lucide-list
 ---

@@ -1,6 +1,6 @@
 ---
 title: 总结
-description: "这一章我们学习了一些简单的数据类型，包括数组、指针、结构体、枚举和联合体（选读）。 - 数组是由一连串连续的、同类型的变量组成的数据； - 指针类型是用于存放地址的数据类型； -..."
+description: "本章总结"
 navigation:
   icon: i-lucide-layers
 ---

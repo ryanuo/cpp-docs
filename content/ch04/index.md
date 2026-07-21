@@ -1,6 +1,6 @@
 ---
 title: 第四章 POD 类型与结构
-description: "本章标题叫做“POD类型与结构”，其中 POD 的含义是 Plain Old..."
+description: "POD 类型与结构"
 navigation:
   icon: i-lucide-layers
 ---

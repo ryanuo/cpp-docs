@@ -1,6 +1,6 @@
 ---
 title: 作用域
-description: "作用域（Scope）是一个很关键的概念。为了演示，我们先从复合语句谈起："
+description: "作用域（Scope）是一个很关键的概念。为了演示，我们先从复合语句谈起"
 navigation:
   icon: i-lucide-git-branch
 ---

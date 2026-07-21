@@ -1,6 +1,6 @@
 ---
 title: if 语句
-description: "分支语句（Branch statement），又称选择语句（Selection statement）、条件语句（Conditional statement），是引入分支结构的语句。在 C++..."
+description: "分支语句（Branch statement），又称选择语句（Selection statement）、条件语句（Conditional statement），是引入分支结构的语句。"
 navigation:
   icon: i-lucide-git-branch
 ---

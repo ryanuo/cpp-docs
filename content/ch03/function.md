@@ -1,6 +1,6 @@
 ---
 title: 函数
-description: "现在来重新审视一下上一节写过的 max 函数："
+description: "函数"
 navigation:
   icon: i-lucide-function-square
 ---

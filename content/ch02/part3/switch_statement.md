@@ -1,6 +1,6 @@
 ---
 title: switch 语句
-description: "请考虑这样一个现实问题：输入一个不大于 5 的正整数，输出它的英文单词。那么运用 if 语句，你可以写出："
+description: "请考虑这样一个现实问题：输入一个不大于 5 的正整数，输出它的英文单词。"
 navigation:
   icon: i-lucide-git-branch
 ---

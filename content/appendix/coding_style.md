@@ -1,6 +1,6 @@
 ---
 title: 代码风格
-description: "本附录主要讨论有关代码风格的几个小问题。"
+description: "代码风格"
 navigation:
   icon: i-lucide-bookmark
 ---

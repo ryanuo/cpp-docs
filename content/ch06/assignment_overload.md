@@ -1,6 +1,6 @@
 ---
 title: 赋值运算符重载
-description: "实际上，读者们可能已经猜到了，这一节我们要做的事情——重载赋值运算符，对于 String 类来说其实很简单。因为我们已经有了一个现成的："
+description: "实际上，读者们可能已经猜到了，这一节我们要做的事情——重载赋值运算符，对于 String 类来说其实很简单。"
 navigation:
   icon: i-lucide-component
 ---

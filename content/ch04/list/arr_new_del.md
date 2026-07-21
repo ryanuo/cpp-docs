@@ -1,6 +1,6 @@
 ---
 title: new[] 和 delete[]
-description: "在使用 new 表达式时，C++ 并不允许申请数组类型的空间："
+description: "在使用 new 表达式时，C++ 并不允许申请数组类型的空间"
 navigation:
   icon: i-lucide-list
 ---

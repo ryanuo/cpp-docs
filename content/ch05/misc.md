@@ -1,6 +1,6 @@
 ---
 title: 收尾工作
-description: "在结束本章之前，我们还需要学一些很简单的小知识。仍然是用我们最熟悉的 String 结构体来举例吧。"
+description: "在结束本章之前，我们还需要学一些很简单的小知识。"
 navigation:
   icon: i-lucide-copy
 ---

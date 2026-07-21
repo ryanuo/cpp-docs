@@ -1,6 +1,6 @@
 ---
 title: 类外定义成员函数
-description: "让我们再次停下来，插入一个小知识点。首先看看我们的 String 类已经写了什么："
+description: "类外定义成员函数"
 navigation:
   icon: i-lucide-component
 ---

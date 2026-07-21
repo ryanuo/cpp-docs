@@ -1,6 +1,6 @@
 ---
 title: 数组的用途
-description: "本节介绍数组的简单用途。我们之前已经略微提及了数组用于统计的写法，这里用一道例题作为复习："
+description: "数组的用途"
 navigation:
   icon: i-lucide-grid
 ---

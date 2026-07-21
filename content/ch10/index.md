@@ -1,6 +1,6 @@
 ---
 title: 第十章 常用库介绍
-description: "在编写 C++ 实用程序时，标准库中的许多设施能帮助你完成工作。在这一章，我选择了某些常用的标准库展开讲解。其中包括："
+description: "常用库介绍"
 navigation:
   icon: i-lucide-hard-drive
 ---

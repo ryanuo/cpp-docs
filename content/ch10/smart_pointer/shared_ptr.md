@@ -1,6 +1,6 @@
 ---
 title: `std::shared_ptr`
-description: "std::shared_ptr 是具有共享所有权的智能指针。与独占所有权不同，共享所有权指有多个对象持有同一资源的所有权。比如下面的例子中："
+description: "std::sharedptr 是具有共享所有权的智能指针。"
 navigation:
   icon: i-lucide-pointer
 ---

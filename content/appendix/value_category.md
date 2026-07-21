@@ -1,6 +1,6 @@
 ---
 title: 值类别
-description: "此文所描述的是 C++17 值类别。其相比 C++11 和 C++98 有较多变化。"
+description: "值类别"
 navigation:
   icon: i-lucide-bookmark
 ---

@@ -1,6 +1,6 @@
 ---
 title: 重载
-description: "我们先把面向对象的话题放在一边，来看一看 C++ 的重载（Overload）机制。假设我有一个函数 printInt，它可以打印出一个整数的值："
+description: "我们先把面向对象的话题放在一边，来看一看 C++ 的重载（Overload）机制。"
 navigation:
   icon: i-lucide-copy
 ---

@@ -1,6 +1,6 @@
 ---
 title: 预置比较
-description: "我们知道，一个结构体在某些情况会自动生成一些特殊成员函数，包括： - 预置默认构造函数 - 预置复制构造函数、复制赋值重载 - 预置移动构造函数、移动赋值重载 - 预置析构函数"
+description: "预置比较"
 navigation:
   icon: i-lucide-graduation-cap
 ---

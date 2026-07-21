@@ -1,6 +1,6 @@
 ---
 title: 空语句
-description: "嗯，最后还有一种特别简单的语句叫做空语句（Null statement）。空语句是表达式语句的一种。"
+description: "嗯，最后还有一种特别简单的语句叫做空语句（Null statement）。"
 navigation:
   icon: i-lucide-git-branch
 ---

@@ -1,6 +1,6 @@
 ---
 title: 其它顺序容器
-description: "std::vector 有一个特点：就是它元素的顺序是可以控制的。比如原来它的元素是 {4, 5, 6}，那么在尾部插入一个元素 3 之后就变成了 {4, 5, 6,..."
+description: "std::vector 有一个特点：就是它元素的顺序是可以控制的。"
 navigation:
   icon: i-lucide-container
 ---

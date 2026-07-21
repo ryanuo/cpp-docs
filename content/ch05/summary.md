@@ -1,6 +1,6 @@
 ---
 title: 总结
-description: "这一章，我们通过实现一个简单的 String 类，学习了面向对象的一些基础知识。下面给出目前 String 类的定义，回顾一下我们都做了什么："
+description: "本章总结"
 navigation:
   icon: i-lucide-copy
 ---

@@ -1,6 +1,6 @@
 ---
 title: 指针的简单使用
-description: "这一节，我们从有关指针的三个运算符来讲解指针在使用方面的细节。"
+description: "指针的简单使用"
 navigation:
   icon: i-lucide-dot
 ---

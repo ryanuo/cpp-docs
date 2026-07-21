@@ -1,6 +1,6 @@
 ---
 title: 派生类的构造
-description: "上一节中遗留了一个问题没有解决，就是派生类的构造函数初始化列表仍然没有写出来："
+description: "派生类的构造"
 navigation:
   icon: i-lucide-share
 ---

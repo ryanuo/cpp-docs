@@ -1,6 +1,6 @@
 ---
 title: C++ 风格类型转换
-description: "在进行之后的讲解之前，容我现在此处插入一些“题外的”内容。我们之前已经了解了 C 风格类型转换，而现在我们要讲的是 C++ 风格类型转换。"
+description: "在进行之后的讲解之前，容我现在此处插入一些“题外的”内容。"
 navigation:
   icon: i-lucide-refresh
 ---

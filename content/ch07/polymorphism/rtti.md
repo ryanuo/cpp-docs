@@ -1,6 +1,6 @@
 ---
 title: RTTI
-description: "考虑之前的代码："
+description: "RTTI"
 navigation:
   icon: i-lucide-refresh
 ---

@@ -1,6 +1,6 @@
 ---
 title: 后记
-description: "整个项目的最核心问题只有一个：为什么它要存在？也即说，市面上、网络上那么多 C++..."
+description: "关于本项目的设计初衷与核心理念"
 navigation:
   icon: i-lucide-bookmark
 ---

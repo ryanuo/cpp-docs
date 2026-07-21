@@ -1,6 +1,6 @@
 ---
 title: 计算机
-description: "第一个概念是计算机（Computer）。计算机，就是我们俗称的“电脑”，它可以做许多许多事情，就像一个人一样。于是我稍微整理一下它的功能，可以分成这样四种："
+description: "第一个概念是计算机（Computer）。"
 navigation:
   icon: i-lucide-monitor
 ---

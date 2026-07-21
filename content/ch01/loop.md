@@ -1,6 +1,6 @@
 ---
 title: 循环
-description: "现在来想这样一个问题，我想输出从 1 到 20 的所有自然数，我该怎么样通过 C++ 来实现呢？当然你可以直接写 20 行输出语句： cpp codemo include <iostream>..."
+description: "循环"
 navigation:
   icon: i-lucide-book-open
 ---

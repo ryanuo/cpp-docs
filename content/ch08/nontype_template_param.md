@@ -1,6 +1,6 @@
 ---
 title: 非类型模板参数
-description: "在之前的模板例子中，我们总是在用类型模板参数。比如："
+description: "在之前的模板例子中，我们总是在用类型模板参数。比如"
 navigation:
   icon: i-lucide-layout-template
 ---

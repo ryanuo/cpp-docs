@@ -1,6 +1,6 @@
 ---
 title: 布尔类型
-description: "布尔类型（Boolean Type）是用于存储“真”或“假”的变量。它一般用于存储数学上一个命题的真假。所以它的值只能为 true 或者 false ，其中 true 表示真， false 表示假。..."
+description: "布尔类型（Boolean Type）是用于存储“真”或“假”的变量。"
 navigation:
   icon: i-lucide-dna
 ---

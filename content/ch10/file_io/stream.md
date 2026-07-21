@@ -1,6 +1,6 @@
 ---
 title: 流式输入输出
-description: "在头文件 <fstream> 中，定义了两个类 std::ifstream 和 std::ofstream。它们可以分别用来写入和读取文件。先看一下使用的例子："
+description: "在头文件  中，定义了两个类 std::ifstream 和 std::ofstream。"
 navigation:
   icon: i-lucide-file-text
 ---

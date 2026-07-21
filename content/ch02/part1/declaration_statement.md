@@ -1,6 +1,6 @@
 ---
 title: 声明语句
-description: "声明语句（Declaration statement）是指执行声明操作的程序片段。我们目前遇到的大部分情况下，声明语句在执行声明操作的同时也会执行定义操作，使得声明引入的名字可以使用。"
+description: "声明语句（Declaration statement）是指执行声明操作的程序片段。"
 navigation:
   icon: i-lucide-database
 ---

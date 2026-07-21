@@ -1,6 +1,6 @@
 ---
 title: 虚析构函数
-description: "本节介绍一些需要将析构函数设置为虚函数的情形。"
+description: "虚析构函数"
 navigation:
   icon: i-lucide-refresh
 ---

@@ -1,6 +1,6 @@
 ---
 title: 多态
-description: "多态（Polymorphism）是指，在编程语言中用某个单一的记号来表示多个类型。这个定义非常广泛，只要满足“一个记号”“多种类型“两个条件的任何语法都可以被称为多态。比如："
+description: "多态"
 navigation:
   icon: i-lucide-refresh
 ---

@@ -1,6 +1,6 @@
 ---
 title: 总结
-description: "恭喜你，第三章的学习已经完成了。本章虽然名叫“过程式编程”，但是大量的笔墨着重于函数和函数的用法上。这是因为，过程式编程本质上就是定义一个接一个的函数，然后通过函数之间互相的调用来实现复杂的功能。"
+description: "本章总结"
 navigation:
   icon: i-lucide-function-square
 ---

@@ -1,6 +1,6 @@
 ---
 title: 链表
-description: "先来考虑这个问题：怎样从数组中删除一个元素？"
+description: "链表"
 navigation:
   icon: i-lucide-list
 ---

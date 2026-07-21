@@ -1,6 +1,6 @@
 ---
 title: 通用积类型 `std::tuple`
-description: "std::tuple 是一个类模板。准确地说，它是一个变参模板，即模板参数的个数是可变的。变参模板的具体写法会在之后的章节展开，这里你只需要知道 std::tuple..."
+description: "std::tuple 是一个类模板。"
 navigation:
   icon: i-lucide-shapes
 ---

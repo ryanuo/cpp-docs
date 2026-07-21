@@ -1,6 +1,6 @@
 ---
 title: 输入失败状态
-description: "当 cin 读取到的东西和它所期望的不符合时，就会进入失败状态。比如这些操作："
+description: "当 cin 读取到的东西和它所期望的不符合时，就会进入失败状态。比如这些操作"
 navigation:
   icon: i-lucide-terminal
 ---

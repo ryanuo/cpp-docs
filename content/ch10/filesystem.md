@@ -1,6 +1,6 @@
 ---
 title: 文件系统
-description: "C++17 引入了文件系统库。这使得通过 C++ 操作文件系统（如新建、删除、复制文件或目录等）变得非常容易。文件系统库的所有名字位于 <filesystem> 头文件下。"
+description: "C++17 引入了文件系统库。"
 navigation:
   icon: i-lucide-hard-drive
 ---

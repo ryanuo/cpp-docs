@@ -1,6 +1,6 @@
 ---
 title: 构造函数
-description: "<h6 id=\"idx_构造函数\"></h6>"
+description: "正如上一节结尾所属，构造函数（Constructor function）是为了解决初始化的问题而存在的。"
 navigation:
   icon: i-lucide-copy
 ---

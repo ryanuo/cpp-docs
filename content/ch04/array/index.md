@@ -1,6 +1,6 @@
 ---
 title: 数组
-description: "我们在第二章第一部分结尾初步认识了数组。所以我们先来复习一下数组："
+description: "数组"
 navigation:
   icon: i-lucide-grid
 ---

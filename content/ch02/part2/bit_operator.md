@@ -1,6 +1,6 @@
 ---
 title: 位运算符（选读）
-description: "位运算符包含以下六种："
+description: "位运算符包含以下六种"
 navigation:
   icon: i-lucide-calculator
 ---

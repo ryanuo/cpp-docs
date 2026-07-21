@@ -1,6 +1,6 @@
 ---
 title: 输入
-description: "想要输入一个字符串到字符数组，一般有三种方法："
+description: "想要输入一个字符串到字符数组，一般有三种方法"
 navigation:
   icon: i-lucide-terminal
 ---

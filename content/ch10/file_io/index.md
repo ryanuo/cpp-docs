@@ -1,6 +1,6 @@
 ---
 title: 文件读写
-description: "这一部分介绍如何用 C++ 程序读取文件或写入文件。在 C++ 中，存在两套用于文件读写的方法：一个是流式输入输出，类似 cin cout；一套是继承自 C 语言的、基于 FILE 的设计。"
+description: "文件读写"
 navigation:
   icon: i-lucide-file-text
 ---
