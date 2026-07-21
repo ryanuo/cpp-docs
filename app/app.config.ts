@@ -12,7 +12,7 @@ export default defineAppConfig({
     }
   },
   seo: {
-    siteName: 'Nuxt Docs Template'
+    siteName: 'C++基础知识'
   },
   header: {
     title: '',

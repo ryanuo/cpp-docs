@@ -67,11 +67,11 @@ export default defineNuxtConfig({
 
   llms: {
     domain: 'https://docs-template.nuxt.dev/',
-    title: 'Nuxt Docs Template',
+    title: 'C++基础知识',
     description: 'A template for building documentation with Nuxt UI and Nuxt Content.',
     full: {
-      title: 'Nuxt Docs Template - Full Documentation',
-      description: 'This is the full documentation for the Nuxt Docs Template.'
+      title: 'C++基础知识 - Full Documentation',
+      description: 'This is the full documentation for the C++基础知识.'
     },
     sections: [
       {
