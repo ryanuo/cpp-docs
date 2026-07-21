@@ -11,9 +11,9 @@ navigation:
 
 ## 目录
 
-1. [模板特化与偏特化](specialization.md)
-2. [静态派发](static_dispatch/index.md)
-   - [定制点](static_dispatch/customize_point.md)
-   - [类型擦除](static_dispatch/type_erasure.md)
-3. [C++20 概念](concepts.md)
-4. [模板元编程](metaprogramming.md)
+1. [模板特化与偏特化](/ch12/specialization)
+2. [静态派发](/ch12/static_dispatch)
+   - [定制点](/ch12/static_dispatch/customize_point)
+   - [类型擦除](/ch12/static_dispatch/type_erasure)
+3. [C++20 概念](/ch12/concepts)
+4. [模板元编程](/ch12/metaprogramming)
