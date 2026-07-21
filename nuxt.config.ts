@@ -10,6 +10,11 @@ export default defineNuxtConfig({
     '@nuxtjs/mcp-toolkit'
   ],
 
+  // Disable font fetching (offline-safe)
+  fonts: {
+    families: []
+  },
+
   devtools: {
     enabled: true
   },
