@@ -23,10 +23,10 @@ useSeoMeta({
 })
 
 const iframeRef = ref<HTMLIFrameElement | null>(null)
-const iframeSrc = ref('/reference/zh/cpp.html')
+const iframeSrc = ref('/reference/zh')
 
 // 默认首页
-const DEFAULT_PAGE = '/reference/zh/cpp.html'
+const DEFAULT_PAGE = '/reference/zh'
 
 // 从 hash 中获取当前页面
 function getPageFromHash(): string {

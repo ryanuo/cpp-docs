@@ -52,8 +52,8 @@ const chapters = [
             class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5"
           />
           <div>
-            <div class="font-semibold text-blue-900 dark:text-blue-100">C++ 参考手册</div>
-            <div class="text-sm text-blue-700 dark:text-blue-300 mt-1">离线版 cppreference.com 文档，涵盖 C++ 标准库完整参考。</div>
+            <div class="font-semibold text-blue-900 dark:text-blue-100">C/C++ 参考手册</div>
+            <div class="text-sm text-blue-700 dark:text-blue-300 mt-1">离线版 cppreference.com 文档，涵盖 C/C++ 标准库完整参考。</div>
           </div>
         </div>
         <UIcon
