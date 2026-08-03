@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>动态内存管理</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"7bec9ac0f9eb9e1a3dbf7cec","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/memory","wgTitle":"c/memory","wgCurRevisionId":100746,"wgRevisionId":100746,"wgArticleId":1087,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/memory","wgRelevantArticleId":1087,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../common/loader_zh_skins_cppreference2.css">
+<script async="" src="../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_memory rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">动态内存管理</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../c.html" title="c">c</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a class="mw-selflink selflink">动态内存管理</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memory/malloc.html" title="c/memory/malloc"><span class="t-lines"><span>malloc</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memory/calloc.html" title="c/memory/calloc"><span class="t-lines"><span>calloc</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memory/realloc.html" title="c/memory/realloc"><span class="t-lines"><span>realloc</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memory/free.html" title="c/memory/free"><span class="t-lines"><span>free</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memory/free_sized.html" title="c/memory/free sized"><span class="t-lines"><span>free_sized</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memory/free_aligned_sized.html" title="c/memory/free aligned sized"><span class="t-lines"><span>free_aligned_sized</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memory/aligned_alloc.html" title="c/memory/aligned alloc"><span class="t-lines"><span>aligned_alloc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memory/memalignment.html" class="mw-redirect" title="c/memory/memalignment"><span class="t-lines"><span>memalignment</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<h3><span id=".E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="函数">函数</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-header">
+<td colspan="2"><div>在标头 <code><a href="header/stdlib.html" title="c/header/stdlib"><tt>&lt;stdlib.h&gt;</tt></a></code> 定义 </div>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="memory/malloc.html" title="c/memory/malloc"> <span class="t-lines"><span>malloc</span></span></a></div></div>
+</td>
+<td>分配内存 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="memory/calloc.html" title="c/memory/calloc"> <span class="t-lines"><span>calloc</span></span></a></div></div>
+</td>
+<td>分配并清零内存 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="memory/realloc.html" title="c/memory/realloc"> <span class="t-lines"><span>realloc</span></span></a></div></div>
+</td>
+<td>扩充之前分配的内存块 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="memory/free.html" title="c/memory/free"> <span class="t-lines"><span>free</span></span></a></div></div>
+</td>
+<td>归还之前分配的内存 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="memory/free_sized.html" title="c/memory/free sized"> <span class="t-lines"><span>free_sized</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>归还之前分配的指定大小的内存  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="memory/free_aligned_sized.html" title="c/memory/free aligned sized"> <span class="t-lines"><span>free_aligned_sized</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>归还之前分配的指定大小和对齐的内存  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="memory/aligned_alloc.html" title="c/memory/aligned alloc"> <span class="t-lines"><span>aligned_alloc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>分配对齐的内存  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="memory/memalignment.html" class="mw-redirect" title="c/memory/memalignment"> <span class="t-lines"><span>memalignment</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>返回给定地址满足的最大对齐  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class=""><span>C 内存管理库</span></span>的 <span><span><a href="../cpp/memory/c.html" title="cpp/memory/c">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260429063742
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.073 seconds
+Real time usage: 1.434 seconds
+Preprocessor visited node count: 2097/1000000
+Post‐expand include size: 66745/4194304 bytes
+Template argument size: 10732/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1094.385      1 -total
+ 72.13%  789.405      8 Template:dsc_inc
+ 29.30%  320.699      1 Template:c/memory/dsc_calloc
+ 20.82%  227.818      1 Template:c/memory/dsc_aligned_alloc
+ 12.92%  141.402      1 Template:c/memory/navbar
+ 11.87%  129.942      1 Template:navbar
+  6.08%   66.484     25 Template:nv
+  4.69%   51.356      1 Template:dsc_header
+  4.67%   51.066      8 Template:dsc_fun
+  4.59%   50.241      1 Template:c/memory/navbar_content
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1087-0!canonical!zh and timestamp 20260429063742 and revision id 100746. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../zh.cppreference.com/w/c/memory">Online version</a></li><li>Offline version retrieved 2026-05-02 15:55.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2985,"wgPageParseReport":{"limitreport":{"cputime":"0.073","walltime":"1.434","ppvisitednodes":{"value":2097,"limit":1000000},"postexpandincludesize":{"value":66745,"limit":4194304},"templateargumentsize":{"value":10732,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00% 1094.385      1 -total"," 72.13%  789.405      8 Template:dsc_inc"," 29.30%  320.699      1 Template:c/memory/dsc_calloc"," 20.82%  227.818      1 Template:c/memory/dsc_aligned_alloc"," 12.92%  141.402      1 Template:c/memory/navbar"," 11.87%  129.942      1 Template:navbar","  6.08%   66.484     25 Template:nv","  4.69%   51.356      1 Template:dsc_header","  4.67%   51.066      8 Template:dsc_fun","  4.59%   50.241      1 Template:c/memory/navbar_content"]},"cachereport":{"timestamp":"20260429063742","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260429063743 -->
+</html>

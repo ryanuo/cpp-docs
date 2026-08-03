@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>lconv</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"18f294df4d4d32620870e687","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/locale/lconv","wgTitle":"c/locale/lconv","wgCurRevisionId":98195,"wgRevisionId":98195,"wgArticleId":1084,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/locale/lconv","wgRelevantArticleId":1084,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_locale_lconv rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">lconv</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../locale.html" title="c/locale">locale</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../locale.html" title="c/locale">本地化支持</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="setlocale.html" title="c/locale/setlocale"><span class="t-lines"><span>setlocale</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="localeconv.html" title="c/locale/localeconv"><span class="t-lines"><span>localeconv</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>lconv</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 本地环境类别</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="LC_categories.html" title="c/locale/LC categories"><span class="t-lines"><span>LC_ALL</span><span>LC_COLLATE</span><span>LC_CTYPE</span><span>LC_MONETARY</span><span>LC_NUMERIC</span><span>LC_TIME</span></span></a></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/locale.html" title="c/header/locale"><tt>&lt;locale.h&gt;</tt></a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 13 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span><span class="p">;</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">struct lconv</code> 含有 C 本地环境定义的数值和货币格式化规则。此结构体的对象可由 <span class="t-lc">localeconv</span> 获得。<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std::lconv</code> 的成员为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">char</span></code> 类型和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">char</span><span class="o">*</span></code> 类型的值。除了 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">decimal_point</code>，每个 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">char</span><span class="o">*</span></code> 成员都可以指向空字符（即为空 C 字符串）。<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">char</span></code> 类型成员均为非负数，而且若任一者在当前 C 本地环境中不可用，则为 <span class="t-lc">CHAR_MAX</span>。
+</p>
+<h3><span id=".E6.88.90.E5.91.98.E5.AF.B9.E8.B1.A1"></span><span class="mw-headline" id="成员对象">成员对象</span></h3>
+<h4><span id=".E9.9D.9E.E8.B4.A7.E5.B8.81.E6.95.B0.E5.80.BC.E6.A0.BC.E5.BC.8F.E5.8C.96.E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="非货币数值格式化参数">非货币数值格式化参数</span></h4>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> decimal_point</span></span></div></div>
+</td>
+<td>用作小数点的字符 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> thousands_sep</span></span></div></div>
+</td>
+<td>用于在小数点前分隔数位组的字符 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> grouping</span></span></div></div>
+</td>
+<td>字符串，其元素指示数位组的大小 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+</tbody></table>
+<h4><span id=".E8.B4.A7.E5.B8.81.E6.95.B0.E5.80.BC.E6.A0.BC.E5.BC.8F.E5.8C.96.E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="货币数值格式化参数">货币数值格式化参数</span></h4>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> mon_decimal_point</span></span></div></div>
+</td>
+<td>用作小数点的字符 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> mon_thousands_sep</span></span></div></div>
+</td>
+<td>用于在小数点前分隔数位组的字符 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> mon_grouping</span></span></div></div>
+</td>
+<td>字符串，其元素指示数位组的大小 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> positive_sign</span></span></div></div>
+</td>
+<td>用于指示非负货币量的字符串 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> negative_sign</span></span></div></div>
+</td>
+<td>用于指示负货币量的字符串 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+</tbody></table>
+<h4><span id=".E6.9C.AC.E5.9C.B0.E8.B4.A7.E5.B8.81.E6.95.B0.E5.80.BC.E6.A0.BC.E5.BC.8F.E5.8C.96.E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="本地货币数值格式化参数">本地货币数值格式化参数</span></h4>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> currency_symbol</span></span></div></div>
+</td>
+<td>当前 C 本地环境中用于通货的符号 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> frac_digits</span></span></div></div>
+</td>
+<td>货币量中小数点后显示的位数 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> p_cs_precedes</span></span></div></div>
+</td>
+<td>若 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">currency_symbol</span></code></span> 置于非负值前则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span>，于其后则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span> <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> n_cs_precedes</span></span></div></div>
+</td>
+<td>若 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">currency_symbol</span></code></span> 置于负值前则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span>，于其后则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span> <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> p_sep_by_space</span></span></div></div>
+</td>
+<td>指示 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">currency_symbol</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">positive_sign</span></code></span> 及非负货币值的分隔 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> n_sep_by_space</span></span></div></div>
+</td>
+<td>指示 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">currency_symbol</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">positive_sign</span></code></span> 及负货币值的分隔 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> p_sign_posn</span></span></div></div>
+</td>
+<td>指示非负货币值中 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">positive_sign</span></code></span> 的位置 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> n_sign_posn</span></span></div></div>
+</td>
+<td>指示负货币值中 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">negative_sign</span></code></span> 的位置 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+</tbody></table>
+<h4><span id=".E5.9B.BD.E9.99.85.E8.B4.A7.E5.B8.81.E6.95.B0.E5.80.BC.E6.A0.BC.E5.BC.8F.E5.8C.96.E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="国际货币数值格式化参数">国际货币数值格式化参数</span></h4>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char*</span> int_curr_symbol</span></span></div></div>
+</td>
+<td>当前 C 本地环境中用作国际通货名的字符串 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> int_frac_digits</span></span></div></div>
+</td>
+<td>国际货币量中小数点后显示的位数 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> int_p_cs_precedes</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>若 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">currency_symbol</span></code></span> 置于非负值前则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span>，于其后则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span> <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> int_n_cs_precedes</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>若 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">currency_symbol</span></code></span> 置于负值前则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span>，于其后则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span> <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> int_p_sep_by_space</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>指示 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">int_curr_symbol</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">positive_sign</span></code></span> 及非负国际货币值的分隔 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> int_n_sep_by_space</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>指示 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">int_curr_symbol</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">positive_sign</span></code></span> 及负国际货币值的分隔 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> int_p_sign_posn</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>指示非负国际货币值中 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">positive_sign</span></code></span> 的位置 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><span class="t-dsc-small">char</span> int_n_sign_posn</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>指示负国际货币值中 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">positive_sign</span></code></span> 的位置 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员对象)</span>
+</td></tr>
+
+</tbody></table>
+<p>按照数值判读 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">grouping</span></code></span> 和 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">mon_grouping</span></code></span> 所指向的 C 字符串。遇到终止 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="sc">'\0'</span></code></span> 时，假设剩下的数位重复采用最后见到的值。若遇到 <span class="t-lc">CHAR_MAX</span>，则不再将数位分组。典型的三位一组的分组是 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"</span><span class="se">\003</span><span class="s">"</span></code></span>。
+</p><p><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">p_sep_by_space</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">n_sep_by_space</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">int_p_sep_by_space</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">int_n_sep_by_space</span></code></span> 的值判读如下：
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span>
+</td>
+<td>通货符号和值间无空格分隔
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span>
+</td>
+<td>符号紧贴通货符号，值为空格所分隔
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">2</span></code></span>
+</td>
+<td>符号紧贴值，通货符号为空格所分隔
+</td></tr>
+
+</tbody></table>
+<p><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">p_sign_posn</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">n_sign_posn</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">int_p_sign_posn</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">int_n_sign_posn</span></code></span> 的值判读如下：
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span>
+</td>
+<td>以围绕值和通货符号的括号表示正负号
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span>
+</td>
+<td>正负号在值与通货符号前
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">2</span></code></span>
+</td>
+<td>正负号在值与通货符号后
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">3</span></code></span>
+</td>
+<td>正负号在通货符号前
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">4</span></code></span>
+</td>
+<td>正负号在通货符号后
+</td></tr>
+
+</tbody></table>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;locale.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span><span class="w"> </span><span class="s">"ja_JP.UTF-8"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span><span class="o">*</span><span class="w"> </span><span class="n">lc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localeconv</span><span class="p">();</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Japanese currency symbol: %s(%s)</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">lc</span><span class="o">-&gt;</span><span class="n">currency_symbol</span><span class="p">,</span><span class="w"> </span><span class="n">lc</span><span class="o">-&gt;</span><span class="n">int_curr_symbol</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>可能的输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Japanese currency symbol: ￥(JPY)
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-23">
+<ul><li>C23 标准（ISO/IEC 9899:2024）：</li></ul>
+<dl><dd><ul><li>7.11/2 Localization &lt;locale.h&gt; （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>7.11/2 Localization &lt;locale.h&gt; （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>7.11/2 Localization &lt;locale.h&gt; （第 223 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>7.11/2 Localization &lt;locale.h&gt; （第 204 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c89">
+<ul><li>C89/C90 标准（ISO/IEC 9899:1990）：</li></ul>
+<dl><dd><ul><li>4.4 LOCALIZATION &lt;locale.h&gt;</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="localeconv.html" title="c/locale/localeconv"> <span class="t-lines"><span>localeconv</span></span></a></div></div>
+</td>
+<td>查询当前本地环境的数值及货币格式化细节 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>lconv</span></span> 的 <span><span><a href="../../cpp/locale/lconv.html" title="cpp/locale/lconv">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422050506
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.105 seconds
+Real time usage: 0.113 seconds
+Preprocessor visited node count: 6155/1000000
+Post‐expand include size: 99683/4194304 bytes
+Template argument size: 34867/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 51/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 11613/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   86.543      1 -total
+ 49.31%   42.672     34 Template:dsc
+ 44.01%   38.090     24 Template:dsc_mem_obj
+ 19.39%   16.782     44 Template:c
+ 13.54%   11.714     24 Template:dsc_mark_mem
+ 10.50%    9.086      1 Template:c/locale/navbar
+  9.83%    8.506      1 Template:navbar
+  8.62%    7.459     25 Template:dsc_member
+  7.61%    6.584      1 Template:ddcl
+  4.64%    4.014     24 Template:mark_mem_obj
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1084-0!canonical!zh and timestamp 20260422050506 and revision id 98195. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/locale/lconv">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":311,"wgPageParseReport":{"limitreport":{"cputime":"0.105","walltime":"0.113","ppvisitednodes":{"value":6155,"limit":1000000},"postexpandincludesize":{"value":99683,"limit":4194304},"templateargumentsize":{"value":34867,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":51,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11613,"limit":5000000},"timingprofile":["100.00%   86.543      1 -total"," 49.31%   42.672     34 Template:dsc"," 44.01%   38.090     24 Template:dsc_mem_obj"," 19.39%   16.782     44 Template:c"," 13.54%   11.714     24 Template:dsc_mark_mem"," 10.50%    9.086      1 Template:c/locale/navbar","  9.83%    8.506      1 Template:navbar","  8.62%    7.459     25 Template:dsc_member","  7.61%    6.584      1 Template:ddcl","  4.64%    4.014     24 Template:mark_mem_obj"]},"cachereport":{"timestamp":"20260422050506","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422094253 -->
+</html>

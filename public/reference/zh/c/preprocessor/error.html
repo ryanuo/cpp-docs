@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>诊断指令</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"8ae44d127c0462278b4357df","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/preprocessor/error","wgTitle":"c/preprocessor/error","wgCurRevisionId":97693,"wgRevisionId":97693,"wgArticleId":7957,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/preprocessor/error","wgRelevantArticleId":7957,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_preprocessor_error rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">诊断指令</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../preprocessor.html" title="c/preprocessor">preprocessor</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="c/language">C 语言</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"> <a href="../language/basic_concepts.html" title="c/language/basic concepts">基本概念</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../keyword.html" title="c/keyword">关键词</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../preprocessor.html" title="c/preprocessor">预处理器</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../language/statements.html" title="c/language/statements">语句</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../language/expressions.html" title="c/language/expressions">表达式</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../language/initialization.html" title="c/language/initialization">初始化</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../language/declarations.html" title="c/language/declarations">声明</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../language/functions.html" title="c/language/functions">函数</a></td></tr>
+<tr class="t-nv"><td colspan="5"> 杂项</td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../language/history.html" title="c/language/history">C 的历史</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../experimental.html" title="c/experimental">技术规范</a> </td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../preprocessor.html" title="c/preprocessor"> 预处理器</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="conditional.html" title="c/preprocessor/conditional"><span class="t-lines"><span>#if</span><span>#ifdef</span><span>#ifndef</span><span>#else</span><span>#elif</span><span>#elifdef</span><span>#elifndef</span><span>#endif</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span></span><span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="replace.html" title="c/preprocessor/replace"><span class="t-lines"><span>#define</span><span>#undef</span><span>#,## 运算符</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="include.html" title="c/preprocessor/include"><span class="t-lines"><span>#include</span><span>__has_include</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>#error</span><span>#warning</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../cpp/preprocessor/impl.html" title="cpp/preprocessor/impl"><span class="t-lines"><span>#pragma</span><span>_Pragma</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="line.html" title="c/preprocessor/line"><span class="t-lines"><span>#line</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="embed.html" title="c/preprocessor/embed"><span class="t-lines"><span>#embed</span><span>__has_embed</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>显示给定的错误消息并使得程序非良构<span class="t-rev-inl t-since-c23"><span>，或给定的警告消息而不影响程序的合法性</span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span></span></span>。
+</p>
+<h3><span id=".E8.AF.AD.E6.B3.95"></span><span class="mw-headline" id="语法">语法</span></h3>
+<table class="t-sdsc-begin">
+
+<tbody><tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr>
+<tr class="t-sdsc">
+<td><code><b>#error</b></code> <span class="t-spar">诊断消息</span>
+</td>
+<td>(1)
+</td>
+<td class="t-sdsc-nopad">
+</td></tr>
+
+
+
+<tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr>
+<tr class="t-sdsc">
+<td><code><b>#warning</b></code> <span class="t-spar">诊断消息</span>
+</td>
+<td>(2)
+</td>
+<td><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span>
+</td></tr>
+
+
+
+<tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr></tbody></table>
+<h3><span id=".E8.A7.A3.E9.87.8A"></span><span class="mw-headline" id="解释">解释</span></h3>
+<div class="t-li1"><span class="t-li">1)</span> 实现在遇到 <code>#error</code> 指令后，显示消息 <span class="t-spar">诊断消息</span>，并令程序非良构（停止编译）。</div>
+<div class="t-li1"><span class="t-li">2)</span> 同 <span class="t-v">(1)</span>，但不影响程序的合法性并且编译继续。</div>
+<p><span class="t-spar">诊断消息</span> 可由多个词组成，不必在引号中。
+</p>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>在其于 C23 的标准化前，<code>#warning</code> 已经被许多编译器作为遵从的扩展提供。
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#if __STDC__ != 1</span>
+<span class="cp">#  error "不是遵从标准的编译器"</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if __STDC_VERSION__ &gt;= 202311L</span>
+<span class="cp">#  warning "使用标准功能特性 #warning"</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"所用编译器遵从 ISO C 标准！！"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>可能的输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>所用编译器遵从 ISO C 标准！！
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-23">
+<ul><li>C23 标准（ISO/IEC 9899:2024）：</li></ul>
+<dl><dd><ul><li>6.10.5 Error directive （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>6.10.5 Error directive （第 126-127 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>6.10.5 Error directive （第 174 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>6.10.5 Error directive （第 159 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c89">
+<ul><li>C89/C90 标准（ISO/IEC 9899:1990）：</li></ul>
+<dl><dd><ul><li>3.8.5 Error directive</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class=""><span>诊断指令</span></span>的 <span><span><a href="../../cpp/preprocessor/error.html" title="cpp/preprocessor/error">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422000607
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.075 seconds
+Real time usage: 0.378 seconds
+Preprocessor visited node count: 1573/1000000
+Post‐expand include size: 47816/4194304 bytes
+Template argument size: 8537/4194304 bytes
+Highest expansion depth: 17/100
+Expensive parser function count: 2/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1172/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  342.638      1 -total
+ 87.83%  300.950      1 Template:example
+ 87.52%  299.866      2 Template:source
+  5.07%   17.375      1 Template:c/preprocessor/navbar
+  4.85%   16.631      1 Template:navbar
+  2.07%    7.079     25 Template:nv
+  2.03%    6.966      1 Template:c/preprocessor/navbar_content
+  1.78%    6.111      7 Template:nv_ln
+  1.20%    4.104      2 Template:sdsc
+  1.20%    4.102      1 Template:c/navbar_content
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:7957-0!canonical!zh and timestamp 20260422000607 and revision id 97693. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/preprocessor/error">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":521,"wgPageParseReport":{"limitreport":{"cputime":"0.075","walltime":"0.378","ppvisitednodes":{"value":1573,"limit":1000000},"postexpandincludesize":{"value":47816,"limit":4194304},"templateargumentsize":{"value":8537,"limit":4194304},"expansiondepth":{"value":17,"limit":100},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1172,"limit":5000000},"timingprofile":["100.00%  342.638      1 -total"," 87.83%  300.950      1 Template:example"," 87.52%  299.866      2 Template:source","  5.07%   17.375      1 Template:c/preprocessor/navbar","  4.85%   16.631      1 Template:navbar","  2.07%    7.079     25 Template:nv","  2.03%    6.966      1 Template:c/preprocessor/navbar_content","  1.78%    6.111      7 Template:nv_ln","  1.20%    4.104      2 Template:sdsc","  1.20%    4.102      1 Template:c/navbar_content"]},"cachereport":{"timestamp":"20260422000607","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422000607 -->
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>tmpnam, tmpnam_s</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"b713cd65c5485944aa64b54e","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/io/tmpnam","wgTitle":"c/io/tmpnam","wgCurRevisionId":80428,"wgRevisionId":80428,"wgArticleId":1011,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/io/tmpnam","wgRelevantArticleId":1011,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_io_tmpnam rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">tmpnam, tmpnam_s</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../io.html" title="c/io">io</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../io.html" title="c/io"> 文件输入/输出</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h1"><td colspan="5">类型与对象</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="std_streams.html" title="c/io/std streams"><span class="t-lines"><span>stdin</span><span>stdout</span><span>stderr</span></span></a></div><div><span class="t-lines"><span><code>        </code></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FILE.html" title="c/io/FILE"><span class="t-lines"><span>FILE</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fpos_t.html" title="c/io/fpos t"><span class="t-lines"><span>fpos_t</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h1"><td colspan="5">函数</td></tr>
+<tr class="t-nv-h2"><td colspan="5">文件访问</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fopen.html" title="c/io/fopen"><span class="t-lines"><span>fopen</span><span>fopen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="freopen.html" title="c/io/freopen"><span class="t-lines"><span>freopen</span><span>freopen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code>  </code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwide.html" title="c/io/fwide"><span class="t-lines"><span>fwide</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="setbuf.html" title="c/io/setbuf"><span class="t-lines"><span>setbuf</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="setvbuf.html" title="c/io/setvbuf"><span class="t-lines"><span>setvbuf</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fclose.html" title="c/io/fclose"><span class="t-lines"><span>fclose</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fflush.html" title="c/io/fflush"><span class="t-lines"><span>fflush</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">无格式输入/输出</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fgetc.html" title="c/io/fgetc"><span class="t-lines"><span>fgetc</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fgets.html" title="c/io/fgets"><span class="t-lines"><span>fgets</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fputc.html" title="c/io/fputc"><span class="t-lines"><span>fputc</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fputs.html" title="c/io/fputs"><span class="t-lines"><span>fputs</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="getchar.html" title="c/io/getchar"><span class="t-lines"><span>getchar</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="gets.html" title="c/io/gets"><span class="t-lines"><span>gets</span><span>gets_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-until-c11" style="white-space: nowrap;">(C11 前)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="putchar.html" title="c/io/putchar"><span class="t-lines"><span>putchar</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="puts.html" title="c/io/puts"><span class="t-lines"><span>puts</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ungetc.html" title="c/io/ungetc"><span class="t-lines"><span>ungetc</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fgetwc.html" title="c/io/fgetwc"><span class="t-lines"><span>fgetwc</span><span>getwc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fgetws.html" title="c/io/fgetws"><span class="t-lines"><span>fgetws</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fputwc.html" title="c/io/fputwc"><span class="t-lines"><span>fputwc</span><span>putwc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fputws.html" title="c/io/fputws"><span class="t-lines"><span>fputws</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="getwchar.html" title="c/io/getwchar"><span class="t-lines"><span>getwchar</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="putwchar.html" title="c/io/putwchar"><span class="t-lines"><span>putwchar</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ungetwc.html" title="c/io/ungetwc"><span class="t-lines"><span>ungetwc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">有格式输入</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fscanf.html" title="c/io/fscanf"><span class="t-lines"><span>scanf</span><span>fscanf</span><span>sscanf</span><span>scanf_s</span><span>fscanf_s</span><span>sscanf_s</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwscanf.html" title="c/io/fwscanf"><span class="t-lines"><span>wscanf</span><span>fwscanf</span><span>swscanf</span><span>wscanf_s</span><span>fwscanf_s</span><span>swscanf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfscanf.html" title="c/io/vfscanf"><span class="t-lines"><span>vscanf</span><span>vfscanf</span><span>vsscanf</span><span>vscanf_s</span><span>vfscanf_s</span><span>vsscanf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfwscanf.html" title="c/io/vfwscanf"><span class="t-lines"><span>vwscanf</span><span>vfwscanf</span><span>vswscanf</span><span>vwscanf_s</span><span>vfwscanf_s</span><span>vswscanf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code>  </code></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5">直接输入/输出</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fread.html" title="c/io/fread"><span class="t-lines"><span>fread</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwrite.html" title="c/io/fwrite"><span class="t-lines"><span>fwrite</span></span></a></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">有格式输出</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fprintf.html" title="c/io/fprintf"><span class="t-lines"><span>printf</span><span>fprintf</span><span>sprintf</span><span>snprintf</span><span>printf_s</span><span>fprintf_s</span><span>sprintf_s</span><span>snprintf_s</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwprintf.html" title="c/io/fwprintf"><span class="t-lines"><span>wprintf</span><span>fwprintf</span><span>swprintf</span><span>wprintf_s</span><span>fwprintf_s</span><span>swprintf_s</span><span>snwprintf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code>  </code></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfprintf.html" title="c/io/vfprintf"><span class="t-lines"><span>vprintf</span><span>vfprintf</span><span>vsprintf</span><span>vsnprintf</span><span>vprintf_s</span><span>vfprintf_s</span><span>vsprintf_s</span><span>vsnprintf_s</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfwprintf.html" title="c/io/vfwprintf"><span class="t-lines"><span>vwprintf</span><span>vfwprintf</span><span>vswprintf</span><span>vwprintf_s</span><span>vfwprintf_s</span><span>vswprintf_s</span><span>vsnwprintf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">文件寻位</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ftell.html" title="c/io/ftell"><span class="t-lines"><span>ftell</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fgetpos.html" title="c/io/fgetpos"><span class="t-lines"><span>fgetpos</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fseek.html" title="c/io/fseek"><span class="t-lines"><span>fseek</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fsetpos.html" title="c/io/fsetpos"><span class="t-lines"><span>fsetpos</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="rewind.html" title="c/io/rewind"><span class="t-lines"><span>rewind</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">错误处理</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="clearerr.html" title="c/io/clearerr"><span class="t-lines"><span>clearerr</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="feof.html" title="c/io/feof"><span class="t-lines"><span>feof</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ferror.html" title="c/io/ferror"><span class="t-lines"><span>ferror</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="perror.html" title="c/io/perror"><span class="t-lines"><span>perror</span></span></a></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">文件上的操作</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="remove.html" title="c/io/remove"><span class="t-lines"><span>remove</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tmpfile.html" title="c/io/tmpfile"><span class="t-lines"><span>tmpfile</span><span>tmpfile_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="rename.html" title="c/io/rename"><span class="t-lines"><span>rename</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>tmpnam</span><span>tmpnam_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/stdio.html" title="c/header/stdio"><tt>&lt;stdio.h&gt;</tt></a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">tmpnam</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (1) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl t-since-c11">
+<td> <div><div style="max-width: min(calc(7.68332px * 52 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">errno_t</span><span class="w"> </span><span class="nf">tmpnam_s</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">filename_s</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">maxsize</span><span class="p">);</span>
+</pre></div></div></td>
+<td> (2) </td>
+<td> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span> </td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 32 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define TMP_MAX        </span><span class="cm">/* 未指明 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl t-since-c11">
+<td> <div><div style="max-width: min(calc(7.68332px * 32 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define TMP_MAX_S      </span><span class="cm">/* 未指明 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span> </td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 32 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define L_tmpnam       </span><span class="cm">/* 未指明 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl t-since-c11">
+<td> <div><div style="max-width: min(calc(7.68332px * 32 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define L_tmpnam_s     </span><span class="cm">/* 未指明 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span> </td>
+</tr>
+
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<div class="t-li1"><span class="t-li">1)</span> 创建独有的合法文件名（长度不长于 <span class="t-lc">L_tmpnam</span>）并将它存储于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">filename</span></code></span> 所指向的字符串。此函数足以生成至多 <span class="t-lc">TMP_MAX</span> 个独有文件名，但它们中的一部分甚至全部可能正在文件系统中使用，从而不适合作为返回值。</div>
+<div class="t-li1"><span class="t-li">2)</span> 同 <span class="t-v">(1)</span>，但至多可以创建 <span class="t-lc">TMP_MAX_S</span> 个长度不长于 <span class="t-lc">L_tmpnam_s</span> 的文件名，而且在运行时检测下列错误，并调用当前安装的<a href="../error/set_constraint_handler_s.html" title="c/error/set constraint handler s">约束处理函数</a>：
+<dl><dd><ul><li><span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">filename_s</span></code></span> 是空指针</li>
+<li><span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">maxsize</span></code></span> 大于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">RSIZE_MAX</span></code></span></li>
+<li><span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">maxsize</span></code></span> 小于生成文件名字符串的长度</li></ul></dd>
+<dd>同所有边界检查函数，<code>tmpnam_s</code>，仅若实现定义 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">__STDC_LIB_EXT1__</span></code></span> 且用户在包含 <a href="../header/stdio.html" title="c/header/stdio"><tt>&lt;stdio.h&gt;</tt></a> 前定义 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">__STDC_WANT_LIB_EXT1__</span></code></span> 为整数常量 1 才保证可用。</dd></dl></div>
+<p><span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">tmpnam</span></code></span> 和 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">tmpnam_s</span></code></span> 修改静态状态（可能会在这些函数间共享），而且不要求是线程安全的。
+</p>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>filename
+</td>
+<td>-
+</td>
+<td>指向足以保有至少 <span class="t-lc">L_tmpnam</span> 字节的字符数组的指针，将以数组为结果缓冲区。若传递空指针，则返回指向内部静态缓冲区的指针。
+</td></tr>
+<tr class="t-par">
+<td>filename_s
+</td>
+<td>-
+</td>
+<td>指向足以保有至少 <span class="t-lc">L_tmpnam_s</span> 字节的字符数组的指针，将以数组为结果缓冲区。
+</td></tr>
+<tr class="t-par">
+<td>maxsize
+</td>
+<td>-
+</td>
+<td>允许函数写入的最大字节数（典型地为 <code>filename_s</code> 数组的大小）。
+</td></tr></tbody></table>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC"></span><span class="mw-headline" id="返回值">返回值</span></h3>
+<div class="t-li1"><span class="t-li">1)</span> 若 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">filename</span></code></span> 不是空指针则为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">filename</span></code></span> 。否则为指向内部静态缓冲区的指针。若不能生成适合的文件名，则返回空指针。</div>
+<div class="t-li1"><span class="t-li">2)</span> 成功时返回零并将文件名写入 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">filename_s</span></code></span> 。失败时，返回非零并将空字符写入 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">filename_s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></code></span> （仅若 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">filename_s</span></code></span> 非空且 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">maxsize</span></code></span> 非零且不大于 <span class="t-lc">RSIZE_MAX</span> ）。</div>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>尽管 <code>tmpnam</code> 所生成的文件名难以猜测，却可能是另一个进程在 <code>tmpnam</code> 返回的时刻和此函程序试图使用返回的名称创建文件之间创建的文件的名称。标准函数 <span class="t-lc">tmpfile</span> 和 POSIX 函数 <a rel="nofollow" class="external text" href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/mkdtemp.html"><code>mkstemp</code></a> 无此问题（仅使用 C 标准库创建一个独有的目录仍然要求使用 <code>tmpnam</code> ）。
+</p><p>POSIX 系统额外定义名称类似的函数 <code><a rel="nofollow" class="external text" href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/tempnam.html"><code>tempnam</code></a></code> ，它提供对目录的选择（默认是可选定义的宏 <code><a rel="nofollow" class="external text" href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdio.h.html"><code>P_tmpdir</code></a></code> ）。
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// 注意，编译器/连接器可能会发出安全警告，比如 GCC：</span>
+<span class="w">    </span><span class="c1">// "warning: the use of `tmpnam' is dangerous, better use `mkstemp'"</span>
+<span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">name1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmpnam</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"temporary file name: %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">name1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">name2</span><span class="p">[</span><span class="n">L_tmpnam</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmpnam</span><span class="p">(</span><span class="n">name2</span><span class="p">))</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"temporary file name: %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">name2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// POSIX 提供了 mkstemp。</span>
+<span class="w">    </span><span class="c1">// 由于未出现于 &lt;stdlib.h&gt;，可能需要以下声明。</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mkstemp</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">name3</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/tmp/fileXXXXXX"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 需要至少六个 'X' ^_^</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">file_descriptor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mkstemp</span><span class="p">(</span><span class="n">name3</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file_descriptor</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"temporary file name: %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">name3</span><span class="p">);</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">perror</span><span class="p">(</span><span class="s">"mkstemp"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>可能的输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>temporary file name: /tmp/file90dLlR
+temporary file name: /tmp/fileY9LWAg
+temporary file name: /tmp/filexgv8PF
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-23">
+<ul><li>C23 标准（ISO/IEC 9899:2024）：</li></ul>
+<dl><dd><ul><li>7.21.4.4 The tmpnam function （第 TBD 页）</li></ul></dd></dl>
+<dl><dd><ul><li>K.3.5.1.2 The tmpnam_s function （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>7.21.4.4 The tmpnam function （第 222 页）</li></ul></dd></dl>
+<dl><dd><ul><li>K.3.5.1.2 The tmpnam_s function （第 427-428 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>7.21.4.4 The tmpnam function （第 303-304 页）</li></ul></dd></dl>
+<dl><dd><ul><li>K.3.5.1.2 The tmpnam_s function （第 587-588 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>7.19.4.4 The tmpnam function （第 269-270 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c89">
+<ul><li>C89/C90 标准（ISO/IEC 9899:1990）：</li></ul>
+<dl><dd><ul><li>4.9.4.4 The tmpnam function</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="tmpfile.html" title="c/io/tmpfile"> <span class="t-lines"><span>tmpfile</span><span>tmpfile_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>返回指向临时文件的指针 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>tmpnam</span></span> 的 <span><span><a href="../../cpp/io/c/tmpnam.html" title="cpp/io/c/tmpnam">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422011801
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.151 seconds
+Real time usage: 2.602 seconds
+Preprocessor visited node count: 6716/1000000
+Post‐expand include size: 192993/4194304 bytes
+Template argument size: 40021/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 23/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 8777/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2558.626      1 -total
+ 42.08% 1076.616      6 Template:dcl
+ 40.75% 1042.566     15 Template:c
+ 14.13%  361.422      1 Template:example
+ 14.08%  360.309      2 Template:source
+  1.61%   41.101      1 Template:c/io/navbar
+  1.59%   40.556      1 Template:navbar
+  1.34%   34.322      1 Template:c/io/navbar_content
+  1.04%   26.645     49 Template:nv_ln
+  1.00%   25.515     66 Template:nv
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1011-0!canonical!zh and timestamp 20260422011801 and revision id 80428. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/io/tmpnam">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2682,"wgPageParseReport":{"limitreport":{"cputime":"0.151","walltime":"2.602","ppvisitednodes":{"value":6716,"limit":1000000},"postexpandincludesize":{"value":192993,"limit":4194304},"templateargumentsize":{"value":40021,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":23,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":8777,"limit":5000000},"timingprofile":["100.00% 2558.626      1 -total"," 42.08% 1076.616      6 Template:dcl"," 40.75% 1042.566     15 Template:c"," 14.13%  361.422      1 Template:example"," 14.08%  360.309      2 Template:source","  1.61%   41.101      1 Template:c/io/navbar","  1.59%   40.556      1 Template:navbar","  1.34%   34.322      1 Template:c/io/navbar_content","  1.04%   26.645     49 Template:nv_ln","  1.00%   25.515     66 Template:nv"]},"cachereport":{"timestamp":"20260422011801","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422011801 -->
+</html>

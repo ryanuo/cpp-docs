@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>标准库标头 &lt;text_encoding&gt; (C++26)</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"68d41c590d35aed90ea53fef","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/header/text_encoding","wgTitle":"cpp/header/text encoding","wgCurRevisionId":97303,"wgRevisionId":97303,"wgArticleId":15776,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/header/text_encoding","wgRelevantArticleId":15776,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_header_text_encoding rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">标准库标头</span> &lt;text_encoding&gt; <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../header.html" title="cpp/header">header</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../standard_library.html" title="cpp/standard library">标准库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="cpp/header">标准库标头</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../named_req.html" title="cpp/named req">具名要求</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../feature_test.html" title="cpp/feature test">功能特性测试宏</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html#%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81" title="cpp/utility">语言支持库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="cpp/error">诊断库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="cpp/memory">内存管理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../meta.html" title="cpp/meta">元编程库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html" title="cpp/utility">通用工具库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../container.html" title="cpp/container">容器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../iterator.html" title="cpp/iterator">迭代器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../ranges.html" title="cpp/ranges">范围库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="cpp/algorithm">算法库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="cpp/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../text.html" title="cpp/text">文本处理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="cpp/numeric">数值库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="cpp/chrono">日期和时间库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="cpp/io">输入/输出库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="cpp/thread">并发支持库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../execution.html" title="cpp/execution">执行控制库</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../header.html" title="cpp/header">标准库头</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81%E5%BA%93" title="cpp/header">语言支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cfloat.html" title="cpp/header/cfloat"><tt>&lt;cfloat&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="climits.html" title="cpp/header/climits"><tt>&lt;climits&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="compare.html" title="cpp/header/compare"><tt>&lt;compare&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="contracts.html" title="cpp/header/contracts"><tt>&lt;contracts&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="coroutine.html" title="cpp/header/coroutine"><tt>&lt;coroutine&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="csetjmp.html" title="cpp/header/csetjmp"><tt>&lt;csetjmp&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="csignal.html" title="cpp/header/csignal"><tt>&lt;csignal&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cstdarg.html" title="cpp/header/cstdarg"><tt>&lt;cstdarg&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cstddef.html" title="cpp/header/cstddef"><tt>&lt;cstddef&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cstdint.html" title="cpp/header/cstdint"><tt>&lt;cstdint&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cstdlib.html" title="cpp/header/cstdlib"><tt>&lt;cstdlib&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="exception.html" title="cpp/header/exception"><tt>&lt;exception&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="initializer_list.html" title="cpp/header/initializer list"><tt>&lt;initializer_list&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">   </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="limits.html" title="cpp/header/limits"><tt>&lt;limits&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="new.html" title="cpp/header/new"><tt>&lt;new&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="source_location.html" title="cpp/header/source location"><tt>&lt;source_location&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdfloat.html" title="cpp/header/stdfloat"><tt>&lt;stdfloat&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="typeinfo.html" title="cpp/header/typeinfo"><tt>&lt;typeinfo&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="version.html" title="cpp/header/version"><tt>&lt;version&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E6%A6%82%E5%BF%B5%E5%BA%93" title="cpp/header">概念</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="concepts.html" title="cpp/header/concepts"><tt>&lt;concepts&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E8%AF%8A%E6%96%AD%E5%BA%93" title="cpp/header">诊断</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cassert.html" title="cpp/header/cassert"><tt>&lt;cassert&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cerrno.html" title="cpp/header/cerrno"><tt>&lt;cerrno&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="debugging.html" title="cpp/header/debugging"><tt>&lt;debugging&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stacktrace.html" title="cpp/header/stacktrace"><tt>&lt;stacktrace&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdexcept.html" title="cpp/header/stdexcept"><tt>&lt;stdexcept&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="system_error.html" title="cpp/header/system error"><tt>&lt;system_error&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%BA%93" title="cpp/header">内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="memory.html" title="cpp/header/memory"><tt>&lt;memory&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="memory_resource.html" title="cpp/header/memory resource"><tt>&lt;memory_resource&gt;</tt></a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="scoped_allocator.html" title="cpp/header/scoped allocator"><tt>&lt;scoped_allocator&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E5%85%83%E7%BC%96%E7%A8%8B%E5%BA%93" title="cpp/header">元编程</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="type_traits.html" title="cpp/header/type traits"><tt>&lt;type_traits&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ratio.html" title="cpp/header/ratio"><tt>&lt;ratio&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E5%BA%93" title="cpp/header">通用工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="any.html" title="cpp/header/any"><tt>&lt;any&gt;</tt></a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="bitset.html" title="cpp/header/bitset"><tt>&lt;bitset&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="bit.html" title="cpp/header/bit"><tt>&lt;bit&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="charconv.html" title="cpp/header/charconv"><tt>&lt;charconv&gt;</tt></a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="expected.html" title="cpp/header/expected"><tt>&lt;expected&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="format.html" title="cpp/header/format"><tt>&lt;format&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="functional.html" title="cpp/header/functional"><tt>&lt;functional&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="optional.html" title="cpp/header/optional"><tt>&lt;optional&gt;</tt></a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/header/stdbit.h（页面不存在）"><tt>&lt;stdbit.h&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tuple.html" title="cpp/header/tuple"><tt>&lt;tuple&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="typeindex.html" title="cpp/header/typeindex"><tt>&lt;typeindex&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="variant.html" title="cpp/header/variant"><tt>&lt;variant&gt;</tt></a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E5%AE%B9%E5%99%A8%E5%BA%93" title="cpp/header">容器</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="array.html" title="cpp/header/array"><tt>&lt;array&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="deque.html" title="cpp/header/deque"><tt>&lt;deque&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="flat_map.html" title="cpp/header/flat map"><tt>&lt;flat_map&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="flat_set.html" title="cpp/header/flat set"><tt>&lt;flat_set&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="forward_list.html" title="cpp/header/forward list"><tt>&lt;forward_list&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="hive.html" title="cpp/header/hive"><tt>&lt;hive&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="inplace_vector.html" title="cpp/header/inplace vector"><tt>&lt;inplace_vector&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">   </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="list.html" title="cpp/header/list"><tt>&lt;list&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="map.html" title="cpp/header/map"><tt>&lt;map&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="mdspan.html" title="cpp/header/mdspan"><tt>&lt;mdspan&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="queue.html" title="cpp/header/queue"><tt>&lt;queue&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="set.html" title="cpp/header/set"><tt>&lt;set&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="span.html" title="cpp/header/span"><tt>&lt;span&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stack.html" title="cpp/header/stack"><tt>&lt;stack&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="unordered_map.html" title="cpp/header/unordered map"><tt>&lt;unordered_map&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="unordered_set.html" title="cpp/header/unordered set"><tt>&lt;unordered_set&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="vector.html" title="cpp/header/vector"><tt>&lt;vector&gt;</tt></a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%BA%93" title="cpp/header">迭代器</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="iterator.html" title="cpp/header/iterator"><tt>&lt;iterator&gt;</tt></a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E8%8C%83%E5%9B%B4%E5%BA%93" title="cpp/header">范围</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="generator.html" title="cpp/header/generator"><tt>&lt;generator&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ranges.html" title="cpp/header/ranges"><tt>&lt;ranges&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E7%AE%97%E6%B3%95%E5%BA%93" title="cpp/header">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="algorithm.html" title="cpp/header/algorithm"><tt>&lt;algorithm&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="numeric.html" title="cpp/header/numeric"><tt>&lt;numeric&gt;</tt></a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BA%93" title="cpp/header">字符串</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cctype.html" title="cpp/header/cctype"><tt>&lt;cctype&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cstring.html" title="cpp/header/cstring"><tt>&lt;cstring&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cuchar.html" title="cpp/header/cuchar"><tt>&lt;cuchar&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cwchar.html" title="cpp/header/cwchar"><tt>&lt;cwchar&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cwctype.html" title="cpp/header/cwctype"><tt>&lt;cwctype&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string_view.html" title="cpp/header/string view"><tt>&lt;string_view&gt;</tt></a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string.html" title="cpp/header/string"><tt>&lt;string&gt;</tt></a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86%E5%BA%93" title="cpp/header">文本处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="clocale.html" title="cpp/header/clocale"><tt>&lt;clocale&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="codecvt.html" title="cpp/header/codecvt"><tt>&lt;codecvt&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C++17 中弃用, C++26 中移除">C++11/17/26*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="locale.html" title="cpp/header/locale"><tt>&lt;locale&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="regex.html" title="cpp/header/regex"><tt>&lt;regex&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink"><tt>&lt;text_encoding&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">   </code></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E6%95%B0%E5%80%BC%E5%BA%93%E6%95%B0%E5%80%BC" title="cpp/header">cpp/header#数值库数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cfenv.html" title="cpp/header/cfenv"><tt>&lt;cfenv&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cmath.html" title="cpp/header/cmath"><tt>&lt;cmath&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="complex.html" title="cpp/header/complex"><tt>&lt;complex&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="linalg.html" title="cpp/header/linalg"><tt>&lt;linalg&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="numbers.html" title="cpp/header/numbers"><tt>&lt;numbers&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="random.html" title="cpp/header/random"><tt>&lt;random&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="simd.html" title="cpp/header/simd"><tt>&lt;simd&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdckdint.h.html" title="cpp/header/stdckdint.h"><tt>&lt;stdckdint.h&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="valarray.html" title="cpp/header/valarray"><tt>&lt;valarray&gt;</tt></a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E6%97%B6%E9%97%B4%E5%BA%93" title="cpp/header">时间</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="chrono.html" title="cpp/header/chrono"><tt>&lt;chrono&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ctime.html" title="cpp/header/ctime"><tt>&lt;ctime&gt;</tt></a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#C_%E5%85%BC%E5%AE%B9%E6%80%A7%E6%A0%87%E5%A4%B4" title="cpp/header">C 兼容性</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ccomplex.html" title="cpp/header/ccomplex"><tt>&lt;ccomplex&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C++17 中弃用, C++20 中移除">C++11/17/20*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ciso646.html" title="cpp/header/ciso646"><tt>&lt;ciso646&gt;</tt></a> <span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cstdalign.html" title="cpp/header/cstdalign"><tt>&lt;cstdalign&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C++17 中弃用, C++20 中移除">C++11/17/20*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cstdbool.html" title="cpp/header/cstdbool"><tt>&lt;cstdbool&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C++17 中弃用, C++20 中移除">C++11/17/20*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ctgmath.html" title="cpp/header/ctgmath"><tt>&lt;ctgmath&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C++17 中弃用, C++20 中移除">C++11/17/20*</span>)</span></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E8%BE%93%E5%85%A5/%E8%BE%93%E5%87%BA%E5%BA%93" title="cpp/header">输入/输出</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cinttypes.html" title="cpp/header/cinttypes"><tt>&lt;cinttypes&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="cstdio.html" title="cpp/header/cstdio"><tt>&lt;cstdio&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="filesystem.html" title="cpp/header/filesystem"><tt>&lt;filesystem&gt;</tt></a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="fstream.html" title="cpp/header/fstream"><tt>&lt;fstream&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="iomanip.html" title="cpp/header/iomanip"><tt>&lt;iomanip&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="iosfwd.html" title="cpp/header/iosfwd"><tt>&lt;iosfwd&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="iostream.html" title="cpp/header/iostream"><tt>&lt;iostream&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ios.html" title="cpp/header/ios"><tt>&lt;ios&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="istream.html" title="cpp/header/istream"><tt>&lt;istream&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ostream.html" title="cpp/header/ostream"><tt>&lt;ostream&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="print.html" title="cpp/header/print"><tt>&lt;print&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="spanstream.html" title="cpp/header/spanstream"><tt>&lt;spanstream&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="sstream.html" title="cpp/header/sstream"><tt>&lt;sstream&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="streambuf.html" title="cpp/header/streambuf"><tt>&lt;streambuf&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="strstream.html" title="cpp/header/strstream"><tt>&lt;strstream&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C++98 中弃用, C++26 中移除">C++98/26*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="syncstream.html" title="cpp/header/syncstream"><tt>&lt;syncstream&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E5%B9%B6%E5%8F%91%E6%94%AF%E6%8C%81%E5%BA%93" title="cpp/header">并发支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="atomic.html" title="cpp/header/atomic"><tt>&lt;atomic&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="barrier.html" title="cpp/header/barrier"><tt>&lt;barrier&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="condition_variable.html" title="cpp/header/condition variable"><tt>&lt;condition_variable&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="future.html" title="cpp/header/future"><tt>&lt;future&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="hazard_pointer.html" title="cpp/header/hazard pointer"><tt>&lt;hazard_pointer&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="latch.html" title="cpp/header/latch"><tt>&lt;latch&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="mutex.html" title="cpp/header/mutex"><tt>&lt;mutex&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="rcu.html" title="cpp/header/rcu"><tt>&lt;rcu&gt;</tt></a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="semaphore.html" title="cpp/header/semaphore"><tt>&lt;semaphore&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="shared_mutex.html" title="cpp/header/shared mutex"><tt>&lt;shared_mutex&gt;</tt></a> <span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdatomic.h.html" title="cpp/header/stdatomic.h"><tt>&lt;stdatomic.h&gt;</tt></a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stop_token.html" title="cpp/header/stop token"><tt>&lt;stop_token&gt;</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="thread.html" title="cpp/header/thread"><tt>&lt;thread&gt;</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../header.html#%E5%A4%9A%E7%94%A8%E9%80%94%E6%A0%87%E5%A4%B4" title="cpp/header">执行支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="execution.html" title="cpp/header/execution"><tt>&lt;execution&gt;</tt></a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>此标头是<a href="../text.html" title="cpp/text">文本处理</a>库的一部分。
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr>
+<td colspan="2"><h3><span id=".E7.B1.BB.E5.9E.8B"></span><span class="mw-headline" id="类型">类型</span></h3>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../text/text_encoding.html" title="cpp/text/text encoding"> <span class="t-lines"><span>text_encoding</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>描述了用于访问 <a rel="nofollow" class="external text" href="https://www.iana.org/assignments/character-sets/character-sets.xhtml">IANA 字符集注册表</a>的接口。 <br> <span class="t-mark" style="white-space: nowrap;">(类)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../text/text_encoding/hash.html" title="cpp/text/text encoding/hash"> <span class="t-lines"><span>std::hash<span class="t-dsc-small">&lt;std::text_encoding&gt;</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td><a href="../text/text_encoding.html" title="cpp/text/text encoding"><tt>std::text_encoding</tt></a> 的散列支持 <br> <span class="t-mark" style="white-space: nowrap;">(类模板特化)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span></h3>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// text_encoding</span>
+<span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">text_encoding</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// text_encoding 的散列支持</span>
+<span class="w">  </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">hash</span><span class="p">;</span>
+<span class="w">  </span><span class="k">template</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">hash</span><span class="o">&lt;</span><span class="n">text_encoding</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h4><span id=".E7.B1.BB_std::text_encoding"></span><span class="mw-headline" id="类_std::text_encoding">类 <span class="t-lc">std::text_encoding</span></span></h4>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">text_encoding</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">max_name_length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">63</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 枚举 text_encoding::id</span>
+<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">id</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">int_least32_t</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="cm">/* 见描述 */</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="nc">id</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">text_encoding</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">text_encoding</span><span class="p">(</span><span class="n">string_view</span><span class="w"> </span><span class="n">enc</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">text_encoding</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="nf">mib</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">name</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 类 text_encoding::aliases_view</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">aliases_view</span><span class="p">;</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">aliases_view</span><span class="w"> </span><span class="nf">aliases</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">text_encoding</span><span class="o">&amp;</span><span class="w"> </span><span class="n">encoding</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="n">text_encoding</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">text_encoding</span><span class="o">&amp;</span><span class="w"> </span><span class="n">encoding</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">consteval</span><span class="w"> </span><span class="n">text_encoding</span><span class="w"> </span><span class="nf">literal</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">text_encoding</span><span class="w"> </span><span class="nf">environment</span><span class="p">();</span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="n">id</span><span class="w"> </span><span class="n">i</span><span class="o">&gt;</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">environment_is</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="n">mib_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="o">::</span><span class="n">unknown</span><span class="p">;</span><span class="w">                                              </span><span class="c1">// 仅用于阐释</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">name_</span><span class="p">[</span><span class="n">max_name_length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">                              </span><span class="c1">// 仅用于阐释</span>
+<span class="w">    </span><span class="c1">// 仅用于阐释</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="cm">/*comp-name*/</span><span class="p">(</span><span class="n">string_view</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">string_view</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+<h4><span id=".E7.B1.BB_std::text_encoding::aliases_view"></span><span class="mw-headline" id="类_std::text_encoding::aliases_view">类 <span class="t-lc">std::text_encoding::aliases_view</span></span></h4>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">text_encoding</span><span class="o">::</span><span class="n">aliases_view</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n">view_interface</span><span class="o">&lt;</span><span class="n">text_encoding</span><span class="o">::</span><span class="n">aliases_view</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">constexpr</span><span class="w"> </span><span class="cm">/* 由实现定义 */</span><span class="w"> </span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="k">constexpr</span><span class="w"> </span><span class="cm">/* 由实现定义 */</span><span class="w"> </span><span class="n">end</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<h4><span id=".E6.9E.9A.E4.B8.BE_std::text_encoding::id"></span><span class="mw-headline" id="枚举_std::text_encoding::id">枚举 <span class="t-lc">std::text_encoding::id</span></span></h4>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">text_encoding</span><span class="o">::</span><span class="n">id</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">int_least32_t</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">unknown</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ASCII</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatin1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatin2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatin3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatin4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatinCyrillic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatinArabic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatinGreek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatinHebrew</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatin5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOLatin6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISOTextComm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span>
+<span class="w">    </span><span class="n">HalfWidthKatakana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
+<span class="w">    </span><span class="n">JISEncoding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ShiftJIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EUCPkdFmtJapanese</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EUCFixWidJapanese</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO4UnitedKingdom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO11SwedishForNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO15Italian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO17Spanish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO21German</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO60DanishNorwegian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO69French</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO10646UTF1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO646basic1983</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span>
+<span class="w">    </span><span class="n">INVARIANT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO2IntlRefVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span><span class="n">NATSSEFI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span>
+<span class="w">    </span><span class="n">NATSSEFIADD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO10Swedish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KSC56011987</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO2022KR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EUCKR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO2022JP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO2022JP2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO13JISC6220jp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO14JISC6220ro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO16Portuguese</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO18Greek7Old</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO19LatinGreek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO25French</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">46</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO27LatinGreek1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO5427Cyrillic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO42JISC62261978</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">49</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO47BSViewdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO49INIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">51</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO50INIS8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO51INISCyrillic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">53</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO54271981</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">54</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO5428Greek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO57GB1988</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO58GB231280</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO61Norwegian2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">58</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO70VideotexSupp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">59</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO84Portuguese2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO85Spanish2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">61</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO86Hungarian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">62</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO87JISX0208</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">63</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO88Greek7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO89ASMO449</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO90</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">66</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO91JISC62291984a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO92JISC62991984b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">68</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO93JIS62291984badd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">69</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO94JIS62291984hand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO95JIS62291984handadd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">71</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO96JISC62291984kana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO2033</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO99NAPLPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO102T617bit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO103T618bit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">76</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO111ECMACyrillic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">77</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO121Canadian1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">78</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO122Canadian2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">79</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO123CSAZ24341985gr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO88596E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">81</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO88596I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">82</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO128T101G2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">83</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO88598E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO88598I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO139CSN369103</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">86</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO141JUSIB1002</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">87</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO143IECP271</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO146Serbian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">89</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO147Macedonian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO150</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">91</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO151Cuba</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">92</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO6937Add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">93</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO153GOST1976874</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">94</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO8859Supp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO10367Box</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO158Lap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">97</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO159JISX02121990</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">98</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO646Danish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span>
+<span class="w">    </span><span class="n">USDK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DKUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KSC5636</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Unicode11UTF7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">103</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO2022CN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">104</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO2022CNEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">105</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UTF8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">106</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO885913</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">109</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO885914</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO885915</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">111</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO885916</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">112</span><span class="p">,</span>
+<span class="w">    </span><span class="n">GBK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">113</span><span class="p">,</span>
+<span class="w">    </span><span class="n">GB18030</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span>
+<span class="w">    </span><span class="n">OSDEBCDICDF0415</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">115</span><span class="p">,</span>
+<span class="w">    </span><span class="n">OSDEBCDICDF03IRV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">116</span><span class="p">,</span>
+<span class="w">    </span><span class="n">OSDEBCDICDF041</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">117</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ISO115481</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">118</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KZ1048</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">119</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UCS2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UCS4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1001</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UnicodeASCII</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1002</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UnicodeLatin1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1003</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UnicodeJapanese</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1004</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UnicodeIBM1261</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1005</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UnicodeIBM1268</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1006</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UnicodeIBM1276</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1007</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UnicodeIBM1264</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1008</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UnicodeIBM1265</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1009</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Unicode11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1010</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SCSU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1011</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UTF7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1012</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UTF16BE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1013</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UTF16LE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1014</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UTF16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1015</span><span class="p">,</span>
+<span class="w">    </span><span class="n">CESU8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1016</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UTF32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1017</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UTF32BE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1018</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UTF32LE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1019</span><span class="p">,</span>
+<span class="w">    </span><span class="n">BOCU1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1020</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UTF7IMAP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1021</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Windows30Latin1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Windows31Latin1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2001</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Windows31Latin2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2002</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Windows31Latin5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2003</span><span class="p">,</span>
+<span class="w">    </span><span class="n">HPRoman8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2004</span><span class="p">,</span>
+<span class="w">    </span><span class="n">AdobeStandardEncoding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2005</span><span class="p">,</span>
+<span class="w">    </span><span class="n">VenturaUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2006</span><span class="p">,</span>
+<span class="w">    </span><span class="n">VenturaInternational</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2007</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DECMCS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2008</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PC850Multilingual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2009</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PC8DanishNorwegian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2012</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PC862LatinHebrew</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2013</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PC8Turkish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2014</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBMSymbols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBMThai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span>
+<span class="w">    </span><span class="n">HPLegal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2017</span><span class="p">,</span>
+<span class="w">    </span><span class="n">HPPiFont</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span>
+<span class="w">    </span><span class="n">HPMath8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2019</span><span class="p">,</span>
+<span class="w">    </span><span class="n">HPPSMath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2020</span><span class="p">,</span>
+<span class="w">    </span><span class="n">HPDesktop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2021</span><span class="p">,</span>
+<span class="w">    </span><span class="n">VenturaMath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2022</span><span class="p">,</span>
+<span class="w">    </span><span class="n">MicrosoftPublishing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2023</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Windows31J</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2024</span><span class="p">,</span>
+<span class="w">    </span><span class="n">GB2312</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2025</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Big5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2026</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Macintosh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2027</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM037</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2028</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM038</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2029</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM273</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2030</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM274</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2031</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM275</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2032</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM277</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2033</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM278</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2034</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM280</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2035</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM281</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2036</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM284</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2037</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM285</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2038</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM290</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2039</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM297</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2040</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM420</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2041</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM423</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2042</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM424</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2043</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PC8CodePage437</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2011</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM500</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2044</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM851</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2045</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PCp852</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2010</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM855</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2046</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM857</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2047</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM860</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2048</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM861</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2049</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM863</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2050</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM864</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2051</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM865</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2052</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM868</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2053</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM869</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2054</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM870</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2055</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM871</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2056</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM880</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2057</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM891</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2058</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM903</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2059</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM904</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2060</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM905</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2061</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM918</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2062</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM1026</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2063</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBMEBCDICATDE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2064</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICATDEA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2065</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICCAFR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2066</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICDKNO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2067</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICDKNOA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2068</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICFISE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2069</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICFISEA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2070</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICFR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2071</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2072</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICPT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2073</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2074</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICESA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2075</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICESS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2076</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICUK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2077</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EBCDICUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2078</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Unknown8BiT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2079</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Mnemonic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2080</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Mnem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2081</span><span class="p">,</span>
+<span class="w">    </span><span class="n">VISCII</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2082</span><span class="p">,</span>
+<span class="w">    </span><span class="n">VIQR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2083</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KOI8R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2084</span><span class="p">,</span>
+<span class="w">    </span><span class="n">HZGB2312</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2085</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM866</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2086</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PC775Baltic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2087</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KOI8U</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2088</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM00858</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2089</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM00924</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2090</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01140</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2091</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01141</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2092</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01142</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2093</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01143</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2094</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01144</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2095</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01145</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2096</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01146</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2097</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01147</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2098</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01148</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2099</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM01149</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2100</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Big5HKSCS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2101</span><span class="p">,</span>
+<span class="w">    </span><span class="n">IBM1047</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2102</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PTCP154</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2103</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Amiga1251</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2104</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KOI7switched</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2105</span><span class="p">,</span>
+<span class="w">    </span><span class="n">BRF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2106</span><span class="p">,</span>
+<span class="w">    </span><span class="n">TSCII</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2107</span><span class="p">,</span>
+<span class="w">    </span><span class="n">CP51932</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2108</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows874</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2109</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows1250</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2250</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows1251</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2251</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows1252</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2252</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows1253</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2253</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows1254</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2254</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows1255</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2255</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows1256</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2256</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows1257</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2257</span><span class="p">,</span>
+<span class="w">    </span><span class="n">windows1258</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2258</span><span class="p">,</span>
+<span class="w">    </span><span class="n">TIS620</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2259</span><span class="p">,</span>
+<span class="w">    </span><span class="n">CP50220</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2260</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+<!-- 
+NewPP limit report
+Cached time: 20260427040132
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.249 seconds
+Real time usage: 5.082 seconds
+Preprocessor visited node count: 9671/1000000
+Post‐expand include size: 212430/4194304 bytes
+Template argument size: 44565/4194304 bytes
+Highest expansion depth: 26/100
+Expensive parser function count: 4/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 58479/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 4527.972      1 -total
+ 74.99% 3395.713      1 Template:cpp/synopsis/text_encoding
+ 74.64% 3379.501      4 Template:source
+ 19.42%  879.263      1 Template:cpp/header/navbar
+ 19.09%  864.376      1 Template:navbar
+ 16.23%  734.973      1 Template:cpp/header/navbar_content
+ 14.75%  667.925    152 Template:nv
+  9.54%  432.038    124 Template:header
+  3.71%  167.772    124 Template:ltt
+  2.82%  127.827      2 Template:dsc_inc
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:15776-0!canonical!zh and timestamp 20260427040132 and revision id 97303. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/cpp/header/text_encoding">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":6229,"wgPageParseReport":{"limitreport":{"cputime":"0.249","walltime":"5.082","ppvisitednodes":{"value":9671,"limit":1000000},"postexpandincludesize":{"value":212430,"limit":4194304},"templateargumentsize":{"value":44565,"limit":4194304},"expansiondepth":{"value":26,"limit":100},"expensivefunctioncount":{"value":4,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":58479,"limit":5000000},"timingprofile":["100.00% 4527.972      1 -total"," 74.99% 3395.713      1 Template:cpp/synopsis/text_encoding"," 74.64% 3379.501      4 Template:source"," 19.42%  879.263      1 Template:cpp/header/navbar"," 19.09%  864.376      1 Template:navbar"," 16.23%  734.973      1 Template:cpp/header/navbar_content"," 14.75%  667.925    152 Template:nv","  9.54%  432.038    124 Template:header","  3.71%  167.772    124 Template:ltt","  2.82%  127.827      2 Template:dsc_inc"]},"cachereport":{"timestamp":"20260427040132","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260427040132 -->
+</html>

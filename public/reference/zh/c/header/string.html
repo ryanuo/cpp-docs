@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>标准库标头 &lt;string.h&gt;</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"45533f520be081fb9402cb3b","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/header/string","wgTitle":"c/header/string","wgCurRevisionId":99805,"wgRevisionId":99805,"wgArticleId":17048,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/header/string","wgRelevantArticleId":17048,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_header_string rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">标准库标头</span> &lt;string.h&gt;</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../header.html" title="c/header">header</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../header.html" title="c/header">标准库头</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="assert.html" title="c/header/assert"><tt>&lt;assert.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="complex.html" title="c/header/complex"><tt>&lt;complex.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ctype.html" title="c/header/ctype"><tt>&lt;ctype.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="errno.html" title="c/header/errno"><tt>&lt;errno.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="fenv.html" title="c/header/fenv"><tt>&lt;fenv.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="float.html" title="c/header/float"><tt>&lt;float.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="inttypes.html" title="c/header/inttypes"><tt>&lt;inttypes.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span><code>    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="iso646.html" title="c/header/iso646"><tt>&lt;iso646.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="limits.html" title="c/header/limits"><tt>&lt;limits.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="locale.html" title="c/header/locale"><tt>&lt;locale.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="math.html" title="c/header/math"><tt>&lt;math.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="setjmp.html" title="c/header/setjmp"><tt>&lt;setjmp.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="signal.html" title="c/header/signal"><tt>&lt;signal.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdalign.html" title="c/header/stdalign"><tt>&lt;stdalign.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdarg.html" title="c/header/stdarg"><tt>&lt;stdarg.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdatomic.html" title="c/header/stdatomic"><tt>&lt;stdatomic.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code>    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbit.html" title="c/header/stdbit"><tt>&lt;stdbit.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbool.html" title="c/header/stdbool"><tt>&lt;stdbool.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C99*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../../zh.cppreference.com/index.php" class="new" title="c/header/stdckdint（页面不存在）"><tt>&lt;stdckdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stddef.html" title="c/header/stddef"><tt>&lt;stddef.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdint.html" title="c/header/stdint"><tt>&lt;stdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdio.html" title="c/header/stdio"><tt>&lt;stdio.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="stdlib.html" title="c/header/stdlib"><tt>&lt;stdlib.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdmchar.html" title="c/header/stdmchar"><tt>&lt;stdmchar.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(C29)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdnoreturn.html" title="c/header/stdnoreturn"><tt>&lt;stdnoreturn.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink"><tt>&lt;string.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tgmath.html" title="c/header/tgmath"><tt>&lt;tgmath.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="threads.html" title="c/header/threads"><tt>&lt;threads.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="time.html" title="c/header/time"><tt>&lt;time.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="uchar.html" title="c/header/uchar"><tt>&lt;uchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wchar.html" title="c/header/wchar"><tt>&lt;wchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wctype.html" title="c/header/wctype"><tt>&lt;wctype.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>此标题提供了用于处理<a href="../string/byte.html" title="c/string/byte">空终止字节字符串</a>的函数。
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr>
+<td colspan="2"><h3><span id=".E5.AE.8F"></span><span class="mw-headline" id="宏">宏</span></h3>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../types/NULL.html" title="c/types/NULL"> <span class="t-lines"><span>NULL</span></span></a></div></div>
+</td>
+<td>实现定义的空指针常量 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h3><span id=".E7.B1.BB.E5.9E.8B"></span><span class="mw-headline" id="类型">类型</span></h3>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../types/size_t.html" title="c/types/size t"> <span class="t-lines"><span>size_t</span></span></a></div></div>
+</td>
+<td><a href="../language/sizeof.html" title="c/language/sizeof"><tt>sizeof</tt></a> 运算符返回的无符号整数类型 <br> <span class="t-mark" style="white-space: nowrap;">(typedef)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h3><span id=".E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="函数">函数</span></h3>
+</td></tr>
+
+<tr>
+<td colspan="2"><h5><span id=".E5.AD.97.E7.AC.A6.E4.B8.B2.E6.93.8D.E7.BA.B5"></span><span class="mw-headline" id="字符串操纵"> 字符串操纵 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strcpy.html" title="c/string/byte/strcpy"> <span class="t-lines"><span>strcpy</span><span>strcpy_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>复制字符串给另一个 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strncpy.html" title="c/string/byte/strncpy"> <span class="t-lines"><span>strncpy</span><span>strncpy_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>从字符串复制一定数量的字符到另一个 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strcat.html" title="c/string/byte/strcat"> <span class="t-lines"><span>strcat</span><span>strcat_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>连接两个字符串 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strncat.html" title="c/string/byte/strncat"> <span class="t-lines"><span>strncat</span><span>strncat_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>连接两个字符串的一定数量字符 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strxfrm.html" title="c/string/byte/strxfrm"> <span class="t-lines"><span>strxfrm</span></span></a></div></div>
+</td>
+<td>变换字符串，使得 strcmp 会产生同 strcoll 的结果 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strdup.html" title="c/string/byte/strdup"> <span class="t-lines"><span>strdup</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>分配字符串的副本  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strndup.html" title="c/string/byte/strndup"> <span class="t-lines"><span>strndup</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>分配拥有指定大小的字符串副本  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E5.AD.97.E7.AC.A6.E4.B8.B2.E6.A3.80.E9.AA.8C"></span><span class="mw-headline" id="字符串检验"> 字符串检验 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strlen.html" title="c/string/byte/strlen"> <span class="t-lines"><span>strlen</span><span>strnlen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>返回给定字符串的长度 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strcmp.html" title="c/string/byte/strcmp"> <span class="t-lines"><span>strcmp</span></span></a></div></div>
+</td>
+<td>比较两个字符串 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strncmp.html" title="c/string/byte/strncmp"> <span class="t-lines"><span>strncmp</span></span></a></div></div>
+</td>
+<td>比较两个字符串的一定数量字符 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strcoll.html" title="c/string/byte/strcoll"> <span class="t-lines"><span>strcoll</span></span></a></div></div>
+</td>
+<td>比较两个字符串，根据当前本地环境 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strchr.html" title="c/string/byte/strchr"> <span class="t-lines"><span>strchr</span></span></a></div></div>
+</td>
+<td>查找字符的首次出现 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strrchr.html" title="c/string/byte/strrchr"> <span class="t-lines"><span>strrchr</span></span></a></div></div>
+</td>
+<td>查找字符的最后一次出现 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strspn.html" title="c/string/byte/strspn"> <span class="t-lines"><span>strspn</span></span></a></div></div>
+</td>
+<td>返回由另一个字符串中的字符分割的最大起始段长度  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strcspn.html" title="c/string/byte/strcspn"> <span class="t-lines"><span>strcspn</span></span></a></div></div>
+</td>
+<td>返回另一个字符串所不具有的字符分割的最大起始段长度  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strpbrk.html" title="c/string/byte/strpbrk"> <span class="t-lines"><span>strpbrk</span></span></a></div></div>
+</td>
+<td>查找字符串中的任意字符在另一个字符串中的首个位置 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strstr.html" title="c/string/byte/strstr"> <span class="t-lines"><span>strstr</span></span></a></div></div>
+</td>
+<td>查找子串字符的首次出现 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strtok.html" title="c/string/byte/strtok"> <span class="t-lines"><span>strtok</span><span>strtok_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>查找字节字符串中的下一个记号 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E5.AD.97.E7.AC.A6.E6.95.B0.E7.BB.84.E6.93.8D.E7.BA.B5"></span><span class="mw-headline" id="字符数组操纵"> 字符数组操纵 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/memchr.html" title="c/string/byte/memchr"> <span class="t-lines"><span>memchr</span></span></a></div></div>
+</td>
+<td>在数组中搜索字符的首次出现 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/memcmp.html" title="c/string/byte/memcmp"> <span class="t-lines"><span>memcmp</span></span></a></div></div>
+</td>
+<td>比较两块缓冲区 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/memset.html" title="c/string/byte/memset"> <span class="t-lines"><span>memset</span><span>memset_explicit</span><span>memset_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>以字符填充缓冲区 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/memcpy.html" title="c/string/byte/memcpy"> <span class="t-lines"><span>memcpy</span><span>memcpy_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>复制缓冲区到另一个 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/memmove.html" title="c/string/byte/memmove"> <span class="t-lines"><span>memmove</span><span>memmove_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>移动缓冲区到另一个 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/memccpy.html" title="c/string/byte/memccpy"> <span class="t-lines"><span>memccpy</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>复制缓冲区到另一个，在指定的分隔符后停止  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E6.9D.82.E9.A1.B9"></span><span class="mw-headline" id="杂项"> 杂项 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/byte/strerror.html" title="c/string/byte/strerror"> <span class="t-lines"><span>strerror</span><span>strerror_s</span><span>strerrorlen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>返回给定错误码的文本版本 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span></h3>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define __STDC_VERSION_STRING_H__ 202311L</span>
+
+<span class="cp">#define NULL </span><span class="cm">/* 见描述 */</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="kt">size_t</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">memcpy</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">memccpy</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">memmove</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">strcpy</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">strncpy</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">strdup</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">strndup</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">strcat</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">strncat</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">memcmp</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">strcmp</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">strcoll</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">strncmp</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">strxfrm</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="cm">/*QVoid*/</span><span class="o">*</span><span class="w"> </span><span class="n">memchr</span><span class="p">(</span><span class="cm">/*QVoid*/</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="cm">/*QChar*/</span><span class="o">*</span><span class="w"> </span><span class="n">strchr</span><span class="p">(</span><span class="cm">/*QChar*/</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">strcspn</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="cm">/*QChar*/</span><span class="o">*</span><span class="w"> </span><span class="n">strpbrk</span><span class="p">(</span><span class="cm">/*QChar*/</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="cm">/*QChar*/</span><span class="o">*</span><span class="w"> </span><span class="n">strrchr</span><span class="p">(</span><span class="cm">/*QChar*/</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">strspn</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="cm">/*QChar*/</span><span class="o">*</span><span class="w"> </span><span class="n">strstr</span><span class="p">(</span><span class="cm">/*QChar*/</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">strtok</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">memset</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">memset_explicit</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">strerror</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">errnum</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">strlen</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">strnlen</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</pre></div>
+<p>仅当实现定义了 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">__STDC_LIB_EXT1__</span></code></span>，并且用户代码在对 <code>&lt;string.h&gt;</code> 的所有包含之前定义了 
+<span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">__STDC_WANT_LIB_EXT1__</span></code></span>：
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#ifdef __STDC_WANT_LIB_EXT1__</span>
+
+<span class="n">tyepdef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">errno_t</span><span class="p">;</span>
+<span class="n">tyepdef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">rsize_t</span><span class="p">;</span>
+
+<span class="n">errno_t</span><span class="w"> </span><span class="nf">memcpy_s</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">s1max</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="n">errno_t</span><span class="w"> </span><span class="nf">memmove_s</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">s1max</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="n">errno_t</span><span class="w"> </span><span class="nf">strcpy_s</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">s1max</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="n">errno_t</span><span class="w"> </span><span class="nf">strncpy_s</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">s1max</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="n">errno_t</span><span class="w"> </span><span class="nf">strcat_s</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">s1max</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="n">errno_t</span><span class="w"> </span><span class="nf">strncat_s</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">s1max</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">strtok_s</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1max</span><span class="p">,</span>
+<span class="w">               </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ptr</span><span class="p">);</span>
+<span class="n">errno_t</span><span class="w"> </span><span class="nf">memset_s</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">smax</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="n">errno_t</span><span class="w"> </span><span class="n">strerror_s</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">rsize_t</span><span class="w"> </span><span class="n">maxsize</span><span class="p">,</span><span class="w"> </span><span class="n">errno_t</span><span class="w"> </span><span class="n">errnum</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">strerrorlen_s</span><span class="p">(</span><span class="n">errno_t</span><span class="w"> </span><span class="n">errnum</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">strnlen_s</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">maxsize</span><span class="p">);</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+<!-- 
+NewPP limit report
+Cached time: 20260422004651
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.134 seconds
+Real time usage: 0.146 seconds
+Preprocessor visited node count: 6330/1000000
+Post‐expand include size: 186943/4194304 bytes
+Template argument size: 35712/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 4/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 22504/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   98.236      1 -total
+ 50.00%   49.116     27 Template:dsc_inc
+ 37.36%   36.704      1 Template:c/header/navbar
+ 36.75%   36.104      1 Template:navbar
+ 29.32%   28.799      1 Template:c/header/navbar_content
+ 27.52%   27.032     49 Template:nv
+ 25.78%   25.322     27 Template:dsc
+ 22.65%   22.246     25 Template:dsc_fun
+ 16.47%   16.178     32 Template:header
+ 11.71%   11.507     27 Template:dsc_member
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:17048-0!canonical!zh and timestamp 20260422004651 and revision id 99805. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/header/string">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":265,"wgPageParseReport":{"limitreport":{"cputime":"0.134","walltime":"0.146","ppvisitednodes":{"value":6330,"limit":1000000},"postexpandincludesize":{"value":186943,"limit":4194304},"templateargumentsize":{"value":35712,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":4,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":22504,"limit":5000000},"timingprofile":["100.00%   98.236      1 -total"," 50.00%   49.116     27 Template:dsc_inc"," 37.36%   36.704      1 Template:c/header/navbar"," 36.75%   36.104      1 Template:navbar"," 29.32%   28.799      1 Template:c/header/navbar_content"," 27.52%   27.032     49 Template:nv"," 25.78%   25.322     27 Template:dsc"," 22.65%   22.246     25 Template:dsc_fun"," 16.47%   16.178     32 Template:header"," 11.71%   11.507     27 Template:dsc_member"]},"cachereport":{"timestamp":"20260422004651","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422004652 -->
+</html>

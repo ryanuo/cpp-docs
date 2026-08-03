@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>代用运算符及记号</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"8035f0964c0f88f562179f06","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/language/operator_alternative","wgTitle":"c/language/operator alternative","wgCurRevisionId":98217,"wgRevisionId":98217,"wgArticleId":7984,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/language/operator_alternative","wgRelevantArticleId":7984,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_language_operator_alternative rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">代用运算符及记号</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../language.html" title="c/language">language</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="c/language">C 语言</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"> <a href="basic_concepts.html" title="c/language/basic concepts">基本概念</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../keyword.html" title="c/keyword">关键词</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../preprocessor.html" title="c/preprocessor">预处理器</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="statements.html" title="c/language/statements">语句</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="expressions.html" title="c/language/expressions">表达式</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="initialization.html" title="c/language/initialization">初始化</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="declarations.html" title="c/language/declarations">声明</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="functions.html" title="c/language/functions">函数</a></td></tr>
+<tr class="t-nv"><td colspan="5"> 杂项</td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="history.html" title="c/language/history">C 的历史</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../experimental.html" title="c/experimental">技术规范</a> </td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>C 源代码可以用任何包含 <a href="https://en.wikipedia.org/wiki/ISO_646" class="extiw" title="enwiki:ISO 646">ISO 646:1983</a> 不变量字符集的 8 位字符集书写，即使是非 ASCII 字符集亦可。然而，几个 C 运算符和标点处于 ISO 646 代码集之外：<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">{, }, [, ], #, \, ^, |, ~</code>。为能使用其中不包含这些符号中的一些或全部的字符编码（例如德文 <a href="https://en.wikipedia.org/wiki/DIN_66003" class="extiw" title="enwiki:DIN 66003">DIN 66003</a>），有两种可能：使用这些字符的代用运算符拼写，或者两或三个 ISO 646 兼容字符的特殊组合，如同单个非 ISO 646 字符般解释它们。
+</p>
+<h2><span id=".E8.BF.90.E7.AE.97.E7.AC.A6.E5.AE.8F_.28C95.29"></span><span class="mw-headline" id="运算符宏_(C95)">运算符宏 <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></h2>
+<p>有使用非 ISO 646 字符的代用拼写，作为宏定义于 <a href="../header/iso646.html" title="c/header/iso646"><tt>&lt;iso646.h&gt;</tt></a>：
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-header">
+<td colspan="2"><div>在标头 <code><a href="../header/iso646.html" title="c/header/iso646"><tt>&lt;iso646.h&gt;</tt></a></code> 定义 </div>
+</td></tr>
+
+<tr class="t-dsc-hitem">
+<td>首选
+</td>
+<td>代用
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&amp;&amp;</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">and</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&amp;=</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">and_eq</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&amp;</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">bitand</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">|</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">bitor</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">~</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">compl</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">!</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">not</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">!=</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">not_eq</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">||</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">or</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">|=</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">or_eq</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">^</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">xor</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">^=</code></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">xor_eq</code> <br> <span class="t-mark" style="white-space: nowrap;">(运算符宏)</span>
+</td></tr>
+
+</tbody></table>
+<p>字符 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">&amp;</span></code></span> 及 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">!</span></code></span> 在 ISO-646 下不变，但仍然为这些运算符提供代用写法，以使这些字符适应更加受限的历史字符集。
+</p><p>没有等于运算符 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">==</span></code></span> 的代用拼写（如 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">eq</span></code></span>），因为字符 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">=</span></code></span> 在所有受支持字符集中都已存在。
+</p>
+<h2><span id=".E4.BB.A3.E7.94.A8.E8.AE.B0.E5.8F.B7_.28C95.29"></span><span class="mw-headline" id="代用记号_(C95)">代用记号 <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></h2>
+<p>下列代用记号是核心语言的一部分，而且在语言的所有方面，每个代用记号表现严格等同于其首选记号，除了其拼写（<a href="../preprocessor/replace.html" title="c/preprocessor/replace">字符串化运算符</a>可令拼写可见）。两个字母的代用记号有时被称为“双标符”（虽然 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">%:%:</span></code></span> 由四个字母长，它也被当做是双标符）。
+</p><p><br>
+</p>
+<table class="wikitable">
+
+<tbody><tr style="text-align: left;">
+<th>首选
+</th>
+<th>代用
+</th></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">{</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&lt;%</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"></code>}</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">%&gt;</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">[</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&lt;:</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">]</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">:&gt;</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">#</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">%:</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">##</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">%:%:</code>
+</td></tr></tbody></table>
+<h2><span id=".E4.B8.89.E6.A0.87.E7.AC.A6_.28C23_.E7.A7.BB.E9.99.A4.29"></span><span class="mw-headline" id="三标符_(C23_移除)">三标符 <span class="t-mark-rev t-until-c23" style="white-space: nowrap;">(C23 移除)</span></span></h2>
+<p>下列三字符组（三标符）<a href="translation_phases.html" title="c/language/translation phases">在辨认注释和字符串字面量之前就被分析</a>，而且每个出现的三标符会被替换为其对应的首选字符：
+</p>
+<table class="wikitable">
+
+<tbody><tr style="text-align: left;">
+<th>首选
+</th>
+<th>三标符
+</th></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">{</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">??&lt;</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"></code>}</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">??&gt;</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">[</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">??(</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">]</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">??)</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">#</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">??=</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">\</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">??/</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">^</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">??'</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">|</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">??!</code>
+</td></tr>
+<tr>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">~</code></td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">??-</code>
+</td></tr></tbody></table>
+<p>因为三标符在早期处理，故如 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="c1">// Will the next line be executed?????/</span></code></span> 的注释可以有效地注释掉下一行，且如 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"What's going on??!"</span></code></span> 的字符串字面量被分析成 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"What's going on|"</span></code></span> 。
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><p>演示来自 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>&lt;iso646.h&gt;</b></code> 的代用运算符拼写，以及双标符和三标符的使用。
+如果命令行实参中包含空格，则应将其包围在引号中：例如 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"Third World!"</span></code></span>。</p><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="o">%:</span><span class="n">include</span><span class="w"> </span><span class="o">&lt;</span><span class="n">stdlib</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
+<span class="o">%:</span><span class="n">include</span><span class="w"> </span><span class="o">&lt;</span><span class="n">stdio</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
+<span class="o">??=</span><span class="n">include</span><span class="w"> </span><span class="o">&lt;</span><span class="n">iso646</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span>
+<span class="o">??&lt;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">argv</span><span class="o">&lt;:</span><span class="mi">1</span><span class="o">:&gt;</span><span class="w"> </span><span class="n">not_eq</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="o">&lt;%</span>
+<span class="w">       </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello %s??/n"</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="o">&lt;:</span><span class="mi">1</span><span class="o">:&gt;</span><span class="p">);</span>
+<span class="w">    </span><span class="o">%&gt;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="o">&lt;%</span>
+<span class="w">       </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello %s??/n"</span><span class="p">,</span><span class="w"> </span><span class="n">argc</span><span class="o">?</span><span class="w"> </span><span class="n">argv</span><span class="o">??</span><span class="p">(</span><span class="mi">42</span><span class="o">??</span><span class="err">'</span><span class="mi">42</span><span class="o">??</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">__FILE__</span><span class="p">);</span>
+<span class="w">    </span><span class="o">%&gt;</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EXIT_SUCCESS</span><span class="p">;</span>
+<span class="o">??&gt;</span>
+</pre></div>
+<p>可能的输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Hello ./a.out
+</pre></div> 
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class=""><span>代用运算符表示</span></span>的 <span><span><a href="../../cpp/language/operator_alternative.html" title="cpp/language/operator alternative">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422094249
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.085 seconds
+Real time usage: 0.268 seconds
+Preprocessor visited node count: 2610/1000000
+Post‐expand include size: 61962/4194304 bytes
+Template argument size: 16502/4194304 bytes
+Highest expansion depth: 16/100
+Expensive parser function count: 12/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5271/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  226.973      1 -total
+ 76.86%  174.446      1 Template:example
+ 75.94%  172.366      2 Template:source
+  5.79%   13.148     11 Template:dsc_macro_opr
+  4.76%   10.815      1 Template:c/language/navbar
+  4.71%   10.687     12 Template:dsc
+  4.42%   10.033      1 Template:navbar
+  2.16%    4.901      1 Template:c/navbar_content
+  1.92%    4.365     10 Template:c
+  1.74%    3.955      1 Template:langlinks
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:7984-0!canonical!zh and timestamp 20260422094249 and revision id 98217. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/language/operator_alternative">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":336,"wgPageParseReport":{"limitreport":{"cputime":"0.085","walltime":"0.268","ppvisitednodes":{"value":2610,"limit":1000000},"postexpandincludesize":{"value":61962,"limit":4194304},"templateargumentsize":{"value":16502,"limit":4194304},"expansiondepth":{"value":16,"limit":100},"expensivefunctioncount":{"value":12,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5271,"limit":5000000},"timingprofile":["100.00%  226.973      1 -total"," 76.86%  174.446      1 Template:example"," 75.94%  172.366      2 Template:source","  5.79%   13.148     11 Template:dsc_macro_opr","  4.76%   10.815      1 Template:c/language/navbar","  4.71%   10.687     12 Template:dsc","  4.42%   10.033      1 Template:navbar","  2.16%    4.901      1 Template:c/navbar_content","  1.92%    4.365     10 Template:c","  1.74%    3.955      1 Template:langlinks"]},"cachereport":{"timestamp":"20260422094249","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422094249 -->
+</html>

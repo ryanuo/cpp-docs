@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>malloc</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"e190ed96f08c431d5a792b6f","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/memory/malloc","wgTitle":"c/memory/malloc","wgCurRevisionId":78898,"wgRevisionId":78898,"wgArticleId":1090,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/memory/malloc","wgRelevantArticleId":1090,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_memory_malloc rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">malloc</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../memory.html" title="c/memory">memory</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../memory.html" title="c/memory">动态内存管理</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>malloc</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="calloc.html" title="c/memory/calloc"><span class="t-lines"><span>calloc</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="realloc.html" title="c/memory/realloc"><span class="t-lines"><span>realloc</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="free.html" title="c/memory/free"><span class="t-lines"><span>free</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="free_sized.html" title="c/memory/free sized"><span class="t-lines"><span>free_sized</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="free_aligned_sized.html" title="c/memory/free aligned sized"><span class="t-lines"><span>free_aligned_sized</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="aligned_alloc.html" title="c/memory/aligned alloc"><span class="t-lines"><span>aligned_alloc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/stdlib.html" title="c/header/stdlib"><tt>&lt;stdlib.h&gt;</tt></a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 28 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">malloc</span><span class="p">(</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>分配 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">size</code> 字节的未初始化内存。
+</p><p>若分配成功，则返回为任何拥有<a href="../language/object.html#%E5%AF%B9%E9%BD%90" title="c/language/object">基础对齐</a>的对象类型对齐的指针。
+</p><p>若 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">size</code> 为零，则 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">malloc</code> 的行为实现是其实现（生成）时定义的。例如可返回空指针。亦可返回非空指针；但不应当<a href="../language/operator_member_access.html" title="c/language/operator member access">解引用</a>这种指针，而且应将它传递给 <span class="t-lc">free</span> 以避免内存泄漏。
+</p>
+<table class="t-rev-begin">
+<tbody><tr class="t-rev t-since-c11"><td>
+<p><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">malloc</code> 是线程安全的：它表现得如同只访问通过其参数可见的内存区域，而非任何静态存储。
+</p><p>解分配一块内存区域的先前 <span class="t-lc">free</span><span class="t-rev-inl t-since-c23"><span>、 <span class="t-lc">free_sized</span> 及 <span class="t-lc">free_aligned_sized</span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span></span></span> 或 <span class="t-lc">realloc</span> 调用<i>同步于</i>分配同一块或部分相同的内存区域的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">malloc</code> 调用。此同步出现于任何通过解分配函数所作的内存访问之后，和任何 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">malloc</code> 所作出的内存访问之前。所有操作每块特定内存区域的分配和解分配函数拥有单独全序。
+</p>
+</td>
+<td><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span></td></tr>
+</tbody></table>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>size
+</td>
+<td>-
+</td>
+<td>要分配的字节数
+</td></tr></tbody></table>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC"></span><span class="mw-headline" id="返回值">返回值</span></h3>
+<p>成功时，返回指向新分配内存的指针。为避免内存泄漏，必须用 <span class="t-lc">free()</span> 或 <span class="t-lc">realloc()</span> 解分配返回的指针。
+</p><p>失败时，返回空指针。
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="c1">   </span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="c1"> </span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span><span class="w">  </span><span class="c1">// 足以分配 4 个 int 的数组</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">[</span><span class="mi">4</span><span class="p">]));</span><span class="w"> </span><span class="c1">// 等价，直接命名数组类型</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">p3</span><span class="p">);</span><span class="w">   </span><span class="c1">// 等价，免去重复类型名</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="c1">// 置入数组</span>
+<span class="w">            </span><span class="n">p1</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="c1">// 打印出来</span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">"p1[%d] == %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">p1</span><span class="p">[</span><span class="n">n</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">p3</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>p1[0] == 0
+p1[1] == 1
+p1[2] == 4
+p1[3] == 9
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>7.22.3.4 The malloc function （第 254 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>7.22.3.4 The malloc function （第 349 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>7.20.3.3 The malloc function （第 314 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c89">
+<ul><li>C89/C90 标准（ISO/IEC 9899:1990）：</li></ul>
+<dl><dd><ul><li>4.10.3.3 The malloc function</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="free.html" title="c/memory/free"> <span class="t-lines"><span>free</span></span></a></div></div>
+</td>
+<td>归还之前分配的内存 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>malloc</span></span> 的 <span><span><a href="../../cpp/memory/c/malloc.html" title="cpp/memory/c/malloc">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260429022324
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.087 seconds
+Real time usage: 0.093 seconds
+Preprocessor visited node count: 1881/1000000
+Post‐expand include size: 43211/4194304 bytes
+Template argument size: 8657/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 3/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5235/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   48.089      1 -total
+ 24.74%   11.899      1 Template:c/memory/navbar
+ 23.48%   11.293      1 Template:navbar
+ 15.75%    7.576      1 Template:ddcl
+ 14.95%    7.189      1 Template:c/memory/thread_safety_note
+ 11.87%    5.707      1 Template:c/memory/navbar_content
+ 10.92%    5.252     24 Template:nv
+  9.88%    4.753      7 Template:nv_ln
+  9.75%    4.689      1 Template:dsc_inc
+  8.46%    4.067      1 Template:c/memory/dsc_free
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1090-0!canonical!zh and timestamp 20260429022324 and revision id 78898. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/memory/malloc">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":217,"wgPageParseReport":{"limitreport":{"cputime":"0.087","walltime":"0.093","ppvisitednodes":{"value":1881,"limit":1000000},"postexpandincludesize":{"value":43211,"limit":4194304},"templateargumentsize":{"value":8657,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":3,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5235,"limit":5000000},"timingprofile":["100.00%   48.089      1 -total"," 24.74%   11.899      1 Template:c/memory/navbar"," 23.48%   11.293      1 Template:navbar"," 15.75%    7.576      1 Template:ddcl"," 14.95%    7.189      1 Template:c/memory/thread_safety_note"," 11.87%    5.707      1 Template:c/memory/navbar_content"," 10.92%    5.252     24 Template:nv","  9.88%    4.753      7 Template:nv_ln","  9.75%    4.689      1 Template:dsc_inc","  8.46%    4.067      1 Template:c/memory/dsc_free"]},"cachereport":{"timestamp":"20260429022324","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260429022324 -->
+</html>

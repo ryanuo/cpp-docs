@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>strdup</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"f5d7beb51a09ef90c162810f","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/string/byte/strdup","wgTitle":"c/string/byte/strdup","wgCurRevisionId":80908,"wgRevisionId":80908,"wgArticleId":13213,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/string/byte/strdup","wgRelevantArticleId":13213,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../../common/ext.css">
+<script async="" src="../../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_string_byte_strdup rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">strdup</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../../string.html" title="c/string">string</a></bdi> | <bdi dir="ltr"><a href="../byte.html" title="c/string/byte">byte</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../string.html" title="c/string">字符串库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../byte.html" title="c/string/byte">空终止字节字符串</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../multibyte.html" title="c/string/multibyte">空终止多字节字符串</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../wide.html" title="c/string/wide">空终止宽字符串</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../byte.html" title="c/string/byte">空终止字节字符串</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h1"><td colspan="5"> 函数</td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 字符操作</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isalnum.html" title="c/string/byte/isalnum"><span class="t-lines"><span>isalnum</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isalpha.html" title="c/string/byte/isalpha"><span class="t-lines"><span>isalpha</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="islower.html" title="c/string/byte/islower"><span class="t-lines"><span>islower</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isupper.html" title="c/string/byte/isupper"><span class="t-lines"><span>isupper</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isdigit.html" title="c/string/byte/isdigit"><span class="t-lines"><span>isdigit</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isxdigit.html" title="c/string/byte/isxdigit"><span class="t-lines"><span>isxdigit</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isblank.html" title="c/string/byte/isblank"><span class="t-lines"><span>isblank</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="iscntrl.html" title="c/string/byte/iscntrl"><span class="t-lines"><span>iscntrl</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isgraph.html" title="c/string/byte/isgraph"><span class="t-lines"><span>isgraph</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isspace.html" title="c/string/byte/isspace"><span class="t-lines"><span>isspace</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isprint.html" title="c/string/byte/isprint"><span class="t-lines"><span>isprint</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ispunct.html" title="c/string/byte/ispunct"><span class="t-lines"><span>ispunct</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tolower.html" title="c/string/byte/tolower"><span class="t-lines"><span>tolower</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="toupper.html" title="c/string/byte/toupper"><span class="t-lines"><span>toupper</span></span></a></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 转换成数值格式</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="atoi.html" title="c/string/byte/atoi"><span class="t-lines"><span>atoi</span><span>atol</span><span>atoll</span></span></a></div><div><span class="t-lines"><span></span><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="atof.html" title="c/string/byte/atof"><span class="t-lines"><span>atof</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strtol.html" title="c/string/byte/strtol"><span class="t-lines"><span>strtol</span><span>strtoll</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strtoul.html" title="c/string/byte/strtoul"><span class="t-lines"><span>strtoul</span><span>strtoull</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strtoimax.html" title="c/string/byte/strtoimax"><span class="t-lines"><span>strtoimax</span><span>strtoumax</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strtof.html" title="c/string/byte/strtof"><span class="t-lines"><span>strtof</span><span>strtod</span><span>strtold</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strfromf.html" title="c/string/byte/strfromf"><span class="t-lines"><span>strfromf</span><span>strfromd</span><span>strfromld</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 字符串操作</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strcpy.html" title="c/string/byte/strcpy"><span class="t-lines"><span>strcpy</span><span>strcpy_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strncpy.html" title="c/string/byte/strncpy"><span class="t-lines"><span>strncpy</span><span>strncpy_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strcat.html" title="c/string/byte/strcat"><span class="t-lines"><span>strcat</span><span>strcat_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strncat.html" title="c/string/byte/strncat"><span class="t-lines"><span>strncat</span><span>strncat_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strxfrm.html" title="c/string/byte/strxfrm"><span class="t-lines"><span>strxfrm</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>strdup</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strndup.html" title="c/string/byte/strndup"><span class="t-lines"><span>strndup</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 字符串检验</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strlen.html" title="c/string/byte/strlen"><span class="t-lines"><span>strlen</span><span>strnlen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strcmp.html" title="c/string/byte/strcmp"><span class="t-lines"><span>strcmp</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strncmp.html" title="c/string/byte/strncmp"><span class="t-lines"><span>strncmp</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strcoll.html" title="c/string/byte/strcoll"><span class="t-lines"><span>strcoll</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strchr.html" title="c/string/byte/strchr"><span class="t-lines"><span>strchr</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strrchr.html" title="c/string/byte/strrchr"><span class="t-lines"><span>strrchr</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strspn.html" title="c/string/byte/strspn"><span class="t-lines"><span>strspn</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strcspn.html" title="c/string/byte/strcspn"><span class="t-lines"><span>strcspn</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strpbrk.html" title="c/string/byte/strpbrk"><span class="t-lines"><span>strpbrk</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strstr.html" title="c/string/byte/strstr"><span class="t-lines"><span>strstr</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strtok.html" title="c/string/byte/strtok"><span class="t-lines"><span>strtok</span><span>strtok_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 内存操作</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memchr.html" title="c/string/byte/memchr"><span class="t-lines"><span>memchr</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memcmp.html" title="c/string/byte/memcmp"><span class="t-lines"><span>memcmp</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memset.html" title="c/string/byte/memset"><span class="t-lines"><span>memset</span><span>memset_explicit</span><span>memset_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memcpy.html" title="c/string/byte/memcpy"><span class="t-lines"><span>memcpy</span><span>memcpy_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memmove.html" title="c/string/byte/memmove"><span class="t-lines"><span>memmove</span><span>memmove_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="memccpy.html" title="c/string/byte/memccpy"><span class="t-lines"><span>memccpy</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 杂项</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strerror.html" title="c/string/byte/strerror"><span class="t-lines"><span>strerror</span><span>strerror_s</span><span>strerrorlen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../../header/string.html" title="c/header/string"><tt>&lt;string.h&gt;</tt></a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl t-since-c23">
+<td> <div><div style="max-width: min(calc(7.68332px * 32 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">strdup</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>返回指向作为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">src</code> 所指向的字符串的副本的空终止字节字符串的指针。如同通过调用 <span class="t-lc">malloc</span> 获得新字符串的空间。必须将返回的指针传递给 <span class="t-lc">free</span> 以避免内存泄漏。
+</p><p>若出现错误，则返回空指针值并可能设置 <span class="t-lc">errno</span>。
+</p>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>src
+</td>
+<td>-
+</td>
+<td>指向要复制的空终止字节字符串的指针
+</td></tr></tbody></table>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC"></span><span class="mw-headline" id="返回值">返回值</span></h3>
+<p>指向新分配的字符串的指针，或若出现错误则为空指针值。
+</p>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>该函数等同于 <a rel="nofollow" class="external text" href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/strdup.html">POSIX strdup</a> 。
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Duplicate me!"</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strdup</span><span class="p">(</span><span class="n">s1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"s2 = </span><span class="se">\"</span><span class="s">%s</span><span class="se">\"\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>s2 = "Duplicate me!"
+</pre></div> 
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="strndup.html" title="c/string/byte/strndup"> <span class="t-lines"><span>strndup</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>分配拥有指定大小的字符串副本  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="strcpy.html" title="c/string/byte/strcpy"> <span class="t-lines"><span>strcpy</span><span>strcpy_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>复制字符串给另一个 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../memory/malloc.html" title="c/memory/malloc"> <span class="t-lines"><span>malloc</span></span></a></div></div>
+</td>
+<td>分配内存 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../memory/free.html" title="c/memory/free"> <span class="t-lines"><span>free</span></span></a></div></div>
+</td>
+<td>归还之前分配的内存 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422075839
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.101 seconds
+Real time usage: 0.113 seconds
+Preprocessor visited node count: 4642/1000000
+Post‐expand include size: 143753/4194304 bytes
+Template argument size: 24591/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 3/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2561/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   72.510      1 -total
+ 52.74%   38.241      1 Template:c/string/byte/navbar
+ 51.96%   37.674      1 Template:navbar
+ 37.46%   27.162      1 Template:c/string/byte/navbar_content
+ 27.65%   20.050     46 Template:nv_ln
+ 26.91%   19.509     66 Template:nv
+ 14.22%   10.311      4 Template:dsc_inc
+ 14.16%   10.264      1 Template:ddcl
+  8.90%    6.453      4 Template:dsc_fun
+  7.91%    5.736      4 Template:dsc
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:13213-0!canonical!zh and timestamp 20260422075839 and revision id 80908. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../../zh.cppreference.com/w/c/string/byte/strdup">Online version</a></li><li>Offline version retrieved 2026-05-02 15:55.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":201,"wgPageParseReport":{"limitreport":{"cputime":"0.101","walltime":"0.113","ppvisitednodes":{"value":4642,"limit":1000000},"postexpandincludesize":{"value":143753,"limit":4194304},"templateargumentsize":{"value":24591,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":3,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2561,"limit":5000000},"timingprofile":["100.00%   72.510      1 -total"," 52.74%   38.241      1 Template:c/string/byte/navbar"," 51.96%   37.674      1 Template:navbar"," 37.46%   27.162      1 Template:c/string/byte/navbar_content"," 27.65%   20.050     46 Template:nv_ln"," 26.91%   19.509     66 Template:nv"," 14.22%   10.311      4 Template:dsc_inc"," 14.16%   10.264      1 Template:ddcl","  8.90%    6.453      4 Template:dsc_fun","  7.91%    5.736      4 Template:dsc"]},"cachereport":{"timestamp":"20260422075839","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422075839 -->
+</html>

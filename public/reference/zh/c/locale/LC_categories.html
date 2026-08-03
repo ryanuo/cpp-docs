@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>LC_ALL, LC_COLLATE, LC_CTYPE, LC_MONETARY, LC_NUMERIC, LC_TIME</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"a352e618efd8b237c0518802","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/locale/LC_categories","wgTitle":"c/locale/LC categories","wgCurRevisionId":98202,"wgRevisionId":98202,"wgArticleId":1083,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/locale/LC_categories","wgRelevantArticleId":1083,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_locale_LC_categories rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">LC_ALL, LC_COLLATE, LC_CTYPE, LC_MONETARY, LC_NUMERIC, LC_TIME</span></h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../locale.html" title="c/locale">locale</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../locale.html" title="c/locale">本地化支持</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="setlocale.html" title="c/locale/setlocale"><span class="t-lines"><span>setlocale</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="localeconv.html" title="c/locale/localeconv"><span class="t-lines"><span>localeconv</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="lconv.html" title="c/locale/lconv"><span class="t-lines"><span>lconv</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 本地环境类别</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>LC_ALL</span><span>LC_COLLATE</span><span>LC_CTYPE</span><span>LC_MONETARY</span><span>LC_NUMERIC</span><span>LC_TIME</span></span></a></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/locale.html" title="c/header/locale"><tt>&lt;locale.h&gt;</tt></a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define LC_ALL      </span><span class="cm">/* 由实现定义 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define LC_COLLATE  </span><span class="cm">/* 由实现定义 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define LC_CTYPE    </span><span class="cm">/* 由实现定义 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define LC_MONETARY </span><span class="cm">/* 由实现定义 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define LC_NUMERIC  </span><span class="cm">/* 由实现定义 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define LC_TIME     </span><span class="cm">/* 由实现定义 */</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>上面每个宏常量都展开成拥有相异值的整数常量表达式，适合用作 <span class="t-lc">setlocale</span> 的首个实参。
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-hitem">
+<td>常量
+</td>
+<td>解释
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_ALL</code>
+</td>
+<td>选择整个 C 本地环境
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_COLLATE</code>
+</td>
+<td>选择 C 本地环境中的校排类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_CTYPE</code>
+</td>
+<td>选择 C 本地环境中的字符分类类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_MONETARY</code>
+</td>
+<td>选择 C 本地环境中的货币格式化类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_NUMERIC</code>
+</td>
+<td>选择 C 本地环境中的数值格式化类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_TIME</code>
+</td>
+<td>选择 C 本地环境中的时间格式化类别
+</td></tr>
+
+</tbody></table>
+<p><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&lt;locale.h&gt;</code> 中可以定义附加宏常量，名称以 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_</code> 后随至少一个大写字母开始。例如， POSIX 规范要求 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_MESSAGES</code>（此外还控制 <span class="t-lc">perror</span> 和 <span class="t-lc">strerror</span>）， ISO/IEC 30112:2014（<a rel="nofollow" class="external text" href="https://www.open-std.org/JTC1/SC35/WG5/docs/30112d10.pdf">2014 方案</a>）额外定义 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_IDENTIFICATION</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_XLITERATE</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_NAME</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_ADDRESS</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_TELEPHONE</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_PAPER</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_MEASUREMENT</code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_KEYBOARD</code>，它们均为 GNU C 库所支持（除了 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_XLITERATE</code>）。
+</p>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<h4><span id="glibc_.E4.B8.AD.E7.9A.84.E6.9C.AC.E5.9C.B0.E7.8E.AF.E5.A2.83.E7.B1.BB.E5.88.AB"></span><span class="mw-headline" id="glibc_中的本地环境类别">glibc 中的本地环境类别</span></h4>
+<p>glibc 除了 C 标准要求的 5 个类别外，还额外支持 7 个类别，以及一个默认项：
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-hitem">
+<td>glibc 本地环境类别常量
+</td>
+<td>解释
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_ADDRESS</code>
+</td>
+<td>选择 C 本地环境中的邮政地址格式类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_IDENTIFICATION</code>
+</td>
+<td>选择 C 本地环境中的类别版本与状态
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_KEYBOARD</code>
+</td>
+<td>选择 C 本地环境中的键盘鉴别类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_MEASUREMENT</code>
+</td>
+<td>选择 C 本地环境中的度量系统信息类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_NAME</code>
+</td>
+<td>选择 C 本地环境中的人名书写格式类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_PAPER</code>
+</td>
+<td>选择 C 本地环境中的纸张格式类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_TELEPHONE</code>
+</td>
+<td>选择 C 本地环境中的电话号码格式（和其他电话信息）类别
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LANG</code>
+</td>
+<td>选择尚未指定的类别
+</td></tr>
+
+</tbody></table>
+<p>其中 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_ALL</code> 的优先级高于所有特定类别，而每个特定类别都优先于 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LANG</code> 。具体而言：
+</p>
+<ol><li>若设置 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_ALL</code> 为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"zh_CN.UTF-8"</span></code></span> ，则不论 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_*</code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LANG</code> 原为何值，每个分类都会被设为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"zh_CN.UTF-8"</span></code></span> 。</li>
+<li>若未设置 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_ALL</code> ，而专门设置 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LANG</code> 为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"zh_CN.UTF-8"</span></code></span> ，并设置某 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_*</code> 为<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"en_US.UTF-8"</span></code></span> ，则其所对应的本地环境类别被设为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"en_US.UTF-8"</span></code></span> 。</li>
+<li>若未设置 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_ALL</code> 和某些类别的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_*</code> ，并设置 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LANG</code> 为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"zh_CN.UTF-8"</span></code></span> ，则这些 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_*</code> 所对应的本地环境被设为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"zh_CN.UTF-8"</span></code></span> 。</li></ol>
+<p>所以，对于不同的目的，应该用不同方式设置本地环境：
+</p>
+<ul><li>例如，若需要纯中文的系统，则可调用 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span><span class="w"> </span><span class="s">"zh_CN.UTF-8"</span><span class="p">)</span></code></span> 或 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">setlocale</span><span class="p">(</span><span class="n">LANG</span><span class="p">,</span><span class="w"> </span><span class="s">"zh_CN.UTF-8"</span><span class="p">)</span></code></span> 。可以但没必要设置二次。</li>
+<li>若只需要输入中文的环境，而其他界面信息和格式为英文，则可使用</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_CTYPE</span><span class="p">,</span><span class="w"> </span><span class="s">"zh_CN.UTF-8"</span><span class="p">);</span>
+<span class="n">setlocale</span><span class="p">(</span><span class="n">LANG</span><span class="p">,</span><span class="w"> </span><span class="s">"en_US.UTF-8"</span><span class="p">);</span>
+</pre></div>
+<ul><li>若有特殊的本地环境定制需求，例如使用中文 GBK 字符集、用 ISO-8859-1 字符集的大英数字系统、用 ISO-8859-15 字符集的德国度量系统……，则应逐一设置 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LC_*</code> ：</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_TYPE</span><span class="p">,</span><span class="w"> </span><span class="s">"zh_CN.GBK/GBK"</span><span class="p">);</span>
+<span class="n">setlocale</span><span class="p">(</span><span class="n">LC_NUMERIC</span><span class="p">,</span><span class="w"> </span><span class="s">"en_GB.ISO-8859-1"</span><span class="p">);</span>
+<span class="n">setlocale</span><span class="p">(</span><span class="n">LC_MESUREMENT</span><span class="p">,</span><span class="w"> </span><span class="s">"de_DE.ISO-8859-15@euro"</span><span class="p">);</span>
+<span class="c1">// 以及其他类别</span>
+</pre></div>
+<ul><li>若只需要应用默认 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"C"</span></code></span> （ <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="s">"POSIX"</span></code></span> 为其别名）本地环境，则无需任何设置代码。</li></ul>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;locale.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wchar.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span><span class="w"> </span><span class="s">"en_US.UTF-8"</span><span class="p">);</span><span class="w"> </span><span class="c1">// C 本地环境将为启用 UTF-8 的英文</span>
+<span class="w">    </span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_NUMERIC</span><span class="p">,</span><span class="w"> </span><span class="s">"de_DE.utf8"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 小数点将为德文</span>
+<span class="w">    </span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_TIME</span><span class="p">,</span><span class="w"> </span><span class="s">"ja_JP.utf8"</span><span class="p">);</span><span class="w">    </span><span class="c1">// 日期/时间格式将为日文</span>
+<span class="w">    </span><span class="kt">wchar_t</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">time_t</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">    </span><span class="n">wcsftime</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="sa">L</span><span class="s">"%A %c"</span><span class="p">,</span><span class="w"> </span><span class="n">localtime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">));</span>
+<span class="w">    </span><span class="n">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">"数值: %.2f</span><span class="se">\n</span><span class="s">日期: %Ls</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="mf">3.14</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>数值: 3,14
+日期: 金曜日 2023年09月15日 20時04分14秒
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-23">
+<ul><li>C23 标准（ISO/IEC 9899:2024）：</li></ul>
+<dl><dd><ul><li>7.11/3 Localization &lt;locale.h&gt; （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>7.11/3 Localization &lt;locale.h&gt; （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>7.11/3 Localization &lt;locale.h&gt; （第 224 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>7.11/3 Localization &lt;locale.h&gt; （第 205 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c89">
+<ul><li>C89/C90 标准（ISO/IEC 9899:1990）：</li></ul>
+<dl><dd><ul><li>4.4 LOCALIZATION &lt;locale.h&gt;</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="setlocale.html" title="c/locale/setlocale"> <span class="t-lines"><span>setlocale</span></span></a></div></div>
+</td>
+<td>获取和设置当前 C 本地环境 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class=""><span>本地环境类别</span></span>的 <span><span><a href="../../cpp/locale/LC_categories.html" title="cpp/locale/LC categories">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422094255
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.098 seconds
+Real time usage: 2.733 seconds
+Preprocessor visited node count: 3113/1000000
+Post‐expand include size: 44829/4194304 bytes
+Template argument size: 9701/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 21/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 9509/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2694.682      1 -total
+ 42.24% 1138.139      6 Template:dcl
+ 31.10%  838.093     11 Template:c
+ 24.53%  661.140      4 Template:source
+ 12.69%  342.069      1 Template:example
+  0.50%   13.590      1 Template:c/locale/navbar
+  0.48%   12.887      1 Template:navbar
+  0.25%    6.864     16 Template:dsc
+  0.22%    5.971      1 Template:dsc_inc
+  0.19%    5.078      1 Template:c/locale/navbar_content
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1083-0!canonical!zh and timestamp 20260422094255 and revision id 98202. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/locale/LC_categories">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2810,"wgPageParseReport":{"limitreport":{"cputime":"0.098","walltime":"2.733","ppvisitednodes":{"value":3113,"limit":1000000},"postexpandincludesize":{"value":44829,"limit":4194304},"templateargumentsize":{"value":9701,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":21,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":9509,"limit":5000000},"timingprofile":["100.00% 2694.682      1 -total"," 42.24% 1138.139      6 Template:dcl"," 31.10%  838.093     11 Template:c"," 24.53%  661.140      4 Template:source"," 12.69%  342.069      1 Template:example","  0.50%   13.590      1 Template:c/locale/navbar","  0.48%   12.887      1 Template:navbar","  0.25%    6.864     16 Template:dsc","  0.22%    5.971      1 Template:dsc_inc","  0.19%    5.078      1 Template:c/locale/navbar_content"]},"cachereport":{"timestamp":"20260422094255","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422094255 -->
+</html>

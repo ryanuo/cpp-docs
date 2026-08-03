@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>可变参数函数</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"a409d3ed9f346a7d10dd166d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/variadic","wgTitle":"c/variadic","wgCurRevisionId":100328,"wgRevisionId":100328,"wgArticleId":7904,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/variadic","wgRelevantArticleId":7904,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../common/ext.css">
+<script async="" src="../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_variadic rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">可变参数函数</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../c.html" title="c">c</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a class="mw-selflink selflink"> 变参数函数</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="variadic/va_start.html" title="c/variadic/va start"><span class="t-lines"><span>va_start</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="variadic/va_arg.html" title="c/variadic/va arg"><span class="t-lines"><span>va_arg</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="variadic/va_copy.html" title="c/variadic/va copy"><span class="t-lines"><span>va_copy</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="variadic/va_end.html" title="c/variadic/va end"><span class="t-lines"><span>va_end</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="variadic/va_list.html" title="c/variadic/va list"><span class="t-lines"><span>va_list</span></span></a></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>可变参数函数是使用可变数量实参的函数（例如 <span class="t-lc">printf</span>）。
+</p><p>可变参数函数使用在其最后一个参数后加省略号声明，例如 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">int</span><span class="w"> </span><span class="nf">printf</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span></code></span>。语法和自动实参转换的额外细节见<a href="language/variadic.html" title="c/language/variadic">变长实参</a>。
+</p><p>从函数体内使用以下工具访问可变实参：
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr>
+<td colspan="2"><h5><span id=".E7.B1.BB.E5.9E.8B"></span><span class="mw-headline" id="类型"> 类型 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="variadic/va_list.html" title="c/variadic/va list"> <span class="t-lines"><span>va_list</span></span></a></div></div>
+</td>
+<td>保有 <span class="t-lc">va_start</span>、<span class="t-lc">va_arg</span>、<span class="t-lc">va_end</span> 及 <span class="t-lc">va_copy</span> 所需的信息 <br> <span class="t-mark" style="white-space: nowrap;">(typedef)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E5.AE.8F"></span><span class="mw-headline" id="宏"> 宏 </span></h5>
+</td></tr>
+
+<tr class="t-dsc-header">
+<td colspan="2"><div>在标头 <code><a href="header/stdarg.html" title="c/header/stdarg"><tt>&lt;stdarg.h&gt;</tt></a></code> 定义 </div>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="variadic/va_start.html" title="c/variadic/va start"> <span class="t-lines"><span>va_start</span></span></a></div></div>
+</td>
+<td>令函数得以访问可变实参 <br> <span class="t-mark" style="white-space: nowrap;">(宏函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="variadic/va_arg.html" title="c/variadic/va arg"> <span class="t-lines"><span>va_arg</span></span></a></div></div>
+</td>
+<td>访问下一个可变函数实参 <br> <span class="t-mark" style="white-space: nowrap;">(宏函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="variadic/va_copy.html" title="c/variadic/va copy"> <span class="t-lines"><span>va_copy</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>创造函数可变实参的副本  <br> <span class="t-mark" style="white-space: nowrap;">(宏函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="variadic/va_end.html" title="c/variadic/va end"> <span class="t-lines"><span>va_end</span></span></a></div></div>
+</td>
+<td>结束对函数可变实参的遍历 <br> <span class="t-mark" style="white-space: nowrap;">(宏函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><p>打印不同类型的值。</p><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">simple_printf</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">fmt</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">va_list</span><span class="w"> </span><span class="n">args</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">va_start</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="n">fmt</span><span class="p">);</span><span class="w"> </span><span class="o">*</span><span class="n">fmt</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">'\0'</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">fmt</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">switch</span><span class="p">(</span><span class="o">*</span><span class="n">fmt</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="sc">'d'</span><span class="p">:</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">va_arg</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span>
+<span class="w">                </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="sc">'c'</span><span class="p">:</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// 将提升 'char' 类型值为 'int'</span>
+<span class="w">                </span><span class="c1">// C 中字符常量自身为 'int' 类型</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">va_arg</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span>
+<span class="w">                </span><span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="sc">'f'</span><span class="p">:</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">va_arg</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">);</span>
+<span class="w">                </span><span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">default</span><span class="o">:</span>
+<span class="w">                </span><span class="n">puts</span><span class="p">(</span><span class="s">"Unknown formatter!"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">goto</span><span class="w"> </span><span class="n">END</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="nl">END</span><span class="p">:</span><span class="w"> </span>
+<span class="w">    </span><span class="n">va_end</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">simple_printf</span><span class="p">(</span><span class="s">"dcff"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="sc">'a'</span><span class="p">,</span><span class="w"> </span><span class="mf">1.969</span><span class="p">,</span><span class="w"> </span><span class="mf">42.5</span><span class="p">);</span><span class="w"> </span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>3
+a
+1.969000
+42.50000
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-23">
+<ul><li>C23 标准（ISO/IEC 9899:2024）：</li></ul>
+<dl><dd><ul><li>7.16 Variable arguments &lt;stdarg.h&gt; （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>7.16 Variable arguments &lt;stdarg.h&gt; （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>7.16 Variable arguments &lt;stdarg.h&gt; （第 269-272 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>7.15 Variable arguments &lt;stdarg.h&gt; （第 249-252 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c89">
+<ul><li>C89/C90 标准（ISO/IEC 9899:1990）：</li></ul>
+<dl><dd><ul><li>4.8 VARIABLE ARGUMENTS &lt;stdarg.h&gt;</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class=""><span>可变参数函数</span></span>的 <span><span><a href="../cpp/utility/variadic.html" title="cpp/utility/variadic">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260421221844
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.069 seconds
+Real time usage: 0.147 seconds
+Preprocessor visited node count: 1763/1000000
+Post‐expand include size: 45165/4194304 bytes
+Template argument size: 9765/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 3/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 7018/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   95.942      1 -total
+ 29.48%   28.283      1 Template:c/variadic/navbar
+ 24.01%   23.031      1 Template:navbar
+ 20.99%   20.142      5 Template:dsc_inc
+ 13.90%   13.338      6 Template:dsc
+ 10.56%   10.133      1 Template:c/navbar_content
+  9.35%    8.968      1 Template:c/variadic/navbar_content
+  8.99%    8.621     22 Template:nv
+  7.91%    7.590      1 Template:c/variadic/dsc_va_list
+  7.74%    7.423      1 Template:dsc_header
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:7904-0!canonical!zh and timestamp 20260421221844 and revision id 100328. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../zh.cppreference.com/w/c/variadic">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":298,"wgPageParseReport":{"limitreport":{"cputime":"0.069","walltime":"0.147","ppvisitednodes":{"value":1763,"limit":1000000},"postexpandincludesize":{"value":45165,"limit":4194304},"templateargumentsize":{"value":9765,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":3,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":7018,"limit":5000000},"timingprofile":["100.00%   95.942      1 -total"," 29.48%   28.283      1 Template:c/variadic/navbar"," 24.01%   23.031      1 Template:navbar"," 20.99%   20.142      5 Template:dsc_inc"," 13.90%   13.338      6 Template:dsc"," 10.56%   10.133      1 Template:c/navbar_content","  9.35%    8.968      1 Template:c/variadic/navbar_content","  8.99%    8.621     22 Template:nv","  7.91%    7.590      1 Template:c/variadic/dsc_va_list","  7.74%    7.423      1 Template:dsc_header"]},"cachereport":{"timestamp":"20260421221844","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260421221844 -->
+</html>

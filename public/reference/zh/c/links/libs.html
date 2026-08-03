@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>开源 C 库列表</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"378208fbb8f3b216d650260d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/links/libs","wgTitle":"c/links/libs","wgCurRevisionId":98283,"wgRevisionId":98283,"wgArticleId":1081,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/links/libs","wgRelevantArticleId":1081,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_links_libs rootpage-c skin-cppreference2 action-view"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">开源 C 库列表</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../links.html" title="c/links">links</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div style="border: 1px solid silver; border-radius: 5px; padding: 0.5em;">
+<p>此页面的目的是构建开源 C++ 库的比较列表，使得人们在需要特定功能的实现时，不必浪费时间在网上（<a rel="nofollow" class="external text" href="https://duckduckgo.com/">DuckDuckGo</a>、<a rel="nofollow" class="external text" href="https://www.google.com/?gws_rd=ssl">谷歌</a>、<a rel="nofollow" class="external text" href="https://www.bing.com/">必应</a>等）搜索。
+</p><p>若你知道可能对其他人有用的库，请在此添加到它的链接。能包含进来的库没有限制，但是必须能便捷地<b>下载</b>库的<b>源码</b>。
+</p><p>以“原态”提供此页面——希望这有用，但不提供任何担保。过时、误导或错误的链接可能出现于此。若你注意到这些错误，则改正它会很有意义。
+</p>
+</div>
+<h1><span id=".E5.8C.85.E7.AE.A1.E7.90.86.E5.99.A8"></span><span class="mw-headline" id="包管理器">包管理器</span></h1>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="15%">包管理器
+</th>
+<th rowspan="1" width="65%">简述
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://build2.org/">build2</a>
+</th>
+<td>一个开源的 (MIT)、跨平台的构建工具链，旨在为开发和打包 C/C++ 项目时提供如 Rust Cargo 一样的便利性，同时提供构建系统中的深度定制和灵活性。
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://cget.readthedocs.io/en/latest/">cget</a>
+</th>
+<td>CMake 包检索工具，可用于下载并安装 CMake 包。
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/scapix-com/cmodule">cmodule</a>
+</th>
+<td>非侵入式 CMake 依赖管理。
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://conan.io/">conan</a>
+</th>
+<td>去中心化、开源 (MIT) 的 C/C++ 包管理器。
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/TheLartians/CPM.cmake">CPM.cmake</a>
+</th>
+<td>一段可以为 CMake 加入依赖管理功能的 CMake 脚本。它是作为 CMake 的 FetchContent 模块的一个简单包装构建的。该模块加入了版本控制、缓存、简单 API 等功能。
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://hunter.readthedocs.io/en/latest/">hunter</a>
+</th>
+<td>一个 CMake 驱动的跨平台包管理器，服务于 C/C++ 项目。
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://spack.io">spack</a>
+</th>
+<td>一个超级计算机、Linux、macOS 平台的包管理器。它使得安装科学软件变得简单。非绑定于某一特定语言。
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://bitbucket.org/benman/teaport">teaport</a>
+</th>
+<td>一个受 cocoapods 启发的依赖管理器。
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/cpp/vcpkg">vcpkg</a>
+</th>
+<td>一个 Windows、Linux、macOS 平台的 C++ 包管理器。
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://xmake.io/">xmake</a>
+</th>
+<td>跨平台的基于 Lua 的 C/C++ 构建工具和包管理器。
+</td></tr>
+</tbody></table>
+<h1><span id=".E5.BA.93"></span><span class="mw-headline" id="库">库</span></h1>
+<h2><span id=".E6.93.8D.E4.BD.9C.E7.B3.BB.E7.BB.9F"></span><span class="mw-headline" id="操作系统">操作系统</span></h2>
+<dl><dt>访问控制</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://savannah.nongnu.org/projects/acl/">acl</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://apparmor.net/">apparmor</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<dl><dt>扩展属性</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://savannah.nongnu.org/projects/attr/">attr</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E5.9B.BE.E5.BD.A2.E7.94.A8.E6.88.B7.E7.95.8C.E9.9D.A2"></span><span class="mw-headline" id="图形用户界面">图形用户界面</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.tecgraf.puc-rio.br/iup/">IUP</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/Immediate-Mode-UI/Nuklear">Nuklear</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>单头文件 ANSI C 立即模式的跨平台 GUI 库。(<a rel="nofollow" class="external text" href="https://immediate-mode-ui.github.io/Nuklear/doc/index.html">文档</a>)
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/lvgl/lvgl">lvgl</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>强力且易用的嵌入式 GUI 库，提供大量部件，高级视觉效果（透明度、抗锯齿、动画）和低内存要求 (16K RAM, 64K Flash)。(<a rel="nofollow" class="external text" href="https://docs.lvgl.io/master/index.html">文档</a>)
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://sourceforge.net/projects/tinyfiledialogs/">tiny file dialogs</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>单个跨平台 C 文件（无初始化，无主循环，6 个模态函数调用）
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id="Gtk.2B_.E9.83.A8.E4.BB.B6"></span><span class="mw-headline" id="Gtk+_部件">Gtk+ 部件</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://launchpad.net/appmenu-gtk">appmenu-gtk</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://wiki.gnome.org/Apps/Ghex">ghex</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://wiki.gnome.org/Projects/GooCanvas">goocanvas</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://launchpad.net/gtkhotkey">gtkhotkey</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.gtk.org/">gtk+</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://wiki.gnome.org/Projects/GtkSourceView">gtksourceview</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://gtkspell.sourceforge.net/">gtkspell</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://wiki.gnome.org/Apps/Gucharmap">gucharmap</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.webkitgtk.org/">webkitgtk</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Microsoft_Excel">Microsoft Excel</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://libxlsxwriter.github.io/">libxlsxwriter</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/damian-m-g/xlsx_drone">xlsx_drone</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E9.9F.B3.E9.A2.91"></span><span class="mw-headline" id="音频">音频</span></h2>
+<dl><dt>CD</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.xiph.org/paranoia/">cdparanoia</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<dl><dt>编解码器</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://aften.sourceforge.net/">aften</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.audiocoding.com/">faad2</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.wavpack.com">wavpack</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<dl><dt>基础结构</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.alsa-project.org/wiki/Main_Page">alsa-lib</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.portaudio.com/">portaudio</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<dl><dt>语音合成</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://espeak.sourceforge.net/">espeak</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.festvox.org/flite/">flite</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E8.A7.86.E9.A2.91"></span><span class="mw-headline" id="视频">视频</span></h2>
+<dl><dt>编解码器</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://slackbuilds.org/repository/14.1/multimedia/schroedinger/">schroedinger</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://linuxtv.org/downloads/v4l-utils/">video4linux</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E6.96.87.E4.BB.B6"></span><span class="mw-headline" id="文件">文件</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://spruce.sourceforge.net/gmime/">gmime</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E6.95.B0.E5.AD.A6"></span><span class="mw-headline" id="数学">数学</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.gnu.org/software/gsl/">gsl</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>GNU 科学运算库 (GSL) 是一个 C/C++ 数值库 (<a rel="nofollow" class="external text" href="https://ftp.gnu.org/gnu/gsl/">源码</a>)
+</td>
+<td>GPL
+</td>
+<td>make
+</td></tr>
+</tbody></table>
+<dl><dt>整数多维插值</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.argyllcms.com/">argyll</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<dl><dt>线性代数</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://math-atlas.sourceforge.net/">atlas</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.netlib.org/blas/">blas</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://eigen.tuxfamily.org/index.php">eigen</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<dl><dt>金融</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://sourceforge.net/projects/ta-lib/">ta-lib</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<dl><dt>快速傅里叶变换（FFT）</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://fftw.org">fftw3</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<dl><dt>多精度</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://gmplib.org/">gmp</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<dl><dt>信号处理</dt></dl>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://liquidsdr.org/">liquid-dsp</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.omg.org/spec/VSIPL">vsipl</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.omg.org/spec/VSIPL++">vsipl++</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E5.9B.BE.E5.BD.A2"></span><span class="mw-headline" id="图形">图形</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://liballeg.org/index.html">allegro</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>Allegro-5 是一个主要针对视频游戏与多媒体编程的跨平台库。
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://gegl.org/babl/">babl</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/bkaradzic/bgfx">Bgfx</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>跨平台，图形 API 无关的，"请自备引擎/框架" 风格的渲染库。
+</td>
+<td>BSD 2
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.cairographics.org/">cairo</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.raylib.com/">raylib</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>跨平台的 C99 游戏开发库，提供 OpenGL 硬件加速，完整 3D 支持，骨骼动画，着色器，字体，音频，数学，GUI，等等。 (<a rel="nofollow" class="external text" href="https://github.com/raysan5/raylib">源码</a>) (<a rel="nofollow" class="external text" href="https://github.com/raysan5/raylib/wiki/">文档</a>)
+</td>
+<td>Zlib
+</td>
+<td>cmake, make, vcpkg, zig
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://sail.software">SAIL</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>松鼠抽象图像库 (Squirrel Abstract Image Library)，是一个小型，快速且跨平台的图像解码库。
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://libsdl.org/">SDL</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>简单直接媒体层 (Simple DirectMedia Layer)，是提供输入、音频、绘图等更多功能的跨平台库。
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.libsigil.com">SIGIL</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/simple2d/simple2d">Simple2d</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>小型、简单、跨平台的 SDL2/OpenGL 包装，提供绘制、媒体、窗口管理和输入等能力。
+</td>
+<td>MIT
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E9.80.9A.E7.94.A8"></span><span class="mw-headline" id="通用">通用</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.roberto-mameli.it/software/#libmixf">libmixf</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E8.BF.9B.E7.A8.8B.E9.97.B4"></span><span class="mw-headline" id="进程间">进程间</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.freedesktop.org/wiki/Software/dbus/">dbus</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://launchpad.net/dee/">dee</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.freedesktop.org/wiki/Software/DBusBindings/">gdbus</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E6.95.B0.E6.8D.AE.E5.BA.93"></span><span class="mw-headline" id="数据库">数据库</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.oracle.com/database/technologies/related/berkeleydb.html">berkeley_db</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.roberto-mameli.it/software/#libfmrt">libfmrt</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/mongodb/mongo-c-driver">libmongoc</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>MongoDB 的官方 C 驱动库（<a rel="nofollow" class="external text" href="https://www.mongodb.com/docs/drivers/c">文档</a>）。它提供了优化的 API，支持 CRUD 操作、易理解功能支持（包括 <a href="https://en.wikipedia.org/wiki/BSON" class="extiw" title="enwiki:BSON">BSON</a>），还支持各种身份认证机制，以便于将 MongoDB 功能集成到基于 C 的应用中。
+</td>
+<td>Apache 2.0
+</td>
+<td>CMake
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://symas.com/lmdb/technical/">lmdb</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://sqlite.org/index.html">SQLite</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>C 库，实现一个小巧、快速、自包含、高可靠、全功能的 SQL 数据库引擎。SQLite 是世上最常用的数据库引擎。(<a rel="nofollow" class="external text" href="https://sqlite.org/src">源码</a>) (<a rel="nofollow" class="external text" href="https://sqlite.org/docs.html">文档</a>)
+</td>
+<td><a rel="nofollow" class="external text" href="https://sqlite.org/copyright.html">公共领域</a>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E9.85.8D.E7.BD.AE"></span><span class="mw-headline" id="配置">配置</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://hyperrealm.github.io/libconfig">libconfig</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://madmurphy.github.io/libconfini/html/index.html">libconfini</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E7.8E.AF.E5.A2.83"></span><span class="mw-headline" id="环境">环境</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/Jorengarenar/libXDGdirs">libXDGdirs</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E9.80.9A.E4.BF.A1"></span><span class="mw-headline" id="通信">通信</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.genivia.com/dev.html">gsoap</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/skywind3000/kcp/blob/master/README.en.md">KCP</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>快速可靠的 ARQ 协议，帮助应用减少网络延迟。
+</td>
+<td>MIT
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://curl.haxx.se/libcurl/">libcurl</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.gnu.org/software/libmicrohttpd/">libmicrohttpd</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://risoflora.github.io/libsagui/">libsagui</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://liambindle.ca/MQTT-C/">MQTT-C</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td><a rel="nofollow" class="external text" href="https://github.com/LiamBindle/MQTT-C">Github URL</a>
+</td>
+<td>MIT
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://nanomsg.org/">nanomsg</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>套接字库，提供常用通信模式；无依赖；跨平台。由 <a rel="nofollow" class="external text" href="https://github.com/nanomsg/nng">nng</a>取代。
+</td>
+<td>MIT/X11
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/openucx/ucx">UCX</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>统一通信框架 (UCX) 为消息传递 (MPI)，共享内存 (PGAS) 和 RPC/以数据为中心的应用程序提供了一个优化的通信层。
+</td>
+<td>BSD3
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://zeromq.org/">zeromq</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://libusb.info/">libusb</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>可移植的 C 库，提供通用的 USB 设备访问。
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E5.8E.8B.E7.BC.A9"></span><span class="mw-headline" id="压缩">压缩</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.bzip.org/">bzip2</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/lz4/lz4">lz4</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://zlib.net/">zlib</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E5.B9.B6.E5.8F.91"></span><span class="mw-headline" id="并发">并发</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.concurrencykit.org/">ck</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/oleh-derevenko/mutexgear">MutexGear</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>仅用互斥体实现的同步（滚轮，读写锁，工作队列）。
+</td>
+<td>MutexGear 库许可
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E6.95.B0.E6.8D.AE.E7.B1.BB.E5.9E.8B"></span><span class="mw-headline" id="数据类型">数据类型</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://bstring.sourceforge.net/">bstrlib</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/delphifeel/datastd">datastd</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/maxim2266/str">str</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>又一个 C 语言的字符串库。
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="PDF">PDF</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/michaelrsweet/pdfio">PDFio</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>简单用于读取和写入 PDF 文件的 C 库。
+</td>
+<td>Apache-2.0
+</td>
+<td>make
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="XML">XML</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://expat.sourceforge.net">expat</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://gsoap2.sourceforge.net">gsoap</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E6.B5.8B.E9.87.8F"></span><span class="mw-headline" id="测量">测量</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/martinsos/edlib">edlib</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E9.9D.A2.E5.90.91.E5.AF.B9.E8.B1.A1.E7.BC.96.E7.A8.8B"></span><span class="mw-headline" id="面向对象编程">面向对象编程</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://libcello.org/">Cello</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://docs.gtk.org/gobject/">GObject</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E7.BD.91.E7.BB.9C.E5.BA.93"></span><span class="mw-headline" id="网络库">网络库</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://www.tcpdump.org/">libpcap(*nix)</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://npcap.com/">npcap(win7~10+)</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id="Web_.E5.89.8D.E7.AB.AF"></span><span class="mw-headline" id="Web_前端">Web 前端</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://git.zx2c4.com/cgit/about/">cgit</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h2><span id=".E8.B0.83.E8.AF.95"></span><span class="mw-headline" id="调试">调试</span></h2>
+<table class="wikitable" style="font-size:1em; line-height:1em; text-align:center;">
+
+<tbody><tr>
+<th rowspan="1" width="10%">库名
+</th>
+<th rowspan="1" width="65%">简述
+</th>
+<th rowspan="1" width="15%">协议
+</th>
+<th colspan="1" width="10%">配置手段
+</th></tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="https://github.com/eerimoq/dbg-macro">dbg-macro</a><span style="color: #BBB; font-size: 0.7em;"></span>
+</th>
+<td>一组用于打印并返回表达式的值的宏，对于快速调试来说非常方便。受 Rust 的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">dbg</span><span class="o">!</span><span class="p">(...)</span></code> 宏和它的 C++ 变体启发。
+</td>
+<td>MIT
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class=""><span>非 ANSI/ISO 库</span></span>的 <span><span><a href="../../cpp/links/libs.html" title="cpp/links/libs">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<h3><span id=".E5.A4.96.E9.83.A8.E9.93.BE.E6.8E.A5"></span><span class="mw-headline" id="外部链接">外部链接</span></h3>
+<table style="border-top:solid 1px;border-bottom:none;border-left:none;border-right:none;">
+
+<tbody><tr style="vertical-align:top;">
+<td>1. </td>
+<td><a href="https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#C" class="extiw" title="enwiki:List of unit testing frameworks">C 单元测试框架列表</a> — Wikipedia
+</td></tr>
+<tr style="vertical-align:top;">
+<td>2. </td>
+<td><a rel="nofollow" class="external text" href="https://github.com/fffaraz/awesome-cpp">A curated list of (awesome) C and C++ libraries</a> — GitHub
+</td></tr>
+<tr style="vertical-align:top;">
+<td>3. </td>
+<td><a rel="nofollow" class="external text" href="https://trilarion.github.io/opensourcegames/games/languages.html#c">C 开源游戏和框架的列表</a> — GitHub.io
+</td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422071154
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.098 seconds
+Real time usage: 0.101 seconds
+Preprocessor visited node count: 4023/1000000
+Post‐expand include size: 40665/4194304 bytes
+Template argument size: 15873/4194304 bytes
+Highest expansion depth: 11/100
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 240/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   50.855      1 -total
+ 59.27%   30.140     89 Template:librow
+ 40.98%   20.838     89 Template:lib
+ 16.16%    8.219    179 Template:trim
+  3.79%    1.927      3 Template:elink
+  3.38%    1.717      1 Template:dsc_see_cpp
+  3.28%    1.670      1 Template:langlinks
+  2.64%    1.345      1 Template:c/core
+  2.21%    1.124      1 Template:dsc
+  1.98%    1.006     35 Template:libtableend
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1081-0!canonical!zh and timestamp 20260422071154 and revision id 98283. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/links/libs">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":306,"wgPageParseReport":{"limitreport":{"cputime":"0.098","walltime":"0.101","ppvisitednodes":{"value":4023,"limit":1000000},"postexpandincludesize":{"value":40665,"limit":4194304},"templateargumentsize":{"value":15873,"limit":4194304},"expansiondepth":{"value":11,"limit":100},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":240,"limit":5000000},"timingprofile":["100.00%   50.855      1 -total"," 59.27%   30.140     89 Template:librow"," 40.98%   20.838     89 Template:lib"," 16.16%    8.219    179 Template:trim","  3.79%    1.927      3 Template:elink","  3.38%    1.717      1 Template:dsc_see_cpp","  3.28%    1.670      1 Template:langlinks","  2.64%    1.345      1 Template:c/core","  2.21%    1.124      1 Template:dsc","  1.98%    1.006     35 Template:libtableend"]},"cachereport":{"timestamp":"20260422071154","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422071154 -->
+</html>

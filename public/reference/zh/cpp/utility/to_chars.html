@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>std::to_chars</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"481b9ea5272e870e1ff0a459","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/utility/to_chars","wgTitle":"cpp/utility/to chars","wgCurRevisionId":97899,"wgRevisionId":97899,"wgArticleId":8578,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/utility/to_chars","wgRelevantArticleId":8578,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_utility_to_chars rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">std::</span>to_chars</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../utility.html" title="cpp/utility">utility</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../standard_library.html" title="cpp/standard library">标准库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="cpp/header">标准库标头</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../named_req.html" title="cpp/named req">具名要求</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../feature_test.html" title="cpp/feature test">功能特性测试宏</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html#%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81" title="cpp/utility">语言支持库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="cpp/error">诊断库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="cpp/memory">内存管理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../meta.html" title="cpp/meta">元编程库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html" title="cpp/utility">通用工具库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../container.html" title="cpp/container">容器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../iterator.html" title="cpp/iterator">迭代器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../ranges.html" title="cpp/ranges">范围库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="cpp/algorithm">算法库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="cpp/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../text.html" title="cpp/text">文本处理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="cpp/numeric">数值库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="cpp/chrono">日期和时间库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="cpp/io">输入/输出库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="cpp/thread">并发支持库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../execution.html" title="cpp/execution">执行控制库</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../text.html" title="cpp/text">文本处理库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../locale.html" title="cpp/locale">本地化库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../regex.html" title="cpp/regex">正则表达式库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="format.html" title="cpp/utility/format">格式化库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../text.html#%E7%A9%BA%E7%BB%88%E6%AD%A2%E5%BA%8F%E5%88%97%E5%B7%A5%E5%85%B7" title="cpp/text">空终止序列工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string/byte.html" title="cpp/string/byte">字节字符串</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string/multibyte.html" title="cpp/string/multibyte">多字节字符串</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string/wide.html" title="cpp/string/wide">宽字符串</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../text.html#%E5%88%9D%E7%AD%89%E6%95%B0%E5%80%BC%E8%BD%AC%E6%8D%A2" title="cpp/text">初等数值转换</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>to_chars</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="to_chars_result.html" title="cpp/utility/to chars result"><span class="t-lines"><span>to_chars_result</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="from_chars.html" title="cpp/utility/from chars"><span class="t-lines"><span>from_chars</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="from_chars_result.html" title="cpp/utility/from chars result"><span class="t-lines"><span>from_chars_result</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="chars_format.html" title="cpp/utility/chars format"><span class="t-lines"><span>chars_format</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../text.html#%E6%96%87%E6%9C%AC%E7%BC%96%E7%A0%81%E8%AF%86%E5%88%AB" title="cpp/text">文本编码识别</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../text/text_encoding.html" title="cpp/text/text encoding"><span class="t-lines"><span>text_encoding</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/charconv.html" title="cpp/header/charconv">&lt;charconv&gt;</a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl t-since-cxx17">
+<td><div><span id="Version_1"></span><div style="max-width: min(calc(7.68332px * 116 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">to_chars_result</span>
+<span class="w">    </span><span class="nf">to_chars</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">last</span><span class="p">,</span>
+<span class="w">              </span><span class="cm">/* integer-type */</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (1)</td>
+<td><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17 起)</span> <br><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起为 <code>constexpr</code>)</span></td>
+</tr>
+<tr class="t-dcl t-since-cxx17">
+<td> <div><div style="max-width: min(calc(7.68332px * 75 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">to_chars_result</span>
+<span class="w">    </span><span class="nf">to_chars</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (2) </td>
+<td> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17 起)</span> </td>
+</tr>
+<tr class="t-dcl t-since-cxx17">
+<td> <div><div style="max-width: min(calc(7.68332px * 94 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">to_chars_result</span>
+<span class="w">    </span><span class="nf">to_chars</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="cm">/* floating-point-type */</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (3) </td>
+<td> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17 起)</span> </td>
+</tr>
+<tr class="t-dcl t-since-cxx17">
+<td> <div><div style="max-width: min(calc(7.68332px * 131 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">to_chars_result</span>
+<span class="w">    </span><span class="nf">to_chars</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="cm">/* floating-point-type */</span><span class="w"> </span><span class="n">value</span><span class="p">,</span>
+<span class="w">              </span><span class="n">std</span><span class="o">::</span><span class="n">chars_format</span><span class="w"> </span><span class="n">fmt</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (4) </td>
+<td> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17 起)</span> </td>
+</tr>
+<tr class="t-dcl t-since-cxx17">
+<td> <div><div style="max-width: min(calc(7.68332px * 146 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">to_chars_result</span>
+<span class="w">    </span><span class="nf">to_chars</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="cm">/* floating-point-type */</span><span class="w"> </span><span class="n">value</span><span class="p">,</span>
+<span class="w">              </span><span class="n">std</span><span class="o">::</span><span class="n">chars_format</span><span class="w"> </span><span class="n">fmt</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">precision</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (5) </td>
+<td> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17 起)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>通过连续填充范围 <code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">first</span></code></span><code>, </code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">last</span></code></span><code>)</code> 将 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 转换成字符串，<code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">first</span></code></span><code>, </code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">last</span></code></span><code>)</code> 要求是<a href="../iterator.html#%E8%8C%83%E5%9B%B4" title="cpp/iterator">有效范围</a>。
+</p>
+<div class="t-li1"><span class="t-li">1)</span> 整数格式化器：<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 以给定底数 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">base</span></code></span> 转换成数位的字符串（无冗余的前导零）。范围 <code>10..35</code>（含上下限）中的数字被表示成小写字母 <code>a..z</code>。如果值小于零，那么该表示以负号开头。标准库提供以所有<span class="t-rev-inl t-since-cxx23"><span>无 cv 限定的</span><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起)</span></span></span>有符号及无符号整数和 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">char</span></code> 类型作为形参 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的类型的重载。</div>
+<div class="t-li1"><span class="t-li">2)</span> 对 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">bool</span></code> 的重载被弃置。<code>std::to_chars</code> 拒绝 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">bool</span></code> 类型的实参，因为假如允许则结果会是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="s">"0"</span></code></span>/<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="s">"1"</span></code></span> 而非 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="s">"false"</span></code></span>/<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="s">"true"</span></code></span>。</div>
+<div class="t-li1"><span class="t-li">3)</span> 如同用 <span class="t-lc">std::printf</span> 在默认（"C"）本地环境将 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 转换成字符串。转换说明符是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">f</span></code></span> 或 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">e</span></code></span>，根据最短表示方式的要求选择（两者相当时优先选择 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">f</span></code></span>）：字符串表示由小数点（如果存在）前至少有一位，且用对应的 <span class="t-lc">std::from_chars</span> 分析该表示能准确恢复值的，最小数量的字符组成。如果有多个这种表示，那么选择到 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的差最小者，用根据 <span class="t-lc">std::round_to_nearest</span> 的舍入解决任何剩余倾向。标准库提供以所有无 cv 限定的<span class="t-rev-inl t-until-cxx23"><span>标准</span><span><span class="t-mark-rev t-until-cxx23" style="white-space: nowrap;">(C++23 前)</span></span></span>浮点数类型作为形参 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的类型的重载。</div>
+<div class="t-li1"><span class="t-li">4)</span> 同 <span class="t-v">(3)</span>，但在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">fmt</span></code></span> 是 <a href="chars_format.html" title="cpp/utility/chars format"><tt>std::chars_format::fixed</tt></a> 时如同对应 <code>printf</code> 的转换指定为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">f</span></code></span>，在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">fmt</span></code></span> 是 <a href="chars_format.html" title="cpp/utility/chars format"><tt>std::chars_format::scientific</tt></a> 时指定为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">e</span></code></span>，在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">fmt</span></code></span> 是 <a href="chars_format.html" title="cpp/utility/chars format"><tt>std::chars_format::hex</tt></a> 时指定为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">a</span></code></span>（但结果无前导 "0x"），且在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">fmt</span></code></span> 是 <a href="chars_format.html" title="cpp/utility/chars format"><tt>chars_format::general</tt></a> 时指定为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">g</span></code></span>。标准库提供以所有无 cv 限定的<span class="t-rev-inl t-until-cxx23"><span>标准</span><span><span class="t-mark-rev t-until-cxx23" style="white-space: nowrap;">(C++23 前)</span></span></span>浮点数类型作为形参 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的类型的重载。</div>
+<div class="t-li1"><span class="t-li">5)</span> 同 <span class="t-v">(4)</span>，但精度由形参 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">precision</span></code></span> 指定，而非以最短表示要求。标准库提供以所有无 cv 限定的<span class="t-rev-inl t-until-cxx23"><span>标准</span><span><span class="t-mark-rev t-until-cxx23" style="white-space: nowrap;">(C++23 前)</span></span></span>浮点数类型作为形参 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的类型的重载。</div>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>first, last
+</td>
+<td>-
+</td>
+<td>要写入的字符范围
+</td></tr>
+<tr class="t-par">
+<td>value
+</td>
+<td>-
+</td>
+<td>要转换到其字符串表示的值
+</td></tr>
+<tr class="t-par">
+<td>base
+</td>
+<td>-
+</td>
+<td>使用的整数底数：2 与 36 间的值（含上下限）。
+</td></tr>
+<tr class="t-par">
+<td>fmt
+</td>
+<td>-
+</td>
+<td>使用的浮点数格式 <a href="chars_format.html" title="cpp/utility/chars format"><tt>std::chars_format</tt></a> 类型的位掩码
+</td></tr>
+<tr class="t-par">
+<td>precision
+</td>
+<td>-
+</td>
+<td>使用的浮点数精度
+</td></tr></tbody></table>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC"></span><span class="mw-headline" id="返回值">返回值</span></h3>
+<p>成功时，返回 <a href="to_chars_result.html" title="cpp/utility/to chars result"><tt>std::to_chars_result</tt></a> 类型的值，它的 <code>ec</code> 等于值初始化的 <span class="t-lc">std::errc</span>，且其 <code>ptr</code> 是指向被写入字符尾后一位置的指针。注意该字符串<i>不</i> ﻿是空终止的。
+</p><p>错误时，返回 <a href="to_chars_result.html" title="cpp/utility/to chars result"><tt>std::to_chars_result</tt></a> 类型的值，<code>ec</code> 保有 <span class="t-lc">std::errc::value_too_large</span>，<code>ptr</code> 保有 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">last</span></code></span> 值的副本，并在范围 <code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">first</span></code></span><code>, </code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">last</span></code></span><code>)</code> 中留下未指定状态的内容。
+</p>
+<h3><span id=".E5.BC.82.E5.B8.B8"></span><span class="mw-headline" id="异常">异常</span></h3>
+<p>不抛出。
+</p>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>不同于 C++ 和 C 库中的其他格式化函数，<code>std::to_chars</code> 独立于本地环境，不分配，而且不抛出。它只提供其他库（例如 <span class="t-lc">std::sprintf</span>）所用策略的一个小子集。它的目的是在常见的高吞吐量环境，例如基于文本的交换（<a href="https://en.wikipedia.org/wiki/JSON" class="extiw" title="enwiki:JSON">JSON</a> 或 <a href="https://en.wikipedia.org/wiki/XML" class="extiw" title="enwiki:XML">XML</a>）中，允许尽可能快的实现。
+</p><p>只有在两个函数都来自同一实现的情况下，才保证 <a href="from_chars.html" title="cpp/utility/from chars"><tt>std::from_chars</tt></a> 能恢复每个由 <code>std::to_chars</code> 格式化的浮点数。
+</p><p>如果想要格式化 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">bool</span></code> 值为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="s">"0"</span></code></span>/<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="s">"1"</span></code></span>，那么要求将它显式转换为另一整数类型。
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th><a href="feature_test.html" title="cpp/utility/feature test">功能特性测试</a>宏
+</th>
+<th><abbr title="采纳该特性的年/月。每个值下面的链接指向编译期支持页面中给定功能特性的条目。">值</abbr>
+</th>
+<th><abbr title="引入该特性的标准；DR 意为针对该修订版的缺陷报告">标准</abbr>
+</th>
+<th>功能特性
+</th></tr>
+<tr>
+<td rowspan="2"><a href="../feature_test.html#cpp_lib_to_chars" title="cpp/feature test"><code>__cpp_lib_to_chars</code></a></td>
+<td><a href="../compiler_support/17.html#cpp_lib_to_chars_201611L" title="cpp/compiler support/17"><code>201611L</code></a></td>
+<td><span class="t-mark" style="white-space: nowrap;">(C++17)</span></td>
+<td>初等字符串转换（<code>std::to_chars</code>，<a href="from_chars.html" title="cpp/utility/from chars"><tt>std::from_chars</tt></a>）
+</td></tr>
+<tr>
+<td><a href="../compiler_support/26.html#cpp_lib_to_chars_202306L" title="cpp/compiler support/26"><code>202306L</code></a></td>
+<td><span class="t-mark" style="white-space: nowrap;">(C++26)</span></td>
+<td>检测 <a href="../header/charconv.html" title="cpp/header/charconv"><tt>&lt;charconv&gt;</tt></a> 函数是否成功
+</td></tr>
+<tr>
+<td><a href="../feature_test.html#cpp_lib_constexpr_charconv" title="cpp/feature test"><code>__cpp_lib_constexpr_charconv</code></a></td>
+<td><a href="../compiler_support/23.html#cpp_lib_constexpr_charconv_202207L" title="cpp/compiler support/23"><code>202207L</code></a></td>
+<td><span class="t-mark" style="white-space: nowrap;">(C++23)</span></td>
+<td>向 <code>std::to_chars</code> 和 <a href="from_chars.html" title="cpp/utility/from chars"><tt>std::from_chars</tt></a> 对于整数类型的重载 <span class="t-v">(<a href="to_chars.html#%E7%89%88%E6%9C%AC_1">1</a>)</span> 添加 <code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">constexpr</span></code> 修饰符
+</td></tr></tbody></table>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;charconv&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string_view&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;system_error&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">show_to_chars</span><span class="p">(</span><span class="k">auto</span><span class="p">...</span><span class="w"> </span><span class="n">format_args</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="n">buf_size</span><span class="p">]{};</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">to_chars_result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_chars</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span><span class="w"> </span><span class="n">format_args</span><span class="p">...);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">ec</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">errc</span><span class="p">())</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_error_code</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">ec</span><span class="p">).</span><span class="n">message</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">str</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">ptr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">buf</span><span class="p">);</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">quoted</span><span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">show_to_chars</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+<span class="w">    </span><span class="n">show_to_chars</span><span class="p">(</span><span class="o">+</span><span class="mf">3.14159F</span><span class="p">);</span>
+<span class="w">    </span><span class="n">show_to_chars</span><span class="p">(</span><span class="mf">-3.14159</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chars_format</span><span class="o">::</span><span class="n">fixed</span><span class="p">);</span>
+<span class="w">    </span><span class="n">show_to_chars</span><span class="p">(</span><span class="mf">-3.14159</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chars_format</span><span class="o">::</span><span class="n">scientific</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">show_to_chars</span><span class="p">(</span><span class="mf">3.1415926535</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chars_format</span><span class="o">::</span><span class="n">fixed</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>可能的输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>"42"
+"3.14159"
+"-3.14159"
+"-3.142e+00"
+Value too large for defined data type
+</pre></div> 
+</div>
+<h3><span id=".E7.BC.BA.E9.99.B7.E6.8A.A5.E5.91.8A"></span><span class="mw-headline" id="缺陷报告">缺陷报告</span></h3>
+<p>下列更改行为的缺陷报告追溯地应用于以前出版的 C++ 标准。
+</p>
+<table class="dsctable" style="font-size:0.8em">
+<tbody><tr>
+<th>缺陷报告
+</th>
+<th>应用于
+</th>
+<th>出版时的行为
+</th>
+<th>正确行为
+</th></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="https://cplusplus.github.io/LWG/issue2955">LWG 2955</a>
+</td>
+<td>C++17
+</td>
+<td>此函数在 <a href="../header/utility.html" title="cpp/header/utility"><tt>&lt;utility&gt;</tt></a> 且使用 <span class="t-lc">std::error_code</span>
+</td>
+<td>移动到 <a href="../header/charconv.html" title="cpp/header/charconv"><tt>&lt;charconv&gt;</tt></a> 并使用 <span class="t-lc">std::errc</span>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="https://cplusplus.github.io/LWG/issue3266">LWG 3266</a>
+</td>
+<td>C++17
+</td>
+<td>接受 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">bool</span></code> 实参并将它提升到 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">int</span></code>
+</td>
+<td>由弃置重载拒绝
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="https://cplusplus.github.io/LWG/issue3373">LWG 3373</a>
+</td>
+<td>C++17
+</td>
+<td><code>std::to_chars_result</code> 可能拥有额外的成员
+</td>
+<td>禁止额外的成员
+</td></tr></tbody></table>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="to_chars_result.html" title="cpp/utility/to chars result"> <span class="t-lines"><span>to_chars_result</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div>
+</td>
+<td><a class="mw-selflink selflink"><tt>std::to_chars</tt></a> 的返回类型 <br> <span class="t-mark" style="white-space: nowrap;">(类)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="from_chars.html" title="cpp/utility/from chars"> <span class="t-lines"><span>from_chars</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div>
+</td>
+<td>转换字符序列到整数或浮点数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/basic_string/to_string.html" title="cpp/string/basic string/to string"> <span class="t-lines"><span>to_string</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div>
+</td>
+<td>转换整数或浮点数为 <code>string</code> <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../io/c/fprintf.html" title="cpp/io/c/fprintf"> <span class="t-lines"><span>printf</span><span>fprintf</span><span>sprintf</span><span>snprintf</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div>
+</td>
+<td>打印有格式输出到 <span class="t-lc">stdout</span>、文件流或缓冲区  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../io/basic_ostream/operator_ltlt.html" title="cpp/io/basic ostream/operator ltlt"> <span class="t-lines"><span>operator&lt;&lt;</span></span></a></div></div>
+</td>
+<td>插入带格式数据 <br> <span class="t-mark" style="white-space: nowrap;">(<code>std::basic_ostream&lt;CharT,Traits&gt;</code> 的公开成员函数)</span> </td></tr>
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422013806
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.141 seconds
+Real time usage: 0.158 seconds
+Preprocessor visited node count: 5742/1000000
+Post‐expand include size: 101666/4194304 bytes
+Template argument size: 23653/4194304 bytes
+Highest expansion depth: 33/100
+Expensive parser function count: 48/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 16235/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  115.352      1 -total
+ 19.16%   22.104      1 Template:cpp/text/navbar
+ 17.85%   20.591      1 Template:navbar
+ 17.40%   20.071      5 Template:dsc_inc
+ 12.15%   14.016     34 Template:c
+  9.35%   10.783    115 Template:trim
+  9.25%   10.674      5 Template:dsc
+  8.24%    9.500      1 Template:cpp/text/navbar_content
+  7.75%    8.943     40 Template:nv
+  7.56%    8.725      3 Template:ftm
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:8578-0!canonical!zh and timestamp 20260422013806 and revision id 97899. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/cpp/utility/to_chars">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":277,"wgPageParseReport":{"limitreport":{"cputime":"0.141","walltime":"0.158","ppvisitednodes":{"value":5742,"limit":1000000},"postexpandincludesize":{"value":101666,"limit":4194304},"templateargumentsize":{"value":23653,"limit":4194304},"expansiondepth":{"value":33,"limit":100},"expensivefunctioncount":{"value":48,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":16235,"limit":5000000},"timingprofile":["100.00%  115.352      1 -total"," 19.16%   22.104      1 Template:cpp/text/navbar"," 17.85%   20.591      1 Template:navbar"," 17.40%   20.071      5 Template:dsc_inc"," 12.15%   14.016     34 Template:c","  9.35%   10.783    115 Template:trim","  9.25%   10.674      5 Template:dsc","  8.24%    9.500      1 Template:cpp/text/navbar_content","  7.75%    8.943     40 Template:nv","  7.56%    8.725      3 Template:ftm"]},"cachereport":{"timestamp":"20260422013806","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422013806 -->
+</html>

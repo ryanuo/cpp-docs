@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>fegetenv, fesetenv</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"44dc9383a0dede8559fb7e61","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/numeric/fenv/feenv","wgTitle":"c/numeric/fenv/feenv","wgCurRevisionId":95919,"wgRevisionId":95919,"wgArticleId":1127,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/numeric/fenv/feenv","wgRelevantArticleId":1127,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../../common/ext.css">
+<script async="" src="../../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_numeric_fenv_feenv rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">fegetenv, fesetenv</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../../numeric.html" title="c/numeric">numeric</a></bdi> | <bdi dir="ltr"><a href="../fenv.html" title="c/numeric/fenv">fenv</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../numeric.html" title="c/numeric">数值</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../math.html" title="c/numeric/math">常用数学函数</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../fenv.html" title="c/numeric/fenv">浮点数环境</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../random.html" title="c/numeric/random">伪随机数生成</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../complex.html" title="c/numeric/complex">复数算术</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../tgmath.html" title="c/numeric/tgmath">泛型数学函数</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../numeric.html#%E4%BD%8D%E6%93%8D%E4%BD%9C" title="c/numeric">位操作</a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../numeric.html#%E5%B8%A6%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E7%AE%97%E6%9C%AF" title="c/numeric">带检查整数算术</a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../fenv.html" title="c/numeric/fenv">浮点数环境</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h1"><td colspan="5"> 函数</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="feclearexcept.html" title="c/numeric/fenv/feclearexcept"><span class="t-lines"><span>feclearexcept</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fetestexcept.html" title="c/numeric/fenv/fetestexcept"><span class="t-lines"><span>fetestexcept</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="feraiseexcept.html" title="c/numeric/fenv/feraiseexcept"><span class="t-lines"><span>feraiseexcept</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="feexceptflag.html" title="c/numeric/fenv/feexceptflag"><span class="t-lines"><span>fegetexceptflag</span><span>fesetexceptflag</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="feround.html" title="c/numeric/fenv/feround"><span class="t-lines"><span>fegetround</span><span>fesetround</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>fegetenv</span><span>fesetenv</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="feholdexcept.html" title="c/numeric/fenv/feholdexcept"><span class="t-lines"><span>feholdexcept</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="feupdateenv.html" title="c/numeric/fenv/feupdateenv"><span class="t-lines"><span>feupdateenv</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h1"><td colspan="5"> 宏常量</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FE_exceptions.html" title="c/numeric/fenv/FE exceptions"><span class="t-lines"><span>FE_ALL_EXCEPT</span><span>FE_DIVBYZERO</span><span>FE_INEXACT</span><span>FE_INVALID</span><span>FE_OVERFLOW</span><span>FE_UNDERFLOW</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FE_round.html" title="c/numeric/fenv/FE round"><span class="t-lines"><span>FE_DOWNWARD</span><span>FE_TONEAREST</span><span>FE_TOWARDZERO</span><span>FE_UPWARD</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FE_DFL_ENV.html" title="c/numeric/fenv/FE DFL ENV"><span class="t-lines"><span>FE_DFL_ENV</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../../header/fenv.html" title="c/header/fenv"><tt>&lt;fenv.h&gt;</tt></a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl t-since-c99">
+<td> <div><div style="max-width: min(calc(7.68332px * 29 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">fegetenv</span><span class="p">(</span><span class="w"> </span><span class="n">fenv_t</span><span class="o">*</span><span class="w"> </span><span class="n">envp</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (1) </td>
+<td> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span> </td>
+</tr>
+<tr class="t-dcl t-since-c99">
+<td> <div><div style="max-width: min(calc(7.68332px * 35 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">fesetenv</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">fenv_t</span><span class="o">*</span><span class="w"> </span><span class="n">envp</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (2) </td>
+<td> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>1) 试图存储浮点数环境的状态于 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">envp</code> 所指向的对象。
+</p><p>2) 试图从 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">envp</code> 所指向的对象建立浮点数环境状态。对象的值必须是以先前调用 <span class="t-lc">feholdexcept</span> 或 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">fegetenv</code> 获得值或是浮点数宏常量。若 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">envp</code> 中设置了任何浮点数状态标志，则环境中标志变为被设置（然后可用 <span class="t-lc">fetestexcept</span> 测试），但不引发对应的浮点数异常（执行持续而不中断）。
+</p>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>envp
+</td>
+<td>-
+</td>
+<td>指向 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">fenv_t</span></code></span> 类型对象的指针，该对象保有浮点数环境的状态
+</td></tr></tbody></table>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC"></span><span class="mw-headline" id="返回值">返回值</span></h3>
+<p>成功时返回 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span>，否则返回非零。
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
+<span class="w"> </span>
+<span class="cp">#pragma STDC FENV_ACCESS ON</span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">show_fe_exceptions</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"current exceptions raised: "</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fetestexcept</span><span class="p">(</span><span class="n">FE_DIVBYZERO</span><span class="p">))</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">" FE_DIVBYZERO"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fetestexcept</span><span class="p">(</span><span class="n">FE_INEXACT</span><span class="p">))</span><span class="w">       </span><span class="n">printf</span><span class="p">(</span><span class="s">" FE_INEXACT"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fetestexcept</span><span class="p">(</span><span class="n">FE_INVALID</span><span class="p">))</span><span class="w">       </span><span class="n">printf</span><span class="p">(</span><span class="s">" FE_INVALID"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fetestexcept</span><span class="p">(</span><span class="n">FE_OVERFLOW</span><span class="p">))</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">" FE_OVERFLOW"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fetestexcept</span><span class="p">(</span><span class="n">FE_UNDERFLOW</span><span class="p">))</span><span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">" FE_UNDERFLOW"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fetestexcept</span><span class="p">(</span><span class="n">FE_ALL_EXCEPT</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">" none"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">show_fe_rounding_method</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"current rounding method:    "</span><span class="p">);</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">fegetround</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">           </span><span class="k">case</span><span class="w"> </span><span class="no">FE_TONEAREST</span><span class="p">:</span><span class="w">  </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"FE_TONEAREST"</span><span class="p">);</span><span class="w">  </span><span class="k">break</span><span class="p">;</span>
+<span class="w">           </span><span class="k">case</span><span class="w"> </span><span class="no">FE_DOWNWARD</span><span class="p">:</span><span class="w">   </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"FE_DOWNWARD"</span><span class="p">);</span><span class="w">   </span><span class="k">break</span><span class="p">;</span>
+<span class="w">           </span><span class="k">case</span><span class="w"> </span><span class="no">FE_UPWARD</span><span class="p">:</span><span class="w">     </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"FE_UPWARD"</span><span class="p">);</span><span class="w">     </span><span class="k">break</span><span class="p">;</span>
+<span class="w">           </span><span class="k">case</span><span class="w"> </span><span class="no">FE_TOWARDZERO</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"FE_TOWARDZERO"</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">           </span><span class="k">default</span><span class="o">:</span><span class="w">            </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"unknown"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">show_fe_environment</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">show_fe_exceptions</span><span class="p">();</span>
+<span class="w">    </span><span class="n">show_fe_rounding_method</span><span class="p">();</span>
+<span class="p">}</span><span class="w">    </span>
+<span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">fenv_t</span><span class="w"> </span><span class="n">curr_env</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">rtn</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="cm">/* 显示默认环境。 */</span>
+<span class="w">    </span><span class="n">show_fe_environment</span><span class="p">();</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 在默认环境下做一些计算。 */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"+11.5 -&gt; %+4.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="o">+</span><span class="mf">11.5</span><span class="p">));</span><span class="w"> </span><span class="cm">/* 两整数的中央值 */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"+12.5 -&gt; %+4.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="o">+</span><span class="mf">12.5</span><span class="p">));</span><span class="w"> </span><span class="cm">/* 两整数的中央值 */</span>
+<span class="w">    </span><span class="n">show_fe_environment</span><span class="p">();</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 保存当前环境。 */</span>
+<span class="w">    </span><span class="n">rtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fegetenv</span><span class="p">(</span><span class="o">&amp;</span><span class="n">curr_env</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 以新舍入方法进行一些计算。 */</span>
+<span class="w">    </span><span class="n">feclearexcept</span><span class="p">(</span><span class="n">FE_ALL_EXCEPT</span><span class="p">);</span>
+<span class="w">    </span><span class="n">fesetround</span><span class="p">(</span><span class="n">FE_DOWNWARD</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"1.0/0.0 = %f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="mf">0.0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"+11.5 -&gt; %+4.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="o">+</span><span class="mf">11.5</span><span class="p">));</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"+12.5 -&gt; %+4.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="o">+</span><span class="mf">12.5</span><span class="p">));</span>
+<span class="w">    </span><span class="n">show_fe_environment</span><span class="p">();</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 恢复先前环境。 */</span>
+<span class="w">    </span><span class="n">rtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fesetenv</span><span class="p">(</span><span class="o">&amp;</span><span class="n">curr_env</span><span class="p">);</span>
+<span class="w">    </span><span class="n">show_fe_environment</span><span class="p">();</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>current exceptions raised: none
+current rounding method:   FE_TONEAREST
+
++11.5 -&gt; +12.0
++12.5 -&gt; +12.0
+current exceptions raised: FE_INEXACT
+current rounding method:   FE_TONEAREST
+
+1.0/0.0 = inf
++11.5 -&gt; +11.0
++12.5 -&gt; +12.0
+current exceptions raised: FE_DIVBYZERO FE_INEXACT
+current rounding method:   FE_DOWNWARD
+
+current exceptions raised: FE_INEXACT
+current rounding method:   FE_TONEAREST
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>7.6.4.1 The fegetenv function （第 213 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.6.4.3 The fesetenv function （第 214 页）</li></ul></dd></dl>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>7.6.4.1 The fegetenv function （第 194 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.6.4.3 The fesetenv function （第 195 页）</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="feholdexcept.html" title="c/numeric/fenv/feholdexcept"> <span class="t-lines"><span>feholdexcept</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>保存当前环境的异常状态标志，再清除所有异常状态标志，并忽略所有未来错误 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="feupdateenv.html" title="c/numeric/fenv/feupdateenv"> <span class="t-lines"><span>feupdateenv</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>恢复之前保存的浮点数环境，并引发之前已经引发过的异常，使其存在于当前内存环境中 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="FE_DFL_ENV.html" title="c/numeric/fenv/FE DFL ENV"> <span class="t-lines"><span>FE_DFL_ENV</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>默认浮点数环境 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>fegetenv</span>, <span>fesetenv</span></span> 的 <span><span><a href="../../../cpp/numeric/fenv/feenv.html" title="cpp/numeric/fenv/feenv">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20260422091806
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.103 seconds
+Real time usage: 0.286 seconds
+Preprocessor visited node count: 2804/1000000
+Post‐expand include size: 81835/4194304 bytes
+Template argument size: 21902/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 6/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13453/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  251.617      1 -total
+ 64.22%  161.583      1 Template:example
+ 63.62%  160.077      2 Template:source
+ 11.89%   29.927      1 Template:c/numeric/fenv/navbar
+ 11.50%   28.942      1 Template:navbar
+  5.86%   14.734     35 Template:nv
+  5.48%   13.792      1 Template:c/numeric/fenv/navbar_content
+  4.58%   11.534      2 Template:dcl
+  4.34%   10.915     11 Template:nv_ln
+  4.16%   10.467      3 Template:dsc_inc
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1127-0!canonical!zh and timestamp 20260422091806 and revision id 95919. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../../zh.cppreference.com/w/c/numeric/fenv/feenv">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":395,"wgPageParseReport":{"limitreport":{"cputime":"0.103","walltime":"0.286","ppvisitednodes":{"value":2804,"limit":1000000},"postexpandincludesize":{"value":81835,"limit":4194304},"templateargumentsize":{"value":21902,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":6,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13453,"limit":5000000},"timingprofile":["100.00%  251.617      1 -total"," 64.22%  161.583      1 Template:example"," 63.62%  160.077      2 Template:source"," 11.89%   29.927      1 Template:c/numeric/fenv/navbar"," 11.50%   28.942      1 Template:navbar","  5.86%   14.734     35 Template:nv","  5.48%   13.792      1 Template:c/numeric/fenv/navbar_content","  4.58%   11.534      2 Template:dcl","  4.34%   10.915     11 Template:nv_ln","  4.16%   10.467      3 Template:dsc_inc"]},"cachereport":{"timestamp":"20260422091806","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422091806 -->
+</html>

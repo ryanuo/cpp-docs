@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>标准库标头 &lt;threads.h&gt; (C11)</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"c34031ff6df0baaf72ebc585","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/header/threads","wgTitle":"c/header/threads","wgCurRevisionId":99079,"wgRevisionId":99079,"wgArticleId":17061,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/header/threads","wgRelevantArticleId":17061,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_header_threads rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">标准库标头</span> &lt;threads.h&gt; <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../header.html" title="c/header">header</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../header.html" title="c/header">标准库头</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="assert.html" title="c/header/assert"><tt>&lt;assert.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="complex.html" title="c/header/complex"><tt>&lt;complex.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ctype.html" title="c/header/ctype"><tt>&lt;ctype.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="errno.html" title="c/header/errno"><tt>&lt;errno.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="fenv.html" title="c/header/fenv"><tt>&lt;fenv.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="float.html" title="c/header/float"><tt>&lt;float.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="inttypes.html" title="c/header/inttypes"><tt>&lt;inttypes.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="iso646.html" title="c/header/iso646"><tt>&lt;iso646.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="limits.html" title="c/header/limits"><tt>&lt;limits.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="locale.html" title="c/header/locale"><tt>&lt;locale.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="math.html" title="c/header/math"><tt>&lt;math.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="setjmp.html" title="c/header/setjmp"><tt>&lt;setjmp.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="signal.html" title="c/header/signal"><tt>&lt;signal.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdalign.html" title="c/header/stdalign"><tt>&lt;stdalign.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdarg.html" title="c/header/stdarg"><tt>&lt;stdarg.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdatomic.html" title="c/header/stdatomic"><tt>&lt;stdatomic.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbit.html" title="c/header/stdbit"><tt>&lt;stdbit.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbool.html" title="c/header/stdbool"><tt>&lt;stdbool.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C99*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../../zh.cppreference.com/index.php" class="new" title="c/header/stdckdint（页面不存在）"><tt>&lt;stdckdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stddef.html" title="c/header/stddef"><tt>&lt;stddef.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdint.html" title="c/header/stdint"><tt>&lt;stdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdio.html" title="c/header/stdio"><tt>&lt;stdio.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="stdlib.html" title="c/header/stdlib"><tt>&lt;stdlib.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdmchar.html" title="c/header/stdmchar"><tt>&lt;stdmchar.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(C29)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdnoreturn.html" title="c/header/stdnoreturn"><tt>&lt;stdnoreturn.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string.html" title="c/header/string"><tt>&lt;string.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tgmath.html" title="c/header/tgmath"><tt>&lt;tgmath.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink"><tt>&lt;threads.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="time.html" title="c/header/time"><tt>&lt;time.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="uchar.html" title="c/header/uchar"><tt>&lt;uchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wchar.html" title="c/header/wchar"><tt>&lt;wchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wctype.html" title="c/header/wctype"><tt>&lt;wctype.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>此标头是<a href="../thread.html" title="c/thread">并发支持库</a>的一部分，并提供了对线程、互斥、条件变量和线程专有存储的支持。
+</p>
+<h3><span id=".E7.BA.BF.E7.A8.8B"></span><span class="mw-headline" id="线程">线程</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>thrd_t</b></code>
+</td>
+<td>实现定义的标识线程的完整对象类型 </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thrd_create.html" title="c/thread/thrd create"> <span class="t-lines"><span>thrd_create</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>创建线程  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thrd_equal.html" title="c/thread/thrd equal"> <span class="t-lines"><span>thrd_equal</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>检查两个标识符是否表示同一线程  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thrd_current.html" title="c/thread/thrd current"> <span class="t-lines"><span>thrd_current</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>获取当前线程标识符  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thrd_sleep.html" title="c/thread/thrd sleep"> <span class="t-lines"><span>thrd_sleep</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>在给定的时间段内挂起调用方线程的执行  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thrd_yield.html" title="c/thread/thrd yield"> <span class="t-lines"><span>thrd_yield</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>让出当前时间片段 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thrd_exit.html" title="c/thread/thrd exit"> <span class="t-lines"><span>thrd_exit</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>终止调用方线程  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thrd_detach.html" title="c/thread/thrd detach"> <span class="t-lines"><span>thrd_detach</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>分离线程  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thrd_join.html" title="c/thread/thrd join"> <span class="t-lines"><span>thrd_join</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>阻塞到线程终止为止  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thrd_errors.html" title="c/thread/thrd errors"> <span class="t-lines"><span>thrd_success</span><span>thrd_timedout</span><span>thrd_busy</span><span>thrd_nomem</span><span>thrd_error</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>指示线程错误状态  <br> <span class="t-mark" style="white-space: nowrap;">(常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>thrd_start_t</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>函数指针类型 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span></code></span> 的 typedef，为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">thrd_create</span></code></span> 所用 <br> <span class="t-mark" style="white-space: nowrap;">(typedef)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E4.BA.92.E6.96.A5"></span><span class="mw-headline" id="互斥">互斥</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>mtx_t</b></code>
+</td>
+<td>互斥体标识符 </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/mtx_init.html" title="c/thread/mtx init"> <span class="t-lines"><span>mtx_init</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>创建互斥体  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/mtx_lock.html" title="c/thread/mtx lock"> <span class="t-lines"><span>mtx_lock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>阻塞到锁定互斥体为止  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/mtx_timedlock.html" title="c/thread/mtx timedlock"> <span class="t-lines"><span>mtx_timedlock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>阻塞到锁定互斥体或超时为止 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/mtx_trylock.html" title="c/thread/mtx trylock"> <span class="t-lines"><span>mtx_trylock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>锁定互斥体，若已锁定则返回而不阻塞 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/mtx_unlock.html" title="c/thread/mtx unlock"> <span class="t-lines"><span>mtx_unlock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>解锁互斥体  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/mtx_destroy.html" title="c/thread/mtx destroy"> <span class="t-lines"><span>mtx_destroy</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>销毁互斥体  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/mtx_types.html" title="c/thread/mtx types"> <span class="t-lines"><span>mtx_plain</span><span>mtx_recursive</span><span>mtx_timed</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>定义互斥体的类型  <br> <span class="t-mark" style="white-space: nowrap;">(枚举)</span> </td></tr>
+
+<tr>
+<td colspan="2"><h5><span id=".E5.8D.95.E6.AC.A1.E8.B0.83.E7.94.A8"></span><span class="mw-headline" id="单次调用"> 单次调用 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/call_once.html" title="c/thread/call once"> <span class="t-lines"><span>call_once</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>对一个函数恰好调用一次  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E6.9D.A1.E4.BB.B6.E5.8F.98.E9.87.8F"></span><span class="mw-headline" id="条件变量">条件变量</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>cnd_t</b></code>
+</td>
+<td>条件变量标识符
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/cnd_init.html" title="c/thread/cnd init"> <span class="t-lines"><span>cnd_init</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>创建条件变量  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/cnd_signal.html" title="c/thread/cnd signal"> <span class="t-lines"><span>cnd_signal</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>除阻阻塞于条件变量上的一个线程  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/cnd_broadcast.html" title="c/thread/cnd broadcast"> <span class="t-lines"><span>cnd_broadcast</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>除阻所有阻塞于条件变量上的线程  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/cnd_wait.html" title="c/thread/cnd wait"> <span class="t-lines"><span>cnd_wait</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>在条件变量上阻塞  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/cnd_timedwait.html" title="c/thread/cnd timedwait"> <span class="t-lines"><span>cnd_timedwait</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>在条件变量上阻塞一段时长  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/cnd_destroy.html" title="c/thread/cnd destroy"> <span class="t-lines"><span>cnd_destroy</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>销毁条件变量  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E7.BA.BF.E7.A8.8B.E5.B1.80.E9.83.A8.E5.AD.98.E5.82.A8"></span><span class="mw-headline" id="线程局部存储">线程局部存储</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/thread_local.html" title="c/thread/thread local"> <span class="t-lines"><span>thread_local</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-until-c23" style="white-space: nowrap;">(C23 移除)</span></span></span></div></div>
+</td>
+<td>存储类说明符 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="k">_Thread_local</span></code> 的便利宏 <br> <span class="t-mark" style="white-space: nowrap;">(关键词宏)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>tss_t</b></code>
+</td>
+<td>线程特定存储的指针 </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/TSS_DTOR_ITERATIONS.html" title="c/thread/TSS DTOR ITERATIONS"> <span class="t-lines"><span>TSS_DTOR_ITERATIONS</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>析构器被调用的最大次数  <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>tss_dtor_t</b></code></span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>函数指针类型 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span></code></span>，用作 TSS 析构器 <br> <span class="t-mark" style="white-space: nowrap;">(typedef)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/tss_create.html" title="c/thread/tss create"> <span class="t-lines"><span>tss_create</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>以给定的析构器，创建线程特定存储指针  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/tss_get.html" title="c/thread/tss get"> <span class="t-lines"><span>tss_get</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>从线程特定存储读取  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/tss_set.html" title="c/thread/tss set"> <span class="t-lines"><span>tss_set</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>写入线程特定存储  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../thread/tss_delete.html" title="c/thread/tss delete"> <span class="t-lines"><span>tss_delete</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>释放给定的线程特定存储指针所保有的资源  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span></h3>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define __STDC_NO_THREADS__ 202311L</span>
+
+<span class="cp">#define ONCE_FLAG_INIT      </span><span class="cm">/* 见描述 */</span>
+<span class="cp">#define TSS_DTOR_ITERATIONS </span><span class="cm">/* 见描述 */</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">cnd_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">thrd_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">tss_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">mtx_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">tss_dtor_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">thrd_start_t</span><span class="p">;</span>
+
+<span class="cp">#define mtx_plain     </span><span class="cm">/* 见描述 */</span>
+<span class="cp">#define mtx_recursive </span><span class="cm">/* 见描述 */</span>
+<span class="cp">#define mtx_timed     </span><span class="cm">/* 见描述 */</span>
+<span class="cp">#define once_flag     </span><span class="cm">/* 见描述 */</span>
+<span class="cp">#define thrd_busy     </span><span class="cm">/* 见描述 */</span>
+<span class="cp">#define thrd_error    </span><span class="cm">/* 见描述 */</span>
+<span class="cp">#define thrd_nomem    </span><span class="cm">/* 见描述 */</span>
+<span class="cp">#define thrd_success  </span><span class="cm">/* 见描述 */</span>
+<span class="cp">#define thrd_timedout </span><span class="cm">/* 见描述 */</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">call_once</span><span class="p">(</span><span class="n">once_flag</span><span class="o">*</span><span class="w"> </span><span class="n">flag</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="kt">void</span><span class="p">));</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">cnd_broadcast</span><span class="p">(</span><span class="n">cnd_t</span><span class="o">*</span><span class="w"> </span><span class="n">cond</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">cnd_destroy</span><span class="p">(</span><span class="n">cnd_t</span><span class="o">*</span><span class="w"> </span><span class="n">cond</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">cnd_init</span><span class="p">(</span><span class="n">cnd_t</span><span class="o">*</span><span class="w"> </span><span class="n">cond</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">cnd_signal</span><span class="p">(</span><span class="n">cnd_t</span><span class="o">*</span><span class="w"> </span><span class="n">cond</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">cnd_timedwait</span><span class="p">(</span><span class="n">cnd_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">mtx_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">mtx</span><span class="p">,</span>
+<span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">timespec</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ts</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">cnd_wait</span><span class="p">(</span><span class="n">cnd_t</span><span class="o">*</span><span class="w"> </span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">mtx_t</span><span class="o">*</span><span class="w"> </span><span class="n">mtx</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">mtx_destroy</span><span class="p">(</span><span class="n">mtx_t</span><span class="o">*</span><span class="w"> </span><span class="n">mtx</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">mtx_init</span><span class="p">(</span><span class="n">mtx_t</span><span class="o">*</span><span class="w"> </span><span class="n">mtx</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">mtx_lock</span><span class="p">(</span><span class="n">mtx_t</span><span class="o">*</span><span class="w"> </span><span class="n">mtx</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">mtx_timedlock</span><span class="p">(</span><span class="n">mtx_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">mtx</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">timespec</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ts</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">mtx_trylock</span><span class="p">(</span><span class="n">mtx_t</span><span class="o">*</span><span class="w"> </span><span class="n">mtx</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">mtx_unlock</span><span class="p">(</span><span class="n">mtx_t</span><span class="o">*</span><span class="w"> </span><span class="n">mtx</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">thrd_create</span><span class="p">(</span><span class="n">thrd_t</span><span class="o">*</span><span class="w"> </span><span class="n">thr</span><span class="p">,</span><span class="w"> </span><span class="n">thrd_start_t</span><span class="w"> </span><span class="n">func</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">arg</span><span class="p">);</span>
+<span class="n">thrd_t</span><span class="w"> </span><span class="nf">thrd_current</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">thrd_detach</span><span class="p">(</span><span class="n">thrd_t</span><span class="w"> </span><span class="n">thr</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">thrd_equal</span><span class="p">(</span><span class="n">thrd_t</span><span class="w"> </span><span class="n">thr0</span><span class="p">,</span><span class="w"> </span><span class="n">thrd_t</span><span class="w"> </span><span class="n">thr1</span><span class="p">);</span>
+<span class="p">[[</span><span class="k">noreturn</span><span class="p">]]</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">thrd_exit</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">thrd_join</span><span class="p">(</span><span class="n">thrd_t</span><span class="w"> </span><span class="n">thr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">res</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">thrd_sleep</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">timespec</span><span class="o">*</span><span class="w"> </span><span class="n">duration</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">timespec</span><span class="o">*</span><span class="w"> </span><span class="n">remaining</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">thrd_yield</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">tss_create</span><span class="p">(</span><span class="n">tss_t</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">tss_dtor_t</span><span class="w"> </span><span class="n">dtor</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">tss_delete</span><span class="p">(</span><span class="n">tss_t</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">tss_get</span><span class="p">(</span><span class="n">tss_t</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">tss_set</span><span class="p">(</span><span class="n">tss_t</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">val</span><span class="p">);</span>
+</pre></div>
+<!-- 
+NewPP limit report
+Cached time: 20260422040832
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.186 seconds
+Real time usage: 2.641 seconds
+Preprocessor visited node count: 7664/1000000
+Post‐expand include size: 243021/4194304 bytes
+Template argument size: 47137/4194304 bytes
+Highest expansion depth: 23/100
+Expensive parser function count: 5/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 11633/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2447.772      1 -total
+ 42.31% 1035.558     34 Template:dsc_inc
+ 35.08%  858.732      1 Template:source
+ 18.56%  454.410      1 Template:c/header/navbar
+ 18.00%  440.536      1 Template:navbar
+ 13.87%  339.456      1 Template:c/header/navbar_content
+ 10.19%  249.325     49 Template:nv
+  7.66%  187.590     35 Template:dsc
+  5.15%  126.121      1 Template:c/thread/dsc_thrd_current
+  3.29%   80.553     32 Template:header
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:17061-0!canonical!zh and timestamp 20260422040832 and revision id 99079. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/header/threads">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":89,"wgPageParseReport":{"limitreport":{"cputime":"0.186","walltime":"2.641","ppvisitednodes":{"value":7664,"limit":1000000},"postexpandincludesize":{"value":243021,"limit":4194304},"templateargumentsize":{"value":47137,"limit":4194304},"expansiondepth":{"value":23,"limit":100},"expensivefunctioncount":{"value":5,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11633,"limit":5000000},"timingprofile":["100.00% 2447.772      1 -total"," 42.31% 1035.558     34 Template:dsc_inc"," 35.08%  858.732      1 Template:source"," 18.56%  454.410      1 Template:c/header/navbar"," 18.00%  440.536      1 Template:navbar"," 13.87%  339.456      1 Template:c/header/navbar_content"," 10.19%  249.325     49 Template:nv","  7.66%  187.590     35 Template:dsc","  5.15%  126.121      1 Template:c/thread/dsc_thrd_current","  3.29%   80.553     32 Template:header"]},"cachereport":{"timestamp":"20260422040832","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422092849 -->
+</html>

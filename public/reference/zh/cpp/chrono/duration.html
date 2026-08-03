@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh-Hans-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>std::chrono::duration</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"6cd30c82164df771da0d5f22","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/chrono/duration","wgTitle":"cpp/chrono/duration","wgCurRevisionId":97967,"wgRevisionId":97967,"wgArticleId":1533,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh-cn","wgPageContentLanguage":"zh-cn","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/chrono/duration","wgRelevantArticleId":1533,"wgUserVariant":"zh-cn","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});mw.user.options.set({"language":"zh-cn","variant":"zh-cn"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_chrono_duration rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh-Hans-CN" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">std::chrono::</span>duration</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh-Hans-CN" dir="ltr"><div id="mw-content-subtitle" lang="zh-Hans-CN" dir="ltr"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../chrono.html" title="cpp/chrono">chrono</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh-Hans-CN" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../standard_library.html" title="cpp/standard library">标准库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="cpp/header">标准库标头</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../named_req.html" title="cpp/named req">具名要求</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../feature_test.html" title="cpp/feature test">功能特性测试宏</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html#%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81" title="cpp/utility">语言支持库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="cpp/error">诊断库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="cpp/memory">内存管理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../meta.html" title="cpp/meta">元编程库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html" title="cpp/utility">通用工具库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../container.html" title="cpp/container">容器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../iterator.html" title="cpp/iterator">迭代器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../ranges.html" title="cpp/ranges">范围库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="cpp/algorithm">算法库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="cpp/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../text.html" title="cpp/text">文本处理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="cpp/numeric">数值库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="cpp/chrono">日期和时间库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="cpp/io">输入/输出库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="cpp/thread">并发支持库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../execution.html" title="cpp/execution">执行控制库</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../chrono.html" title="cpp/chrono">日期和时间库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a href="../chrono.html#%E6%97%B6%E9%97%B4%E7%82%B9" title="cpp/chrono">时间点</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="time_point.html" title="cpp/chrono/time point"><span class="t-lines"><span>time_point</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="clock_time_conversion.html" title="cpp/chrono/clock time conversion"><span class="t-lines"><span>clock_time_conversion</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="clock_cast.html" title="cpp/chrono/clock cast"><span class="t-lines"><span>clock_cast</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../chrono.html#%E6%97%B6%E9%95%BF" title="cpp/chrono">时长</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>duration</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../chrono.html#%E6%97%B6%E9%92%9F" title="cpp/chrono">时钟</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="system_clock.html" title="cpp/chrono/system clock"><span class="t-lines"><span>system_clock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="steady_clock.html" title="cpp/chrono/steady clock"><span class="t-lines"><span>steady_clock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="is_clock.html" title="cpp/chrono/is clock"><span class="t-lines"><span>is_clock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="utc_clock.html" title="cpp/chrono/utc clock"><span class="t-lines"><span>utc_clock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tai_clock.html" title="cpp/chrono/tai clock"><span class="t-lines"><span>tai_clock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="high_resolution_clock.html" title="cpp/chrono/high resolution clock"><span class="t-lines"><span>high_resolution_clock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="gps_clock.html" title="cpp/chrono/gps clock"><span class="t-lines"><span>gps_clock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="file_clock.html" title="cpp/chrono/file clock"><span class="t-lines"><span>file_clock</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="local_t.html" title="cpp/chrono/local t"><span class="t-lines"><span>local_t</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../chrono.html#%E5%BD%93%E5%A4%A9%E6%97%B6%E5%88%BB" title="cpp/chrono">当天时刻</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="hour_fun.html" title="cpp/chrono/hour fun"><span class="t-lines"><span>is_am</span><span>is_pm</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="hour_fun.html" title="cpp/chrono/hour fun"><span class="t-lines"><span>make12</span><span>make24</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="hh_mm_ss.html" title="cpp/chrono/hh mm ss"><span class="t-lines"><span>hh_mm_ss</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a href="../chrono.html#%E6%97%A5%E5%8E%86" title="cpp/chrono">日历</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="day.html" title="cpp/chrono/day"><span class="t-lines"><span>day</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="month.html" title="cpp/chrono/month"><span class="t-lines"><span>month</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="year.html" title="cpp/chrono/year"><span class="t-lines"><span>year</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="weekday.html" title="cpp/chrono/weekday"><span class="t-lines"><span>weekday</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator_slash.html" title="cpp/chrono/operator slash"><span class="t-lines"><span>operator/</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="year_month_day.html" title="cpp/chrono/year month day"><span class="t-lines"><span>year_month_day</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="year_month_day_last.html" title="cpp/chrono/year month day last"><span class="t-lines"><span>year_month_day_last</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="year_month_weekday.html" title="cpp/chrono/year month weekday"><span class="t-lines"><span>year_month_weekday</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="year_month_weekday_last.html" title="cpp/chrono/year month weekday last"><span class="t-lines"><span>year_month_weekday_last</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="weekday_indexed.html" title="cpp/chrono/weekday indexed"><span class="t-lines"><span>weekday_indexed</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="weekday_last.html" title="cpp/chrono/weekday last"><span class="t-lines"><span>weekday_last</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="month_day.html" title="cpp/chrono/month day"><span class="t-lines"><span>month_day</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="month_day_last.html" title="cpp/chrono/month day last"><span class="t-lines"><span>month_day_last</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="month_weekday.html" title="cpp/chrono/month weekday"><span class="t-lines"><span>month_weekday</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="month_weekday_last.html" title="cpp/chrono/month weekday last"><span class="t-lines"><span>month_weekday_last</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="year_month.html" title="cpp/chrono/year month"><span class="t-lines"><span>year_month</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="last_spec.html" title="cpp/chrono/last spec"><span class="t-lines"><span>last_spec</span><span>last</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../chrono.html#chrono_I/O" title="cpp/chrono"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">chrono</code> I/O</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="parse.html" title="cpp/chrono/parse"><span class="t-lines"><span>parse</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a href="../chrono.html#%E6%97%B6%E5%8C%BA" title="cpp/chrono">时区</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tzdb.html" title="cpp/chrono/tzdb"><span class="t-lines"><span>tzdb</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tzdb_list.html" title="cpp/chrono/tzdb list"><span class="t-lines"><span>tzdb_list</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tzdb_functions.html" title="cpp/chrono/tzdb functions"><span class="t-lines"><span>get_tzdb</span><span>get_tzdb_list</span><span>reload_tzdb</span><span>remote_version</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="sys_info.html" title="cpp/chrono/sys info"><span class="t-lines"><span>sys_info</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="local_info.html" title="cpp/chrono/local info"><span class="t-lines"><span>local_info</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="nonexistent_local_time.html" title="cpp/chrono/nonexistent local time"><span class="t-lines"><span>nonexistent_local_time</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ambiguous_local_time.html" title="cpp/chrono/ambiguous local time"><span class="t-lines"><span>ambiguous_local_time</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="locate_zone.html" title="cpp/chrono/locate zone"><span class="t-lines"><span>locate_zone</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="current_zone.html" title="cpp/chrono/current zone"><span class="t-lines"><span>current_zone</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="time_zone.html" title="cpp/chrono/time zone"><span class="t-lines"><span>time_zone</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="choose.html" title="cpp/chrono/choose"><span class="t-lines"><span>choose</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="zoned_traits.html" title="cpp/chrono/zoned traits"><span class="t-lines"><span>zoned_traits</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="zoned_time.html" title="cpp/chrono/zoned time"><span class="t-lines"><span>zoned_time</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="time_zone_link.html" title="cpp/chrono/time zone link"><span class="t-lines"><span>time_zone_link</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="leap_second.html" title="cpp/chrono/leap second"><span class="t-lines"><span>leap_second</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="utc_clock/leap_second_info.html" title="cpp/chrono/utc clock/leap second info"><span class="t-lines"><span>leap_second_info</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="utc_clock/get_leap_second_info.html" title="cpp/chrono/utc clock/get leap second info"><span class="t-lines"><span>get_leap_second_info</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="c.html" title="cpp/chrono/c">C 风格日期和时间</a></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a class="mw-selflink selflink"><tt>std::chrono::duration</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h1"><td colspan="5">成员函数</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/duration.html" title="cpp/chrono/duration/duration"><span class="t-lines"><span>duration::duration</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/operator%3D.html" title="cpp/chrono/duration/operator="><span class="t-lines"><span>duration::operator=</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/count.html" title="cpp/chrono/duration/count"><span class="t-lines"><span>duration::count</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/zero.html" title="cpp/chrono/duration/zero"><span class="t-lines"><span>duration::zero</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/min.html" title="cpp/chrono/duration/min"><span class="t-lines"><span>duration::min</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/max.html" title="cpp/chrono/duration/max"><span class="t-lines"><span>duration::max</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/operator_arith.html" title="cpp/chrono/duration/operator arith"><span class="t-lines"><span>duration::operator+</span><span>duration::operator-</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/operator_arith2.html" title="cpp/chrono/duration/operator arith2"><span class="t-lines"><span>duration::operator++</span><span>duration::operator--</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/operator_arith3.html" title="cpp/chrono/duration/operator arith3"><span class="t-lines"><span>duration::operator+=</span><span>duration::operator-=</span><span>duration::operator*=</span><span>duration::operator/=</span><span>duration::operator%=</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h1"><td colspan="5">非成员函数</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/operator_arith4.html" title="cpp/chrono/duration/operator arith4"><span class="t-lines"><span>operator+</span><span>operator-</span><span>operator*</span><span>operator/</span><span>operator%</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/operator_cmp.html" title="cpp/chrono/duration/operator cmp"><span class="t-lines"><span>operator==</span><span>operator!=</span><span>operator&lt;</span><span>operator&lt;=</span><span>operator&gt;</span><span>operator&gt;=</span><span>operator&lt;=&gt;</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></span><span></span><span></span><span></span><span></span><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/operator_ltlt.html" title="cpp/chrono/duration/operator ltlt"><span class="t-lines"><span>operator&lt;&lt;</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/duration_cast.html" title="cpp/chrono/duration/duration cast"><span class="t-lines"><span>duration_cast</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/floor.html" title="cpp/chrono/duration/floor"><span class="t-lines"><span>floor</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/ceil.html" title="cpp/chrono/duration/ceil"><span class="t-lines"><span>ceil</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/round.html" title="cpp/chrono/duration/round"><span class="t-lines"><span>round</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/abs.html" title="cpp/chrono/duration/abs"><span class="t-lines"><span>abs</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%2522%2522h.html" title='cpp/chrono/operator""h'><span class="t-lines"><span>operator""h</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%2522%2522min.html" title='cpp/chrono/operator""min'><span class="t-lines"><span>operator""min</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%2522%2522s.html" title='cpp/chrono/operator""s'><span class="t-lines"><span>operator""s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%2522%2522ms.html" title='cpp/chrono/operator""ms'><span class="t-lines"><span>operator""ms</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%2522%2522us.html" title='cpp/chrono/operator""us'><span class="t-lines"><span>operator""us</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%2522%2522ns.html" title='cpp/chrono/operator""ns'><span class="t-lines"><span>operator""ns</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/from_stream.html" title="cpp/chrono/duration/from stream"><span class="t-lines"><span>from_stream</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h1"><td colspan="5">辅助类</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/common_type.html" title="cpp/chrono/duration/common type"><span class="t-lines"><span>common_type</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="treat_as_floating_point.html" title="cpp/chrono/treat as floating point"><span class="t-lines"><span>treat_as_floating_point</span></span></a></div><div><span class="t-lines"><span>    </span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration_values.html" title="cpp/chrono/duration values"><span class="t-lines"><span>duration_values</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/formatter.html" title="cpp/chrono/duration/formatter"><span class="t-lines"><span>formatter<span class="t-dsc-small">&lt;std::chrono::duration&gt;</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="duration/hash.html" title="cpp/chrono/duration/hash"><span class="t-lines"><span>hash<span class="t-dsc-small">&lt;std::chrono::duration&gt;</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/chrono.html" title="cpp/header/chrono">&lt;chrono&gt;</a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl t-since-cxx11">
+<td> <div><div style="max-width: min(calc(7.68332px * 75 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Rep</span><span class="p">,</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Period</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">duration</span><span class="p">;</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>类模板 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std::chrono::duration</code> 表示时间间隔。
+</p><p>它由 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">Rep</code> 类型的计次数和计次周期组成，其中计次周期是一个编译期有理<a href="../numeric/ratio/ratio.html" title="cpp/numeric/ratio/ratio"><tt>f</tt></a>，表示从一个计次到下一个的秒数。
+</p><p>在 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">duration</code> 存储的数据只有 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">Rep</code> 类型的计次数。若 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">Rep</code> 是浮点类型，则 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">duration</code> 能表示小数的计次数。<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">Period</code> 被包含为时长类型的一部分，且只在不同时长间转换时使用。
+</p>
+<h3><span id=".E6.88.90.E5.91.98.E7.B1.BB.E5.9E.8B"></span><span class="mw-headline" id="成员类型">成员类型</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-hitem">
+<td>成员类型
+</td>
+<td>定义
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">rep</code>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">Rep</code>，表示计次数的算术类型或模仿算术类型的类
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">period</code>
+</td>
+<td><span class="t-rev-inl t-until-cxx17"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">Period</code></span><span><span class="t-mark-rev t-until-cxx17" style="white-space: nowrap;">(C++17 前)</span></span></span><span class="t-rev-inl t-since-cxx17"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">typename</span><span class="w"> </span><span class="nc">Period</span><span class="o">::</span><span class="n">type</span></code></span><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17 起)</span></span></span>，表示计次周期的 <span class="t-lc">std::ratio</span>（即每次的秒数）
+</td></tr>
+
+</tbody></table>
+<h3><span id=".E6.88.90.E5.91.98.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="成员函数">成员函数</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div t-dsc-member-nobold-div"><div><a href="duration/duration.html" title="cpp/chrono/duration/duration"> <span class="t-lines"><span>(构造函数)</span></span></a></div></div>
+</td>
+<td>构造新 duration <br> <span class="t-mark" style="white-space: nowrap;">(公开成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/operator%3D.html" title="cpp/chrono/duration/operator="> <span class="t-lines"><span>operator=</span></span></a></div></div>
+</td>
+<td>赋值内容 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/count.html" title="cpp/chrono/duration/count"> <span class="t-lines"><span>count</span></span></a></div></div>
+</td>
+<td>返回计次的计数 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/zero.html" title="cpp/chrono/duration/zero"> <span class="t-lines"><span>zero</span></span></a></div><div><span class="t-lines"><span><span class="t-cmark">[静态]</span></span></span></div></div>
+</td>
+<td>返回特殊时长值零 <br> <span class="t-mark" style="white-space: nowrap;">(公开静态成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/min.html" title="cpp/chrono/duration/min"> <span class="t-lines"><span>min</span></span></a></div><div><span class="t-lines"><span><span class="t-cmark">[静态]</span></span></span></div></div>
+</td>
+<td>返回特殊时长值最小值 <br> <span class="t-mark" style="white-space: nowrap;">(公开静态成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/max.html" title="cpp/chrono/duration/max"> <span class="t-lines"><span>max</span></span></a></div><div><span class="t-lines"><span><span class="t-cmark">[静态]</span></span></span></div></div>
+</td>
+<td>返回特殊时长值最大值 <br> <span class="t-mark" style="white-space: nowrap;">(公开静态成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/operator_arith.html" title="cpp/chrono/duration/operator arith"> <span class="t-lines"><span>operator+</span><span>operator-</span></span></a></div></div>
+</td>
+<td>实现一元 + 和一元 - <br> <span class="t-mark" style="white-space: nowrap;">(公开成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/operator_arith2.html" title="cpp/chrono/duration/operator arith2"> <span class="t-lines"><span>operator++</span><span>operator++<span class="t-dsc-small">(int)</span></span><span>operator--</span><span>operator--<span class="t-dsc-small">(int)</span></span></span></a></div></div>
+</td>
+<td>自增或自减计次数 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/operator_arith3.html" title="cpp/chrono/duration/operator arith3"> <span class="t-lines"><span>operator+=</span><span>operator-=</span><span>operator*=</span><span>operator/=</span><span>operator%=</span></span></a></div></div>
+</td>
+<td>实现两个时长间的复合赋值 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E9.9D.9E.E6.88.90.E5.91.98.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="非成员函数">非成员函数</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/operator_arith4.html" title="cpp/chrono/duration/operator arith4"> <span class="t-lines"><span>operator+</span><span>operator-</span><span>operator*</span><span>operator/</span><span>operator%</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div>
+</td>
+<td>实现以时长为实参的算术运算 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/operator_cmp.html" title="cpp/chrono/duration/operator cmp"> <span class="t-lines"><span>operator==</span><span>operator!=</span><span>operator&lt;</span><span>operator&lt;=</span><span>operator&gt;</span><span>operator&gt;=</span><span>operator&lt;=&gt;</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 移除)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div>
+</td>
+<td>比较两个时长  <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/duration_cast.html" title="cpp/chrono/duration/duration cast"> <span class="t-lines"><span>duration_cast</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div>
+</td>
+<td>转换时长到另一个拥有不同计次间隔的时长 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/floor.html" title="cpp/chrono/duration/floor"> <span class="t-lines"><span>floor<span class="t-dsc-small">(std::chrono::duration)</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div>
+</td>
+<td>以向下取整的方式，将一个时长转换为另一个时长  <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/ceil.html" title="cpp/chrono/duration/ceil"> <span class="t-lines"><span>ceil<span class="t-dsc-small">(std::chrono::duration)</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div>
+</td>
+<td>以向上取整的方式，将一个时长转换为另一个时长  <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/round.html" title="cpp/chrono/duration/round"> <span class="t-lines"><span>round<span class="t-dsc-small">(std::chrono::duration)</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div>
+</td>
+<td>转换时长到另一个时长，就近取整，偶数优先 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/abs.html" title="cpp/chrono/duration/abs"> <span class="t-lines"><span>abs<span class="t-dsc-small">(std::chrono::duration)</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div>
+</td>
+<td>获取时长的绝对值  <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/operator_ltlt.html" title="cpp/chrono/duration/operator ltlt"> <span class="t-lines"><span>operator&lt;&lt;</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div>
+</td>
+<td>进行 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">duration</code> 上的流输出 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/from_stream.html" title="cpp/chrono/duration/from stream"> <span class="t-lines"><span>from_stream</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div>
+</td>
+<td>按照提供的格式，从流分析 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">duration</code> <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E8.BE.85.E5.8A.A9.E7.B1.BB.E5.9E.8B"></span><span class="mw-headline" id="辅助类型">辅助类型</span></h3>
+<p>下表中用到的类型 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/* intXX */</span></code> 表示至少 XX 位的有符号整数类型。
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-hitem">
+<td>类型
+</td>
+<td>定义
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::nanoseconds</b></code>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int64 */</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nano</span><span class="o">&gt;</span></code>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::microseconds</b></code>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int55 */</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">micro</span><span class="o">&gt;</span></code>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::milliseconds</b></code>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int45 */</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">milli</span><span class="o">&gt;</span></code>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::seconds</b></code>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int35 */</span><span class="o">&gt;</span></code>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::minutes</b></code>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int29 */</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">60</span><span class="o">&gt;&gt;</span></code>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::hours</b></code>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int23 */</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">3600</span><span class="o">&gt;&gt;</span></code>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::days</b></code> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int25 */</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">86400</span><span class="o">&gt;&gt;</span></code>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::weeks</b></code> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int22 */</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">604800</span><span class="o">&gt;&gt;</span></code>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::months</b></code> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int20 */</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">2629746</span><span class="o">&gt;&gt;</span></code>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>std::chrono::years</b></code> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="cm">/* int17 */</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">31556952</span><span class="o">&gt;&gt;</span></code>
+</td></tr>
+
+</tbody></table>
+<p>注意：到 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">hours</code> 为止的每个预定义时长类型至少涵盖 ±292 年的范围。
+</p>
+<table class="t-rev-begin">
+<tbody><tr class="t-rev t-since-cxx20"><td>
+<p>每个预定义时长类型 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">days</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">weeks</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">months</code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">years</code> 至少涵盖 ±40000 年范围。<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">years</code> 等于 365.2425 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">days</code>（格里高利年的平均长度）。<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">months</code> 等于 30.436875 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">days</code>（恰好为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">years</code> 的 1/12）。
+</p>
+</td>
+<td><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span></td></tr>
+</tbody></table>
+<h3><span id=".E8.BE.85.E5.8A.A9.E7.B1.BB"></span><span class="mw-headline" id="辅助类">辅助类</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/common_type.html" title="cpp/chrono/duration/common type"> <span class="t-lines"><span>std::common_type<span class="t-dsc-small">&lt;std::chrono::duration&gt;</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div>
+</td>
+<td>特化 <span class="t-lc">std::common_type</span> 特征 <br> <span class="t-mark" style="white-space: nowrap;">(类模板特化)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="treat_as_floating_point.html" title="cpp/chrono/treat as floating point"> <span class="t-lines"><span>treat_as_floating_point</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div>
+</td>
+<td>指示时长可转换为拥有不同计次周期的时长 <br> <span class="t-mark" style="white-space: nowrap;">(类模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration_values.html" title="cpp/chrono/duration values"> <span class="t-lines"><span>duration_values</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div>
+</td>
+<td>构造给定类型计次的零、最小及最大值 <br> <span class="t-mark" style="white-space: nowrap;">(类模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/formatter.html" title="cpp/chrono/duration/formatter"> <span class="t-lines"><span>std::formatter<span class="t-dsc-small">&lt;std::chrono::duration&gt;</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div>
+</td>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">duration</code> 的格式化支持 <br> <span class="t-mark" style="white-space: nowrap;">(类模板特化)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="duration/hash.html" title="cpp/chrono/duration/hash"> <span class="t-lines"><span>std::hash<span class="t-dsc-small">&lt;std::chrono::duration&gt;</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td><a class="mw-selflink selflink"><tt>std::chrono::duration</tt></a> 的散列支持 <br> <span class="t-mark" style="white-space: nowrap;">(类模板特化)</span>
+</td></tr>
+
+</tbody></table>
+<h3><span id=".E8.BE.85.E5.8A.A9.E7.89.B9.E5.8C.96"></span><span class="mw-headline" id="辅助特化">辅助特化</span></h3>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl t-since-cxx23">
+<td> <div><div style="max-width: min(calc(7.68332px * 176 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Rep</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Period</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">enable_nonlocking_formatter_optimization</span><span class="o">&lt;</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="n">Rep</span><span class="p">,</span><span class="w"> </span><span class="n">Period</span><span class="o">&gt;&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">enable_nonlocking_formatter_optimization</span><span class="o">&lt;</span><span class="n">Rep</span><span class="o">&gt;</span><span class="p">;</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>这个 <a href="../utility/format/enable_nonlocking_formatter_optimization.html" title="cpp/utility/format/enable nonlocking formatter optimization"><tt>std::enable_nonlocking_formatter_optimization</tt></a> 针对模板形参 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">Rep</code> 已启用的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">chrono::duration</code> 对象的打印启用 <a href="../io/print.html" title="cpp/io/print"><tt>std::print</tt></a> 和 <a href="../io/println.html" title="cpp/io/println"><tt>std::println</tt></a> 的高效实现。
+</p>
+<h3><span id=".E5.AD.97.E9.9D.A2.E9.87.8F"></span><span class="mw-headline" id="字面量">字面量</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-header">
+<td colspan="2"><div>在内联命名空间 <code>std::literals::chrono_literals</code> 定义</div>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="operator%2522%2522h.html" title='cpp/chrono/operator""h'> <span class="t-lines"><span>operator""h</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div>
+</td>
+<td>表示小时的 <span class="t-lc">std::chrono::duration</span> 字面量 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="operator%2522%2522min.html" title='cpp/chrono/operator""min'> <span class="t-lines"><span>operator""min</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div>
+</td>
+<td>表示分钟的 <span class="t-lc">std::chrono::duration</span> 字面量 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="operator%2522%2522s.html" title='cpp/chrono/operator""s'> <span class="t-lines"><span>operator""s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div>
+</td>
+<td>表示秒的 <span class="t-lc">std::chrono::duration</span> 字面量 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="operator%2522%2522ms.html" title='cpp/chrono/operator""ms'> <span class="t-lines"><span>operator""ms</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div>
+</td>
+<td>表示毫秒的 <span class="t-lc">std::chrono::duration</span> 字面量 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="operator%2522%2522us.html" title='cpp/chrono/operator""us'> <span class="t-lines"><span>operator""us</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div>
+</td>
+<td>表示微秒的 <span class="t-lc">std::chrono::duration</span> 字面量 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="operator%2522%2522ns.html" title='cpp/chrono/operator""ns'> <span class="t-lines"><span>operator""ns</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx14" style="white-space: nowrap;">(C++14)</span></span></span></div></div>
+</td>
+<td>表示纳秒的 <span class="t-lc">std::chrono::duration</span> 字面量 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<table class="t-rev-begin">
+<tbody><tr class="t-rev t-since-cxx20"><td>
+<p>注意：字面量后缀 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">d</code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">y</code> 不指代 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">days</code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">years</code>，而是分别指代 <a href="day.html" title="cpp/chrono/day"><tt>day</tt></a> 和 <a href="year.html" title="cpp/chrono/year"><tt>year</tt></a>。
+</p>
+</td>
+<td><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span></td></tr>
+</tbody></table>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>时长对象 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">d</span></code></span> 持有的实际时间间隔（以秒计）大致等于 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">d</span><span class="p">.</span><span class="n">count</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">D</span><span class="o">::</span><span class="n">period</span><span class="o">::</span><span class="n">num</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">D</span><span class="o">::</span><span class="n">period</span><span class="o">::</span><span class="n">den</span></code></span>，其中 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">D</code> 是类型 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">chrono::duration&lt;&gt;</code>，<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">d</span></code></span> 是具有该类型的对象。
+</p>
+<table class="wikitable ftm-begin">
+
+<tbody><tr>
+<th><a href="../utility/feature_test.html" title="cpp/utility/feature test">功能特性测试</a>宏</th>
+<th><abbr title="采纳该特性的年/月。每个值下面的链接指向编译期支持页面中给定功能特性的条目。">值</abbr></th>
+<th><abbr title="引入该特性的标准；DR 意为针对该修订版的缺陷报告">标准</abbr></th>
+<th>功能特性
+</th></tr>
+<tr>
+<td><a href="../feature_test.html#cpp_lib_chrono_udls" title="cpp/feature test"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">__cpp_lib_chrono_udls</code></a></td>
+<td><a href="../compiler_support/14.html#cpp_lib_chrono_udls_201304L" title="cpp/compiler support/14"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">201304L</code></a></td>
+<td><span class="t-mark" style="white-space: nowrap;">(C++14)</span></td>
+<td><a href="duration.html#%E5%AD%97%E9%9D%A2%E9%87%8F">时间类型的用户定义字面量</a>
+</td></tr></tbody></table>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><p>此示例演示如何定义几种自定义时长类型及在类型间转换：</p><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T1</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">T2</span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">mul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ratio_multiply</span><span class="o">&lt;</span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">T2</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">microfortnights</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span>
+<span class="w">        </span><span class="n">mul</span><span class="o">&lt;</span><span class="n">mul</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">weeks</span><span class="o">::</span><span class="n">period</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">micro</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">nanocenturies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span>
+<span class="w">        </span><span class="n">mul</span><span class="o">&lt;</span><span class="n">mul</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">hecto</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">years</span><span class="o">::</span><span class="n">period</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nano</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">fps_24</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"1 秒是：</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 无精度损失的整数尺度转换：无转型</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">).</span><span class="n">count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" 毫秒</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">microseconds</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">).</span><span class="n">count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" 微秒</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">nanoseconds</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">).</span><span class="n">count</span><span class="p">()</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" 纳秒</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 有精度损失的整数尺度转换：需要转型</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">minutes</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">).</span><span class="n">count</span><span class="p">()</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" 分</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 不用 duration_cast 的替代方法：</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="n">s</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1</span><span class="n">min</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" 分</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 浮点尺度转换：无转型</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">microfortnights</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">).</span><span class="n">count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" 微两周</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nanocenturies</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">).</span><span class="n">count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" 纳世纪</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"24fps 下的 "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fps_24</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">).</span><span class="n">count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" 帧</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>1 秒是：
+1000 毫秒
+1000000 微秒
+1000000000 纳秒
+0 分
+0 分
+0.82672 微两周
+0.316887 纳世纪
+24fps 下的 24 帧
+</pre></div> 
+</div>
+<!-- 
+NewPP limit report
+Cached time: 20260502045710
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.266 seconds
+Real time usage: 0.295 seconds
+Preprocessor visited node count: 14023/1000000
+Post‐expand include size: 472051/4194304 bytes
+Template argument size: 107409/4194304 bytes
+Highest expansion depth: 24/100
+Expensive parser function count: 19/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 19451/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  212.872      1 -total
+ 36.67%   78.055      1 Template:cpp/chrono/duration/navbar
+ 36.17%   77.002      1 Template:navbar
+ 35.62%   75.816     28 Template:dsc_inc
+ 27.99%   59.576     41 Template:dsc
+ 21.81%   46.419    108 Template:nv
+ 19.57%   41.651     71 Template:nv_ln
+ 18.19%   38.715      1 Template:cpp/chrono/navbar_content
+ 11.38%   24.228      1 Template:cpp/chrono/duration/navbar_content
+ 10.03%   21.360     29 Template:dsc_member
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1533-0!canonical!zh-cn and timestamp 20260502045710 and revision id 97967. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh-Hans-CN" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/cpp/chrono/duration">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":463,"wgPageParseReport":{"limitreport":{"cputime":"0.266","walltime":"0.295","ppvisitednodes":{"value":14023,"limit":1000000},"postexpandincludesize":{"value":472051,"limit":4194304},"templateargumentsize":{"value":107409,"limit":4194304},"expansiondepth":{"value":24,"limit":100},"expensivefunctioncount":{"value":19,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":19451,"limit":5000000},"timingprofile":["100.00%  212.872      1 -total"," 36.67%   78.055      1 Template:cpp/chrono/duration/navbar"," 36.17%   77.002      1 Template:navbar"," 35.62%   75.816     28 Template:dsc_inc"," 27.99%   59.576     41 Template:dsc"," 21.81%   46.419    108 Template:nv"," 19.57%   41.651     71 Template:nv_ln"," 18.19%   38.715      1 Template:cpp/chrono/navbar_content"," 11.38%   24.228      1 Template:cpp/chrono/duration/navbar_content"," 10.03%   21.360     29 Template:dsc_member"]},"cachereport":{"timestamp":"20260502045710","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>字符串库</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"66fa8c0459171a654e7e1efc","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/string","wgTitle":"c/string","wgCurRevisionId":97069,"wgRevisionId":97069,"wgArticleId":1250,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/string","wgRelevantArticleId":1250,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../common/loader_zh_skins_cppreference2.css">
+<script async="" src="../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_string rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">字符串库</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../c.html" title="c">c</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a class="mw-selflink selflink">字符串库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="string/byte.html" title="c/string/byte">空终止字节字符串</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string/multibyte.html" title="c/string/multibyte">空终止多字节字符串</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string/wide.html" title="c/string/wide">空终止宽字符串</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<h3><span id=".E7.A9.BA.E7.BB.88.E6.AD.A2.E5.AD.97.E8.8A.82.E5.AD.97.E7.AC.A6.E4.B8.B2"></span><span class="mw-headline" id="空终止字节字符串"><a href="string/byte.html" title="c/string/byte">空终止字节字符串</a></span></h3>
+<h3><span id=".E7.A9.BA.E7.BB.88.E6.AD.A2.E5.A4.9A.E5.AD.97.E8.8A.82.E5.AD.97.E7.AC.A6.E4.B8.B2"></span><span class="mw-headline" id="空终止多字节字符串"><a href="string/multibyte.html" title="c/string/multibyte">空终止多字节字符串</a></span></h3>
+<h3><span id=".E7.A9.BA.E7.BB.88.E6.AD.A2.E5.AE.BD.E5.AD.97.E7.AC.A6.E4.B8.B2"></span><span class="mw-headline" id="空终止宽字符串"><a href="string/wide.html" title="c/string/wide">空终止宽字符串</a></span></h3>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class=""><span>字符串库</span></span>的 <span><span><a href="../cpp/string.html" title="cpp/string">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422012435
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.032 seconds
+Real time usage: 0.037 seconds
+Preprocessor visited node count: 441/1000000
+Post‐expand include size: 15442/4194304 bytes
+Template argument size: 1272/4194304 bytes
+Highest expansion depth: 14/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   16.787      1 -total
+ 57.85%    9.711      1 Template:c/string/navbar
+ 47.06%    7.900      1 Template:navbar
+ 24.10%    4.045      1 Template:c/navbar_content
+ 15.10%    2.535      1 Template:dsc_see_cpp
+ 12.64%    2.122     20 Template:nv
+ 11.06%    1.857      1 Template:dsc
+ 10.51%    1.765      1 Template:langlinks
+  8.71%    1.462      1 Template:mark_c11
+  5.41%    0.908      1 Template:mark_rev
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1250-0!canonical!zh and timestamp 20260422012435 and revision id 97069. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../zh.cppreference.com/w/c/string">Online version</a></li><li>Offline version retrieved 2026-05-02 15:55.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":140,"wgPageParseReport":{"limitreport":{"cputime":"0.032","walltime":"0.037","ppvisitednodes":{"value":441,"limit":1000000},"postexpandincludesize":{"value":15442,"limit":4194304},"templateargumentsize":{"value":1272,"limit":4194304},"expansiondepth":{"value":14,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   16.787      1 -total"," 57.85%    9.711      1 Template:c/string/navbar"," 47.06%    7.900      1 Template:navbar"," 24.10%    4.045      1 Template:c/navbar_content"," 15.10%    2.535      1 Template:dsc_see_cpp"," 12.64%    2.122     20 Template:nv"," 11.06%    1.857      1 Template:dsc"," 10.51%    1.765      1 Template:langlinks","  8.71%    1.462      1 Template:mark_c11","  5.41%    0.908      1 Template:mark_rev"]},"cachereport":{"timestamp":"20260422012435","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422012435 -->
+</html>

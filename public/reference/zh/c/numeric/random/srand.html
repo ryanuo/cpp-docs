@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>srand</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"341301219dfb260172a82d23","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/numeric/random/srand","wgTitle":"c/numeric/random/srand","wgCurRevisionId":80803,"wgRevisionId":80803,"wgArticleId":1218,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/numeric/random/srand","wgRelevantArticleId":1218,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../../common/ext.css">
+<script async="" src="../../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_numeric_random_srand rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">srand</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../../numeric.html" title="c/numeric">numeric</a></bdi> | <bdi dir="ltr"><a href="../random.html" title="c/numeric/random">random</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../numeric.html" title="c/numeric">数值</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../math.html" title="c/numeric/math">常用数学函数</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../fenv.html" title="c/numeric/fenv">浮点数环境</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../random.html" title="c/numeric/random">伪随机数生成</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../complex.html" title="c/numeric/complex">复数算术</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../tgmath.html" title="c/numeric/tgmath">泛型数学函数</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../numeric.html#%E4%BD%8D%E6%93%8D%E4%BD%9C" title="c/numeric">位操作</a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../numeric.html#%E5%B8%A6%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E7%AE%97%E6%9C%AF" title="c/numeric">带检查整数算术</a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../random.html" title="c/numeric/random">伪随机数生成</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="rand.html" title="c/numeric/random/rand"><span class="t-lines"><span>rand</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>srand</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="RAND_MAX.html" title="c/numeric/random/RAND MAX"><span class="t-lines"><span>RAND_MAX</span></span></a></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../../header/stdlib.html" title="c/header/stdlib"><tt>&lt;stdlib.h&gt;</tt></a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: calc(7.68332px * 28 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">srand</span><span class="p">(</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">seed</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>以值 <code>seed</code> 播种 <span class="t-lc">rand()</span> 所用的随机数生成器。
+</p><p>若在任何到 <code>srand()</code> 的调用前使用 <code>rand()</code>，则 <code>rand()</code> 表现为如同它被以 <code>srand(1)</code> 播种。
+</p><p>每次以同一 <code>seed</code> 播种 <code>rand()</code> 时，它必须产生相同的值数列。
+</p><p><code>srand()</code> 不保证为线程安全。
+</p>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>seed  种子值
+</td>
+<td>-
+</td>
+<td>
+</td></tr></tbody></table>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC"></span><span class="mw-headline" id="返回值">返回值</span></h3>
+<p>（无）
+</p>
+<h3><span id=".E6.B3.A8.E6.84.8F"></span><span class="mw-headline" id="注意">注意</span></h3>
+<p>通常来说，应该只播种一次随机数生成器，在程序开始处，任何到 <code>rand()</code> 的调用前。不应重复播种，或每次冀愿生成新一批随机数时重播种。
+</p><p>标准实践是使用以 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></code></span> 为种子调用的结果。然而 <code>time()</code> 返回 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">time_t</span></code></span> 值，而不保证 <code>time_t</code> 是整数类型。
+尽管实践中，主流实现都定义 <code>time_t</code> 为整数类型，且此亦为 POSIX 所要求。
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w"> </span><span class="c1">// 以当前时间为随机数生成器的种子</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">random_variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">();</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Random value on [0,%d]: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">RAND_MAX</span><span class="p">,</span><span class="w"> </span><span class="n">random_variable</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>可能的输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Random value on [0 2147483647]: 1373858591
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>7.22.2.2 The srand function （第 252-253 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>7.22.2.2 The srand function （第 346-347 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>7.20.2.2 The srand function （第 312-313 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c89">
+<ul><li>C89/C90 标准（ISO/IEC 9899:1990）：</li></ul>
+<dl><dd><ul><li>4.10.2.2 The srand function</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="rand.html" title="c/numeric/random/rand"> <span class="t-lines"><span>rand</span></span></a></div></div>
+</td>
+<td>产生一个伪随机数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="RAND_MAX.html" title="c/numeric/random/RAND MAX"> <span class="t-lines"><span>RAND_MAX</span></span></a></div></div>
+</td>
+<td><span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">rand</span><span class="p">()</span></code></span> 生成的最大可能值 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>srand</span></span> 的 <span><span><a href="../../../cpp/numeric/random/srand.html" title="cpp/numeric/random/srand">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260421233050
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.100 seconds
+Real time usage: 0.281 seconds
+Preprocessor visited node count: 1684/1000000
+Post‐expand include size: 39061/4194304 bytes
+Template argument size: 5828/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 6/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2695/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  248.377      1 -total
+ 70.23%  174.444      1 Template:example
+ 69.84%  173.458      2 Template:source
+  8.32%   20.672      2 Template:dsc_inc
+  6.09%   15.118      1 Template:c/numeric/random/navbar
+  6.04%   15.013      3 Template:dsc
+  5.84%   14.513      1 Template:navbar
+  4.28%   10.622      1 Template:c/numeric/random/dsc_rand
+  3.64%    9.043      1 Template:dsc_fun
+  3.27%    8.122      1 Template:ddcl
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1218-0!canonical!zh and timestamp 20260421233050 and revision id 80803. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../../zh.cppreference.com/w/c/numeric/random/srand">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":378,"wgPageParseReport":{"limitreport":{"cputime":"0.100","walltime":"0.281","ppvisitednodes":{"value":1684,"limit":1000000},"postexpandincludesize":{"value":39061,"limit":4194304},"templateargumentsize":{"value":5828,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":6,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2695,"limit":5000000},"timingprofile":["100.00%  248.377      1 -total"," 70.23%  174.444      1 Template:example"," 69.84%  173.458      2 Template:source","  8.32%   20.672      2 Template:dsc_inc","  6.09%   15.118      1 Template:c/numeric/random/navbar","  6.04%   15.013      3 Template:dsc","  5.84%   14.513      1 Template:navbar","  4.28%   10.622      1 Template:c/numeric/random/dsc_rand","  3.64%    9.043      1 Template:dsc_fun","  3.27%    8.122      1 Template:ddcl"]},"cachereport":{"timestamp":"20260421233050","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260421233050 -->
+</html>

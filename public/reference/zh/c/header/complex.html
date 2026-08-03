@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>标准库标头 &lt;complex.h&gt; (C99)</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"29311ac70a1479e5aaaf5655","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/header/complex","wgTitle":"c/header/complex","wgCurRevisionId":98189,"wgRevisionId":98189,"wgArticleId":17024,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/header/complex","wgRelevantArticleId":17024,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_header_complex rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">标准库标头</span> &lt;complex.h&gt; <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../header.html" title="c/header">header</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../header.html" title="c/header">标准库头</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="assert.html" title="c/header/assert"><tt>&lt;assert.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink"><tt>&lt;complex.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ctype.html" title="c/header/ctype"><tt>&lt;ctype.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="errno.html" title="c/header/errno"><tt>&lt;errno.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="fenv.html" title="c/header/fenv"><tt>&lt;fenv.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="float.html" title="c/header/float"><tt>&lt;float.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="inttypes.html" title="c/header/inttypes"><tt>&lt;inttypes.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="iso646.html" title="c/header/iso646"><tt>&lt;iso646.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="limits.html" title="c/header/limits"><tt>&lt;limits.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="locale.html" title="c/header/locale"><tt>&lt;locale.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="math.html" title="c/header/math"><tt>&lt;math.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="setjmp.html" title="c/header/setjmp"><tt>&lt;setjmp.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="signal.html" title="c/header/signal"><tt>&lt;signal.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdalign.html" title="c/header/stdalign"><tt>&lt;stdalign.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdarg.html" title="c/header/stdarg"><tt>&lt;stdarg.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdatomic.html" title="c/header/stdatomic"><tt>&lt;stdatomic.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbit.html" title="c/header/stdbit"><tt>&lt;stdbit.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbool.html" title="c/header/stdbool"><tt>&lt;stdbool.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C99*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../../zh.cppreference.com/index.php" class="new" title="c/header/stdckdint（页面不存在）"><tt>&lt;stdckdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stddef.html" title="c/header/stddef"><tt>&lt;stddef.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdint.html" title="c/header/stdint"><tt>&lt;stdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdio.html" title="c/header/stdio"><tt>&lt;stdio.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="stdlib.html" title="c/header/stdlib"><tt>&lt;stdlib.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdmchar.html" title="c/header/stdmchar"><tt>&lt;stdmchar.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(C29)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdnoreturn.html" title="c/header/stdnoreturn"><tt>&lt;stdnoreturn.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string.html" title="c/header/string"><tt>&lt;string.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tgmath.html" title="c/header/tgmath"><tt>&lt;tgmath.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="threads.html" title="c/header/threads"><tt>&lt;threads.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="time.html" title="c/header/time"><tt>&lt;time.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="uchar.html" title="c/header/uchar"><tt>&lt;uchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wchar.html" title="c/header/wchar"><tt>&lt;wchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wctype.html" title="c/header/wctype"><tt>&lt;wctype.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>此标头是<a href="../numeric/complex.html" title="c/numeric/complex">复数算术</a>库的一部分。
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr>
+<td colspan="2"><h5><span id=".E7.B1.BB.E5.9E.8B"></span><span class="mw-headline" id="类型"> 类型 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/imaginary.html" title="c/numeric/complex/imaginary"> <span class="t-lines"><span>imaginary</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>虚数类型宏 <br> <span class="t-mark" style="white-space: nowrap;">(关键词宏)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/complex.html" title="c/numeric/complex/complex"> <span class="t-lines"><span>complex</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>复数类型宏 <br> <span class="t-mark" style="white-space: nowrap;">(关键词宏)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E8.99.9A.E6.95.B0.E5.B8.B8.E9.87.8F"></span><span class="mw-headline" id="虚数常量"> 虚数常量 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/Imaginary_I.html" title="c/numeric/complex/Imaginary I"> <span class="t-lines"><span>_Imaginary_I</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>虚数单位常量 i <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/Complex_I.html" title="c/numeric/complex/Complex I"> <span class="t-lines"><span>_Complex_I</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>复数单位常量 i  <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/I.html" title="c/numeric/complex/I"> <span class="t-lines"><span>I</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>复数或虚数单位常量 i <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E6.93.8D.E4.BD.9C"></span><span class="mw-headline" id="操作"> 操作 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/CMPLX.html" title="c/numeric/complex/CMPLX"> <span class="t-lines"><span>CMPLX</span><span>CMPLXF</span><span>CMPLXL</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>由实部和虚部构建复数 <br> <span class="t-mark" style="white-space: nowrap;">(宏函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/creal.html" title="c/numeric/complex/creal"> <span class="t-lines"><span>creal</span><span>crealf</span><span>creall</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的实部 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/cimag.html" title="c/numeric/complex/cimag"> <span class="t-lines"><span>cimag</span><span>cimagf</span><span>cimagl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的虚部 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/cabs.html" title="c/numeric/complex/cabs"> <span class="t-lines"><span>cabs</span><span>cabsf</span><span>cabsl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的模（绝对值） <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/carg.html" title="c/numeric/complex/carg"> <span class="t-lines"><span>carg</span><span>cargf</span><span>cargl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的辐角 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/conj.html" title="c/numeric/complex/conj"> <span class="t-lines"><span>conj</span><span>conjf</span><span>conjl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算共轭复数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/cproj.html" title="c/numeric/complex/cproj"> <span class="t-lines"><span>cproj</span><span>cprojf</span><span>cprojl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算黎曼球上的投影 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E6.8C.87.E6.95.B0.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="指数函数"> 指数函数 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/cexp.html" title="c/numeric/complex/cexp"> <span class="t-lines"><span>cexp</span><span>cexpf</span><span>cexpl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的 e 底指数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/clog.html" title="c/numeric/complex/clog"> <span class="t-lines"><span>clog</span><span>clogf</span><span>clogl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的自然对数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E5.B9.82.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="幂函数"> 幂函数 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/cpow.html" title="c/numeric/complex/cpow"> <span class="t-lines"><span>cpow</span><span>cpowf</span><span>cpowl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数幂函数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/csqrt.html" title="c/numeric/complex/csqrt"> <span class="t-lines"><span>csqrt</span><span>csqrtf</span><span>csqrtl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数平方根 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E4.B8.89.E8.A7.92.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="三角函数"> 三角函数 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/csin.html" title="c/numeric/complex/csin"> <span class="t-lines"><span>csin</span><span>csinf</span><span>csinl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数正弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/ccos.html" title="c/numeric/complex/ccos"> <span class="t-lines"><span>ccos</span><span>ccosf</span><span>ccosl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数余弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/ctan.html" title="c/numeric/complex/ctan"> <span class="t-lines"><span>ctan</span><span>ctanf</span><span>ctanl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数正切 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/casin.html" title="c/numeric/complex/casin"> <span class="t-lines"><span>casin</span><span>casinf</span><span>casinl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反正弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/cacos.html" title="c/numeric/complex/cacos"> <span class="t-lines"><span>cacos</span><span>cacosf</span><span>cacosl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反余弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/catan.html" title="c/numeric/complex/catan"> <span class="t-lines"><span>catan</span><span>catanf</span><span>catanl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反正切 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E5.8F.8C.E6.9B.B2.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="双曲函数"> 双曲函数 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/csinh.html" title="c/numeric/complex/csinh"> <span class="t-lines"><span>csinh</span><span>csinhf</span><span>csinhl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数双曲正弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/ccosh.html" title="c/numeric/complex/ccosh"> <span class="t-lines"><span>ccosh</span><span>ccoshf</span><span>ccoshl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复双曲余弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/ctanh.html" title="c/numeric/complex/ctanh"> <span class="t-lines"><span>ctanh</span><span>ctanhf</span><span>ctanhl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数双曲正切 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/casinh.html" title="c/numeric/complex/casinh"> <span class="t-lines"><span>casinh</span><span>casinhf</span><span>casinhl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反双曲正弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/cacosh.html" title="c/numeric/complex/cacosh"> <span class="t-lines"><span>cacosh</span><span>cacoshf</span><span>cacoshl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反双曲余弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../numeric/complex/catanh.html" title="c/numeric/complex/catanh"> <span class="t-lines"><span>catanh</span><span>catanhf</span><span>catanhl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反双曲正切 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span></h3>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define __STDC_VERSION_COMPLEX_H__ 202311L</span>
+
+<span class="cp">#define complex       _Complex</span>
+<span class="cp">#define imaginary     </span><span class="cm">/* 由实现定义 */</span>
+<span class="cp">#define _Imaginary_I  </span><span class="cm">/* 由实现定义 */</span>
+<span class="cp">#define _Complex_I    </span><span class="cm">/* 由实现定义 */</span>
+<span class="cp">#define I             _Complex_I</span>
+
+<span class="cp">#pragma STDC CX_LIMITED_RANGE </span><span class="cm">/*ON OFF 切换开关*/</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cacos</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cacosf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cacosl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">casin</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">casinf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">casinl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">catan</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">catanf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">catanl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ccos</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ccosf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ccosl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">csin</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">csinf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">csinl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ctan</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ctanf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ctanl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cacosh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cacoshf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cacoshl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">casinh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">casinhf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">casinhl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">catanh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">catanhf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">catanhl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ccosh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ccoshf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ccoshl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">csinh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">csinhf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">csinhl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ctanh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ctanhf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ctanhl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cexp</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cexpf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cexpl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">clog</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">clogf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">clogl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">cabs</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">cabsf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">cabsl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cpow</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cpowf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cpowl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">csqrt</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">csqrtf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">csqrtl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">carg</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">cargf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">cargl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">cimag</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">cimagf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">cimagl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">CMPLX</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">CMPLXF</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">CMPLXL</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">conj</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">conjf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">conjl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cproj</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cprojf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">cprojl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">creal</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">crealf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">creall</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+
+<span class="c1">// 仅当实现定义了 __STDC_IEC_60559_TYPES__，同时用户代码</span>
+<span class="c1">// 在对 &lt;complex.h&gt; 的所有包含之前定义了 __STDC_WANT_IEC_60559_TYPES_EXT__：</span>
+<span class="cp">#ifdef __STDC_WANT_IEC_60559_TYPES_EXT__</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cacosfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cacosfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*casinfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*casinfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*catanfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*catanfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*ccosfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*ccosfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*csinfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*csinfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*ctanfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*ctanfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cacoshfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cacoshfNx*/</span><span class="p">(</span><span class="w"> </span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*casinhfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*casinhfNx*/</span><span class="p">(</span><span class="w"> </span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*catanhfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*catanhfNx*/</span><span class="p">(</span><span class="w"> </span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*ccoshfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*ccoshfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*csinhfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*csinhfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*ctanhfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*ctanhfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cexpfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cexpfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*clogfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*clogfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="cm">/*cabsfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="cm">/*cabsfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cpowfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cpowfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*csqrtfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*csqrtfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="cm">/*cargfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="cm">/*cargfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="cm">/*cimagfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="cm">/*cimagfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*CMPLXFN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*CMPLXFNX*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*conjfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*conjfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cprojfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="cm">/*cprojfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="cm">/*crealfN*/</span><span class="p">(</span><span class="cm">/*_FloatN*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="cm">/*crealfNx*/</span><span class="p">(</span><span class="cm">/*_FloatNx*/</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="cp">#endif</span>
+</pre></div>
+<!-- 
+NewPP limit report
+Cached time: 20260422025215
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.156 seconds
+Real time usage: 0.376 seconds
+Preprocessor visited node count: 6917/1000000
+Post‐expand include size: 277535/4194304 bytes
+Template argument size: 66099/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 41192/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  316.788      1 -total
+ 59.58%  188.743      1 Template:source
+ 23.32%   73.872     28 Template:dsc_inc
+ 12.84%   40.665      1 Template:c/header/navbar
+ 12.60%   39.931      1 Template:navbar
+ 10.41%   32.989     28 Template:dsc
+  9.05%   28.654      1 Template:c/header/navbar_content
+  8.09%   25.642     22 Template:dsc_fun
+  8.07%   25.578     49 Template:nv
+  5.51%   17.465     28 Template:dsc_member
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:17024-0!canonical!zh and timestamp 20260422025215 and revision id 98189. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/header/complex">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":535,"wgPageParseReport":{"limitreport":{"cputime":"0.156","walltime":"0.376","ppvisitednodes":{"value":6917,"limit":1000000},"postexpandincludesize":{"value":277535,"limit":4194304},"templateargumentsize":{"value":66099,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":41192,"limit":5000000},"timingprofile":["100.00%  316.788      1 -total"," 59.58%  188.743      1 Template:source"," 23.32%   73.872     28 Template:dsc_inc"," 12.84%   40.665      1 Template:c/header/navbar"," 12.60%   39.931      1 Template:navbar"," 10.41%   32.989     28 Template:dsc","  9.05%   28.654      1 Template:c/header/navbar_content","  8.09%   25.642     22 Template:dsc_fun","  8.07%   25.578     49 Template:nv","  5.51%   17.465     28 Template:dsc_member"]},"cachereport":{"timestamp":"20260422025215","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422025216 -->
+</html>

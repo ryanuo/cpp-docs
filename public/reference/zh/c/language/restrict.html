@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>restrict 类型限定符 (C99 起)</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"54eb27ae969cd118a45d62e5","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/language/restrict","wgTitle":"c/language/restrict","wgCurRevisionId":80603,"wgRevisionId":80603,"wgArticleId":7886,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/language/restrict","wgRelevantArticleId":7886,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_language_restrict rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">restrict 类型限定符 <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span></h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../language.html" title="c/language">language</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="c/language">C 语言</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"> <a href="basic_concepts.html" title="c/language/basic concepts">基本概念</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../keyword.html" title="c/keyword">关键词</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../preprocessor.html" title="c/preprocessor">预处理器</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="statements.html" title="c/language/statements">语句</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="expressions.html" title="c/language/expressions">表达式</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="initialization.html" title="c/language/initialization">初始化</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="declarations.html" title="c/language/declarations">声明</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="functions.html" title="c/language/functions">函数</a></td></tr>
+<tr class="t-nv"><td colspan="5"> 杂项</td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="history.html" title="c/language/history">C 的历史</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../experimental.html" title="c/experimental">技术规范</a> </td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="declarations.html" title="c/language/declarations">声明</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+<div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"> <a href="pointer.html" title="c/language/pointer">指针</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="array.html" title="c/language/array">数组</a> </td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="enum.html" title="c/language/enum"><span class="t-lines"><span>enum</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="struct.html" title="c/language/struct"><span class="t-lines"><span>struct</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="union.html" title="c/language/union"><span class="t-lines"><span>union</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="bit_field.html" title="c/language/bit field">位域</a> </td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="atomic.html" title="c/language/atomic">原子类型</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="const.html" title="c/language/const"><span class="t-lines"><span>const</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="volatile.html" title="c/language/volatile"><span class="t-lines"><span>volatile</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>restrict</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="_Alignas.html" title="c/language/ Alignas">对齐说明符</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="storage_duration.html" title="c/language/storage duration">存储期与链接</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="extern.html" title="c/language/extern">外部及试探性定义</a> </td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="typedef.html" title="c/language/typedef"><span class="t-lines"><span>typedef</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="_Static_assert.html" title="c/language/ Static assert">静态断言</a></td></tr>
+<tr class="t-nv"><td colspan="5"> <a href="attributes.html" title="c/language/attributes">属性</a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+</tbody></table></div>
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>C <a href="type.html" title="c/language/type">类型系统</a>中每一个独立的类型都有数个该类型的<i>限定</i>版本，对应 <a href="const.html" title="c/language/const"><code>const</code></a>、<a href="volatile.html" title="c/language/volatile"><code>volatile</code></a>，以及对于指向对象指针的 <code>restrict</code> 限定符中的一个、两个或全部三个。此页面描述 <code>restrict</code> 限定符的效果。
+</p><p>仅有指向<a href="type.html" title="c/language/type">对象类型</a>的指针<span class="t-rev-inl t-since-c23"><span>及其（可能多维的）数组</span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span></span></span>可被 restrict 限定；具体而言，以下是<i>错误</i>的：
+</p>
+<ul><li><span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">int</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="o">*</span><span class="n">p</span></code></span></li>
+<li><span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">f9</span><span class="p">)(</span><span class="kt">void</span><span class="p">)</span></code></span></li></ul>
+<p>restrict 语义仅适用于左值表达式；例如到 restrict 限定指针的类型转换，或返回 restrict 限定指针的函数调用不是左值，从而该限定符无效果。
+</p><p>在声明了 restrict 指针 <code>P</code> 的块的每次执行（典型例子是函数体的执行，其中 <code>P</code> 为函数形参）中，若某个可由 <code>P</code>（直接或间接）访问的对象会被任何手段修改，则该块中对该对象的所有访问（读或写），都必须经由 <code>P</code> 进行，否则行为未定义：
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">q</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 通过 *p 修改的对象与通过 *q 读取的无一相同</span>
+<span class="w">                     </span><span class="c1">// 编译器可以自由地优化、向量化、做页面映射等等。</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="w">    </span><span class="n">f</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK</span>
+<span class="w">    </span><span class="n">f</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span><span class="w">  </span><span class="c1">// 未定义行为：f 中的 p 和 q 均可访问 d[1]</span>
+<span class="p">}</span>
+</pre></div>
+<p>若对象决不被修改，则它可以被别名引用，并被异于 restrict 限定的指针访问（注意若对象为别名引用的 restrict 限定指针所指，则别名引用可能抑制优化）。
+</p><p>将一个 restrict 指针赋值给另一个是未定义行为，除非将指向外部块的指针赋值给内部块中的指针（包括在调用含 restrict 指针参数的函数时，以 restrict 指针为参数），或从函数返回指针（还有在前一个指针的块已经结束时）：
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
+<span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">;</span>
+<span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 未定义行为</span>
+</pre></div>
+<p>restrict 指针可以自由地赋值给非 restrict 指针，只要编译器还能优化代码，优化机会还是保留就位的：
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 几乎肯定优化成仅如 *r++ = *s++ 一般</span>
+<span class="p">}</span>
+</pre></div>
+<table class="t-rev-begin">
+<tbody><tr class="t-rev t-until-c23"><td>
+<p>若以 restrict 类型限定符声明数组类型（通过使用 <a href="typedef.html" title="c/language/typedef">typedef</a>），则数组类型无 restrict 限定，但其元素类型有 restrict 限定：
+</p>
+</td>
+<td><span class="t-mark-rev t-until-c23" style="white-space: nowrap;">(C23 前)</span></td></tr>
+<tr class="t-rev t-since-c23"><td>
+<p>始终认为数组类型与其元素类型同等地拥有 restrict 限定：
+</p>
+</td>
+<td><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span></td></tr>
+</tbody></table>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">array_t</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+
+<span class="kr">restrict</span><span class="w"> </span><span class="n">array_t</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// a 的类型是 int *restrict[10] </span>
+<span class="c1">// 注：clang 和 icc 以 array_t 不是指针类型为由拒绝</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">unqual_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// C23 前 OK ； C23 起错误</span>
+<span class="c1">// 注：clang 即使在 C89-C17 模式也应用 C++/C23 中的规则</span>
+</pre></div>
+<p>在函数声明中，关键词 <code>restrict</code> 可以出现于方括号内，用以声明函数参数的数组类型。它对数组所转换得的指针类型赋予限定：
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="kr">restrict</span><span class="w"> </span><span class="n">m</span><span class="p">][</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="kr">restrict</span><span class="w"> </span><span class="n">m</span><span class="p">][</span><span class="n">n</span><span class="p">]);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">g12</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)[</span><span class="n">n</span><span class="p">])</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="o">+</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK</span>
+<span class="w">   </span><span class="n">f</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="o">+</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// 可能是未定义行为（取决于 f 所为）</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>restrict 限定符（像寄存器存储类）是有意使用以促进优化的。而从所有组成一致程序的预处理翻译单元中，删除所有此限定符的实例不会影响其含义（即可观的行为）。
+</p><p>编译器可以忽略任何一个或全部使用 <code>restrict</code> 的别名使用暗示。
+</p><p>欲避免未定义行为，程序员应该确保 restrict 限定指针所做的别名引用断言不会违规。
+</p><p>许多编译器提供作为 <code>restrict</code> 对立面的语言扩展：指示即使指针类型不同，也可以别名使用的属性： <a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcc/Common-Type-Attributes.html#index-g_t_0040code_007bmay_005falias_007d-type-attribute-3667"><code>may_alias</code> (gcc)</a>
+</p>
+<h3><span id=".E4.BD.BF.E7.94.A8.E6.A8.A1.E5.BC.8F"></span><span class="mw-headline" id="使用模式">使用模式</span></h3>
+<p>restrict 限定指针有几种常用的使用模式：
+</p>
+<h4><span id=".E6.96.87.E4.BB.B6.E4.BD.9C.E7.94.A8.E5.9F.9F"></span><span class="mw-headline" id="文件作用域">文件作用域</span></h4>
+<p>文件作用域的 restrict 限定指针必须在程序运行期间指向单个数组的元素。该数组对象不可以通过 restrict 指针和通过其声明名称（若有的话）或另一个 restrict 指针两种方式一同引用。
+</p><p>文件作用域 restrict 指针对访问动态分配的全局数组有用；restrict 语义令通过此指针的引用，和通过静态数组的声明名称引用该数组效率相当：
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">));</span>
+<span class="w">   </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w">      </span><span class="c1">// a 引用前半</span>
+<span class="w">   </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">  </span><span class="c1">// b 引用后半</span>
+<span class="p">}</span>
+<span class="c1">// 编译器可以从 restrict 限定符推断 a、b 和 c 都没有潜在的别名引用</span>
+</pre></div>
+<h4><span id=".E5.87.BD.E6.95.B0.E5.BD.A2.E5.8F.82"></span><span class="mw-headline" id="函数形参">函数形参</span></h4>
+<p>最广泛的 restrict 限定指针使用，是用作函数形参。
+</p><p>在下例中，编译器可能推断出被修改对象不会有别名引用，从而能更大胆地优化循环。在 <code>f</code> 的入口处，必须提供 restrict 指针对关联数组的独占访问。特别是，在 <code>f</code> 内 <code>b</code> 或 <code>c</code> 都不可以指入 <code>a</code> 所关联的数组，因为它们都不是以基于 <code>a</code> 的指针值赋值的。对于 <code>b</code>，因为其声明的 const 限定符这是显然的，但对于 <code>c</code>，需要检查 <code>f</code> 的函数体：
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">c</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
+<span class="w">       </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">g3</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="mi">100</span><span class="p">],</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w">   </span><span class="n">d</span><span class="p">,</span><span class="w">    </span><span class="n">e</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK</span>
+<span class="w">           </span><span class="n">f</span><span class="p">(</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">   </span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="o">+</span><span class="mi">50</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK</span>
+<span class="w">           </span><span class="n">f</span><span class="p">(</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w">    </span><span class="n">d</span><span class="p">);</span><span class="w"> </span><span class="c1">// 未定义行为</span>
+<span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w">    </span><span class="n">e</span><span class="p">);</span><span class="w"> </span><span class="c1">// 未定义行为</span>
+<span class="w">           </span><span class="n">f</span><span class="p">(</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w">   </span><span class="n">e</span><span class="p">,</span><span class="w">  </span><span class="n">d</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK</span>
+<span class="p">}</span>
+</pre></div>
+<p>注意将 <code>c</code> 指向 <code>b</code> 所关联的数组是允许的。还要注意，对于这些目的，关联到通常指针的“数组”，仅表示数组对象的那一部分实际上是由该指针引用的。
+</p><p>注意在上例中，编译器能推断 a 和 b 不会别名使用，因为 b 的常性确保这点不会变得依赖函数体。程序员能等价地写 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">void</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">b</span><span class="p">)</span></code></span>，该情况下编译器理解无法修改通过 b 引用的对象，而以 b 和 a 一同引用的对象也不会被修改。假如程序员要写 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">void</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">)</span></code></span>，则编译器不检验函数体就无法推断出 a 和 b 不会别名使用。
+</p><p>通常情况下，最好在函数原型中用 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kr">restrict</span></code></span> 显式标注所有不会别名使用的指针。
+</p>
+<h4><span id=".E5.9D.97.E4.BD.9C.E7.94.A8.E5.9F.9F"></span><span class="mw-headline" id="块作用域">块作用域</span></h4>
+<p>一个块作用域的 restrict 限定指针会做一个限于其块内的别名引用断言。它允许局部断言仅应用到重要的块，譬如紧凑循环。它亦使得将使用 restrict 限定指针的函数转换成宏成为可能：
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">c</span><span class="p">;</span>
+<span class="cp">#define f3(N, A, B)                                    \</span>
+<span class="cp">do                                                     \</span>
+<span class="cp">{   int n = (N);                                       \</span>
+<span class="cp">    float * restrict a = (A);                          \</span>
+<span class="cp">    float * const    b = (B);                          \</span>
+<span class="cp">    int i;                                             \</span>
+<span class="cp">    for ( i=0; i&lt;n; i++ )                              \</span>
+<span class="cp">        a[i] = b[i] + c[i];                            \</span>
+<span class="cp">} while(0)</span>
+</pre></div>
+<h4><span id=".E7.BB.93.E6.9E.84.E4.BD.93.E6.88.90.E5.91.98"></span><span class="mw-headline" id="结构体成员">结构体成员</span></h4>
+<p>作为结构体成员的 restrict 限定指针，所做的别名引用断言作用域，是用于访问该结构体的标识符的作用域。
+</p><p>即使结构体声明于文件作用域，当用以访问此结构体的标识符拥有块作用域时，结构体中的别名引用断言亦拥有块作用域；别名引用断言仅在块执行或函数调用中生效，具体取决于此结构体类型的对象是如何创造的：
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">t</span><span class="w">      </span><span class="c1">// restrict 指针断言</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">     </span><span class="c1">// 成员指向无交集的存储区。</span>
+<span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ff</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">t</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">t</span><span class="w"> </span><span class="n">s</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="k">struct</span><span class="w"> </span><span class="nc">t</span><span class="w"> </span><span class="n">u</span><span class="p">;</span>
+<span class="w">   </span><span class="c1">// r、s、u 拥有块作用域</span>
+<span class="w">   </span><span class="c1">// r.p、r.q、s.p、s.q、u.p、u.q 应该在</span>
+<span class="w">   </span><span class="c1">// 每次执行 ff 时全部指向无交集的存储区。</span>
+<span class="w">   </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span id=".E5.85.B3.E9.94.AE.E8.AF.8D"></span><span class="mw-headline" id="关键词">关键词</span></h3>
+<p><a href="../keyword/restrict.html" title="c/keyword/restrict"><tt>restrict</tt></a>
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<p>代码生成样例；以 -S（gcc、clang 等）或 /FA（Visual Studio）参数编译
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="o">*</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">rfoo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="o">*</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>可能的输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-asm mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">; 所生成的 64 位 Intel 平台的代码：</span>
+<span class="nl">foo:</span>
+<span class="w">    </span><span class="nf">movl</span><span class="w">    </span><span class="no">$5</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nv">%rdi</span><span class="p">)</span><span class="w">    </span><span class="c1">; 存储 5 于 *a</span>
+<span class="w">    </span><span class="nf">movl</span><span class="w">    </span><span class="no">$6</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nv">%rsi</span><span class="p">)</span><span class="w">    </span><span class="c1">; 存储 6 于 *b</span>
+<span class="w">    </span><span class="nf">movl</span><span class="w">    </span><span class="p">(</span><span class="nv">%rdi</span><span class="p">),</span><span class="w"> </span><span class="nv">%eax</span><span class="w">  </span><span class="c1">; 从 *a 读回值，考虑到前面的存储会修改它</span>
+<span class="w">    </span><span class="nf">addl</span><span class="w">    </span><span class="no">$6</span><span class="p">,</span><span class="w"> </span><span class="nv">%eax</span><span class="w">      </span><span class="c1">; 将从 *a 读得的值加 6</span>
+<span class="w">    </span><span class="nf">ret</span>
+
+<span class="nl">rfoo:</span>
+<span class="w">    </span><span class="nf">movl</span><span class="w">      </span><span class="no">$11</span><span class="p">,</span><span class="w"> </span><span class="nv">%eax</span><span class="w">   </span><span class="c1">; 结果是 11，编译时常量</span>
+<span class="w">    </span><span class="nf">movl</span><span class="w">      </span><span class="no">$5</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nv">%rdi</span><span class="p">)</span><span class="w">  </span><span class="c1">; 存储 5 于 *a</span>
+<span class="w">    </span><span class="nf">movl</span><span class="w">      </span><span class="no">$6</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nv">%rsi</span><span class="p">)</span><span class="w">  </span><span class="c1">; 存储 6 于 *b</span>
+<span class="w">    </span><span class="nf">ret</span>
+</pre></div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-23">
+<ul><li>C23 标准（ISO/IEC 9899:2024）：</li></ul>
+<dl><dd><ul><li>6.7.3.1 Formal definition of restrict （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>6.7.3.1 Formal definition of restrict （第 89-90 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>6.7.3.1 Formal definition of restrict （第 123-125 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>6.7.3.1 Formal definition of restrict （第 110-112 页）</li></ul></dd></dl>
+</div>
+<!-- 
+NewPP limit report
+Cached time: 20260421215435
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.130 seconds
+Real time usage: 1.648 seconds
+Preprocessor visited node count: 1914/1000000
+Post‐expand include size: 42503/4194304 bytes
+Template argument size: 8559/4194304 bytes
+Highest expansion depth: 17/100
+Expensive parser function count: 16/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 26868/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1575.484      1 -total
+ 96.82% 1525.461     11 Template:source
+  0.99%   15.628      1 Template:c/language/declarations/navbar
+  0.89%   13.980      1 Template:navbar
+  0.38%    5.928      1 Template:c/language/declarations/navbar_content
+  0.33%    5.125     34 Template:nv
+  0.32%    5.109      5 Template:c
+  0.28%    4.446      1 Template:rrev_multi
+  0.23%    3.613      7 Template:nv_ln
+  0.21%    3.374      1 Template:langlinks
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:7886-0!canonical!zh and timestamp 20260421215435 and revision id 80603. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/language/restrict">Online version</a></li><li>Offline version retrieved 2026-05-02 15:55.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1728,"wgPageParseReport":{"limitreport":{"cputime":"0.130","walltime":"1.648","ppvisitednodes":{"value":1914,"limit":1000000},"postexpandincludesize":{"value":42503,"limit":4194304},"templateargumentsize":{"value":8559,"limit":4194304},"expansiondepth":{"value":17,"limit":100},"expensivefunctioncount":{"value":16,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":26868,"limit":5000000},"timingprofile":["100.00% 1575.484      1 -total"," 96.82% 1525.461     11 Template:source","  0.99%   15.628      1 Template:c/language/declarations/navbar","  0.89%   13.980      1 Template:navbar","  0.38%    5.928      1 Template:c/language/declarations/navbar_content","  0.33%    5.125     34 Template:nv","  0.32%    5.109      5 Template:c","  0.28%    4.446      1 Template:rrev_multi","  0.23%    3.613      7 Template:nv_ln","  0.21%    3.374      1 Template:langlinks"]},"cachereport":{"timestamp":"20260421215435","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260421215436 -->
+</html>

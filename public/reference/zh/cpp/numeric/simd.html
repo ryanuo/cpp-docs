@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>数据并行类型 (SIMD) (C++26 起)</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"6f6acb62776aec209740165e","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/numeric/simd","wgTitle":"cpp/numeric/simd","wgCurRevisionId":100182,"wgRevisionId":100182,"wgArticleId":16906,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面","有原因的 todo","无原因的 todo"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/numeric/simd","wgRelevantArticleId":16906,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_numeric_simd rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">数据并行类型 (SIMD) <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26 起)</span></h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../numeric.html" title="cpp/numeric">numeric</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../standard_library.html" title="cpp/standard library">标准库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="cpp/header">标准库标头</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../named_req.html" title="cpp/named req">具名要求</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../feature_test.html" title="cpp/feature test">功能特性测试宏</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html#%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81" title="cpp/utility">语言支持库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="cpp/error">诊断库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="cpp/memory">内存管理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../meta.html" title="cpp/meta">元编程库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html" title="cpp/utility">通用工具库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../container.html" title="cpp/container">容器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../iterator.html" title="cpp/iterator">迭代器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../ranges.html" title="cpp/ranges">范围库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="cpp/algorithm">算法库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="cpp/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../text.html" title="cpp/text">文本处理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="cpp/numeric">数值库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="cpp/chrono">日期和时间库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="cpp/io">输入/输出库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="cpp/thread">并发支持库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../execution.html" title="cpp/execution">执行控制库</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../numeric.html" title="cpp/numeric">数值库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="math.html" title="cpp/numeric/math">常用数学函数</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="special_functions.html" title="cpp/numeric/special functions">数学特殊函数</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="constants.html" title="cpp/numeric/constants">数学常数</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="linalg.html" title="cpp/numeric/linalg">基本线性代数算法</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink">数据并行类型（SIMD）</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="fenv.html" title="cpp/numeric/fenv">浮点数环境</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="complex.html" title="cpp/numeric/complex">复数</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="valarray.html" title="cpp/numeric/valarray">数值数组 (<code>valarray</code>)</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="random.html" title="cpp/numeric/random">伪随机数生成</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility/bit.html" title="cpp/utility/bit">位操纵</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html#%E9%A5%B1%E5%92%8C%E7%AE%97%E6%9C%AF" title="cpp/numeric">饱和算术</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../numeric.html#%E5%9B%A0%E6%95%B0%E8%BF%90%E7%AE%97" title="cpp/numeric">因数运算</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="gcd.html" title="cpp/numeric/gcd"><span class="t-lines"><span>gcd</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="lcm.html" title="cpp/numeric/lcm"><span class="t-lines"><span>lcm</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../numeric.html#%E6%8F%92%E5%80%BC%E8%BF%90%E7%AE%97" title="cpp/numeric">插值</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="midpoint.html" title="cpp/numeric/midpoint"><span class="t-lines"><span>midpoint</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="lerp.html" title="cpp/numeric/lerp"><span class="t-lines"><span>lerp</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../numeric.html#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97" title="cpp/numeric">泛型算术运算</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/iota.html" title="cpp/algorithm/iota"><span class="t-lines"><span>iota</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/ranges/iota.html" title="cpp/algorithm/ranges/iota"><span class="t-lines"><span>ranges::iota</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/accumulate.html" title="cpp/algorithm/accumulate"><span class="t-lines"><span>accumulate</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/inner_product.html" title="cpp/algorithm/inner product"><span class="t-lines"><span>inner_product</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/adjacent_difference.html" title="cpp/algorithm/adjacent difference"><span class="t-lines"><span>adjacent_difference</span></span></a></div><div><span class="t-lines"><span><code>  </code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/partial_sum.html" title="cpp/algorithm/partial sum"><span class="t-lines"><span>partial_sum</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/reduce.html" title="cpp/algorithm/reduce"><span class="t-lines"><span>reduce</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/transform_reduce.html" title="cpp/algorithm/transform reduce"><span class="t-lines"><span>transform_reduce</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/inclusive_scan.html" title="cpp/algorithm/inclusive scan"><span class="t-lines"><span>inclusive_scan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/exclusive_scan.html" title="cpp/algorithm/exclusive scan"><span class="t-lines"><span>exclusive_scan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/transform_inclusive_scan.html" title="cpp/algorithm/transform inclusive scan"><span class="t-lines"><span>transform_inclusive_scan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/transform_exclusive_scan.html" title="cpp/algorithm/transform exclusive scan"><span class="t-lines"><span>transform_exclusive_scan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../numeric.html#%E5%B8%A6%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E7%AE%97%E6%9C%AF" title="cpp/numeric">C 风格带检查整数算术</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ckd_add.html" title="cpp/numeric/ckd add"><span class="t-lines"><span>ckd_add</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ckd_sub.html" title="cpp/numeric/ckd sub"><span class="t-lines"><span>ckd_sub</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ckd_mul.html" title="cpp/numeric/ckd mul"><span class="t-lines"><span>ckd_mul</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a class="mw-selflink selflink">数据并行类型 (SIMD)</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a class="mw-selflink-fragment" href="simd.html#%E4%B8%BB%E7%B1%BB">主类</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="simd/basic_simd.html" title="cpp/numeric/simd/basic simd"><span class="t-lines"><span>basic_simd</span><span>simd</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/basic simd mask（页面不存在）"><span class="t-lines"><span>basic_simd_mask</span><span>simd_mask</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a class="mw-selflink-fragment" href="simd.html#%E5%8A%A0%E8%BD%BD%E4%B8%8E%E5%AD%98%E5%82%A8%E6%A0%87%E5%BF%97">加载与存储标志</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/flags（页面不存在）"><span class="t-lines"><span>flags</span><span>flag_default</span><span>flag_convert</span><span>flag_aligned</span><span>flag_overaligned</span></span></a></div><div><span class="t-lines"><span><code>    </code></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a class="mw-selflink-fragment" href="simd.html#%E5%8A%A0%E8%BD%BD%E4%B8%8E%E5%AD%98%E5%82%A8%E6%93%8D%E4%BD%9C">加载与存储</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/load（页面不存在）"><span class="t-lines"><span>unchecked_load</span><span>partial_load</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/simd store（页面不存在）"><span class="t-lines"><span>unchecked_store</span><span>partial_store</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a class="mw-selflink-fragment" href="simd.html#%E8%BD%AC%E6%8D%A2">转换</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/chunk（页面不存在）"><span class="t-lines"><span>chunk</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/cat（页面不存在）"><span class="t-lines"><span>cat</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a class="mw-selflink-fragment" href="simd.html#%E7%AE%97%E6%B3%95">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/min max（页面不存在）"><span class="t-lines"><span>min</span><span>max</span><span>minmax</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/clamp（页面不存在）"><span class="t-lines"><span>clamp</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/select（页面不存在）"><span class="t-lines"><span>select</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a class="mw-selflink-fragment" href="simd.html#%E5%BD%92%E7%BA%A6">归约</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/all any none of（页面不存在）"><span class="t-lines"><span>all_of</span><span>any_of</span><span>none_of</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/reduce（页面不存在）"><span class="t-lines"><span>reduce</span><span>reduce_min</span><span>reduce_max</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/reduce min max index（页面不存在）"><span class="t-lines"><span>reduce_min_index</span><span>reduce_max_index</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/reduce count（页面不存在）"><span class="t-lines"><span>reduce_count</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a class="mw-selflink-fragment" href="simd.html#%E7%89%B9%E5%BE%81">特征</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/alignment（页面不存在）"><span class="t-lines"><span>alignment</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/rebind（页面不存在）"><span class="t-lines"><span>rebind</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/resize（页面不存在）"><span class="t-lines"><span>resize</span></span></a></div></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>这个库提供数据并行类型和对这些类型的操作：它们是一组可移植的类型，用于明确指定数据并行性，并于数据并行执行资源可用时在其中组织数据，这种资源包括 <a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data" class="extiw" title="enwiki:Single instruction, multiple data">SIMD</a> 寄存器和指令，或由某个公共指令解码器驱动的执行单元。
+</p><p><span id="可向量化类型"></span>
+<i>可向量化类型</i> 集合包括：
+</p>
+<ul><li>所有的标准整数和字符类型；</li>
+<li>大多数浮点数类型，包括 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 以及选定的扩展浮点数类型：<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">float16_t</span></code>、<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">float32_t</span></code> 和 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">float64_t</span></code>（若有所定义）；以及</li>
+<li><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span></code> 其中 <code>T</code> 为可向量化的浮点数类型。</li></ul>
+<p><i>数据并行类型</i> ﻿由一个或多个底层的可向量化类型元素组成，这成为其<i>元素类型 ﻿</i>。元素的个数，称为其<i>宽度 ﻿</i>，对于每个数据并行类型来说是常量。
+</p><p>数据并行类型指代类模板 <code>basic_simd</code> 和 <code>basic_simd_mask</code> 的所有启用的特化。
+</p><p>数据并行类型的<i>数据并行对象</i> ﻿的表现模仿 <code>T</code> 类型的对象。但 <code>T</code> 是存储并操作单个值，而元素类型为 <code>T</code> 的数据并行类型则存储并操作多个值。
+</p><p>数据并行对象上的每种运算（除了如归约这样的横向运算，它们都是标明的），都表现为运用于对象的每个元素上或者两个对象的对应元素上的<i>逐元素</i>操作。每次这种运用之间都是无顺序的。这条简单规则表现了数据并行性，并由编译器所运用以生成 SIMD 指令和/或独立执行流。
+</p><p>数据并行类型上，（除了非 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">constexpr</span></code> 数学函数重载）的所有运算都是 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">constexpr</span></code> 的：在常量表达式的求值中创建并使用数据并行对象是有可能的。
+</p><p>别名模板 <code>simd</code> 和 <code>simd_mask</code> 的定义允许用户指定其具有特定大小的宽度。默认的宽度有实现在编译时确定。
+</p>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-header">
+<td colspan="2"><div>在标头 <code><a href="../header/simd.html" title="cpp/header/simd">&lt;simd&gt;</a></code> 定义 </div>
+</td></tr>
+
+<tr class="t-dsc-header">
+<td colspan="2"><div>在命名空间 <code>std::datapar</code> 定义</div>
+</td></tr>
+</tbody></table>
+<h3><span id=".E4.B8.BB.E7.B1.BB"></span><span class="mw-headline" id="主类">主类</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="simd/basic_simd.html" title="cpp/numeric/simd/basic simd"> <span class="t-lines"><span>datapar::basic_simd</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>数据并行向量类型 <br> <span class="t-mark" style="white-space: nowrap;">(类模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="simd/basic_simd.html" title="cpp/numeric/simd/basic simd"> <span class="t-lines"><span>datapar::simd</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>可以指定宽度的 <code>basic_simd</code> 的便利别名模板 <br> <span class="t-mark" style="white-space: nowrap;">(别名模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/basic simd mask（页面不存在）"> <span class="t-lines"><span>datapar::basic_simd_mask</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>元素类型为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">bool</span></code> 的数据并行类型 <br> <span class="t-mark" style="white-space: nowrap;">(类模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/basic simd mask（页面不存在）"> <span class="t-lines"><span>datapar::simd_mask</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>可以指定宽度的 <code>basic_simd_mask</code> 的便利别名模板 <br> <span class="t-mark" style="white-space: nowrap;">(别名模板)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E5.8A.A0.E8.BD.BD.E4.B8.8E.E5.AD.98.E5.82.A8.E6.A0.87.E5.BF.97"></span><span class="mw-headline" id="加载与存储标志">加载与存储标志</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/flags（页面不存在）"> <span class="t-lines"><span>datapar::flags</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>为数据并行类型加载并存储标志 <br> <span class="t-mark" style="white-space: nowrap;">(类模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/flags（页面不存在）"> <span class="t-lines"><span>datapar::flag_default</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>加载和存储操作所用的默认标志 <br> <span class="t-mark" style="white-space: nowrap;">(常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/flags（页面不存在）"> <span class="t-lines"><span>datapar::flag_convert</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>用于在加载和存储操作中启用不维持值的转换的标志 <br> <span class="t-mark" style="white-space: nowrap;">(常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/flags（页面不存在）"> <span class="t-lines"><span>datapar::flag_aligned</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>指示在指定存储中进行加载/存储的地址按照 <code>simd_alignment</code> 的值对齐 <br> <span class="t-mark" style="white-space: nowrap;">(常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/flags（页面不存在）"> <span class="t-lines"><span>datapar::flag_overaligned</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>指示在指定存储中进行加载/存储的地址按照指定对齐值对齐 <br> <span class="t-mark" style="white-space: nowrap;">(变量模板)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E5.8A.A0.E8.BD.BD.E4.B8.8E.E5.AD.98.E5.82.A8.E6.93.8D.E4.BD.9C"></span><span class="mw-headline" id="加载与存储操作">加载与存储操作</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/load（页面不存在）"> <span class="t-lines"><span>datapar::unchecked_load</span><span>datapar::partial_load</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>加载连续范围中的的元素到 <code>basic_simd</code> 中 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/store（页面不存在）"> <span class="t-lines"><span>datapar::unchecked_store</span><span>datapar::partial_store</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>储存 <code>basic_simd</code> 中的元素到连续范围中 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E8.BD.AC.E6.8D.A2"></span><span class="mw-headline" id="转换">转换</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/chunk（页面不存在）"> <span class="t-lines"><span>datapar::chunk</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>分割单个数据并行对象为多个 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/cat（页面不存在）"> <span class="t-lines"><span>datapar::cat</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>拼接多个数据并行对象为一个 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E7.AE.97.E6.B3.95"></span><span class="mw-headline" id="算法">算法</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/min max（页面不存在）"> <span class="t-lines"><span>datapar::min</span><span>datapar::max</span><span>datapar::minmax</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td><code>basic_simd</code> 的逐元素 min/max 运算 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/clamp（页面不存在）"> <span class="t-lines"><span>datapar::clamp</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td><code>basic_simd</code> 的逐元素 clamp 运算 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/select（页面不存在）"> <span class="t-lines"><span>datapar::select</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>使用条件运算符进行逐元素选择 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E5.BD.92.E7.BA.A6"></span><span class="mw-headline" id="归约">归约</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/reduce（页面不存在）"> <span class="t-lines"><span>datapar::reduce</span><span>datapar::reduce_min</span><span>datapar::reduce_max</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>以指定二元运算规约 <code>basic_simd</code> 中的所有值为单个值 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/all any none of（页面不存在）"> <span class="t-lines"><span>datapar::all_of</span><span>datapar::any_of</span><span>datapar::none_of</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>规约 <code>basic_simd_mask</code> 为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">bool</span></code> <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/reduce count（页面不存在）"> <span class="t-lines"><span>datapar::reduce_count</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>规约 <code>basic_simd_mask</code> 为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code> 值个数 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/reduce min max index（页面不存在）"> <span class="t-lines"><span>datapar::reduce_min_index</span><span>datapar::reduce_max_index</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>将 <code>basic_simd_mask</code> 归约为第一个或最后一个 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code> 值的索引 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E7.89.B9.E5.BE.81"></span><span class="mw-headline" id="特征">特征</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/alignment（页面不存在）"> <span class="t-lines"><span>datapar::alignment</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>获得适于 <code>simd_flag_aligned</code> 的对齐 <br> <span class="t-mark" style="white-space: nowrap;">(类模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/rebind（页面不存在）"> <span class="t-lines"><span>datapar::rebind</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>改变数据并行类型的元素类型 <br> <span class="t-mark" style="white-space: nowrap;">(类模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/resize（页面不存在）"> <span class="t-lines"><span>datapar::resize</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div>
+</td>
+<td>改变数据并行类型的宽度 <br> <span class="t-mark" style="white-space: nowrap;">(类模板)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E6.95.B0.E5.AD.A6.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="数学函数">数学函数</span></h3>
+<p><a href="../header/cmath.html" title="cpp/header/cmath"><tt>&lt;cmath&gt;</tt></a> 和 <a href="../header/complex.html" title="cpp/header/complex"><tt>&lt;complex&gt;</tt></a> 中的所有函数都为 <code>basic_simd</code> 进行了重载。
+</p>
+<table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成<br>原因：description </td></tr></tbody></table>
+<h3><span id=".E4.B8.BA.E6.93.8D.E7.BA.B5.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="为操纵函数">为操纵函数</span></h3>
+<p><a href="../header/bit.html" title="cpp/header/bit"><tt>&lt;bit&gt;</tt></a> 中的所有为操纵函数都为 <code>basic_simd</code> 进行了重载。
+</p>
+<table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成<br>原因：description </td></tr></tbody></table>
+<h3><span id=".E5.AE.9E.E7.8E.B0.E7.BB.86.E8.8A.82"></span><span class="mw-headline" id="实现细节">实现细节</span></h3>
+<h4><span id="ABI_.E6.A0.87.E7.AD.BE"></span><span class="mw-headline" id="ABI_标签">ABI 标签</span></h4>
+<p>数据并行类型 <code>basic_simd</code> 和 <code>basic_simd_mask</code> 都关联一组 <i>ABI 标签 ﻿</i>。这些标签是用于指定数据并行对象的大小和二进制表示的类型。其设计意图是使大小和二进制表示基于目标架构和编译器选项而变化。ABI 标签和元素类型一同决定其宽度。
+</p><p>ABI 标签保持与机器指令集的选择无关。所选机器指令集限制了可用的 ABI 标签类型。这些 ABI 标签使得用户可以安全地跨越翻译单元边界而传递数据并行类型的对象。
+</p>
+<table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成 </td></tr></tbody></table>
+<h4><span id=".E4.BB.85.E7.94.A8.E4.BA.8E.E9.98.90.E9.87.8A.E7.9A.84.E5.AE.9E.E4.BD.93"></span><span class="mw-headline" id="仅用于阐释的实体">仅用于阐释的实体</span></h4>
+<table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成<br>原因：needs update </td></tr></tbody></table>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl">
+<td><div><span id="simd-size-type"></span><div style="max-width: calc(7.68332px * 37 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="cm">/*simd-size-type*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (1)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="integer-from"></span><div style="max-width: calc(7.68332px * 65 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">Bytes</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="cm">/*integer-from*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (2)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="simd-size-v"></span><div style="max-width: calc(7.68332px * 88 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Abi</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="cm">/*simd-size-type*/</span><span class="w"> </span><span class="cm">/*simd-size-v*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (3)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="mask-element-size"></span><div style="max-width: calc(7.68332px * 76 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="cm">/*mask-element-size*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (4)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="constexpr-wrapper-like"></span><div style="max-width: calc(7.68332px * 67 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">concept</span><span class="w"> </span><span class="cm">/*constexpr-wrapper-like*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (5)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="deduced-simd-t"></span><div style="max-width: calc(7.68332px * 57 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="cm">/*deduced-simd-t*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (6)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="make-compatible-simd-t"></span><div style="max-width: calc(7.68332px * 74 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">V</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="cm">/*make-compatible-simd-t*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (7)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<div class="t-li1"><span class="t-li">1)</span> <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*simd-size-type*/</span></code> 是某个有符号整数类型的别名。实现可自由选择任何有符号整数类型。</div>
+<div class="t-li1"><span class="t-li">2)</span> <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*integer-from*/</span><span class="o">&lt;</span><span class="n">Bytes</span><span class="o">&gt;</span></code> 是某个有符号整数类型 <code>T</code> 的别名，使得 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">sizeof</span><span class="p">(</span><span class="n">T</span><span class="p">)</span></code></span> 等于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">Bytes</span></code></span>。</div>
+<div class="t-li1"><span class="t-li">3)</span> <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*simd-size-v*/</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">Abi</span><span class="o">&gt;</span></code> 代表被启用的 <code>basic_simd&lt;T, Abi&gt;</code> 特化的宽度，否则为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span>。</div>
+<div class="t-li1"><span class="t-li">4)</span> 如果 <code>T</code> 代表 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">datapar</span><span class="o">::</span><span class="n">basic_simd_mask</span><span class="o">&lt;</span><span class="n">Bytes</span><span class="p">,</span><span class="w"> </span><span class="n">Abi</span><span class="o">&gt;</span></code>，那么 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*mask-element-size*/</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span></code> 等于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">Bytes</span></code></span>。</div>
+<div class="t-li1"><span class="t-li">5)</span> 概念 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*constexpr-wrapper-like*/</span></code> 定义为：
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">concept</span><span class="w"> </span><span class="cm">/*constexpr-wrapper-like*/</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">convertible_to</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">T</span><span class="o">::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">equality_comparable_with</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">T</span><span class="o">::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">bool_constant</span><span class="o">&lt;</span><span class="n">T</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">T</span><span class="o">::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">bool_constant</span><span class="o">&lt;</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">T</span><span class="o">::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span><span class="p">(</span><span class="n">T</span><span class="p">())</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">T</span><span class="o">::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">;</span>
+</pre></div></div>
+<div class="t-li1"><span class="t-li">6)</span> 令 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">x</span></code></span> 为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span><span class="w"> </span><span class="n">T</span></code> 类型的左值。<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*deduced-simd-t*/</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span></code> 是等价于以下类型的别名：
+<ul><li><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">decltype</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">)</span></code>，如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span></code></span> 的类型是被启用的 <code>basic_simd</code> 特化；否则为</li>
+<li><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">void</span></code>。</li></ul></div>
+<div class="t-li1"><span class="t-li">7)</span> 令 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">x</span></code></span> 为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span><span class="w"> </span><span class="n">T</span></code> 类型的左值。<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*make-compatible-simd-t*/</span><span class="o">&lt;</span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span></code> 是等价于以下类型的别名：
+<ul><li><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*deduced-simd-t*/</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span></code>，如果此类型并非 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">void</span></code>，否则为</li>
+<li><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">datapar</span><span class="o">::</span><span class="n">simd</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">V</span><span class="err">​</span><span class="o">::</span><span class="err">​</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;</span></code>。</li></ul></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl-h">
+<td> <div>数学函数要求</div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="simd-floating-point"></span><div style="max-width: calc(7.68332px * 64 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">V</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">concept</span><span class="w"> </span><span class="cm">/*simd-floating-point*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (8)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="math-floating-point"></span><div style="max-width: calc(7.68332px * 68 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="p">...</span><span class="w"> </span><span class="n">Ts</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">concept</span><span class="w"> </span><span class="cm">/*math-floating-point*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (9)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="math-common-simd-t"></span><div style="max-width: calc(7.68332px * 107 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="p">...</span><span class="w"> </span><span class="n">Ts</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="w">  </span><span class="k">requires</span><span class="w"> </span><span class="cm">/*math-floating-point*/</span><span class="o">&lt;</span><span class="n">Ts</span><span class="p">...</span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="cm">/*math-common-simd-t*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (10)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="reduction-binary-operation"></span><div style="max-width: calc(7.68332px * 87 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">BinaryOp</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">concept</span><span class="w"> </span><span class="cm">/*reduction-binary-operation*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (11)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<div class="t-li1"><span class="t-li">8)</span> The concept <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*simd-floating-point*/</span></code> is defined as:
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">V</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">concept</span><span class="w"> </span><span class="cm">/*simd-floating-point*/</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">same_as</span><span class="o">&lt;</span><span class="n">V</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">std</span><span class="o">::</span><span class="n">datapar</span><span class="o">::</span><span class="n">basic_simd</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">V</span><span class="o">::</span><span class="n">value_type</span><span class="p">,</span>
+<span class="w">                 </span><span class="k">typename</span><span class="w"> </span><span class="nc">V</span><span class="o">::</span><span class="n">abi_type</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">is_default_constructible_v</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">floating_point</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">V</span><span class="o">::</span><span class="n">value_type</span><span class="o">&gt;</span><span class="p">;</span>
+</pre></div></div>
+<div class="t-li1"><span class="t-li">9)</span> The concept <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*math-floating-point*/</span></code> is defined as:
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="p">...</span><span class="w"> </span><span class="n">Ts</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">concept</span><span class="w"> </span><span class="cm">/*math-floating-point*/</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="p">(</span><span class="cm">/*simd-floating-point*/</span><span class="o">&lt;</span><span class="cm">/*deduced-simd-t*/</span><span class="o">&lt;</span><span class="n">Ts</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">...);</span>
+</pre></div></div>
+<div class="t-li1"><span class="t-li">10)</span> 令 <code>T0</code> 代表 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">Ts</span><span class="p">...[</span><span class="mi">0</span><span class="p">]</span></code>，<code>T1</code> 代表 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">Ts</span><span class="p">...[</span><span class="mi">1</span><span class="p">]</span></code>，并令 <code>TRest</code> 代表使得 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">T0</span><span class="p">,</span><span class="w"> </span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">TRest</span><span class="p">...</span></code> 等价于 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">Ts</span><span class="p">...</span></code> 的包。从而 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*math-common-simd-t*/</span><span class="o">&lt;</span><span class="n">Ts</span><span class="p">...</span><span class="o">&gt;</span></code> 是等价于以下类型的别名：
+<ul><li><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*deduced-simd-t*/</span><span class="o">&lt;</span><span class="n">T0</span><span class="o">&gt;</span></code>，如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">sizeof</span><span class="p">...(</span><span class="n">Ts</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span></code></span> 为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span></li>
+<li>否则为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">common_type_t</span><span class="o">&lt;</span><span class="cm">/*deduced-simd-t*/</span><span class="o">&lt;</span><span class="n">T0</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="cm">/*deduced-simd-t*/</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;&gt;</span></code>，如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">sizeof</span><span class="p">...(</span><span class="n">Ts</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span></code></span> 为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span> 且 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*math-floating-point*/</span><span class="o">&lt;</span><span class="n">T0</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="cm">/*math-floating-point*/</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span></code></span> 为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span>，</li>
+<li>否则为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">common_type_t</span><span class="o">&lt;</span><span class="cm">/*deduced-simd-t*/</span><span class="o">&lt;</span><span class="n">T0</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">T1</span><span class="o">&gt;</span></code>，如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">sizeof</span><span class="p">...(</span><span class="n">Ts</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span></code></span> 为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span> 且 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*math-floating-point*/</span><span class="o">&lt;</span><span class="n">T0</span><span class="o">&gt;</span></code></span> 为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span>，</li>
+<li>否则为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">common_type_t</span><span class="o">&lt;</span><span class="n">T0</span><span class="p">,</span><span class="w"> </span><span class="cm">/*deduced-simd-t*/</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;&gt;</span></code>，如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">sizeof</span><span class="p">...(</span><span class="n">Ts</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span></code></span> 为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span>，</li>
+<li>否则为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">common_type_t</span><span class="o">&lt;</span><span class="cm">/*math-common-simd-t*/</span><span class="o">&lt;</span><span class="n">T0</span><span class="p">,</span><span class="w"> </span><span class="n">T1</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">TRest</span><span class="p">...</span><span class="o">&gt;</span></code>，如果 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*math-common-simd-t*/</span><span class="o">&lt;</span><span class="n">T0</span><span class="p">,</span><span class="w"> </span><span class="n">T1</span><span class="o">&gt;</span></code> 是有效类型，</li>
+<li>否则为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">common_type_t</span><span class="o">&lt;</span><span class="cm">/*math-common-simd-t*/</span><span class="o">&lt;</span><span class="n">TRest</span><span class="p">...</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">T0</span><span class="p">,</span><span class="w"> </span><span class="n">T1</span><span class="o">&gt;</span></code>。</li></ul></div>
+<div class="t-li1"><span class="t-li">11)</span> 概念 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*reduction-binary-operation*/</span></code> 定义为：
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">BinaryOp</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">concept</span><span class="w"> </span><span class="cm">/*reduction-binary-operation*/</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="k">requires</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">BinaryOp</span><span class="w"> </span><span class="n">binary_op</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">datapar</span><span class="o">::</span><span class="n">simd</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="n">binary_op</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">same_as</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">datapar</span><span class="o">::</span><span class="n">simd</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+</pre></div>
+<p>仅当以下情况下，<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*reduction-binary-operation*/</span><span class="o">&lt;</span><span class="n">BinaryOp</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span></code> 被实现：
+</p>
+<dl><dd><ul><li><code>BinaryOp</code> 是具有交换性的二元逐元素运算，并且</li>
+<li><code>BinaryOp</code> 类型的对象，对于某个未指明的 ABI 标签 <code>Abi</code>，可以以两个 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">datapar</span><span class="o">::</span><span class="n">basic_simd</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">Abi</span><span class="o">&gt;</span></code> 类型的实参调用并返回 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">datapar</span><span class="o">::</span><span class="n">basic_simd</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">Abi</span><span class="o">&gt;</span></code>。</li></ul></dd></dl></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl-h">
+<td> <div>SIMD ABI 标签</div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="native-abi"></span><div style="max-width: calc(7.68332px * 53 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="cm">/*native-abi*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (12)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="deduce-abi-t"></span><div style="max-width: calc(7.68332px * 77 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="cm">/*simd-size-type*/</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="cm">/*deduce-abi-t*/</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (13)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<div class="t-li1"><span class="t-li">12)</span> <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*native-abi*/</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span></code> 是某个 ABI 标签的由实现定义的别名。这是进行高效的显式向量化时首选使用的 ABI 标签。这导致 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">basic_simd</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="cm">/*native-abi*/</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span></code> 是被启用的特化。</div>
+<div class="t-li1"><span class="t-li">13)</span> <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*deduce-abi-t*/</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;</span></code> 是指名某个 ABI 标签类型的别名，使得：
+<ul><li><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*simd-size-v*/</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="cm">/*deduce-abi-t*/</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;&gt;</span></code> 等于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">N</span></code></span>，</li>
+<li><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">datapar</span><span class="o">::</span><span class="n">basic_simd</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="cm">/*deduce-abi-t*/</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;&gt;</span></code> 是被启用的特化，并且</li>
+<li><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">datapar</span><span class="o">::</span><span class="n">basic_simd_mask</span><span class="o">&lt;</span><span class="k">sizeof</span><span class="p">(</span><span class="n">T</span><span class="p">),</span><span class="w"> </span><span class="cm">/*deduce-abi-t*/</span><span class="o">&lt;</span><span class="cm">/*integer-from*/</span><span class="o">&lt;</span><span class="k">sizeof</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;&gt;</span></code> 是被启用的特化。</li></ul>
+仅当 <code>T</code> 是可向量化类型，且 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">N</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">M</span></code></span> 为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span> 时才有定义，其中 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">M</span></code></span> 某个由实现定义的最大值，它至少为 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">64</span></code></span> 并可以根据 <code>T</code> 而有所不同。</div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl-h">
+<td> <div>加载与存储标志</div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="convert-flag"></span><div style="max-width: calc(7.68332px * 24 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="cm">/*convert-flag*/</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (14)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="aligned-flag"></span><div style="max-width: calc(7.68332px * 24 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="cm">/*aligned-flag*/</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (15)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="overaligned-flag"></span><div style="max-width: calc(7.68332px * 54 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="cm">/*overaligned-flag*/</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (16)</td>
+<td class="t-dcl-nopad"><span class="t-mark t-mark-expos" style="white-space: nowrap;">(<span title="此定义仅用于展示。实现不需要通过这种方式定义实体。此实体的名字未指定。">仅用于阐述*</span>)</span></td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<div class="t-li1"><span class="t-li">14-16)</span> 这些标签类型被用作 <code>std::datapar::flags</code> 的模板实参。参见<a href="../../../zh.cppreference.com/index.php" class="new" title="cpp/numeric/simd/flags（页面不存在）">加载与存储标志</a>查看它们的相应用法。</div>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<table class="wikitable ftm-begin">
+
+<tbody><tr>
+<th><a href="../utility/feature_test.html" title="cpp/utility/feature test">功能特性测试</a>宏</th>
+<th><abbr title="采纳该特性的年/月。每个值下面的链接指向编译期支持页面中给定功能特性的条目。">值</abbr></th>
+<th><abbr title="引入该特性的标准；DR 意为针对该修订版的缺陷报告">标准</abbr></th>
+<th>功能特性
+</th></tr>
+<tr>
+<td><a href="../feature_test.html#cpp_lib_simd" title="cpp/feature test"><code>__cpp_lib_simd</code></a></td>
+<td><a href="../compiler_support/26.html#cpp_lib_simd_202411L" title="cpp/compiler support/26"><code>202411L</code></a></td>
+<td><span class="t-mark" style="white-space: nowrap;">(C++26)</span></td>
+<td>数据并行类型及运算
+</td></tr></tbody></table>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;simd&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string_view&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">dp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">datapar</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">println</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">": "</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">{};</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="n">dp</span><span class="o">::</span><span class="n">basic_simd</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="n">my_abs</span><span class="p">(</span><span class="n">dp</span><span class="o">::</span><span class="n">basic_simd</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dp</span><span class="o">::</span><span class="n">select</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">dp</span><span class="o">::</span><span class="n">simd</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">dp</span><span class="o">::</span><span class="n">simd</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">([](</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"b"</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"c"</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_abs</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"d"</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"e"</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">inner_product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dp</span><span class="o">::</span><span class="n">reduce</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"内积: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">inner_product</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">dp</span><span class="o">::</span><span class="n">simd</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">([](</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"x"</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// &lt;simd&gt; 中定义了重载的数学函数</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"cos²(x) + sin²(x)"</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pow</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pow</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>a: 1 1 1 1 
+b: -2 -1 0 1 
+c: -1 0 1 2 
+d: 1 0 1 2 
+e: 1 0 1 4 
+内积: 6
+x: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 
+cos²(x) + sin²(x): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+</pre></div> 
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="valarray.html" title="cpp/numeric/valarray"> <span class="t-lines"><span>valarray</span></span></a></div></div>
+</td>
+<td>数值数组，数组掩码和数组切分 <br> <span class="t-mark" style="white-space: nowrap;">(类模板)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E5.A4.96.E9.83.A8.E9.93.BE.E6.8E.A5"></span><span class="mw-headline" id="外部链接">外部链接</span></h3>
+<table style="border-top:solid 1px;border-bottom:none;border-left:none;border-right:none;">
+
+<tbody><tr style="vertical-align:top;">
+<td>1. </td>
+<td><a rel="nofollow" class="external text" href="https://github.com/VcDevel/std-simd">ISO/IEC TS 19570:2018 第 9 章 "数据并行类型" 的实现</a> — github.com
+</td></tr>
+<tr style="vertical-align:top;">
+<td>2. </td>
+<td>TS 实现抵达 <a rel="nofollow" class="external text" href="https://gcc.gnu.org/git/?p=gcc.git;a=blob;f=libstdc%2B%2B-v3/include/experimental/simd;hb=HEAD">GCC/libstdc++</a> (GCC-11 提供 <code>std::experimental::simd</code>) — gcc.gnu.org
+</td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260421221154
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.256 seconds
+Real time usage: 0.288 seconds
+Preprocessor visited node count: 14576/1000000
+Post‐expand include size: 323294/4194304 bytes
+Template argument size: 72583/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 97/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 48381/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  205.957      1 -total
+ 27.05%   55.708     24 Template:dsc_inc
+ 20.33%   41.881      1 Template:cpp/numeric/simd/navbar
+ 20.04%   41.270      1 Template:navbar
+ 13.80%   28.423     24 Template:dsc
+ 13.52%   27.836     16 Template:dcla
+ 10.41%   21.439     75 Template:nv
+  9.16%   18.870      1 Template:cpp/numeric/navbar_content
+  8.13%   16.744     51 Template:c/core
+  7.96%   16.388     36 Template:nv_ln
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:16906-0!canonical!zh and timestamp 20260421221154 and revision id 100182. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/cpp/numeric/simd">Online version</a></li><li>Offline version retrieved 2026-05-02 15:55.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":411,"wgPageParseReport":{"limitreport":{"cputime":"0.256","walltime":"0.288","ppvisitednodes":{"value":14576,"limit":1000000},"postexpandincludesize":{"value":323294,"limit":4194304},"templateargumentsize":{"value":72583,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":97,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":48381,"limit":5000000},"timingprofile":["100.00%  205.957      1 -total"," 27.05%   55.708     24 Template:dsc_inc"," 20.33%   41.881      1 Template:cpp/numeric/simd/navbar"," 20.04%   41.270      1 Template:navbar"," 13.80%   28.423     24 Template:dsc"," 13.52%   27.836     16 Template:dcla"," 10.41%   21.439     75 Template:nv","  9.16%   18.870      1 Template:cpp/numeric/navbar_content","  8.13%   16.744     51 Template:c/core","  7.96%   16.388     36 Template:nv_ln"]},"cachereport":{"timestamp":"20260421221154","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260421221154 -->
+</html>

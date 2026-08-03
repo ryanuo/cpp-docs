@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>std::lerp</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"a27bff81ea54db1a085b0a19","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/numeric/lerp","wgTitle":"cpp/numeric/lerp","wgCurRevisionId":95854,"wgRevisionId":95854,"wgArticleId":11996,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/numeric/lerp","wgRelevantArticleId":11996,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_numeric_lerp rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">std::</span>lerp</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../numeric.html" title="cpp/numeric">numeric</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../standard_library.html" title="cpp/standard library">标准库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="cpp/header">标准库标头</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../named_req.html" title="cpp/named req">具名要求</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../feature_test.html" title="cpp/feature test">功能特性测试宏</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html#%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81" title="cpp/utility">语言支持库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="cpp/error">诊断库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="cpp/memory">内存管理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../meta.html" title="cpp/meta">元编程库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html" title="cpp/utility">通用工具库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../container.html" title="cpp/container">容器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../iterator.html" title="cpp/iterator">迭代器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../ranges.html" title="cpp/ranges">范围库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="cpp/algorithm">算法库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="cpp/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../text.html" title="cpp/text">文本处理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="cpp/numeric">数值库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="cpp/chrono">日期和时间库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="cpp/io">输入/输出库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="cpp/thread">并发支持库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../execution.html" title="cpp/execution">执行控制库</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../numeric.html" title="cpp/numeric">数值库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="math.html" title="cpp/numeric/math">常用数学函数</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="special_functions.html" title="cpp/numeric/special functions">数学特殊函数</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="constants.html" title="cpp/numeric/constants">数学常数</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="linalg.html" title="cpp/numeric/linalg">基本线性代数算法</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="simd.html" title="cpp/numeric/simd">数据并行类型（SIMD）</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="fenv.html" title="cpp/numeric/fenv">浮点数环境</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="complex.html" title="cpp/numeric/complex">复数</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="valarray.html" title="cpp/numeric/valarray">数值数组 (<code>valarray</code>)</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="random.html" title="cpp/numeric/random">伪随机数生成</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility/bit.html" title="cpp/utility/bit">位操纵</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html#%E9%A5%B1%E5%92%8C%E7%AE%97%E6%9C%AF" title="cpp/numeric">饱和算术</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../numeric.html#%E5%9B%A0%E6%95%B0%E8%BF%90%E7%AE%97" title="cpp/numeric">因数运算</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="gcd.html" title="cpp/numeric/gcd"><span class="t-lines"><span>gcd</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="lcm.html" title="cpp/numeric/lcm"><span class="t-lines"><span>lcm</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../numeric.html#%E6%8F%92%E5%80%BC%E8%BF%90%E7%AE%97" title="cpp/numeric">插值</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="midpoint.html" title="cpp/numeric/midpoint"><span class="t-lines"><span>midpoint</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>lerp</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../numeric.html#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97" title="cpp/numeric">泛型算术运算</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/iota.html" title="cpp/algorithm/iota"><span class="t-lines"><span>iota</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/ranges/iota.html" title="cpp/algorithm/ranges/iota"><span class="t-lines"><span>ranges::iota</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/accumulate.html" title="cpp/algorithm/accumulate"><span class="t-lines"><span>accumulate</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/inner_product.html" title="cpp/algorithm/inner product"><span class="t-lines"><span>inner_product</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/adjacent_difference.html" title="cpp/algorithm/adjacent difference"><span class="t-lines"><span>adjacent_difference</span></span></a></div><div><span class="t-lines"><span><code>  </code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/partial_sum.html" title="cpp/algorithm/partial sum"><span class="t-lines"><span>partial_sum</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/reduce.html" title="cpp/algorithm/reduce"><span class="t-lines"><span>reduce</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/transform_reduce.html" title="cpp/algorithm/transform reduce"><span class="t-lines"><span>transform_reduce</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/inclusive_scan.html" title="cpp/algorithm/inclusive scan"><span class="t-lines"><span>inclusive_scan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/exclusive_scan.html" title="cpp/algorithm/exclusive scan"><span class="t-lines"><span>exclusive_scan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/transform_inclusive_scan.html" title="cpp/algorithm/transform inclusive scan"><span class="t-lines"><span>transform_inclusive_scan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../algorithm/transform_exclusive_scan.html" title="cpp/algorithm/transform exclusive scan"><span class="t-lines"><span>transform_exclusive_scan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../numeric.html#%E5%B8%A6%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E7%AE%97%E6%9C%AF" title="cpp/numeric">C 风格带检查整数算术</a></td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ckd_add.html" title="cpp/numeric/ckd add"><span class="t-lines"><span>ckd_add</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ckd_sub.html" title="cpp/numeric/ckd sub"><span class="t-lines"><span>ckd_sub</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ckd_mul.html" title="cpp/numeric/ckd mul"><span class="t-lines"><span>ckd_mul</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/cmath.html" title="cpp/header/cmath">&lt;cmath&gt;</a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl-rev-begin t-dcl-rev-num" style="display:none" aria-hidden="true"><td colspan="3"></td></tr><tr class="t-dcl-rev-aux">
+<td></td>
+<td rowspan="142">(1)</td>
+<td></td>
+</tr>
+<tr class="t-dcl t-since-cxx20 t-until-cxx23">
+<td><div><span id="版本_1"></span><div style="max-width: min(calc(7.68332px * 246 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w">       </span><span class="nf">lerp</span><span class="p">(</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w">      </span><span class="nf">lerp</span><span class="p">(</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">lerp</span><span class="p">(</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">,</span>
+<span class="w">                            </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad"> </td>
+<td><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span> <br><span class="t-mark-rev t-until-cxx23" style="white-space: nowrap;">(C++23 前)</span></td>
+</tr>
+<tr class="t-dcl t-since-cxx23">
+<td> <div><div style="max-width: min(calc(7.68332px * 163 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="cm">/* floating-point-type */</span>
+<span class="w">    </span><span class="n">lerp</span><span class="p">(</span><span class="w"> </span><span class="cm">/* floating-point-type */</span><span class="w"> </span><span class="n">a</span><span class="p">,</span>
+<span class="w">          </span><span class="cm">/* floating-point-type */</span><span class="w"> </span><span class="n">b</span><span class="p">,</span>
+<span class="w">          </span><span class="cm">/* floating-point-type */</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起)</span> </td>
+</tr>
+<tr class="t-dcl-rev-end" style="display:none" aria-hidden="true"><td colspan="3"></td></tr>
+<tr class="t-dcl-h">
+<td> <div><a href="lerp.html#%E6%B3%A8%E8%A7%A3">额外重载</a></div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/cmath.html" title="cpp/header/cmath">&lt;cmath&gt;</a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl t-since-cxx20">
+<td> <div><div style="max-width: min(calc(7.68332px * 176 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Arithmetic1</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Arithmetic2</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Arithmetic3</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="cm">/* common-floating-point-type */</span>
+<span class="w">    </span><span class="n">lerp</span><span class="p">(</span><span class="w"> </span><span class="n">Arithmetic1</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">Arithmetic2</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Arithmetic3</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (A) </td>
+<td> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<div class="t-li1"><span class="t-li">1)</span> 如果形参 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">t</span></code></span> 在 <code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span><code>, </code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span><code>)</code> 之内，则计算 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">a</span></code></span> 与 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">b</span></code></span> 间参的<a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="extiw" title="enwiki:Linear interpolation">线性内插</a>（否则是<a href="https://en.wikipedia.org/wiki/Extrapolation#Linear" class="extiw" title="enwiki:Extrapolation">线性外插</a>），即其结果为 <span class="mjax" style="display:none">\(a+t(b−a)\)</span><span class="mjax-fallback texhtml" style="white-space:nowrap;font-family:'Times New Roman',serif;font-size:120%;line-height:1em;margin-left:-0.1em;">a+t(b−a)</span>（计入浮点数运算的不精确性）。<span class="t-rev-inl t-since-cxx23"><span>标准库提供所有以无 cv 限定的浮点数类型作为参数 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">a</span></code></span>，<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">b</span></code></span> 和 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">t</span></code></span> 的类型的重载。</span><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起)</span></span></span></div>
+<div class="t-li1"><span class="t-li">A)</span> 为算术类型的所有其他组合提供额外重载。</div>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>a, b, t
+</td>
+<td>-
+</td>
+<td>浮点数或整数
+</td></tr></tbody></table>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC"></span><span class="mw-headline" id="返回值">返回值</span></h3>
+<p><span class="mjax" style="display:none">\(a + t(b − a)\)</span><span class="mjax-fallback texhtml" style="white-space:nowrap;font-family:'Times New Roman',serif;font-size:120%;line-height:1em;margin-left:-0.1em;">a + t(b − a)</span>
+</p><p>当 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">isfinite</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">isfinite</span><span class="p">(</span><span class="n">b</span><span class="p">)</span></code></span> 是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span> 时，保证下列属性：
+</p>
+<ul><li>如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">t</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span></code></span>，那么结果等于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">a</span></code></span>。</li>
+<li>如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">t</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span></code></span>，那么结果等于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">b</span></code></span>。</li>
+<li>如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">t</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span></code></span>，那么结果有限。</li>
+<li>如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">isfinite</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span></code></span>，那么结果等于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">a</span></code></span>。</li>
+<li>如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">isfinite</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">isinf</span><span class="p">(</span><span class="n">t</span><span class="p">))</span></code></span>，那么结果非 <a href="math/NAN.html" title="cpp/numeric/math/NAN"><tt>NaN</tt></a>。</li></ul>
+<p>令 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">CMP</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span></code></span> 在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span></code></span> 时是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span>，在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span></code></span> 时是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">-1</span></code></span>，否则是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span>。对于任意 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">t1</span></code></span> 与 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">t2</span></code></span>，以下三者的积非负（即 <code>std::lerp</code> 单调）：
+</p>
+<ul><li><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">CMP</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">t2</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">t1</span><span class="p">))</span></code></span></li>
+<li><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">CMP</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span><span class="w"> </span><span class="n">t1</span><span class="p">)</span></code></span></li>
+<li><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">CMP</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">)</span></code></span></li></ul>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>额外重载不需要以 <span class="t-v">(A)</span> 的形式提供。它们只需要能够对它们的第一个实参 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num1</span></code></span>，第二个实参 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num2</span></code></span> 和第三个实参 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num3</span></code></span> 满足以下要求：
+</p>
+<table class="t-rev-begin">
+<tbody><tr class="t-rev t-until-cxx23"><td>
+<ul><li>如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num1</span></code></span>，<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num2</span></code></span> 或 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num3</span></code></span> 具有 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 类型，那么 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">,</span><span class="w"> </span><span class="n">num3</span><span class="p">)</span></code></span> 和 <span class="t-c"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num1</span><span class="p">),</span></code><br><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num2</span><span class="p">),</span></code><br><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num3</span><span class="p">))</span></code></span> 的效果相同。</li>
+<li>否则，如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num1</span></code></span>，<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num2</span></code></span> 和/或 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num3</span></code></span> 具有 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 或整数类型，那么 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">,</span><span class="w"> </span><span class="n">num3</span><span class="p">)</span></code></span> 和 <span class="t-c"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num1</span><span class="p">),</span></code><br><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num2</span><span class="p">),</span></code><br><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num3</span><span class="p">))</span></code></span> 的效果相同。</li>
+<li>否则，如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num1</span></code></span>，<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num2</span></code></span> 或 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num3</span></code></span> 具有 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">float</span></code> 类型，那么 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">,</span><span class="w"> </span><span class="n">num3</span><span class="p">)</span></code></span> 和 <span class="t-c"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num1</span><span class="p">),</span></code><br><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num2</span><span class="p">),</span></code><br><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num3</span><span class="p">))</span></code></span> 的效果相同。</li></ul>
+</td>
+<td><span class="t-mark-rev t-until-cxx23" style="white-space: nowrap;">(C++23 前)</span></td></tr>
+<tr class="t-rev t-since-cxx23"><td>
+<p>如果 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num1</span></code></span>，<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num2</span></code></span> 和 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num3</span></code></span> 具有算术类型，那么 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">,</span><span class="w"> </span><span class="n">num3</span><span class="p">)</span></code></span> 和 <span class="t-c"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="cm">/*公共浮点数类型*/</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num1</span><span class="p">),</span></code><br><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="cm">/*公共浮点数类型*/</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num2</span><span class="p">),</span></code><br><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="cm">/*公共浮点数类型*/</span><span class="o">&gt;</span><span class="p">(</span><span class="n">num3</span><span class="p">))</span></code></span> 的效果相同，其中 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/*公共浮点数类型*/</span></code> 是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num1</span></code></span>，<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num2</span></code></span> 和 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">num3</span></code></span> 的类型中<a href="../language/usual_arithmetic_conversions.html#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BD%AC%E6%8D%A2%E7%AD%89%E7%BA%A7" title="cpp/language/usual arithmetic conversions">浮点数转换等级</a>和<a href="../language/usual_arithmetic_conversions.html#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BD%AC%E6%8D%A2%E5%AD%90%E7%AD%89%E7%BA%A7" title="cpp/language/usual arithmetic conversions">浮点数转换子等级</a>最高的浮点数类型，整数类型的实参被视为具有与 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 相等的浮点数转换等级。
+</p><p>如果不存在等级和子等级最高的浮点数类型，那么在<a href="../language/overload_resolution.html" title="cpp/language/overload resolution">重载决议</a>时不会从提供的重载中产生可用的候选。
+</p>
+</td>
+<td><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起)</span></td></tr>
+</tbody></table>
+<table class="wikitable ftm-begin">
+
+<tbody><tr>
+<th><a href="../utility/feature_test.html" title="cpp/utility/feature test">功能特性测试</a>宏</th>
+<th><abbr title="采纳该特性的年/月。每个值下面的链接指向编译期支持页面中给定功能特性的条目。">值</abbr></th>
+<th><abbr title="引入该特性的标准；DR 意为针对该修订版的缺陷报告">标准</abbr></th>
+<th>功能特性
+</th></tr>
+<tr>
+<td><a href="../feature_test.html#cpp_lib_interpolate" title="cpp/feature test"><code>__cpp_lib_interpolate</code></a></td>
+<td><a href="../compiler_support/20.html#cpp_lib_interpolate_201902L" title="cpp/compiler support/20"><code>201902L</code></a></td>
+<td><span class="t-mark" style="white-space: nowrap;">(C++20)</span></td>
+<td><code>std::lerp</code>, <span class="t-lc">std::midpoint</span>
+</td></tr></tbody></table>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cassert&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">float</span><span class="w"> </span><span class="nf">naive_lerp</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e8f</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">midpoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5f</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"a = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"，"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"b = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"中点 = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">midpoint</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"std::lerp 是否精确？："</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"naive_lerp 是否精确？："</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">naive_lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">naive_lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"std::lerp(a, b, 1.0f) = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"naive_lerp(a, b, 1.0f) = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">naive_lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="k">not</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">isnan</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">INFINITY</span><span class="p">)));</span><span class="w"> </span><span class="c1">// 这里的 lerp 可以是 -inf</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"演示外插，给定 std::lerp(5, 10, t)：</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">t</span><span class="p">{</span><span class="mf">-2.0</span><span class="p">};</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">lerp</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>a = 1e+08，b = 1
+中点 = 5e+07
+std::lerp 是否精确？：true true
+naive_lerp 是否精确？：true false
+std::lerp(a, b, 1.0f) = 1
+naive_lerp(a, b, 1.0f) = 0
+演示外插，给定 std::lerp(5, 10, t)：
+-5 -2.5 0 2.5 5 7.5 10 12.5 15
+</pre></div> 
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="midpoint.html" title="cpp/numeric/midpoint"> <span class="t-lines"><span>midpoint</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div>
+</td>
+<td>两个数值或指针间的中点 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422012548
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.200 seconds
+Real time usage: 3.112 seconds
+Preprocessor visited node count: 5855/1000000
+Post‐expand include size: 128323/4194304 bytes
+Template argument size: 28744/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 73/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 30868/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 3062.907      1 -total
+ 64.34% 1970.726     51 Template:c
+ 12.41%  380.068      1 Template:cpp/numeric/math/additional_overload_note
+ 12.13%  371.526      2 Template:dcl
+ 12.02%  368.289      2 Template:rev
+ 11.56%  354.179      1 Template:dcl_rev_multi
+  9.94%  304.340      1 Template:example
+  9.91%  303.391      2 Template:source
+  5.36%  164.114      1 Template:dcla
+  5.32%  163.029      4 Template:c_multi
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:11996-0!canonical!zh and timestamp 20260422012548 and revision id 95854. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/cpp/numeric/lerp">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":3240,"wgPageParseReport":{"limitreport":{"cputime":"0.200","walltime":"3.112","ppvisitednodes":{"value":5855,"limit":1000000},"postexpandincludesize":{"value":128323,"limit":4194304},"templateargumentsize":{"value":28744,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":73,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":30868,"limit":5000000},"timingprofile":["100.00% 3062.907      1 -total"," 64.34% 1970.726     51 Template:c"," 12.41%  380.068      1 Template:cpp/numeric/math/additional_overload_note"," 12.13%  371.526      2 Template:dcl"," 12.02%  368.289      2 Template:rev"," 11.56%  354.179      1 Template:dcl_rev_multi","  9.94%  304.340      1 Template:example","  9.91%  303.391      2 Template:source","  5.36%  164.114      1 Template:dcla","  5.32%  163.029      4 Template:c_multi"]},"cachereport":{"timestamp":"20260422012548","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422012548 -->
+</html>

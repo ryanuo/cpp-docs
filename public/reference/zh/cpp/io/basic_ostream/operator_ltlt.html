@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>std::basic_ostream&lt;CharT,Traits&gt;::operator&lt;&lt;</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"eb2a6080f8f37a3cdeb60172","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/io/basic_ostream/operator_ltlt","wgTitle":"cpp/io/basic ostream/operator ltlt","wgCurRevisionId":95705,"wgRevisionId":95705,"wgArticleId":2294,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/io/basic_ostream/operator_ltlt","wgRelevantArticleId":2294,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../../common/ext.css">
+<script async="" src="../../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_io_basic_ostream_operator_ltlt rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">std::basic_ostream&lt;CharT,Traits&gt;::</span>operator&lt;&lt;</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../../io.html" title="cpp/io">io</a></bdi> | <bdi dir="ltr"><a href="../basic_ostream.html" title="cpp/io/basic ostream">basic ostream</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../standard_library.html" title="cpp/standard library">标准库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../header.html" title="cpp/header">标准库标头</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../named_req.html" title="cpp/named req">具名要求</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../feature_test.html" title="cpp/feature test">功能特性测试宏</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../utility.html#%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81" title="cpp/utility">语言支持库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../error.html" title="cpp/error">诊断库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../memory.html" title="cpp/memory">内存管理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../meta.html" title="cpp/meta">元编程库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../utility.html" title="cpp/utility">通用工具库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../container.html" title="cpp/container">容器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../iterator.html" title="cpp/iterator">迭代器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../ranges.html" title="cpp/ranges">范围库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../algorithm.html" title="cpp/algorithm">算法库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../string.html" title="cpp/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../text.html" title="cpp/text">文本处理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../numeric.html" title="cpp/numeric">数值库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../chrono.html" title="cpp/chrono">日期和时间库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../io.html" title="cpp/io">输入/输出库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../thread.html" title="cpp/thread">并发支持库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../execution.html" title="cpp/execution">执行控制库</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../io.html" title="cpp/io">输入/输出库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../manip.html" title="cpp/io/manip">I/O 操纵符</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../io.html#%E6%89%93%E5%8D%B0%E5%87%BD%E6%95%B0_(C++23_%E8%B5%B7)" title="cpp/io">打印函数</a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../c.html" title="cpp/io/c">C 风格 I/O</a></td></tr>
+<tr class="t-nv-h1"><td colspan="5">缓冲区</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_streambuf.html" title="cpp/io/basic streambuf"><span class="t-lines"><span>basic_streambuf</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_filebuf.html" title="cpp/io/basic filebuf"><span class="t-lines"><span>basic_filebuf</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_stringbuf.html" title="cpp/io/basic stringbuf"><span class="t-lines"><span>basic_stringbuf</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_spanbuf.html" title="cpp/io/basic spanbuf"><span class="t-lines"><span>basic_spanbuf</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../strstreambuf.html" title="cpp/io/strstreambuf"><span class="t-lines"><span>strstreambuf</span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="C++98 中弃用，C++26 中移除">C++98/26*</span>)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_syncbuf.html" title="cpp/io/basic syncbuf"><span class="t-lines"><span>basic_syncbuf</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h1"><td colspan="5">流</td></tr>
+<tr class="t-nv-h2"><td colspan="5">抽象</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../ios_base.html" title="cpp/io/ios base"><span class="t-lines"><span>ios_base</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_ios.html" title="cpp/io/basic ios"><span class="t-lines"><span>basic_ios</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_istream.html" title="cpp/io/basic istream"><span class="t-lines"><span>basic_istream</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_ostream.html" title="cpp/io/basic ostream"><span class="t-lines"><span>basic_ostream</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_iostream.html" title="cpp/io/basic iostream"><span class="t-lines"><span>basic_iostream</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">文件 I/O</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_ifstream.html" title="cpp/io/basic ifstream"><span class="t-lines"><span>basic_ifstream</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_ofstream.html" title="cpp/io/basic ofstream"><span class="t-lines"><span>basic_ofstream</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_fstream.html" title="cpp/io/basic fstream"><span class="t-lines"><span>basic_fstream</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">字符串 I/O</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_istringstream.html" title="cpp/io/basic istringstream"><span class="t-lines"><span>basic_istringstream</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_ostringstream.html" title="cpp/io/basic ostringstream"><span class="t-lines"><span>basic_ostringstream</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_stringstream.html" title="cpp/io/basic stringstream"><span class="t-lines"><span>basic_stringstream</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">数组 I/O</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_ispanstream.html" title="cpp/io/basic ispanstream"><span class="t-lines"><span>basic_ispanstream</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_ospanstream.html" title="cpp/io/basic ospanstream"><span class="t-lines"><span>basic_ospanstream</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_spanstream.html" title="cpp/io/basic spanstream"><span class="t-lines"><span>basic_spanstream</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../istrstream.html" title="cpp/io/istrstream"><span class="t-lines"><span>istrstream</span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="C++98 中弃用，C++26 中移除">C++98/26*</span>)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../ostrstream.html" title="cpp/io/ostrstream"><span class="t-lines"><span>ostrstream</span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="C++98 中弃用，C++26 中移除">C++98/26*</span>)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../strstream.html" title="cpp/io/strstream"><span class="t-lines"><span>strstream</span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="C++98 中弃用，C++26 中移除">C++98/26*</span>)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">同步的输出</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_osyncstream.html" title="cpp/io/basic osyncstream"><span class="t-lines"><span>basic_osyncstream</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h1"><td colspan="5">类型</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../streamoff.html" title="cpp/io/streamoff"><span class="t-lines"><span>streamoff</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../streamsize.html" title="cpp/io/streamsize"><span class="t-lines"><span>streamsize</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../fpos.html" title="cpp/io/fpos"><span class="t-lines"><span>fpos</span></span></a></div></div></td></tr>
+<tr class="t-nv-h1"><td colspan="5">错误类别接口</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../iostream_category.html" title="cpp/io/iostream category"><span class="t-lines"><span>iostream_category</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../io_errc.html" title="cpp/io/io errc"><span class="t-lines"><span>io_errc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../basic_ostream.html" title="cpp/io/basic ostream"><tt>std::basic_ostream</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h1"><td colspan="5">全局对象</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../cout.html" title="cpp/io/cout"><span class="t-lines"><span>cout</span><span>wcout</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../cerr.html" title="cpp/io/cerr"><span class="t-lines"><span>cerr</span><span>wcerr</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../clog.html" title="cpp/io/clog"><span class="t-lines"><span>clog</span><span>wclog</span></span></a></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h1"><td colspan="5">成员函数</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="basic_ostream.html" title="cpp/io/basic ostream/basic ostream"><span class="t-lines"><span>basic_ostream::basic_ostream</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="~basic_ostream.html" title="cpp/io/basic ostream/~basic ostream"><span class="t-lines"><span>basic_ostream::~basic_ostream</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%3D.html" title="cpp/io/basic ostream/operator="><span class="t-lines"><span>basic_ostream::operator=</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">有格式输出</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>basic_ostream::operator&lt;&lt;</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">无格式输出</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="put.html" title="cpp/io/basic ostream/put"><span class="t-lines"><span>basic_ostream::put</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="write.html" title="cpp/io/basic ostream/write"><span class="t-lines"><span>basic_ostream::write</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">定位</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tellp.html" title="cpp/io/basic ostream/tellp"><span class="t-lines"><span>basic_ostream::tellp</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="seekp.html" title="cpp/io/basic ostream/seekp"><span class="t-lines"><span>basic_ostream::seekp</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">杂项</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="flush.html" title="cpp/io/basic ostream/flush"><span class="t-lines"><span>basic_ostream::flush</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="swap.html" title="cpp/io/basic ostream/swap"><span class="t-lines"><span>basic_ostream::swap</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h1"><td colspan="5">成员类</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="sentry.html" title="cpp/io/basic ostream/sentry"><span class="t-lines"><span>basic_ostream::sentry</span></span></a></div></div></td></tr>
+<tr class="t-nv-h1"><td colspan="5">非成员函数</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator_ltlt2.html" title="cpp/io/basic ostream/operator ltlt2"><span class="t-lines"><span>operator&lt;&lt;<span class="t-dsc-small">(std::basic_ostream)</span></span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="print.html" title="cpp/io/basic ostream/print"><span class="t-lines"><span>print<span class="t-dsc-small">(std::ostream)</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="println.html" title="cpp/io/basic ostream/println"><span class="t-lines"><span>println<span class="t-dsc-small">(std::ostream)</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vprint_unicode.html" title="cpp/io/basic ostream/vprint unicode"><span class="t-lines"><span>vprint_unicode<span class="t-dsc-small">(std::ostream)</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vprint_nonunicode.html" title="cpp/io/basic ostream/vprint nonunicode"><span class="t-lines"><span>vprint_nonunicode<span class="t-dsc-small">(std::ostream)</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 40 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (1) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="Version_2"></span><div style="max-width: calc(7.68332px * 40 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (2)</td>
+<td class="t-dcl-nopad"></td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 49 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (3) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl t-since-cxx11">
+<td> <div><div style="max-width: calc(7.68332px * 45 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (4) </td>
+<td> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span> </td>
+</tr>
+<tr class="t-dcl t-since-cxx11">
+<td> <div><div style="max-width: calc(7.68332px * 54 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (5) </td>
+<td> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span> </td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 42 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (6) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 47 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (7) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="Version_8"></span><div style="max-width: calc(7.68332px * 47 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (8)</td>
+<td class="t-dcl-nopad"></td>
+</tr>
+<tr class="t-dcl t-since-cxx23">
+<td> <div><div style="max-width: calc(7.68332px * 56 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">volatile</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (9) </td>
+<td> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起)</span> </td>
+</tr>
+<tr class="t-dcl t-since-cxx17">
+<td> <div><div style="max-width: calc(7.68332px * 44 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullptr_t</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (10) </td>
+<td> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17 起)</span> </td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="Version_11"></span><div style="max-width: calc(7.68332px * 41 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (11)</td>
+<td class="t-dcl-nopad"></td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 39 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (12) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 50 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (13) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 48 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (14) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 41 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (15) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl t-since-cxx23">
+<td> <div><div style="max-width: calc(7.68332px * 49 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="cm">/* 扩展浮点数类型 */</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (16) </td>
+<td> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起)</span> </td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 69 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">basic_streambuf</span><span class="o">&lt;</span><span class="n">CharT</span><span class="p">,</span><span class="w"> </span><span class="n">Traits</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (17) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td><div><span id="Version_18"></span><div style="max-width: calc(7.68332px * 72 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">ios_base</span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="n">std</span><span class="o">::</span><span class="n">ios_base</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (18)</td>
+<td class="t-dcl-nopad"></td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 104 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">basic_ios</span><span class="o">&lt;</span><span class="n">CharT</span><span class="p">,</span><span class="w"> </span><span class="n">Traits</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="n">std</span><span class="o">::</span><span class="n">basic_ios</span><span class="o">&lt;</span><span class="n">CharT</span><span class="p">,</span><span class="w"> </span><span class="n">Traits</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (19) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl">
+<td> <div><div style="max-width: calc(7.68332px * 121 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">basic_ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">basic_ostream</span><span class="o">&lt;</span><span class="n">CharT</span><span class="p">,</span><span class="w"> </span><span class="n">Traits</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)</span>
+<span class="w">        </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">basic_ostream</span><span class="o">&lt;</span><span class="n">CharT</span><span class="p">,</span><span class="w"> </span><span class="n">Traits</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td> (20) </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>将数据插入到流。
+</p>
+<div class="t-li1"><span class="t-li">1-8)</span> 插入 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span>。</div>
+<div class="t-li1"><span class="t-li"></span> 此函数表现为<a href="../../named_req/FormattedOutputFunction.html" title="cpp/named req/FormattedOutputFunction"><span style="font-style:italic">有格式输出函数</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(FormattedOutputFunction)</span> </a>。在构造并检查 sentry 对象后，通过调用 <a href="../../locale/num_put/put.html" title="cpp/locale/num put/put"><tt>std::num_put::put()</tt></a> 插入值。如果在输出中遇到文件尾（<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">put</span><span class="p">().</span><span class="n">failed</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span></code></span>），那么就会设置 <code>badbit</code>。</div>
+<div class="t-li1"><span class="t-li">9)</span> 等价于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">return</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">p</span><span class="p">));</span></code></span>。</div>
+<div class="t-li1"><span class="t-li">10)</span> 等价于 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span></code></span>，其中 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">s</span></code></span> 是由实现定义的空终止字符类型字符串。</div>
+<div class="t-li1"><span class="t-li">11)</span> 插入来自 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">short</span></code> <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的值。</div>
+<div class="t-li1"><span class="t-li"></span> 此函数表现为<a href="../../named_req/FormattedOutputFunction.html" title="cpp/named req/FormattedOutputFunction"><span style="font-style:italic">有格式输出函数</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(FormattedOutputFunction)</span> </a>。在构造并检查 sentry 对象后，按 <span class="t-v">(2)</span> 中的方式插入 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">long</span></code> 值 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">lval</span></code></span>，其中 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">lval</span></code></span>：
+<ul><li>在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">flags</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ios_base</span><span class="o">::</span><span class="n">basefield</span></code></span> 是 <span class="t-lc">std::ios_base::oct</span> 或 <span class="t-lc">std::ios_base::hex</span> 时是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></code></span>；</li>
+<li>否则是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code></span>。</li></ul></div>
+<div class="t-li1"><span class="t-li">12)</span> 插入来自 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">int</span></code> <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的值。</div>
+<div class="t-li1"><span class="t-li"></span> 此函数表现为<a href="../../named_req/FormattedOutputFunction.html" title="cpp/named req/FormattedOutputFunction"><span style="font-style:italic">有格式输出函数</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(FormattedOutputFunction)</span> </a>。在构造并检查 sentry 对象后，按 <span class="t-v">(2)</span> 中的方式插入 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">long</span></code> 值 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">lval</span></code></span>，其中 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">lval</span></code></span>：
+<ul><li>在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">flags</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ios_base</span><span class="o">::</span><span class="n">basefield</span></code></span> 是 <span class="t-lc">std::ios_base::oct</span> 或 <span class="t-lc">std::ios_base::hex</span> 时是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></code></span>；</li>
+<li>否则是 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code></span>。</li></ul></div>
+<div class="t-li1"><span class="t-li">13,14)</span> 插入来自 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span></code> 或 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span></code> <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的值。</div>
+<div class="t-li1"><span class="t-li"></span> 此函数表现为<a href="../../named_req/FormattedOutputFunction.html" title="cpp/named req/FormattedOutputFunction"><span style="font-style:italic">有格式输出函数</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(FormattedOutputFunction)</span> </a>。在构造并检查 sentry 对象后，按 <span class="t-v">(3)</span> 中的方式插入 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code></span>。</div>
+<div class="t-li1"><span class="t-li">15)</span> 插入来自 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">float</span></code> <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的值。</div>
+<div class="t-li1"><span class="t-li"></span> 此函数表现为<a href="../../named_req/FormattedOutputFunction.html" title="cpp/named req/FormattedOutputFunction"><span style="font-style:italic">有格式输出函数</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(FormattedOutputFunction)</span> </a>。在构造并检查 sentry 对象后，按 <span class="t-v">(6)</span> 中的方式插入 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code></span>。</div>
+<div class="t-li1"><span class="t-li">16)</span> 插入来自 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 的值。标准库提供所有以无 cv 限定的<a href="../../language/types.html#%E6%89%A9%E5%B1%95%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B" title="cpp/language/types">扩展浮点数类型</a>作为参数 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 类型的重载。</div>
+<div class="t-li1"><span class="t-li"></span> 此函数表现为<a href="../../named_req/FormattedOutputFunction.html" title="cpp/named req/FormattedOutputFunction"><span style="font-style:italic">有格式输出函数</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(FormattedOutputFunction)</span> </a>。在构造并检查 sentry 对象后，检查 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cm">/* 扩展浮点数类型 */</span></code> 的<a href="../../language/usual_arithmetic_conversions.html#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BD%AC%E6%8D%A2%E7%AD%89%E7%BA%A7" title="cpp/language/usual arithmetic conversions">浮点数转换等级</a>：
+<ul><li>如果该等级低于或等于 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 的等级，按 <span class="t-v">(6)</span> 中的方式插入 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code></span>。</li>
+<li>否则，如果该等级低于或等于 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 的等级，按 <span class="t-v">(7)</span> 中的方式插入 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code></span>。</li>
+<li>否则，对此重载的调用受条件性支持，并且语义由实现定义。</li></ul></div>
+<div class="t-li1"><span class="t-li">17)</span> 表现为<a href="../../named_req/UnformattedOutputFunction.html" title="cpp/named req/UnformattedOutputFunction"><span style="font-style:italic">无格式输出函数</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(UnformattedOutputFunction)</span> </a>。在构造并检查 sentry 对象后，检查 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">sb</span></code></span> 是否为空指针。是的情况下执行 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">setstate</span><span class="p">(</span><span class="n">badbit</span><span class="p">)</span></code></span> 并退出。否则，从 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">sb</span></code></span> 控制的输入序列提取字符，并将它们插入到 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">*</span><span class="k">this</span></code></span>，直到满足下列条件之一为止：
+<dl><dd><ul><li>输入序列上出现文件尾；</li>
+<li>插入输出序列失败（此时不会提取要被插入的字符）；</li>
+<li>发生异常（此时异常会被捕获）。</li></ul></dd></dl>
+如果没有插入字符，那么执行 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">setstate</span><span class="p">(</span><span class="n">failbit</span><span class="p">)</span></code></span>。如果在提取中抛出异常，那么就会设置 <code>failbit</code>，而且如果在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">exceptions</span><span class="p">()</span></code></span> 设置里 <code>failbit</code>，那么就会重抛异常。</div>
+<div class="t-li1"><span class="t-li">18-20)</span> 调用 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">)</span></code></span>。这些重载用于实现用于输出的输入/输出操纵符，例如 <span class="t-lc">std::endl</span>。</div>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>value
+</td>
+<td>-
+</td>
+<td>要插入的整数、浮点数、布尔值或指针
+</td></tr>
+<tr class="t-par">
+<td>func
+</td>
+<td>-
+</td>
+<td>要调用的函数
+</td></tr>
+<tr class="t-par">
+<td>sb
+</td>
+<td>-
+</td>
+<td>指向要从之读取数据的流缓冲区的指针
+</td></tr></tbody></table>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC"></span><span class="mw-headline" id="返回值">返回值</span></h3>
+<div class="t-li1"><span class="t-li">1-19)</span> <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">*</span><span class="k">this</span></code></span></div>
+<div class="t-li1"><span class="t-li">20)</span> <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">)</span></code></span></div>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>没有对指向非静态数据成员指针<span class="t-rev-inl t-until-cxx23"><span>、指向 volatile 指针</span><span><span class="t-mark-rev t-until-cxx23" style="white-space: nowrap;">(C++23 前)</span></span></span>或函数指针（除了拥有 <span class="t-v">(18-20)</span> 重载所接受之签名者）的重载。
+</p>
+<ul><li>试图输出这种对象会引发到 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">bool</span></code> 的隐式转换，并对于任何非空指针值将打印值 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span>（除非设置了 <code>boolalpha</code>，此时会打印 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span>）。</li></ul>
+<p>字符与字符串实参（例如拥有 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">char</span></code> 类型或 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span></code> 类型者）由 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">operator</span><span class="o">&lt;&lt;</span></code> 的<a href="operator_ltlt2.html" title="cpp/io/basic ostream/operator ltlt2">非成员重载</a>处理。
+</p>
+<ul><li>试图用成员函数调用语法输出字符（例如 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">.</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="sc">'c'</span><span class="p">);</span></code></span>）会调用重载 <span class="t-v">(<a href="operator_ltlt.html#%E7%89%88%E6%9C%AC_2">2-5</a>)</span> 或 <span class="t-v">(<a href="operator_ltlt.html#%E7%89%88%E6%9C%AC_11">11-14</a>)</span> 之一，并输出数字值。</li>
+<li>试图用成员函数调用语法输出字符串会调用重载 <span class="t-v">(8)</span> 而改为打印指针值。</li></ul>
+<p>重载 <span class="t-v">(10)</span> 由 <a rel="nofollow" class="external text" href="https://cplusplus.github.io/LWG/issue2221">LWG 问题 2221</a>的解决方案添加，但是没有任何标准库实现在 C++11/14 模式下实现它。
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">fun</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">istringstream</span><span class="w"> </span><span class="n">input</span><span class="p">(</span><span class="s">" </span><span class="se">\"</span><span class="s">Some text.</span><span class="se">\"</span><span class="s"> "</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fun</span><span class="p">()</span><span class="w">          </span><span class="c1">// int 重载 (12)</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="w">            </span><span class="c1">// 非成员重载</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="w"> </span><span class="c1">// 函数重载 (18)</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w">              </span><span class="c1">// bool 重载 (1)</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="w">            </span><span class="c1">// 非成员重载</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">fixed</span><span class="w">     </span><span class="c1">// 又是函数重载 (18)</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">f</span><span class="w">              </span><span class="c1">// double 重载 (6)</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">()</span><span class="w">  </span><span class="c1">// streambuf 重载</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fun</span><span class="w">            </span><span class="c1">// bool 重载 (1)：没有 int(*)() 的重载</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">     </span><span class="c1">// 又是函数重载 (18)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="k">volatile</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"p1: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="w">  </span><span class="c1">// `const void*` 重载，打印地址</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"p2: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span><span class="w"> </span><span class="c1">// C++23 (P1147) 之前: bool 重载 :)</span>
+<span class="w">            </span><span class="c1">// 因为其并不匹配 operator&lt;&lt;(const void*)，由于它舍弃了 `volatile` 限定符。</span>
+<span class="w">            </span><span class="c1">// 为修正这点，C++23 添加了 `const volatile void*` 的重载 (9)，</span>
+<span class="w">            </span><span class="c1">// 它按预期打印了地址。</span>
+<span class="p">}</span>
+</pre></div>
+<p>可能的输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>42 true 3.140000 "Some text." true
+p1: 0x7ffcea766600
+p2: 0x7ffcea766600
+</pre></div> 
+</div>
+<h3><span id=".E7.BC.BA.E9.99.B7.E6.8A.A5.E5.91.8A"></span><span class="mw-headline" id="缺陷报告">缺陷报告</span></h3>
+<p>下列更改行为的缺陷报告追溯地应用于以前出版的 C++ 标准。
+</p>
+<table class="dsctable" style="font-size:0.8em">
+<tbody><tr>
+<th>缺陷报告
+</th>
+<th>应用于
+</th>
+<th>出版时的行为
+</th>
+<th>正确行为
+</th></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="https://cplusplus.github.io/LWG/issue117">LWG 117</a>
+</td>
+<td>C++98
+</td>
+<td>重载 <span class="t-v">(1-8,11-15)</span> 通过 <a href="../../locale/num_put/put.html" title="cpp/locale/num put/put"><tt>num_put::put</tt></a> 代理插入操作，但它没有为<br><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">short</span></code>，<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span></code>，<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">int</span></code>，<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span></code> 以及 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">float</span></code> 重载
+</td>
+<td>它们在传递到 <code>num_put::put</code><br>之前会先进行转换
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="https://cplusplus.github.io/LWG/issue567">LWG 567</a>
+</td>
+<td>C++98
+</td>
+<td>重载 <span class="t-v">(17)</span> 因 <a rel="nofollow" class="external text" href="https://cplusplus.github.io/LWG/issue60">LWG 问题 60</a> 的解决方案而表现为<br><a href="../../named_req/FormattedOutputFunction.html" title="cpp/named req/FormattedOutputFunction"><span style="font-style:italic">有格式输出函数</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(FormattedOutputFunction)</span> </a>
+</td>
+<td>表现为<br><a href="../../named_req/UnformattedOutputFunction.html" title="cpp/named req/UnformattedOutputFunction"><span style="font-style:italic">无格式输出函数</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(UnformattedOutputFunction)</span> </a>
+</td></tr></tbody></table>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="operator_ltlt2.html" title="cpp/io/basic ostream/operator ltlt2"> <span class="t-lines"><span>operator&lt;&lt;<span class="t-dsc-small">(std::basic_ostream)</span></span></span></a></div></div>
+</td>
+<td>插入字符数据，或向右值流插入 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../string/basic_string/operator_ltltgtgt.html" title="cpp/string/basic string/operator ltltgtgt"> <span class="t-lines"><span>operator&lt;&lt;</span><span>operator&gt;&gt;</span></span></a></div></div>
+</td>
+<td>执行字符串的流输入与输出 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../string/basic_string_view/operator_ltlt.html" title="cpp/string/basic string view/operator ltlt"> <span class="t-lines"><span>operator&lt;&lt;</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div>
+</td>
+<td>进行字符串视图的流输出 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../utility/bitset/operator_ltltgtgt2.html" title="cpp/utility/bitset/operator ltltgtgt2"> <span class="t-lines"><span>operator&lt;&lt;</span><span>operator&gt;&gt;</span></span></a></div></div>
+</td>
+<td>执行 bitset 的流输入和输出 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../numeric/complex/operator_ltltgtgt.html" title="cpp/numeric/complex/operator ltltgtgt"> <span class="t-lines"><span>operator&lt;&lt;</span><span>operator&gt;&gt;</span></span></a></div></div>
+</td>
+<td>复数的序列化和反序列化 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../numeric/random/linear_congruential_engine/operator_ltltgtgt.html" title="cpp/numeric/random/linear congruential engine/operator ltltgtgt"> <span class="t-lines"><span>operator&lt;&lt;</span><span>operator&gt;&gt;</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div>
+</td>
+<td>执行伪随机数引擎的流输入和输出 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../numeric/random/uniform_int_distribution/operator_ltltgtgt.html" title="cpp/numeric/random/uniform int distribution/operator ltltgtgt"> <span class="t-lines"><span>operator&lt;&lt;</span><span>operator&gt;&gt;</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div>
+</td>
+<td>执行伪随机数分布的流输入和输出 <br> <span class="t-mark" style="white-space: nowrap;">(函数模板)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="put.html" title="cpp/io/basic ostream/put"> <span class="t-lines"><span>put</span></span></a></div></div>
+</td>
+<td>插入字符 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="write.html" title="cpp/io/basic ostream/write"> <span class="t-lines"><span>write</span></span></a></div></div>
+</td>
+<td>按区块插入字符 <br> <span class="t-mark" style="white-space: nowrap;">(公开成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../../utility/to_chars.html" title="cpp/utility/to chars"> <span class="t-lines"><span>to_chars</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div>
+</td>
+<td>转换整数或浮点数为字符序列 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260421204005
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.205 seconds
+Real time usage: 0.561 seconds
+Preprocessor visited node count: 12343/1000000
+Post‐expand include size: 218396/4194304 bytes
+Template argument size: 47703/4194304 bytes
+Highest expansion depth: 23/100
+Expensive parser function count: 78/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 31640/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  497.539      1 -total
+ 34.73%  172.791     19 Template:c/core
+ 32.08%  159.628      1 Template:example
+ 31.79%  158.165      2 Template:source
+  7.24%   36.042      1 Template:cpp/io/basic_ostream/navbar
+  7.14%   35.503      1 Template:navbar
+  5.18%   25.756     10 Template:dsc_inc
+  4.81%   23.934     37 Template:c
+  4.14%   20.620     79 Template:nv
+  3.78%   18.802     16 Template:dcl
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:2294-0!canonical!zh and timestamp 20260421204005 and revision id 95705. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../../zh.cppreference.com/w/cpp/io/basic_ostream/operator_ltlt">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":205,"wgPageParseReport":{"limitreport":{"cputime":"0.205","walltime":"0.561","ppvisitednodes":{"value":12343,"limit":1000000},"postexpandincludesize":{"value":218396,"limit":4194304},"templateargumentsize":{"value":47703,"limit":4194304},"expansiondepth":{"value":23,"limit":100},"expensivefunctioncount":{"value":78,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":31640,"limit":5000000},"timingprofile":["100.00%  497.539      1 -total"," 34.73%  172.791     19 Template:c/core"," 32.08%  159.628      1 Template:example"," 31.79%  158.165      2 Template:source","  7.24%   36.042      1 Template:cpp/io/basic_ostream/navbar","  7.14%   35.503      1 Template:navbar","  5.18%   25.756     10 Template:dsc_inc","  4.81%   23.934     37 Template:c","  4.14%   20.620     79 Template:nv","  3.78%   18.802     16 Template:dcl"]},"cachereport":{"timestamp":"20260421204005","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422004357 -->
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>标准库标头 &lt;float.h&gt;</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"e7577d5002cb235004bd6e37","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/header/float","wgTitle":"c/header/float","wgCurRevisionId":98251,"wgRevisionId":98251,"wgArticleId":17027,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","有原因的 todo"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/header/float","wgRelevantArticleId":17027,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_header_float rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">标准库标头</span> &lt;float.h&gt;</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../header.html" title="c/header">header</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../header.html" title="c/header">标准库头</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="assert.html" title="c/header/assert"><tt>&lt;assert.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="complex.html" title="c/header/complex"><tt>&lt;complex.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ctype.html" title="c/header/ctype"><tt>&lt;ctype.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="errno.html" title="c/header/errno"><tt>&lt;errno.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="fenv.html" title="c/header/fenv"><tt>&lt;fenv.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink"><tt>&lt;float.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="inttypes.html" title="c/header/inttypes"><tt>&lt;inttypes.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="iso646.html" title="c/header/iso646"><tt>&lt;iso646.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="limits.html" title="c/header/limits"><tt>&lt;limits.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="locale.html" title="c/header/locale"><tt>&lt;locale.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="math.html" title="c/header/math"><tt>&lt;math.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="setjmp.html" title="c/header/setjmp"><tt>&lt;setjmp.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="signal.html" title="c/header/signal"><tt>&lt;signal.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdalign.html" title="c/header/stdalign"><tt>&lt;stdalign.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdarg.html" title="c/header/stdarg"><tt>&lt;stdarg.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdatomic.html" title="c/header/stdatomic"><tt>&lt;stdatomic.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbit.html" title="c/header/stdbit"><tt>&lt;stdbit.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbool.html" title="c/header/stdbool"><tt>&lt;stdbool.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C99*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../../zh.cppreference.com/index.php" class="new" title="c/header/stdckdint（页面不存在）"><tt>&lt;stdckdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stddef.html" title="c/header/stddef"><tt>&lt;stddef.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdint.html" title="c/header/stdint"><tt>&lt;stdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdio.html" title="c/header/stdio"><tt>&lt;stdio.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="stdlib.html" title="c/header/stdlib"><tt>&lt;stdlib.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdmchar.html" title="c/header/stdmchar"><tt>&lt;stdmchar.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(C29)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdnoreturn.html" title="c/header/stdnoreturn"><tt>&lt;stdnoreturn.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string.html" title="c/header/string"><tt>&lt;string.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tgmath.html" title="c/header/tgmath"><tt>&lt;tgmath.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="threads.html" title="c/header/threads"><tt>&lt;threads.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="time.html" title="c/header/time"><tt>&lt;time.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="uchar.html" title="c/header/uchar"><tt>&lt;uchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wchar.html" title="c/header/wchar"><tt>&lt;wchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wctype.html" title="c/header/wctype"><tt>&lt;wctype.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>此标头是<a href="../types.html" title="c/types">类型支持</a>库的一部分，特别是其<a href="../types/limits.html" title="c/types/limits">数值极限</a>接口。
+</p>
+<h3><span id=".E5.AE.8F"></span><span class="mw-headline" id="宏">宏</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_RADIX</span></span></div></div>
+</td>
+<td>全部三种浮点数类型的表示所用的基数（整数基） <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>DECIMAL_DIG</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>将 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 转换为带有至少 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">DECIMAL_DIG</code> 个数位的十进制数，再转换回 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 为恒等转换：此为序列化/反序列化 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 所需的十进制精度 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_DECIMAL_DIG</span><span>DBL_DECIMAL_DIG</span><span>LDBL_DECIMAL_DIG</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>将 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>/<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code>/<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 转换为带有至少 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">FLT_DECIMAL_DIG</code>/<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">DBL_DECIMAL_DIG</code>/<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">LDBL_DECIMAL_DIG</code> 个数位的十进制数，再转换回去为恒等转换：此为序列号/反序列化浮点数值所需的十进制精度。分别至少定义为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">6</span></code></span>、<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">10</span></code></span> 和 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">10</span></code></span>，或对于 IEEE float 为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">9</span></code></span>，对于 IEEE double 为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">17</span></code></span>（另见 C++ 对应物：<a href="../../cpp/types/numeric_limits/max_digits10.html" title="cpp/types/numeric limits/max digits10"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">max_digits10</code></a>） <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_MIN</span><span>DBL_MIN</span><span>LDBL_MIN</span></span></div></div>
+</td>
+<td>分别为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 的最小正规正数值 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_TRUE_MIN</span><span>DBL_TRUE_MIN</span><span>LDBL_TRUE_MIN</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>分别为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 的最小整数值 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_MAX</span><span>DBL_MAX</span><span>LDBL_MAX</span></span></div></div>
+</td>
+<td>分别为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 的最大有穷值 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_EPSILON</span><span>DBL_EPSILON</span><span>LDBL_EPSILON</span></span></div></div>
+</td>
+<td>分别为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mf">1.0</span></code></span> 与 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 的下一个可表示值之差的绝对值 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_DIG</span><span>DBL_DIG</span><span>LDBL_DIG</span></span></div></div>
+</td>
+<td>在“文本 → <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>/<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code>/<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> → 文本”往返转换中保证被保留且不会印舍入或溢出而改变的十进制数位个数（参见 C++ 对应物 <a href="../../cpp/types/numeric_limits/digits10.html" title="cpp/types/numeric limits/digits10"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">digits10</code></a> 的详情） <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_MANT_DIG</span><span>DBL_MANT_DIG</span><span>LDBL_MANT_DIG</span></span></div></div>
+</td>
+<td>分别为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 可表示且不损失精度的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">FLT_RADIX</code> 进制有效数字数位个数 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_MIN_EXP</span><span>DBL_MIN_EXP</span><span>LDBL_MIN_EXP</span></span></div></div>
+</td>
+<td>分别为对于 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 的最小负整数，使得 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">FLT_RADIX</code> 的该整数减一次方是该类型的正规值 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_MIN_10_EXP</span><span>DBL_MIN_10_EXP</span><span>LDBL_MIN_10_EXP</span></span></div></div>
+</td>
+<td>分别为对于 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 的最小负整数，使得 10 的该整数次方是该类型的正规值 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_MAX_EXP</span><span>DBL_MAX_EXP</span><span>LDBL_MAX_EXP</span></span></div></div>
+</td>
+<td>分别为对于 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 的最大正整数，使得 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">FLT_RADIX</code> 的该整数减一次方是该类型的可表示有穷值 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_MAX_10_EXP</span><span>DBL_MAX_10_EXP</span><span>LDBL_MAX_10_EXP</span></span></div></div>
+</td>
+<td>分别为对于 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span></code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span></code> 的最大正整数，使得 10 的该整数次方是该类型的可表示有穷值 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../types/limits/FLT_ROUNDS.html" title="c/types/limits/FLT ROUNDS"> <span class="t-lines"><span>FLT_ROUNDS</span></span></a></div></div>
+</td>
+<td>浮点数算术的舍入模式 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../types/limits/FLT_EVAL_METHOD.html" title="c/types/limits/FLT EVAL METHOD"> <span class="t-lines"><span>FLT_EVAL_METHOD</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>指定所有算术运算以什么精度执行 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+</tbody></table>
+<table class="t-dsc-begin">
+
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><span class="t-lines"><span>FLT_HAS_SUBNORM</span><span>DBL_HAS_SUBNORM</span><span>LDBL_HAS_SUBNORM</span></span></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-deprecated-c23" style="white-space: nowrap;">(C23 弃用)</span></span></span></div></div>
+</td>
+<td>类型是否支持<a href="https://en.wikipedia.org/wiki/Denormal_number" class="extiw" title="enwiki:Denormal number">非正规</a>）数值：<br><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">-1</span></code></span> – 不确定, <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">0</span></code></span> – 不支持, <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="mi">1</span></code></span> – 支持 <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span>
+</td></tr>
+
+</tbody></table>
+<table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成<br>原因：Add macros from B.6.2, B.6.3 </td></tr></tbody></table>
+<h3><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span></h3>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define FLT_ROUNDS           </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_EVAL_METHOD      </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_HAS_SUBNORM      </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_HAS_SUBNORM      </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_HAS_SUBNORM     </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_RADIX            </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_MANT_DIG         </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_MANT_DIG         </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_MANT_DIG        </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_DECIMAL_DIG      </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_DECIMAL_DIG      </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_DECIMAL_DIG     </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DECIMAL_DIG          </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_DIG              </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_DIG              </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_DIG             </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_MIN_EXP          </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_MIN_EXP          </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_MIN_EXP         </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_MIN_10_EXP       </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_MIN_10_EXP       </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_MIN_10_EXP      </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_MAX_EXP          </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_MAX_EXP          </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_MAX_EXP         </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_MAX_10_EXP       </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_MAX_10_EXP       </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_MAX_10_EXP      </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_MAX              </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_MAX              </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_MAX             </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_EPSILON          </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_EPSILON          </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_EPSILON         </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_MIN              </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_MIN              </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_MIN             </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define FLT_TRUE_MIN         </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define DBL_TRUE_MIN         </span><span class="cm">/* 见定义 */</span>
+<span class="cp">#define LDBL_TRUE_MIN        </span><span class="cm">/* 见定义 */</span>
+</pre></div>
+<!-- 
+NewPP limit report
+Cached time: 20260425114319
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.135 seconds
+Real time usage: 0.326 seconds
+Preprocessor visited node count: 5759/1000000
+Post‐expand include size: 109757/4194304 bytes
+Template argument size: 35806/4194304 bytes
+Highest expansion depth: 18/100
+Expensive parser function count: 46/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13187/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  283.751      1 -total
+ 58.04%  164.686      1 Template:source
+ 19.38%   54.984      1 Template:c/header/navbar
+ 19.08%   54.133      1 Template:navbar
+ 15.84%   44.949      1 Template:c/header/navbar_content
+ 14.64%   41.534     16 Template:dsc_macro_const
+ 14.40%   40.862     49 Template:nv
+ 13.65%   38.744     16 Template:dsc
+  6.81%   19.310     32 Template:header
+  4.04%   11.461     36 Template:c/core
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:17027-0!canonical!zh and timestamp 20260425114319 and revision id 98251. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/header/float">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":473,"wgPageParseReport":{"limitreport":{"cputime":"0.135","walltime":"0.326","ppvisitednodes":{"value":5759,"limit":1000000},"postexpandincludesize":{"value":109757,"limit":4194304},"templateargumentsize":{"value":35806,"limit":4194304},"expansiondepth":{"value":18,"limit":100},"expensivefunctioncount":{"value":46,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13187,"limit":5000000},"timingprofile":["100.00%  283.751      1 -total"," 58.04%  164.686      1 Template:source"," 19.38%   54.984      1 Template:c/header/navbar"," 19.08%   54.133      1 Template:navbar"," 15.84%   44.949      1 Template:c/header/navbar_content"," 14.64%   41.534     16 Template:dsc_macro_const"," 14.40%   40.862     49 Template:nv"," 13.65%   38.744     16 Template:dsc","  6.81%   19.310     32 Template:header","  4.04%   11.461     36 Template:c/core"]},"cachereport":{"timestamp":"20260425114319","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260425114319 -->
+</html>

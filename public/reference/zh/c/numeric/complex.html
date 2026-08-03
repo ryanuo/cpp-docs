@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>复数算术</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"ef7cd988e2f6564b2cbd5a7a","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/numeric/complex","wgTitle":"c/numeric/complex","wgCurRevisionId":98179,"wgRevisionId":98179,"wgArticleId":1093,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/numeric/complex","wgRelevantArticleId":1093,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready","jquery.makeCollapsible.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/loader_zh_ext_pygments_jquery_makecollapsible_skins_cppreference2.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_numeric_complex rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">复数算术</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../numeric.html" title="c/numeric">numeric</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../numeric.html" title="c/numeric">数值</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="math.html" title="c/numeric/math">常用数学函数</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="fenv.html" title="c/numeric/fenv">浮点数环境</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="random.html" title="c/numeric/random">伪随机数生成</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink">复数算术</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tgmath.html" title="c/numeric/tgmath">泛型数学函数</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html#%E4%BD%8D%E6%93%8D%E4%BD%9C" title="c/numeric">位操作</a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html#%E5%B8%A6%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E7%AE%97%E6%9C%AF" title="c/numeric">带检查整数算术</a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a class="mw-selflink selflink">复数算术</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"> 类型与虚数常量</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/complex.html" title="c/numeric/complex/complex"><span class="t-lines"><span>complex</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/Complex_I.html" title="c/numeric/complex/Complex I"><span class="t-lines"><span>_Complex_I</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/CMPLX.html" title="c/numeric/complex/CMPLX"><span class="t-lines"><span>CMPLX</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/imaginary.html" title="c/numeric/complex/imaginary"><span class="t-lines"><span>imaginary</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/Imaginary_I.html" title="c/numeric/complex/Imaginary I"><span class="t-lines"><span>_Imaginary_I</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/I.html" title="c/numeric/complex/I"><span class="t-lines"><span>I</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 操作</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/cimag.html" title="c/numeric/complex/cimag"><span class="t-lines"><span>cimag</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/creal.html" title="c/numeric/complex/creal"><span class="t-lines"><span>creal</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/carg.html" title="c/numeric/complex/carg"><span class="t-lines"><span>carg</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/cabs.html" title="c/numeric/complex/cabs"><span class="t-lines"><span>cabs</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/conj.html" title="c/numeric/complex/conj"><span class="t-lines"><span>conj</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/cproj.html" title="c/numeric/complex/cproj"><span class="t-lines"><span>cproj</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 幂与指数函数</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/cexp.html" title="c/numeric/complex/cexp"><span class="t-lines"><span>cexp</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/clog.html" title="c/numeric/complex/clog"><span class="t-lines"><span>clog</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/cpow.html" title="c/numeric/complex/cpow"><span class="t-lines"><span>cpow</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/csqrt.html" title="c/numeric/complex/csqrt"><span class="t-lines"><span>csqrt</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 三角函数</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/ccos.html" title="c/numeric/complex/ccos"><span class="t-lines"><span>ccos</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/csin.html" title="c/numeric/complex/csin"><span class="t-lines"><span>csin</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/ctan.html" title="c/numeric/complex/ctan"><span class="t-lines"><span>ctan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/cacos.html" title="c/numeric/complex/cacos"><span class="t-lines"><span>cacos</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/casin.html" title="c/numeric/complex/casin"><span class="t-lines"><span>casin</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/catan.html" title="c/numeric/complex/catan"><span class="t-lines"><span>catan</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 双曲函数</td></tr>
+<tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/ccosh.html" title="c/numeric/complex/ccosh"><span class="t-lines"><span>ccosh</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/csinh.html" title="c/numeric/complex/csinh"><span class="t-lines"><span>csinh</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/ctanh.html" title="c/numeric/complex/ctanh"><span class="t-lines"><span>ctanh</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/cacosh.html" title="c/numeric/complex/cacosh"><span class="t-lines"><span>cacosh</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/casinh.html" title="c/numeric/complex/casinh"><span class="t-lines"><span>casinh</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="complex/catanh.html" title="c/numeric/complex/catanh"><span class="t-lines"><span>catanh</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-rev-begin">
+<tbody><tr class="t-rev t-since-c11"><td>
+<p>若实现定义了宏常量 <code>__STDC_NO_COMPLEX__</code>，则不提供头文件 <a href="../header/complex.html" title="c/header/complex"><tt>&lt;complex.h&gt;</tt></a>、复数类型以及此处列出的所有名称。
+</p>
+</td>
+<td><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span></td></tr>
+</tbody></table>
+<p>C 编程语言从 C99 开始支持三种内建类型 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span><span class="w"> </span><span class="kt">_Complex</span></code>、<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span><span class="w"> </span><span class="kt">_Complex</span></code> 及 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="kt">_Complex</span></code> 的复数数学运算（见 <a href="../keyword/_Complex.html" title="c/keyword/ Complex"><tt>_Complex</tt></a>）。包含头文件 <a href="../header/complex.html" title="c/header/complex"><tt>&lt;complex.h&gt;</tt></a> 时，三种复数类型亦可通过 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span><span class="w"> </span><span class="k">complex</span></code>、<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span><span class="w"> </span><span class="k">complex</span></code>、<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span></code> 使用。
+</p><p>除了复数类型，还支持三种虚数类型：<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span><span class="w"> </span><span class="k">_Imaginary</span></code>、<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span><span class="w"> </span><span class="k">_Imaginary</span></code> 及 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">_Imaginary</span></code>（见 <a href="../keyword/_Imaginary.html" title="c/keyword/ Imaginary"><tt>_Imaginary</tt></a>）。包含头文件 <a href="../header/complex.html" title="c/header/complex"><tt>&lt;complex.h&gt;</tt></a> 时，三种虚数类型亦可通过 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">double</span><span class="w"> </span><span class="k">imaginary</span></code>、<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">float</span><span class="w"> </span><span class="k">imaginary</span></code> 及 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">imaginary</span></code> 使用。
+</p><p>标准算术运算符 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">+</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">/</span></code></span> 可用于实数、复数及虚数类型的任意混合。
+</p>
+<table class="t-rev-begin">
+<tbody><tr class="t-rev t-since-c99 t-until-c11"><td>
+<p>推荐定义了 <code>__STDC_IEC_559_COMPLEX__</code> 编译器支持虚数，但并非强制要求。POSIX 推荐检查是否定义宏 <span class="t-lc">_Imaginary_I</span> 以鉴别是否支持虚数。
+</p>
+</td>
+<td><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span><br><span class="t-mark-rev t-until-c11" style="white-space: nowrap;">(C11 前)</span></td></tr>
+<tr class="t-rev t-since-c11"><td>
+<p>若定义了 <code>__STDC_IEC_559_COMPLEX__</code> <span class="t-rev-inl t-since-c23"><span>或 <code>__STDC_IEC_60559_COMPLEX__</code></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span></span></span>，则支持虚数。
+</p>
+</td>
+<td><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span></td></tr>
+</tbody></table>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-sep">
+<td colspan="2"> 
+</td></tr>
+<tr class="t-dsc-header">
+<td colspan="2"><div>在标头 <code><a href="../header/complex.html" title="c/header/complex"><tt>&lt;complex.h&gt;</tt></a></code> 定义 </div>
+</td></tr>
+
+<tr>
+<td colspan="2"><h5><span id=".E7.B1.BB.E5.9E.8B"></span><span class="mw-headline" id="类型"> 类型 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/imaginary.html" title="c/numeric/complex/imaginary"> <span class="t-lines"><span>imaginary</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>虚数类型宏 <br> <span class="t-mark" style="white-space: nowrap;">(关键词宏)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/complex.html" title="c/numeric/complex/complex"> <span class="t-lines"><span>complex</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>复数类型宏 <br> <span class="t-mark" style="white-space: nowrap;">(关键词宏)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E8.99.9A.E6.95.B0.E5.B8.B8.E9.87.8F"></span><span class="mw-headline" id="虚数常量"> 虚数常量 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/Imaginary_I.html" title="c/numeric/complex/Imaginary I"> <span class="t-lines"><span>_Imaginary_I</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>虚数单位常量 i <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/Complex_I.html" title="c/numeric/complex/Complex I"> <span class="t-lines"><span>_Complex_I</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>复数单位常量 i  <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/I.html" title="c/numeric/complex/I"> <span class="t-lines"><span>I</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>复数或虚数单位常量 i <br> <span class="t-mark" style="white-space: nowrap;">(宏常量)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E6.93.8D.E4.BD.9C"></span><span class="mw-headline" id="操作"> 操作 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/CMPLX.html" title="c/numeric/complex/CMPLX"> <span class="t-lines"><span>CMPLX</span><span>CMPLXF</span><span>CMPLXL</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>由实部和虚部构建复数 <br> <span class="t-mark" style="white-space: nowrap;">(宏函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/creal.html" title="c/numeric/complex/creal"> <span class="t-lines"><span>creal</span><span>crealf</span><span>creall</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的实部 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/cimag.html" title="c/numeric/complex/cimag"> <span class="t-lines"><span>cimag</span><span>cimagf</span><span>cimagl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的虚部 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/cabs.html" title="c/numeric/complex/cabs"> <span class="t-lines"><span>cabs</span><span>cabsf</span><span>cabsl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的模（绝对值） <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/carg.html" title="c/numeric/complex/carg"> <span class="t-lines"><span>carg</span><span>cargf</span><span>cargl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的辐角 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/conj.html" title="c/numeric/complex/conj"> <span class="t-lines"><span>conj</span><span>conjf</span><span>conjl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算共轭复数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/cproj.html" title="c/numeric/complex/cproj"> <span class="t-lines"><span>cproj</span><span>cprojf</span><span>cprojl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算黎曼球上的投影 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E6.8C.87.E6.95.B0.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="指数函数"> 指数函数 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/cexp.html" title="c/numeric/complex/cexp"> <span class="t-lines"><span>cexp</span><span>cexpf</span><span>cexpl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的 e 底指数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/clog.html" title="c/numeric/complex/clog"> <span class="t-lines"><span>clog</span><span>clogf</span><span>clogl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数的自然对数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E5.B9.82.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="幂函数"> 幂函数 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/cpow.html" title="c/numeric/complex/cpow"> <span class="t-lines"><span>cpow</span><span>cpowf</span><span>cpowl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数幂函数 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/csqrt.html" title="c/numeric/complex/csqrt"> <span class="t-lines"><span>csqrt</span><span>csqrtf</span><span>csqrtl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数平方根 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E4.B8.89.E8.A7.92.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="三角函数"> 三角函数 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/csin.html" title="c/numeric/complex/csin"> <span class="t-lines"><span>csin</span><span>csinf</span><span>csinl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数正弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/ccos.html" title="c/numeric/complex/ccos"> <span class="t-lines"><span>ccos</span><span>ccosf</span><span>ccosl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数余弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/ctan.html" title="c/numeric/complex/ctan"> <span class="t-lines"><span>ctan</span><span>ctanf</span><span>ctanl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数正切 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/casin.html" title="c/numeric/complex/casin"> <span class="t-lines"><span>casin</span><span>casinf</span><span>casinl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反正弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/cacos.html" title="c/numeric/complex/cacos"> <span class="t-lines"><span>cacos</span><span>cacosf</span><span>cacosl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反余弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/catan.html" title="c/numeric/complex/catan"> <span class="t-lines"><span>catan</span><span>catanf</span><span>catanl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反正切 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+
+<tr>
+<td colspan="2"><h5><span id=".E5.8F.8C.E6.9B.B2.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="双曲函数"> 双曲函数 </span></h5>
+</td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/csinh.html" title="c/numeric/complex/csinh"> <span class="t-lines"><span>csinh</span><span>csinhf</span><span>csinhl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数双曲正弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/ccosh.html" title="c/numeric/complex/ccosh"> <span class="t-lines"><span>ccosh</span><span>ccoshf</span><span>ccoshl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复双曲余弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/ctanh.html" title="c/numeric/complex/ctanh"> <span class="t-lines"><span>ctanh</span><span>ctanhf</span><span>ctanhl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数双曲正切 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/casinh.html" title="c/numeric/complex/casinh"> <span class="t-lines"><span>casinh</span><span>casinhf</span><span>casinhl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反双曲正弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/cacosh.html" title="c/numeric/complex/cacosh"> <span class="t-lines"><span>cacosh</span><span>cacoshf</span><span>cacoshl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反双曲余弦 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="complex/catanh.html" title="c/numeric/complex/catanh"> <span class="t-lines"><span>catanh</span><span>catanhf</span><span>catanhl</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>计算复数反双曲正切 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>为未来加入 <a href="../header/complex.html" title="c/header/complex"><tt>&lt;complex.h&gt;</tt></a> 而<span class="t-rev-inl t-since-c23"><span>潜在</span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span></span></span>保留下列函数名，并且在包含该头文件的程序中不可使用：<code>cerf</code>、<code>cerfc</code>、<code>cexp2</code>、<code>cexpm1</code>、<code>clog10</code>、<code>clog1p</code>、<code>clog2</code>、<code>clgamma</code>、<code>ctgamma</code><span class="t-rev-inl t-since-c23"><span>、<code>csinpi</code>、<code>ccospi</code>、<code>ctanpi</code>、<code>casinpi</code>、<code>cacospi</code>、<code>catanpi</code>、<code>ccompoundn</code>、<code>cpown</code>、<code>cpowr</code>、<code>crootn</code>、<code>crsqrt</code>、<code>cexp10m1</code>、<code>cexp10</code>、<code>cexp2m1</code>、<code>clog10p1</code>、<code>clog2p1</code>、<code>clogp1</code></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span></span></span>，还有它们带 -f 及 -l 后缀的变体。
+</p><p>尽管 C 标准以“复弧双曲正弦（complex arc hyperbolic sine）”等名称指名反双曲函数，双曲函数的反函数却是面积函数。它们的生成是双曲扇形的面积，而非弧长。正确名称是“复反双曲正弦”等等。一些作者会使用“复面积双曲正弦（complex area hyperbolic sine）”等名称。
+</p><p>若两部之一是无穷大，则复数或虚数为无穷大，即使另一部分是 NaN 也是如此。
+</p><p>若两部都不是无穷大或 NaN，则复数或虚数是有限的。
+</p><p>若两部皆为正零或负零，则复数或虚数为零。
+</p><p>尽管 MSVC 确实提供了 <a rel="nofollow" class="external text" href="https://learn.microsoft.com/en-us/cpp/c-runtime-library/complex-math-support"><code>&lt;complex.h&gt;</code></a> 标头，但它并未将复数实现为本机类型，而是实现为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="k">struct</span></code>，这与标准 C 复数类型不兼容，且不支持 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">+</span></code></span>、<span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">-</span></code></span>、<span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">*</span></code></span>、<span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">/</span></code></span> 等运算符。
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;complex.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tgmath.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">I</span><span class="p">;</span><span class="w">     </span><span class="c1">// 虚数单位平方</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"I * I = %.1f%+.1fi</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">creal</span><span class="p">(</span><span class="n">z1</span><span class="p">),</span><span class="w"> </span><span class="n">cimag</span><span class="p">(</span><span class="n">z1</span><span class="p">));</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 虚数单位平方</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"pow(I, 2) = %.1f%+.1fi</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">creal</span><span class="p">(</span><span class="n">z2</span><span class="p">),</span><span class="w"> </span><span class="n">cimag</span><span class="p">(</span><span class="n">z2</span><span class="p">));</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="mi">-1</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">exp</span><span class="p">(</span><span class="n">I</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="p">);</span><span class="w"> </span><span class="c1">// 欧拉公式</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"exp(I*PI) = %.1f%+.1fi</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">creal</span><span class="p">(</span><span class="n">z3</span><span class="p">),</span><span class="w"> </span><span class="n">cimag</span><span class="p">(</span><span class="n">z3</span><span class="p">));</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">z4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">z5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1-2</span><span class="o">*</span><span class="n">I</span><span class="p">;</span><span class="w"> </span><span class="c1">// 共轭</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"(1+2i)*(1-2i) = %.1f%+.1fi</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">creal</span><span class="p">(</span><span class="n">z4</span><span class="o">*</span><span class="n">z5</span><span class="p">),</span><span class="w"> </span><span class="n">cimag</span><span class="p">(</span><span class="n">z4</span><span class="o">*</span><span class="n">z5</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>I * I = -1.0+0.0i
+pow(I, 2) = -1.0+0.0i
+exp(I*PI) = -1.0+0.0i
+(1+2i)*(1-2i) = 5.0+0.0i
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div style="margin-left:0px">
+<table class="mw-collapsible mw-collapsed" style="background: transparent; text-align: left; border: 1px solid silver; margin: 0.2em auto auto; width:100%; clear: both; padding: 1px;">
+
+<tbody><tr>
+<th style="background: #F0F2F5; font-size:87%; padding:0.2em 0.3em; text-align:center;"><span style="font-size:115%">延伸内容    </span>
+</th></tr>
+<tr>
+<td style="border: solid 1px silver; padding: 8px; background: white;">
+<div class="t-ref-std-23">
+<ul><li>C23 标准（ISO/IEC 9899:2024）：</li></ul>
+<dl><dd><ul><li>6.10.8.3/1/2 <code>__STDC_NO_COMPLEX__</code> （第 TBD 页）</li></ul></dd></dl>
+<dl><dd><ul><li>6.10.8.3/1/2 <code>__STDC_IEC_559_COMPLEX__</code> （第 TBD 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.3 Complex arithmetic <code>&lt;complex.h&gt;</code> （第 TBD 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.25 Type-generic math <code>&lt;tgmath.h&gt;</code> （第 TBD 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.31.1 Complex arithmetic <code>&lt;complex.h&gt;</code> （第 TBD 页）</li></ul></dd></dl>
+<dl><dd><ul><li>Annex G (normative) IEC 60559-compatible complex arithmetic （第 TBD 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>6.10.8.3/1/2 <code>__STDC_NO_COMPLEX__</code> （第 128 页）</li></ul></dd></dl>
+<dl><dd><ul><li>6.10.8.3/1/2 <code>__STDC_IEC_559_COMPLEX__</code> （第 128 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.3 Complex arithmetic <code>&lt;complex.h&gt;</code> （第 136-144 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.25 Type-generic math <code>&lt;tgmath.h&gt;</code> （第 272-273 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.31.1 Complex arithmetic <code>&lt;complex.h&gt;</code> （第 391 页）</li></ul></dd></dl>
+<dl><dd><ul><li>Annex G (normative) IEC 60559-compatible complex arithmetic （第 469-479 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>6.10.8.3/1/2 <code>__STDC_NO_COMPLEX__</code> （第 177 页）</li></ul></dd></dl>
+<dl><dd><ul><li>6.10.8.3/1/2 <code>__STDC_IEC_559_COMPLEX__</code> （第 177 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.3 Complex arithmetic <code>&lt;complex.h&gt;</code> （第 188-199 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.25 Type-generic math <code>&lt;tgmath.h&gt;</code> （第 373-375 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.31.1 Complex arithmetic <code>&lt;complex.h&gt;</code> （第 455 页）</li></ul></dd></dl>
+<dl><dd><ul><li>Annex G (normative) IEC 60559-compatible complex arithmetic （第 532-545 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>6.10.8/2 <code>__STDC_IEC_559_COMPLEX__</code> （第 161 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.3 Complex arithmetic <code>&lt;complex.h&gt;</code> （第 170-180 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.22 Type-generic math <code>&lt;tgmath.h&gt;</code> （第 335-337 页）</li></ul></dd></dl>
+<dl><dd><ul><li>7.26.1 Complex arithmetic <code>&lt;complex.h&gt;</code> （第 401 页）</li></ul></dd></dl>
+<dl><dd><ul><li>Annex G (informative) IEC 60559-compatible complex arithmetic （第 467-480 页）</li></ul></dd></dl>
+</div>
+</td></tr></tbody></table></div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class=""><span>复数算术</span></span>的 <span><span><a href="../../cpp/numeric/complex.html" title="cpp/numeric/complex">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422022712
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.190 seconds
+Real time usage: 0.215 seconds
+Preprocessor visited node count: 9047/1000000
+Post‐expand include size: 342311/4194304 bytes
+Template argument size: 76588/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 20/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 8557/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  160.192      1 -total
+ 50.55%   80.974     28 Template:dsc_inc
+ 21.87%   35.030     29 Template:dsc
+ 18.15%   29.077      1 Template:c/numeric/complex/navbar
+ 17.75%   28.429      1 Template:navbar
+ 16.96%   27.164     22 Template:dsc_fun
+ 11.22%   17.977     28 Template:dsc_member
+ 10.89%   17.445      1 Template:c/numeric/complex/navbar_content
+  9.49%   15.208     52 Template:nv
+  7.85%   12.576     28 Template:nv_ln
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1093-0!canonical!zh and timestamp 20260422022712 and revision id 98179. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/numeric/complex">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":92,"wgPageParseReport":{"limitreport":{"cputime":"0.190","walltime":"0.215","ppvisitednodes":{"value":9047,"limit":1000000},"postexpandincludesize":{"value":342311,"limit":4194304},"templateargumentsize":{"value":76588,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":20,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":8557,"limit":5000000},"timingprofile":["100.00%  160.192      1 -total"," 50.55%   80.974     28 Template:dsc_inc"," 21.87%   35.030     29 Template:dsc"," 18.15%   29.077      1 Template:c/numeric/complex/navbar"," 17.75%   28.429      1 Template:navbar"," 16.96%   27.164     22 Template:dsc_fun"," 11.22%   17.977     28 Template:dsc_member"," 10.89%   17.445      1 Template:c/numeric/complex/navbar_content","  9.49%   15.208     52 Template:nv","  7.85%   12.576     28 Template:nv_ln"]},"cachereport":{"timestamp":"20260422022712","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422033419 -->
+</html>

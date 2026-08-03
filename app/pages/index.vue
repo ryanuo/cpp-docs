@@ -41,6 +41,28 @@ const chapters = [
       </p>
     </div>
 
+    <div class="mb-12">
+      <a
+        href="/reference/zh"
+        class="flex items-center justify-between p-5 rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors group"
+      >
+        <div class="flex items-start gap-3">
+          <UIcon
+            name="i-lucide-book-open"
+            class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5"
+          />
+          <div>
+            <div class="font-semibold text-blue-900 dark:text-blue-100">C++ 参考手册</div>
+            <div class="text-sm text-blue-700 dark:text-blue-300 mt-1">离线版 cppreference.com 文档，涵盖 C++ 标准库完整参考。</div>
+          </div>
+        </div>
+        <UIcon
+          name="i-lucide-arrow-right"
+          class="w-5 h-5 text-blue-500 dark:text-blue-400 group-hover:translate-x-1 transition-transform"
+        />
+      </a>
+    </div>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
       <NuxtLink
         v-for="ch in chapters"

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>va_end</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"6fce528cf041cd7555778eff","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/variadic/va_end","wgTitle":"c/variadic/va end","wgCurRevisionId":81088,"wgRevisionId":81088,"wgArticleId":7906,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/variadic/va_end","wgRelevantArticleId":7906,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_variadic_va_end rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">va_end</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../variadic.html" title="c/variadic">variadic</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../variadic.html" title="c/variadic"> 变参数函数</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="va_start.html" title="c/variadic/va start"><span class="t-lines"><span>va_start</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="va_arg.html" title="c/variadic/va arg"><span class="t-lines"><span>va_arg</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="va_copy.html" title="c/variadic/va copy"><span class="t-lines"><span>va_copy</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>va_end</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="va_list.html" title="c/variadic/va list"><span class="t-lines"><span>va_list</span></span></a></div></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/stdarg.html" title="c/header/stdarg"><tt>&lt;stdarg.h&gt;</tt></a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 26 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">va_end</span><span class="p">(</span><span class="w"> </span><span class="kt">va_list</span><span class="w"> </span><span class="n">ap</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">va_end</code> 宏对由 <span class="t-lc">va_start</span> 或 <span class="t-lc">va_copy</span> 的调用所初始化的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">ap</code> 对象进行清理。<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">va_end</code> 可以修改 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">ap</code> 的值，使得它不再能使用。
+</p><p>若无对应的对 <span class="t-lc">va_start</span> 或 <span class="t-lc">va_copy</span> 调用，或在调用 <span class="t-lc">va_start</span> 或 <span class="t-lc">va_copy</span> 的函数返回前没有调用 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">va_end</code>，则行为未定义。
+</p>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>ap
+</td>
+<td>-
+</td>
+<td>待清理的 <span class="t-lc">va_list</span> 类型的实例
+</td></tr></tbody></table>
+<h3><span id=".E5.B1.95.E5.BC.80.E5.80.BC"></span><span class="mw-headline" id="展开值">展开值</span></h3>
+<p>（无）
+</p>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>7.16.1.3 The va_end macro （第 270-271 页）</li></ul></dd></dl>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>7.15.1.3 The va_end macro （第 250-251 页）</li></ul></dd></dl>
+<div class="t-ref-std-c89">
+<ul><li>C89/C90 标准（ISO/IEC 9899:1990）：</li></ul>
+<dl><dd><ul><li>4.8.1.3 The va_end macro</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="va_start.html" title="c/variadic/va start"> <span class="t-lines"><span>va_start</span></span></a></div></div>
+</td>
+<td>令函数得以访问可变实参 <br> <span class="t-mark" style="white-space: nowrap;">(宏函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="va_copy.html" title="c/variadic/va copy"> <span class="t-lines"><span>va_copy</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div>
+</td>
+<td>创造函数可变实参的副本  <br> <span class="t-mark" style="white-space: nowrap;">(宏函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="va_arg.html" title="c/variadic/va arg"> <span class="t-lines"><span>va_arg</span></span></a></div></div>
+</td>
+<td>访问下一个可变函数实参 <br> <span class="t-mark" style="white-space: nowrap;">(宏函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="va_list.html" title="c/variadic/va list"> <span class="t-lines"><span>va_list</span></span></a></div></div>
+</td>
+<td>保有 <span class="t-lc">va_start</span>、<span class="t-lc">va_arg</span>、<span class="t-lc">va_end</span> 及 <span class="t-lc">va_copy</span> 所需的信息 <br> <span class="t-mark" style="white-space: nowrap;">(typedef)</span> </td></tr>
+
+<tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>va_end</span></span> 的 <span><span><a href="../../cpp/utility/variadic/va_end.html" title="cpp/utility/variadic/va end">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20260422031111
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.064 seconds
+Real time usage: 0.287 seconds
+Preprocessor visited node count: 1840/1000000
+Post‐expand include size: 42578/4194304 bytes
+Template argument size: 6210/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 542/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  256.782      1 -total
+ 73.17%  187.878      1 Template:dcl
+  9.97%   25.599      1 Template:c/variadic/navbar
+  9.72%   24.951      1 Template:navbar
+  5.11%   13.114     22 Template:nv
+  4.43%   11.386      4 Template:dsc_inc
+  3.79%    9.720      1 Template:c/navbar_content
+  2.93%    7.536      5 Template:dsc
+  2.92%    7.503      1 Template:c/variadic/navbar_content
+  2.56%    6.581      5 Template:nv_ln
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:7906-0!canonical!zh and timestamp 20260422031111 and revision id 81088. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/variadic/va_end">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":412,"wgPageParseReport":{"limitreport":{"cputime":"0.064","walltime":"0.287","ppvisitednodes":{"value":1840,"limit":1000000},"postexpandincludesize":{"value":42578,"limit":4194304},"templateargumentsize":{"value":6210,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":542,"limit":5000000},"timingprofile":["100.00%  256.782      1 -total"," 73.17%  187.878      1 Template:dcl","  9.97%   25.599      1 Template:c/variadic/navbar","  9.72%   24.951      1 Template:navbar","  5.11%   13.114     22 Template:nv","  4.43%   11.386      4 Template:dsc_inc","  3.79%    9.720      1 Template:c/navbar_content","  2.93%    7.536      5 Template:dsc","  2.92%    7.503      1 Template:c/variadic/navbar_content","  2.56%    6.581      5 Template:nv_ln"]},"cachereport":{"timestamp":"20260422031111","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422031111 -->
+</html>

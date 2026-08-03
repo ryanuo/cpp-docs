@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>std::tx_exception</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"c6a32677459ea74f1bc6aa61","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/error/tx_exception","wgTitle":"cpp/error/tx exception","wgCurRevisionId":82761,"wgRevisionId":82761,"wgArticleId":9430,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/error/tx_exception","wgRelevantArticleId":9430,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_error_tx_exception rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">std::</span>tx_exception</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../error.html" title="cpp/error">error</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../standard_library.html" title="cpp/standard library">标准库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="cpp/header">标准库标头</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../named_req.html" title="cpp/named req">具名要求</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../feature_test.html" title="cpp/feature test">功能特性测试宏</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html#%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81" title="cpp/utility">语言支持库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../concepts.html" title="cpp/concepts">概念库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="cpp/error">诊断库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="cpp/memory">内存管理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../meta.html" title="cpp/meta">元编程库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../utility.html" title="cpp/utility">通用工具库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../container.html" title="cpp/container">容器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../iterator.html" title="cpp/iterator">迭代器库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../ranges.html" title="cpp/ranges">范围库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="cpp/algorithm">算法库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="cpp/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../text.html" title="cpp/text">文本处理库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="cpp/numeric">数值库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="cpp/chrono">日期和时间库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="cpp/io">输入/输出库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../filesystem.html" title="cpp/filesystem">文件系统库</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="cpp/thread">并发支持库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../execution.html" title="cpp/execution">执行控制库</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../error.html" title="cpp/error"> 诊断库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a href="../error.html#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86" title="cpp/error">异常处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="exception.html" title="cpp/error/exception"><span class="t-lines"><span>exception</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="uncaught_exception.html" title="cpp/error/uncaught exception"><span class="t-lines"><span>uncaught_exception</span><span>uncaught_exceptions</span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="deprecated in C++17">until C++20*</span>)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="exception_ptr.html" title="cpp/error/exception ptr"><span class="t-lines"><span>exception_ptr</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="make_exception_ptr.html" title="cpp/error/make exception ptr"><span class="t-lines"><span>make_exception_ptr</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="current_exception.html" title="cpp/error/current exception"><span class="t-lines"><span>current_exception</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="rethrow_exception.html" title="cpp/error/rethrow exception"><span class="t-lines"><span>rethrow_exception</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="nested_exception.html" title="cpp/error/nested exception"><span class="t-lines"><span>nested_exception</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="throw_with_nested.html" title="cpp/error/throw with nested"><span class="t-lines"><span>throw_with_nested</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="rethrow_if_nested.html" title="cpp/error/rethrow if nested"><span class="t-lines"><span>rethrow_if_nested</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5">异常处理失败</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="terminate.html" title="cpp/error/terminate"><span class="t-lines"><span>terminate</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="terminate_handler.html" title="cpp/error/terminate handler"><span class="t-lines"><span>terminate_handler</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="get_terminate.html" title="cpp/error/get terminate"><span class="t-lines"><span>get_terminate</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="set_terminate.html" title="cpp/error/set terminate"><span class="t-lines"><span>set_terminate</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="bad_exception.html" title="cpp/error/bad exception"><span class="t-lines"><span>bad_exception</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="unexpected.html" title="cpp/error/unexpected"><span class="t-lines"><span>unexpected</span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="deprecated in C++11">until C++17*</span>)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="unexpected_handler.html" title="cpp/error/unexpected handler"><span class="t-lines"><span>unexpected_handler</span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="deprecated in C++11">until C++17*</span>)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="get_unexpected.html" title="cpp/error/get unexpected"><span class="t-lines"><span>get_unexpected</span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="deprecated in C++11">until C++17*</span>)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="set_unexpected.html" title="cpp/error/set unexpected"><span class="t-lines"><span>set_unexpected</span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="deprecated in C++11">until C++17*</span>)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../error.html#%E9%94%99%E8%AF%AF%E5%8F%B7" title="cpp/error">错误号</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="errno_macros.html" title="cpp/error/errno macros">错误码</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="errno.html" title="cpp/error/errno"><span class="t-lines"><span>errno</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../error.html#%E6%96%AD%E8%A8%80" title="cpp/error">断言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="assert.html" title="cpp/error/assert"><span class="t-lines"><span>assert</span></span></a></div></div></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"><a href="../error.html#%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%88%AB" title="cpp/error">异常类别</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="logic_error.html" title="cpp/error/logic error"><span class="t-lines"><span>logic_error</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="invalid_argument.html" title="cpp/error/invalid argument"><span class="t-lines"><span>invalid_argument</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="domain_error.html" title="cpp/error/domain error"><span class="t-lines"><span>domain_error</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="length_error.html" title="cpp/error/length error"><span class="t-lines"><span>length_error</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="out_of_range.html" title="cpp/error/out of range"><span class="t-lines"><span>out_of_range</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="runtime_error.html" title="cpp/error/runtime error"><span class="t-lines"><span>runtime_error</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="range_error.html" title="cpp/error/range error"><span class="t-lines"><span>range_error</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="overflow_error.html" title="cpp/error/overflow error"><span class="t-lines"><span>overflow_error</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="underflow_error.html" title="cpp/error/underflow error"><span class="t-lines"><span>underflow_error</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>tx_exception</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-tm-ts t-mark-ts" style="white-space: nowrap;">(TM TS)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../error.html#%E7%B3%BB%E7%BB%9F%E9%94%99%E8%AF%AF" title="cpp/error">系统错误</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="error_category.html" title="cpp/error/error category"><span class="t-lines"><span>error_category</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="generic_category.html" title="cpp/error/generic category"><span class="t-lines"><span>generic_category</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="system_category.html" title="cpp/error/system category"><span class="t-lines"><span>system_category</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="error_condition.html" title="cpp/error/error condition"><span class="t-lines"><span>error_condition</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="errc.html" title="cpp/error/errc"><span class="t-lines"><span>errc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="error_code.html" title="cpp/error/error code"><span class="t-lines"><span>error_code</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="system_error.html" title="cpp/error/system error"><span class="t-lines"><span>system_error</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../error.html#%E6%A0%88%E8%B8%AA%E8%BF%B9" title="cpp/error">栈踪迹</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../utility/stacktrace_entry.html" title="cpp/utility/stacktrace entry"><span class="t-lines"><span>stacktrace_entry</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../utility/basic_stacktrace.html" title="cpp/utility/basic stacktrace"><span class="t-lines"><span>basic_stacktrace</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></span></span></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"><a href="../error.html#%E8%B0%83%E8%AF%95%E6%94%AF%E6%8C%81" title="cpp/error">调试支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../utility/is_debugger_present.html" title="cpp/utility/is debugger present"><span class="t-lines"><span>is_debugger_present</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../utility/breakpoint_if_debugging.html" title="cpp/utility/breakpoint if debugging"><span class="t-lines"><span>breakpoint_if_debugging</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../utility/breakpoint.html" title="cpp/utility/breakpoint"><span class="t-lines"><span>breakpoint</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dsc-header">
+<td> <div>在标头 <code><a href="../header/stdexcept.html" title="cpp/header/stdexcept">&lt;stdexcept&gt;</a></code> 定义
+ </div></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="t-dcl t-since-tm_ts">
+<td> <div><div style="max-width: min(calc(7.68332px * 67 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">tx_exception</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">;</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-tm-ts t-mark-ts" style="white-space: nowrap;">(TM TS)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>定义能用于取消并回滚关键词 <a href="../language/transactional_memory.html" title="cpp/language/transactional memory"><tt>atomic_cancel</tt></a> 所初始化的原子事务的异常类型。
+</p><p>若 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">T</code> 非<a href="../named_req/TriviallyCopyable.html" title="cpp/named req/TriviallyCopyable"><span style="font-style:italic">可平凡复制</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(TriviallyCopyable)</span> </a>，则特化 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std::tx_exception&lt;T&gt;</code> 的程序非良构。
+</p>
+<h3><span id=".E6.88.90.E5.91.98.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="成员函数">成员函数</span></h3>
+<div class="t-member">
+<h2><span class="mw-headline" id="std::tx_exception::tx_exception"><span style="font-size:0.8em; line-height:125%">std::tx_exception::</span>tx_exception</span></h2>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl t-since-tm_ts">
+<td> <div><div style="max-width: min(calc(7.68332px * 50 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">explicit</span><span class="w"> </span><span class="n">tx_exception</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">transaction_safe</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (1) </td>
+<td> <span class="t-mark-rev t-since-tm-ts t-mark-ts" style="white-space: nowrap;">(TM TS)</span> </td>
+</tr>
+<tr class="t-dcl t-since-tm_ts">
+<td> <div><div style="max-width: min(calc(7.68332px * 70 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">tx_exception</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">what_arg</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">transaction_safe</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (2) </td>
+<td> <span class="t-mark-rev t-since-tm-ts t-mark-ts" style="white-space: nowrap;">(TM TS)</span> </td>
+</tr>
+<tr class="t-dcl t-since-tm_ts">
+<td> <div><div style="max-width: min(calc(7.68332px * 63 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">tx_exception</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">what_arg</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">transaction_safe</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (3) </td>
+<td> <span class="t-mark-rev t-since-tm-ts t-mark-ts" style="white-space: nowrap;">(TM TS)</span> </td>
+</tr>
+<tr class="t-dcl t-since-tm_ts">
+<td> <div><div style="max-width: min(calc(7.68332px * 68 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">tx_exception</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">tx_exception</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">transaction_safe</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</pre></div></div></td>
+<td> (4) </td>
+<td> <span class="t-mark-rev t-since-tm-ts t-mark-ts" style="white-space: nowrap;">(TM TS)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<div class="t-li1"><span class="t-li">1-3)</span> 以 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">what_arg</span></code></span> 为能通过 <span class="t-lc">what()</span> 访问的解释字符串并以 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">value</span></code></span> 为能通过 <span class="t-lc">get()</span> 访问的对象构造异常对象。</div>
+<div class="t-li1"><span class="t-li">4)</span> 复制构造函数。若 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">*</span><span class="k">this</span></code></span> 与 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">other</span></code></span> 均拥有动态类型 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std::tx_exception&lt;T&gt;</code> 则 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">strcmp</span><span class="p">(</span><span class="n">what</span><span class="p">(),</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">what</span><span class="p">())</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span></code></span>。</div>
+<h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>value
+</td>
+<td>-
+</td>
+<td>载荷对象
+</td></tr>
+<tr class="t-par">
+<td>what_arg
+</td>
+<td>-
+</td>
+<td>解释字符串
+</td></tr>
+<tr class="t-par">
+<td>other
+</td>
+<td>-
+</td>
+<td>要复制的另一字符串
+</td></tr></tbody></table>
+<h3><span id=".E5.BC.82.E5.B8.B8"></span><span class="mw-headline" id="异常">异常</span></h3>
+<div class="t-li1"><span class="t-li">1-3)</span> 可能抛出由实现定义的异常。
+</div></div>
+<div class="t-member">
+<h2><span id="std::tx_exception::operator.3D"></span><span class="mw-headline" id="std::tx_exception::operator="><span style="font-size:0.8em; line-height:125%">std::tx_exception::</span>operator=</span></h2>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl t-since-tm_ts">
+<td> <div><div style="max-width: min(calc(7.68332px * 79 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">tx_exception</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">tx_exception</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">transaction_safe</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-tm-ts t-mark-ts" style="white-space: nowrap;">(TM TS)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>以 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">other</span></code></span> 的内容赋值其内容。若 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">*</span><span class="k">this</span></code></span> 与 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">other</span></code></span> 均拥有动态类型 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std::tx_exception&lt;T&gt;</code> 则赋值后 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">strcmp</span><span class="p">(</span><span class="n">what</span><span class="p">(),</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">what</span><span class="p">())</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span></code></span>。
+</p>
+<h3><span id=".E5.8F.82.E6.95.B0_2"></span><span class="mw-headline" id="参数_2">参数</span></h3>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td>other
+</td>
+<td>-
+</td>
+<td>用以赋值的另一异常对象
+</td></tr></tbody></table>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC"></span><span class="mw-headline" id="返回值">返回值</span></h3>
+<p><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">*</span><span class="k">this</span></code></span>
+</p>
+</div>
+<div class="t-member">
+<h2><span class="mw-headline" id="std::tx_exception::get"><span style="font-size:0.8em; line-height:125%">std::tx_exception::</span>get</span></h2>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl t-since-tm_ts">
+<td> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">T</span><span class="w"> </span><span class="nf">get</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">transaction_safe</span><span class="p">;</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-tm-ts t-mark-ts" style="white-space: nowrap;">(TM TS)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>返回异常对象保有的载荷对象。
+</p>
+<h3><span id=".E5.BC.82.E5.B8.B8_2"></span><span class="mw-headline" id="异常_2">异常</span></h3>
+<p>可能抛出由实现定义的异常。
+</p>
+</div>
+<div class="t-member">
+<h2><span class="mw-headline" id="std::tx_exception::what"><span style="font-size:0.8em; line-height:125%">std::tx_exception::</span>what</span></h2>
+<table class="t-dcl-begin">
+<tbody><tr class="t-dcl t-since-tm_ts">
+<td> <div><div style="max-width: min(calc(7.68332px * 67 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">virtual</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">what</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">transaction_safe_dynamic</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</pre></div></div></td>
+<td class="t-dcl-nopad">  </td>
+<td> <span class="t-mark-rev t-since-tm-ts t-mark-ts" style="white-space: nowrap;">(TM TS)</span> </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>返回解释字符串。
+</p>
+<h3><span id=".E5.8F.82.E6.95.B0_3"></span><span class="mw-headline" id="参数_3">参数</span></h3>
+<p>（无）
+</p>
+<h3><span id=".E8.BF.94.E5.9B.9E.E5.80.BC_2"></span><span class="mw-headline" id="返回值_2">返回值</span></h3>
+<p>指向拥有解释信息的空中止字符串的指针。
+</p>
+</div>
+<div class="t-inherited">
+<h2><span id=".E7.BB.A7.E6.89.BF.E8.87.AA_std::runtime_error"></span><span class="mw-headline" id="继承自_std::runtime_error">继承自  <a href="runtime_error.html" title="cpp/error/runtime error"> <span style="font-size:0.8em; line-height:125%">std::</span>runtime_error</a> </span></h2>
+<p><br>
+</p>
+</div>
+<div class="t-inherited">
+<h2><span id=".E7.BB.A7.E6.89.BF.E8.87.AA_std::exception"></span><span class="mw-headline" id="继承自_std::exception">继承自  <a href="exception.html" title="cpp/error/exception"> <span style="font-size:0.8em; line-height:125%">std::</span>exception</a> </span></h2>
+<h3><span id=".E6.88.90.E5.91.98.E5.87.BD.E6.95.B0_2"></span><span class="mw-headline" id="成员函数_2">成员函数</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div t-dsc-member-nobold-div"><div><a href="exception/~exception.html" title="cpp/error/exception/~exception"> <span class="t-lines"><span>(析构函数)</span></span></a></div><div><span class="t-lines"><span><span class="t-cmark">[虚]</span></span></span></div></div>
+</td>
+<td>销毁该异常对象 <br> <span class="t-mark" style="white-space: nowrap;">(<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std::exception</code> 的虚公开成员函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="exception/what.html" title="cpp/error/exception/what"> <span class="t-lines"><span>what</span></span></a></div><div><span class="t-lines"><span><span class="t-cmark">[虚]</span></span></span></div></div>
+</td>
+<td>返回解释性字符串 <br> <span class="t-mark" style="white-space: nowrap;">(<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std::exception</code> 的虚公开成员函数)</span> </td></tr>
+</tbody></table>
+</div>
+<!-- 
+NewPP limit report
+Cached time: 20260422073827
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.138 seconds
+Real time usage: 1.097 seconds
+Preprocessor visited node count: 6532/1000000
+Post‐expand include size: 164889/4194304 bytes
+Template argument size: 36371/4194304 bytes
+Highest expansion depth: 36/100
+Expensive parser function count: 18/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 8589/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1057.277      1 -total
+ 90.97%  961.811      8 Template:dcl
+ 77.16%  815.785      4 Template:member
+ 15.68%  165.811      1 Template:ddcl
+  4.65%   49.126      1 Template:cpp/error/navbar
+  4.58%   48.471      1 Template:navbar
+  3.08%   32.562      1 Template:cpp/error/navbar_content
+  2.60%   27.537     71 Template:nv
+  2.21%   23.377     42 Template:nv_ln
+  1.06%   11.181      1 Template:cpp/navbar_content
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:9430-0!canonical!zh and timestamp 20260422073827 and revision id 82761. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/cpp/error/tx_exception">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":118,"wgPageParseReport":{"limitreport":{"cputime":"0.138","walltime":"1.097","ppvisitednodes":{"value":6532,"limit":1000000},"postexpandincludesize":{"value":164889,"limit":4194304},"templateargumentsize":{"value":36371,"limit":4194304},"expansiondepth":{"value":36,"limit":100},"expensivefunctioncount":{"value":18,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":8589,"limit":5000000},"timingprofile":["100.00% 1057.277      1 -total"," 90.97%  961.811      8 Template:dcl"," 77.16%  815.785      4 Template:member"," 15.68%  165.811      1 Template:ddcl","  4.65%   49.126      1 Template:cpp/error/navbar","  4.58%   48.471      1 Template:navbar","  3.08%   32.562      1 Template:cpp/error/navbar_content","  2.60%   27.537     71 Template:nv","  2.21%   23.377     42 Template:nv_ln","  1.06%   11.181      1 Template:cpp/navbar_content"]},"cachereport":{"timestamp":"20260422073827","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422093040 -->
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>标准库标头 &lt;uchar.h&gt; (C11)</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"567ec8b8232541b07cb6007d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/header/uchar","wgTitle":"c/header/uchar","wgCurRevisionId":99024,"wgRevisionId":99024,"wgArticleId":17058,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/header/uchar","wgRelevantArticleId":17058,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_header_uchar rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.8em; line-height:125%">标准库标头</span> &lt;uchar.h&gt; <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../header.html" title="c/header">header</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../header.html" title="c/header">标准库头</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="assert.html" title="c/header/assert"><tt>&lt;assert.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="complex.html" title="c/header/complex"><tt>&lt;complex.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="ctype.html" title="c/header/ctype"><tt>&lt;ctype.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="errno.html" title="c/header/errno"><tt>&lt;errno.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="fenv.html" title="c/header/fenv"><tt>&lt;fenv.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="float.html" title="c/header/float"><tt>&lt;float.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="inttypes.html" title="c/header/inttypes"><tt>&lt;inttypes.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="iso646.html" title="c/header/iso646"><tt>&lt;iso646.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="limits.html" title="c/header/limits"><tt>&lt;limits.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="locale.html" title="c/header/locale"><tt>&lt;locale.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="math.html" title="c/header/math"><tt>&lt;math.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="setjmp.html" title="c/header/setjmp"><tt>&lt;setjmp.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="signal.html" title="c/header/signal"><tt>&lt;signal.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdalign.html" title="c/header/stdalign"><tt>&lt;stdalign.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdarg.html" title="c/header/stdarg"><tt>&lt;stdarg.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdatomic.html" title="c/header/stdatomic"><tt>&lt;stdatomic.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">    </code></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbit.html" title="c/header/stdbit"><tt>&lt;stdbit.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdbool.html" title="c/header/stdbool"><tt>&lt;stdbool.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C99*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../../../zh.cppreference.com/index.php" class="new" title="c/header/stdckdint（页面不存在）"><tt>&lt;stdckdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stddef.html" title="c/header/stddef"><tt>&lt;stddef.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdint.html" title="c/header/stdint"><tt>&lt;stdint.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdio.html" title="c/header/stdio"><tt>&lt;stdio.h&gt;</tt></a></td></tr>
+</tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv"><td colspan="5"><a href="stdlib.html" title="c/header/stdlib"><tt>&lt;stdlib.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdmchar.html" title="c/header/stdmchar"><tt>&lt;stdmchar.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(C29)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="stdnoreturn.html" title="c/header/stdnoreturn"><tt>&lt;stdnoreturn.h&gt;</tt></a> <span class="t-mark" style="white-space: nowrap;">(<span title="C23 中弃用">C11*</span>)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="string.html" title="c/header/string"><tt>&lt;string.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tgmath.html" title="c/header/tgmath"><tt>&lt;tgmath.h&gt;</tt></a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="threads.html" title="c/header/threads"><tt>&lt;threads.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="time.html" title="c/header/time"><tt>&lt;time.h&gt;</tt></a></td></tr>
+<tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink"><tt>&lt;uchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wchar.html" title="c/header/wchar"><tt>&lt;wchar.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="wctype.html" title="c/header/wctype"><tt>&lt;wctype.h&gt;</tt></a> <span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></td></tr>
+<tr class="t-nv"><td colspan="5"> <br>
+</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>此标头是<a href="../string/multibyte.html" title="c/string/multibyte">空终结多字节字符串</a>库的一部分。
+</p>
+<h3><span id=".E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="函数">函数</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/mbrtoc8.html" title="c/string/multibyte/mbrtoc8"> <span class="t-lines"><span>mbrtoc8</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>转换窄多字节字符为 UTF-8 编码  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/c8rtomb.html" title="c/string/multibyte/c8rtomb"> <span class="t-lines"><span>c8rtomb</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>转换 UTF-8 字符串为窄多字节编码  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/mbrtoc16.html" title="c/string/multibyte/mbrtoc16"> <span class="t-lines"><span>mbrtoc16</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>转换窄多字节字符为 UTF-16 编码  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/c16rtomb.html" title="c/string/multibyte/c16rtomb"> <span class="t-lines"><span>c16rtomb</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>转换 UTF-16 字符为窄多字节编码 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/mbrtoc32.html" title="c/string/multibyte/mbrtoc32"> <span class="t-lines"><span>mbrtoc32</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>转换窄多字节字符为 UTF-32 编码 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/c32rtomb.html" title="c/string/multibyte/c32rtomb"> <span class="t-lines"><span>c32rtomb</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>转换 UTF-32 字符为窄多字节编码 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E7.B1.BB.E5.9E.8B"></span><span class="mw-headline" id="类型">类型</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/mbstate_t.html" title="c/string/multibyte/mbstate t"> <span class="t-lines"><span>mbstate_t</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div>
+</td>
+<td>迭代多字节字符串所需的转换信息 <br> <span class="t-mark" style="white-space: nowrap;">(结构体)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/char8_t.html" title="c/string/multibyte/char8 t"> <span class="t-lines"><span>char8_t</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div>
+</td>
+<td>8 位字符类型 <br> <span class="t-mark" style="white-space: nowrap;">(typedef)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/char16_t.html" title="c/string/multibyte/char16 t"> <span class="t-lines"><span>char16_t</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>16 位字符类型 <br> <span class="t-mark" style="white-space: nowrap;">(typedef)</span> </td></tr>
+
+<tr class="t-dsc">
+<td><div class="t-dsc-member-div"><div><a href="../string/multibyte/char32_t.html" title="c/string/multibyte/char32 t"> <span class="t-lines"><span>char32_t</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div>
+</td>
+<td>32 位字符类型 <br> <span class="t-mark" style="white-space: nowrap;">(typedef)</span> </td></tr>
+</tbody></table>
+<h3><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span></h3>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define __STDC_VERSION_UCHAR_H__ 202311L</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="kt">mbstate_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="kt">size_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">char8_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">char16_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="cm">/* 见描述 */</span><span class="w"> </span><span class="n">char32_t</span><span class="p">;</span>
+
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">mbrtoc8</span><span class="p">(</span><span class="n">char8_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">pc8</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">,</span>
+<span class="w">               </span><span class="kt">mbstate_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ps</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">c8rtomb</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">char8_t</span><span class="w"> </span><span class="n">c8</span><span class="p">,</span><span class="w"> </span><span class="kt">mbstate_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ps</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">mbrtoc16</span><span class="p">(</span><span class="n">char16_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">pc16</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">mbstate_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ps</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">c16rtomb</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">char16_t</span><span class="w"> </span><span class="n">c16</span><span class="p">,</span><span class="w"> </span><span class="kt">mbstate_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ps</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">mbrtoc32</span><span class="p">(</span><span class="n">char32_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">pc32</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">mbstate_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ps</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">c32rtomb</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">char32_t</span><span class="w"> </span><span class="n">c32</span><span class="p">,</span><span class="w"> </span><span class="kt">mbstate_t</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ps</span><span class="p">);</span>
+</pre></div>
+<!-- 
+NewPP limit report
+Cached time: 20260422045712
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.113 seconds
+Real time usage: 0.296 seconds
+Preprocessor visited node count: 4246/1000000
+Post‐expand include size: 111679/4194304 bytes
+Template argument size: 20881/4194304 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5685/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  248.169      1 -total
+ 70.19%  174.191      1 Template:source
+ 14.27%   35.419      1 Template:c/header/navbar
+ 14.00%   34.755      1 Template:navbar
+ 11.94%   29.620      1 Template:c/header/navbar_content
+ 10.98%   27.251     10 Template:dsc_inc
+ 10.50%   26.057     49 Template:nv
+  6.64%   16.467     32 Template:header
+  5.13%   12.743     10 Template:dsc
+  3.38%    8.378      6 Template:dsc_fun
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:17058-0!canonical!zh and timestamp 20260422045712 and revision id 99024. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/header/uchar">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":395,"wgPageParseReport":{"limitreport":{"cputime":"0.113","walltime":"0.296","ppvisitednodes":{"value":4246,"limit":1000000},"postexpandincludesize":{"value":111679,"limit":4194304},"templateargumentsize":{"value":20881,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5685,"limit":5000000},"timingprofile":["100.00%  248.169      1 -total"," 70.19%  174.191      1 Template:source"," 14.27%   35.419      1 Template:c/header/navbar"," 14.00%   34.755      1 Template:navbar"," 11.94%   29.620      1 Template:c/header/navbar_content"," 10.98%   27.251     10 Template:dsc_inc"," 10.50%   26.057     49 Template:nv","  6.64%   16.467     32 Template:header","  5.13%   12.743     10 Template:dsc","  3.38%    8.378      6 Template:dsc_fun"]},"cachereport":{"timestamp":"20260422045712","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422045712 -->
+</html>

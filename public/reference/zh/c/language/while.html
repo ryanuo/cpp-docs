@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>while 循环</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"c3ee7a8ac62ef5e5dde7d92a","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/language/while","wgTitle":"c/language/while","wgCurRevisionId":80627,"wgRevisionId":80627,"wgArticleId":1079,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/language/while","wgRelevantArticleId":1079,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.cppreference2.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.cppreference2.js","ext.checkUser.clientHints","ext.gadget.MathJax","ext.gadget.ColiruCompiler"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../../common/ext.css">
+<script async="" src="../../../common/startup_scripts.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="../../../common/site_modules.css">
+<meta name="generator" content="MediaWiki 1.43.8">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_language_while rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
+<!-- /header -->
+
+<!-- content -->
+<div id="cpp-content-base">
+    <div id="content" class="mw-body">
+        <a id="top"></a>
+        <div id="mw-js-message" style="display:none;" lang="zh" dir="ltr"></div>
+        <!-- firstHeading -->
+        <h1 id="firstHeading" class="firstHeading">while 循环</h1>
+        <!-- /firstHeading -->
+        <!-- bodyContent -->
+        <div id="bodyContent" class="mw-body-content">
+            <!-- tagline -->
+            <div id="siteSub">来自cppreference.com</div>
+            <!-- /tagline -->
+            <!-- subtitle -->
+            <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../language.html" title="c/language">language</a></bdi></div></div></div>
+            <!-- /subtitle -->
+            <!-- bodycontent -->
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../types.html" title="c/types">类型支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../program.html" title="c/program">程序工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../variadic.html" title="c/variadic">可变参数函数支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../error.html" title="c/error">错误处理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../memory.html" title="c/memory">动态内存管理</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../string.html" title="c/string">字符串库</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../algorithm.html" title="c/algorithm">算法</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../numeric.html" title="c/numeric">数值</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../chrono.html" title="c/chrono">日期和时间工具</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../io.html" title="c/io">输入/输出支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../locale.html" title="c/locale">本地化支持</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
+<tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="c/language">C 语言</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"> <a href="basic_concepts.html" title="c/language/basic concepts">基本概念</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../keyword.html" title="c/keyword">关键词</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../preprocessor.html" title="c/preprocessor">预处理器</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="statements.html" title="c/language/statements">语句</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="expressions.html" title="c/language/expressions">表达式</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="initialization.html" title="c/language/initialization">初始化</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="declarations.html" title="c/language/declarations">声明</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="functions.html" title="c/language/functions">函数</a></td></tr>
+<tr class="t-nv"><td colspan="5"> 杂项</td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="history.html" title="c/language/history">C 的历史</a></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> <a href="../experimental.html" title="c/experimental">技术规范</a> </td></tr>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="statements.html" title="c/language/statements">语句</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+<div><table class="t-nv-begin" cellpadding="0" style="">
+<tbody><tr class="t-nv-h2"><td colspan="5"> 标号</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="statements.html#%E6%A0%87%E5%8F%B7" title="c/language/statements"><span class="t-lines"><span><span class="t-spar">label</span> : <span class="t-spar">statement</span></span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 表达式语句</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="statements.html#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E5%8F%A5" title="c/language/statements"><span class="t-lines"><span><span class="t-spar">expression</span> ;</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 复合语句</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="statements.html#%E5%A4%8D%E5%90%88%E8%AF%AD%E5%8F%A5" title="c/language/statements"><span class="t-lines"><span>{ <span class="t-spar">statement</span>... }</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 选择语句</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="if.html" title="c/language/if"><span class="t-lines"><span>if</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="switch.html" title="c/language/switch"><span class="t-lines"><span>switch</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 重复语句</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>while</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="do.html" title="c/language/do"><span class="t-lines"><span>do-while</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="for.html" title="c/language/for"><span class="t-lines"><span>for</span></span></a></div></div></td></tr>
+<tr class="t-nv-h2"><td colspan="5"> 跳转语句</td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="break.html" title="c/language/break"><span class="t-lines"><span>break</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="continue.html" title="c/language/continue"><span class="t-lines"><span>continue</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="return.html" title="c/language/return"><span class="t-lines"><span>return</span></span></a></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="goto.html" title="c/language/goto"><span class="t-lines"><span>goto</span></span></a></div></div></td></tr>
+</tbody></table></div>
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<p>重复执行 <span class="t-spar">语句</span>，直到 <span class="t-spar">表达式</span> 的值变得比较等于零。此测试在每次迭代前发生。
+</p>
+<h3><span id=".E8.AF.AD.E6.B3.95"></span><span class="mw-headline" id="语法">语法</span></h3>
+<table class="t-sdsc-begin">
+
+<tbody><tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr>
+<tr class="t-sdsc">
+<td class="t-sdsc-nopad"><span class="t-spar">属性说明符序列</span><span class="t-mark" style="white-space: nowrap;">(可选)</span> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>while (</b></code> <span class="t-spar">表达式</span> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>)</b></code> <span class="t-spar">语句</span>
+</td>
+<td class="t-sdsc-nopad">
+</td>
+<td class="t-sdsc-nopad">
+</td></tr>
+
+
+
+<tr>
+<td colspan="10" class="t-sdsc-sep">
+</td></tr></tbody></table>
+<table class="t-par-begin">
+
+
+<tbody><tr class="t-par">
+<td><span class="t-spar">表达式</span>
+</td>
+<td>-
+</td>
+<td>任何<a href="types.html#%E7%B1%BB%E5%9E%8B%E7%BB%84%E5%88%AB" class="mw-redirect" title="c/language/types">标量类型</a>的<a href="expressions.html" title="c/language/expressions">表达式</a>。在每次迭代前求值此表达式，而若它与零比较相等，则退出循环。
+</td></tr>
+<tr class="t-par">
+<td><span class="t-spar">语句</span>
+</td>
+<td>-
+</td>
+<td>任何<a href="statements.html" title="c/language/statements">语句</a>，常为一条复合语句，它被用作循环体
+</td></tr>
+<tr class="t-par">
+<td><span class="t-spar">属性说明符序列</span>
+</td>
+<td>-
+</td>
+<td><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span>可选的<a href="attributes.html" title="c/language/attributes">属性</a>列表，应用到循环语句
+</td></tr></tbody></table>
+<h3><span id=".E8.A7.A3.E9.87.8A"></span><span class="mw-headline" id="解释">解释</span></h3>
+<p><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">while</code> 导致重复执行 <span class="t-spar">语句</span>（亦称为<i>循环体</i>），直至 <span class="t-spar">表达式</span>（亦称为<i>控制表达式</i>）与零比较相等。不管是正常进入循环体还是以 <a href="goto.html" title="c/language/goto">goto</a> 进入 <span class="t-spar">语句</span> 内部，都会发生重复。
+</p><p><span class="t-spar">表达式</span>的求值在每次执行 <span class="t-spar">语句</span> 前发生（除非用 goto 进入）。若需要在每次循环体后求值控制表达式，可以用 <a href="do.html" title="c/language/do">do-while 循环</a>。
+</p><p>若循环的执行需要在某些点终止，则能以 <a href="break.html" title="c/language/break">break 语句</a>为作终止语句。
+</p><p>若循环的执行需要从循环体的结尾继续，则能以 <a href="continue.html" title="c/language/continue">continue 语句</a>为快捷方式。
+</p><p>若无限循环在其 <span class="t-spar">语句</span> 或 <span class="t-spar">表达式</span> 的任何部分无可观测行为（I/O、volatile 访问、原子或同步操作），则拥有这种循环的程序有未定义行为。这允许编译器优化掉整个不可观测循环，而无需证明他们会结束。仅有的例外是 <span class="t-spar">表达式</span> 为常量表达式的循环：<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">while(true)</code> 始终是无限循环。
+</p>
+<table class="t-rev-begin">
+<tbody><tr class="t-rev t-since-c99"><td>
+<p>同所有选择和迭代语句，while 语句建立<a href="scope.html" title="c/language/scope">块作用域</a>：任何于 <span class="t-spar">表达式</span> 中引入的标识符在语句后离开作用域。
+</p>
+</td>
+<td><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span></td></tr>
+</tbody></table>
+<h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
+<p>常以布尔和指针表达式为循环控制表达式。布尔值 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">false</code> 和任何指针类型的空指针值与零比较相等。
+</p>
+<h3><span id=".E5.85.B3.E9.94.AE.E8.AF.8D"></span><span class="mw-headline" id="关键词">关键词</span></h3>
+<p><a href="../keyword/while.html" title="c/keyword/while"><tt>while</tt></a>
+</p>
+<h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
+<div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+<span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">};</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// 平凡示例</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="n">SIZE</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">SIZE</span><span class="p">)</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="n">n</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">puts</span><span class="p">(</span><span class="s">"Array filled!"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">SIZE</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="n">n</span><span class="o">++</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 经典的 strcpy() 实现</span>
+<span class="w">    </span><span class="c1">// （从 src 复制空终止字符串到 dst）</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">src</span><span class="p">[]</span><span class="o">=</span><span class="s">"Hello, world"</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">[</span><span class="k">sizeof</span><span class="w"> </span><span class="n">src</span><span class="p">],</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="o">=</span><span class="n">src</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="p">((</span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="o">++</span><span class="p">))</span><span class="w"> </span><span class="c1">// 用双括号（这严格上并不必要）</span>
+<span class="w">                         </span><span class="c1">// 抑制警告，确保这有意为</span>
+<span class="w">                         </span><span class="c1">// 赋值（而非比较），</span>
+<span class="w">                         </span><span class="c1">// 其结果被用作真值</span>
+<span class="w">        </span><span class="p">;</span><span class="w"> </span><span class="c1">// 空语句</span>
+<span class="w">    </span><span class="n">puts</span><span class="p">(</span><span class="n">dst</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>输出：
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Array filled!
+1 0 1 1 1 1 0 0 
+Hello, world
+</pre></div> 
+</div>
+<h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
+<div class="t-ref-std-17">
+<ul><li>C17 标准（ISO/IEC 9899:2018）：</li></ul>
+<dl><dd><ul><li>6.8.5.1 The while statement （第 109 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-11">
+<ul><li>C11 标准（ISO/IEC 9899:2011）：</li></ul>
+<dl><dd><ul><li>6.8.5.1 The while statement （第 151 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c99">
+<ul><li>C99 标准（ISO/IEC 9899:1999）：</li></ul>
+<dl><dd><ul><li>6.8.5.1 The while statement （第 136 页）</li></ul></dd></dl>
+</div>
+<div class="t-ref-std-c89">
+<ul><li>C89/C90 标准（ISO/IEC 9899:1990）：</li></ul>
+<dl><dd><ul><li>3.6.5.1 The while statement</li></ul></dd></dl>
+</div>
+<h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc">
+<td colspan="2"><div class="t-dsc-see"><span class=""><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">while</code> 循环</span></span>的 <span><span><a href="../../cpp/language/while.html" title="cpp/language/while">C++ 文档</a></span></span></div>
+</td></tr>
+
+</tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260422033149
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.067 seconds
+Real time usage: 0.075 seconds
+Preprocessor visited node count: 2100/1000000
+Post‐expand include size: 48371/4194304 bytes
+Template argument size: 9842/4194304 bytes
+Highest expansion depth: 18/100
+Expensive parser function count: 2/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5047/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   47.240      1 -total
+ 35.85%   16.936      1 Template:c/language/statements/navbar
+ 34.74%   16.412      1 Template:navbar
+ 13.63%    6.438      1 Template:c/language/statements/navbar_content
+ 12.79%    6.041     30 Template:nv
+ 10.72%    5.064      1 Template:sdsc
+ 10.57%    4.995     12 Template:nv_ln
+  9.02%    4.262     37 Template:trim
+  8.88%    4.193      1 Template:c/navbar_content
+  7.46%    3.526      3 Template:par
+-->
+
+<!-- Saved in parser cache with key zh:pcache:idhash:1079-0!canonical!zh and timestamp 20260422033149 and revision id 80627. Rendering was triggered because: page-view
+ -->
+</div></div>
+            <!-- /bodycontent -->
+            <!-- catlinks -->
+            <!-- /catlinks -->
+            <div class="visualClear"></div>
+            <!-- debughtml -->
+                        <!-- /debughtml -->
+        </div>
+        <!-- /bodyContent -->
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="cpp-footer-base" class="noprint">
+    <div id="footer" lang="zh" dir="ltr">
+        <div id="cpp-navigation">
+            <h5>导航</h5>
+            <ul><li><a href="../../../zh.cppreference.com/w/c/language/while">Online version</a></li><li>Offline version retrieved 2026-05-02 15:56.</li></ul></div>
+        </div>
+</div>
+<!-- /footer -->
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":171,"wgPageParseReport":{"limitreport":{"cputime":"0.067","walltime":"0.075","ppvisitednodes":{"value":2100,"limit":1000000},"postexpandincludesize":{"value":48371,"limit":4194304},"templateargumentsize":{"value":9842,"limit":4194304},"expansiondepth":{"value":18,"limit":100},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5047,"limit":5000000},"timingprofile":["100.00%   47.240      1 -total"," 35.85%   16.936      1 Template:c/language/statements/navbar"," 34.74%   16.412      1 Template:navbar"," 13.63%    6.438      1 Template:c/language/statements/navbar_content"," 12.79%    6.041     30 Template:nv"," 10.72%    5.064      1 Template:sdsc"," 10.57%    4.995     12 Template:nv_ln","  9.02%    4.262     37 Template:trim","  8.88%    4.193      1 Template:c/navbar_content","  7.46%    3.526      3 Template:par"]},"cachereport":{"timestamp":"20260422033149","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20260422033149 -->
+</html>
