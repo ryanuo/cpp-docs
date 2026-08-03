@@ -28,12 +28,13 @@ const iframeSrc = ref('/reference/zh')
 // 默认首页
 const DEFAULT_PAGE = '/reference/zh'
 
-// 从 hash 中获取当前页面
+// 从 hash 中获取当前页面（兼容有/无 .html 后缀）
 function getPageFromHash(): string {
   if (typeof window === 'undefined') return DEFAULT_PAGE
   const hash = window.location.hash.slice(1)
-  if (hash && hash.endsWith('.html')) {
-    return hash.startsWith('/') ? hash : `/${hash}`
+  if (hash.startsWith('/reference/zh/')) {
+    // 自动补全 .html 后缀
+    return hash.endsWith('.html') ? hash : `${hash}.html`
   }
   return DEFAULT_PAGE
 }
