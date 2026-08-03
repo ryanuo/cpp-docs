@@ -28,6 +28,32 @@ pnpm build
 pnpm preview
 ```
 
+## 参考手册（离线版）
+
+本项目内置了 **cppreference.com 的中文离线文档**，包含完整的 C/C++ 标准库参考。
+
+### 在线地址
+
+`https://zh.cppreference.com`（[归档下载](https://zh.cppreference.com/Cppreference:Archives)）
+
+### 离线使用方式
+
+1. 从上方链接下载最新的 `cppreference-doxygen-*.tar.xz` 归档
+2. 解压后将 `reference/zh/` 目录放到 `public/reference/` 下
+3. 构建后访问 `/reference/zh/cpp.html` 即可离线浏览
+
+### 目录结构
+
+```
+public/reference/
+├── zh/
+│   ├── cpp.html              # C++ 参考手册首页
+│   ├── c.html                # C 参考手册首页
+│   ├── symbol_index.html     # 符号索引
+│   ├── cpp/                  # C++ 文档子页面
+│   └── common/               # 公共资源（CSS/字体）
+```
+
 ## 技术栈
 
 - [Nuxt 4](https://nuxt.com) - Vue 全栈框架
