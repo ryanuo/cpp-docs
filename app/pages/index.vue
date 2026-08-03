@@ -43,7 +43,7 @@ const chapters = [
 
     <div class="mb-12">
       <a
-        href="/reference/zh"
+        href="/reference"
         class="flex items-center justify-between p-5 rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors group"
       >
         <div class="flex items-start gap-3">
