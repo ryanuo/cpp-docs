@@ -3,12 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "build": "node scripts/build-reference-index.mjs && nuxt build",
+    "dev": "node scripts/build-reference-index.mjs && nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "build:index": "node scripts/build-reference-index.mjs"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.117",
@@ -19,12 +20,13 @@
     "@nuxt/ui": "^4.10.0",
     "@nuxtjs/mcp-toolkit": "^0.18.0",
     "@nuxtjs/mdc": "^0.22.1",
-    "@vueuse/core": "^14.3.0",
     "@takumi-rs/core": "^1.8.7",
+    "@vueuse/core": "^14.3.0",
     "minimark": "^0.2.0",
     "nuxt": "^4.4.8",
     "nuxt-llms": "0.2.0",
     "nuxt-og-image": "^6.7.2",
+    "pinyin-pro": "^3.28.2",
     "tailwindcss": "^4.3.2",
     "ufo": "^1.6.4",
     "unist-util-visit": "^5.1.0",
@@ -32,6 +34,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.16.0",
+    "@types/pako": "^2.0.4",
     "eslint": "^10.7.0",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.7"

@@ -1,9 +1,26 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
+import ReferenceSearch from './ReferenceSearch.vue'
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 const { header } = useAppConfig()
+const searchRef = ref<InstanceType<typeof ReferenceSearch> | null>(null)
+
+function handleKeydown(e: KeyboardEvent) {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'm') {
+    e.preventDefault()
+    searchRef.value?.open()
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', handleKeydown)
+})
 </script>
 
 <template>
@@ -60,6 +77,8 @@ const { header } = useAppConfig()
       />
 
       <UColorModeButton v-if="header?.colorMode" />
+
+      <ReferenceSearch ref="searchRef" />
 
       <template v-if="header?.links">
         <UButton
