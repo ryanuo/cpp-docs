@@ -2266,3 +2266,42 @@ pre,
     border-radius: 4px;
     margin: 1px 0;
 }
+
+/* ========== 分组标题行 ========== */
+.t-dsc-header td {
+    background: transparent !important;  /* 不继承卡片底色 */
+    border: none !important;
+    padding: 20px 16px 8px;              /* 上方留白，形成分组感 */
+    font-size: 13px;
+    color: #6a737d;
+    letter-spacing: .02em;
+}
+
+/* 表格第一行的标题不用额外留白 */
+.t-dsc-header:first-child td {
+    padding-top: 6px;
+}
+
+/* 标题里的 <list> 代码片段 */
+.t-dsc-header code {
+    font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+    font-size: 12.5px;
+    background: #eff1f3;
+    border: 1px solid #e1e4e8;
+    padding: 1px 7px;
+    border-radius: 5px;
+}
+
+/* 链接颜色与悬停 */
+.t-dsc-header code a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+.t-dsc-header code a:hover {
+    text-decoration: underline;
+}
+
+.t-dsc-header > td:first-child > div{
+    margin-left: 0em;
+}
