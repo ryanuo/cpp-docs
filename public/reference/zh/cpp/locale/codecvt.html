@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>std::codecvt</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"bf7d68de98711d350c3806a6","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/locale/codecvt","wgTitle":"cpp/locale/codecvt","wgCurRevisionId":95717,"wgRevisionId":95717,"wgArticleId":2781,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/locale/codecvt","wgRelevantArticleId":2781,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em}
-.shiki .line{display:block;min-height:1em}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_locale_codecvt rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -41,7 +36,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../locale.html" title="cpp/locale">locale</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
@@ -70,7 +65,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../text.html" title="cpp/text">文本处理库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../text.html" title="cpp/text">文本处理库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../locale.html" title="cpp/locale">本地化库</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../regex.html" title="cpp/regex">正则表达式库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../utility/format.html" title="cpp/utility/format">格式化库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
@@ -90,9 +85,9 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../text/text_encoding.html" title="cpp/text/text encoding"><span class="t-lines"><span>text_encoding</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../locale.html" title="cpp/locale">本地化库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../locale.html" title="cpp/locale">本地化库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv-h1"><td colspan="5"><a href="../locale.html#%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%88%BB%E9%9D%A2" title="cpp/locale">本地环境与刻面</a><code>&nbsp;&nbsp;</code></td></tr>
+<tbody><tr class="t-nv-h1"><td colspan="5"><a href="../locale.html#%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%88%BB%E9%9D%A2" title="cpp/locale">本地环境与刻面</a><code>  </code></td></tr>
 <tr class="t-nv-h2"><td colspan="5"><a href="../locale.html#%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83" title="cpp/locale">本地环境</a></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="has_facet.html" title="cpp/locale/has facet"><span class="t-lines"><span>has_facet</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="use_facet.html" title="cpp/locale/use facet"><span class="t-lines"><span>use_facet</span></span></a></div></div></td></tr>
@@ -135,15 +130,15 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5"><a href="../locale.html#%E5%AD%97%E7%AC%A6%E5%88%86%E7%B1%BB" title="cpp/locale">字符分类</a></td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isspace.html" title="cpp/locale/isspace"><span class="t-lines"><span>isspace</span></span></a></div><div><span class="t-lines"><span><code>&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isspace.html" title="cpp/locale/isspace"><span class="t-lines"><span>isspace</span></span></a></div><div><span class="t-lines"><span><code>  </code></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="iscntrl.html" title="cpp/locale/iscntrl"><span class="t-lines"><span>iscntrl</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isupper.html" title="cpp/locale/isupper"><span class="t-lines"><span>isupper</span></span></a></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="islower.html" title="cpp/locale/islower"><span class="t-lines"><span>islower</span></span></a></div><div><span class="t-lines"><span><code>&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="islower.html" title="cpp/locale/islower"><span class="t-lines"><span>islower</span></span></a></div><div><span class="t-lines"><span><code>  </code></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isalpha.html" title="cpp/locale/isalpha"><span class="t-lines"><span>isalpha</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ispunct.html" title="cpp/locale/ispunct"><span class="t-lines"><span>ispunct</span></span></a></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isdigit.html" title="cpp/locale/isdigit"><span class="t-lines"><span>isdigit</span></span></a></div><div><span class="t-lines"><span><code>&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isdigit.html" title="cpp/locale/isdigit"><span class="t-lines"><span>isdigit</span></span></a></div><div><span class="t-lines"><span><code>  </code></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isxdigit.html" title="cpp/locale/isxdigit"><span class="t-lines"><span>isxdigit</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="isalnum.html" title="cpp/locale/isalnum"><span class="t-lines"><span>isalnum</span></span></a></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -155,7 +150,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5"><a href="../locale.html#%E5%AD%97%E7%AC%A6%E8%BD%AC%E6%8D%A2" title="cpp/locale">字符转换</a></td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="toupper.html" title="cpp/locale/toupper"><span class="t-lines"><span>toupper</span></span></a></div><div><span class="t-lines"><span><code>&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="toupper.html" title="cpp/locale/toupper"><span class="t-lines"><span>toupper</span></span></a></div><div><span class="t-lines"><span><code>  </code></span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tolower.html" title="cpp/locale/tolower"><span class="t-lines"><span>tolower</span></span></a></div></div></td></tr>
 </tbody></table></div></td></tr>
@@ -171,7 +166,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h1"><td colspan="5"><a href="../locale.html#C_%E5%BA%93%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83" title="cpp/locale">C 库本地环境</a></td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="LC_categories.html" title="cpp/locale/LC categories"><span class="t-lines"><span>LC_ALL</span><span>LC_COLLATE</span><span>LC_CTYPE</span><span>LC_MONETARY</span><span>LC_NUMERIC</span><span>LC_TIME</span></span></a></div><div><span class="t-lines"><span><code>&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="LC_categories.html" title="cpp/locale/LC categories"><span class="t-lines"><span>LC_ALL</span><span>LC_COLLATE</span><span>LC_CTYPE</span><span>LC_MONETARY</span><span>LC_NUMERIC</span><span>LC_TIME</span></span></a></div><div><span class="t-lines"><span><code>  </code></span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="setlocale.html" title="cpp/locale/setlocale"><span class="t-lines"><span>setlocale</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="localeconv.html" title="cpp/locale/localeconv"><span class="t-lines"><span>localeconv</span></span></a></div></div></td></tr>
@@ -185,7 +180,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </tbody></table></div></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a class="mw-selflink selflink"><tt>std::codecvt</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a class="mw-selflink selflink"><tt>std::codecvt</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">成员函数</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="codecvt/codecvt.html" title="cpp/locale/codecvt/codecvt"><span class="t-lines"><span>codecvt::codecvt</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="codecvt/~codecvt.html" title="cpp/locale/codecvt/~codecvt"><span class="t-lines"><span>codecvt::~codecvt</span></span></a></div></div></td></tr>
@@ -196,7 +191,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="codecvt/always_noconv.html" title="cpp/locale/codecvt/always noconv"><span class="t-lines"><span>codecvt::always_noconv</span><span>codecvt::do_always_noconv</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="codecvt/length.html" title="cpp/locale/codecvt/length"><span class="t-lines"><span>codecvt::length</span><span>codecvt::do_length</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="codecvt/max_length.html" title="cpp/locale/codecvt/max length"><span class="t-lines"><span>codecvt::max_length</span><span>codecvt::do_max_length</span></span></a></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../header/locale.html" title="cpp/header/locale">&lt;locale&gt;</a></code> 定义
@@ -205,12 +200,12 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 84 + 27.1px), calc(100% - 160px)); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt; </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> InternT</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> ExternT</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> StateT</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> codecvt</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 84 + 27.1px), calc(100% - 160px)); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">InternT</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">ExternT</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">StateT</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">codecvt</span><span class="p">;</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
@@ -472,63 +467,63 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </div>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><p>下例示例用在 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">codecvt</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">mbstate_t</span><span class="o">&gt;</span></code> 实现 UTF-8 转换的本地环境读取 UTF-8 环境，并用 <code>std::codecvt</code> 的标准特化转换 UTF-8 字符串到 UTF-16。</p><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;codecvt&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstdint&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;fstream&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iomanip&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;locale&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 工具包装器，用于为 wstring/wbuffer 适配绑定到本地环境的刻面</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Facet</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> deletable_facet</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : Facet</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">... </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Args</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    deletable_facet</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Args</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">... </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">args</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">Facet</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">forward</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Args</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">args</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)...) {}</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    ~deletable_facet</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() {}</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // UTF-8 窄多字节编码</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> data</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">reinterpret_cast</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*&gt;(+</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">u8"z</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\u00df\u6c34\U0001f34c</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                       // 或 reinterpret_cast&lt;const char*&gt;(+u8"zß水🍌")</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                       // 或 "\x7a\xc3\x9f\xe6\xb0\xb4\xf0\x9f\x8d\x8c"</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">ofstream</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"text.txt"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">data</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 使用系统提供的本地环境的 codecvt 刻面</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">wifstream</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> fin</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"text.txt"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 从 wifstream 的读取将使用 codecvt&lt;wchar_t, char, std::mbstate_t&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 此本地环境的 codecvt 从 UTF-8 转换到 UCS4（在如 Linux 的系统上）</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    fin</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">imbue</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">locale</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"en_US.UTF-8"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"此 UTF-8 文件包含以下 UCS4 编码单元：</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">hex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">wchar_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">fin</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt;&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;)</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"U+"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setw</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setfill</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'0'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">                  &lt;&lt; </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">static_cast</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">uint32_t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">' '</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 使用标准（本地环境无关）codecvt 刻面</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">wstring_convert</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">        deletable_facet</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">codecvt</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">char16_t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">mbstate_t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;&gt;, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">char16_t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">conv16</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">u16string</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> str16</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">conv16</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">from_bytes</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">data</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">此 UTF-8 文件包含以下 UTF-16 编码单元：</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">              &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">hex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">char16_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">str16</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"U+"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setw</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setfill</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'0'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">                  &lt;&lt; </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">static_cast</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">uint16_t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">' '</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;codecvt&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdint&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;locale&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+
+<span class="c1">// 工具包装器，用于为 wstring/wbuffer 适配绑定到本地环境的刻面</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Facet</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">deletable_facet</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Facet</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="n">deletable_facet</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Facet</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">Args</span><span class="o">&gt;</span><span class="p">(</span><span class="n">args</span><span class="p">)...)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span><span class="o">~</span><span class="n">deletable_facet</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// UTF-8 窄多字节编码</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">(</span><span class="o">+</span><span class="sa">u8</span><span class="s">"z</span><span class="se">\u00df\u6c34\U0001f34c</span><span class="s">"</span><span class="p">);</span>
+<span class="w">                       </span><span class="c1">// 或 reinterpret_cast&lt;const char*&gt;(+u8"zß水🍌")</span>
+<span class="w">                       </span><span class="c1">// 或 "\x7a\xc3\x9f\xe6\xb0\xb4\xf0\x9f\x8d\x8c"</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span><span class="p">(</span><span class="s">"text.txt"</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 使用系统提供的本地环境的 codecvt 刻面</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">wifstream</span><span class="w"> </span><span class="n">fin</span><span class="p">(</span><span class="s">"text.txt"</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// 从 wifstream 的读取将使用 codecvt&lt;wchar_t, char, std::mbstate_t&gt;</span>
+<span class="w">    </span><span class="c1">// 此本地环境的 codecvt 从 UTF-8 转换到 UCS4（在如 Linux 的系统上）</span>
+<span class="w">    </span><span class="n">fin</span><span class="p">.</span><span class="n">imbue</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">locale</span><span class="p">(</span><span class="s">"en_US.UTF-8"</span><span class="p">));</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"此 UTF-8 文件包含以下 UCS4 编码单元：</span><span class="se">\n</span><span class="s">"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">hex</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">wchar_t</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">;)</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"U+"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">setw</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">setfill</span><span class="p">(</span><span class="sc">'0'</span><span class="p">)</span>
+<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 使用标准（本地环境无关）codecvt 刻面</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">wstring_convert</span><span class="o">&lt;</span>
+<span class="w">        </span><span class="n">deletable_facet</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">codecvt</span><span class="o">&lt;</span><span class="kt">char16_t</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">mbstate_t</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">char16_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">conv16</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">u16string</span><span class="w"> </span><span class="n">str16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conv16</span><span class="p">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n\n</span><span class="s">此 UTF-8 文件包含以下 UTF-16 编码单元：</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">hex</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char16_t</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">str16</span><span class="p">)</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"U+"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">setw</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">setfill</span><span class="p">(</span><span class="sc">'0'</span><span class="p">)</span>
+<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>此 UTF-8 文件包含以下 UCS4 编码单元：</span></span>
-<span class="line"><span>U+007a U+00df U+6c34 U+1f34c</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>此 UTF-8 文件包含以下 UTF-16 编码单元：</span></span>
-<span class="line"><span>U+007a U+00df U+6c34 U+d83c U+df4c</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>此 UTF-8 文件包含以下 UCS4 编码单元：
+U+007a U+00df U+6c34 U+1f34c
+
+此 UTF-8 文件包含以下 UTF-16 编码单元：
+U+007a U+00df U+6c34 U+d83c U+df4c
+</pre></div> 
 </div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
 <table class="wikitable" style="font-size:85%; text-align:center;">
@@ -680,6 +675,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":751,"wgPageParseReport":{"limitreport":{"cputime":"0.266","walltime":"0.625","ppvisitednodes":{"value":12069,"limit":1000000},"postexpandincludesize":{"value":311237,"limit":4194304},"templateargumentsize":{"value":67897,"limit":4194304},"expansiondepth":{"value":23,"limit":100},"expensivefunctioncount":{"value":27,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":19627,"limit":5000000},"timingprofile":["100.00%  560.997      1 -total"," 60.14%  337.389      1 Template:example"," 59.84%  335.679      2 Template:source"," 11.46%   64.292     19 Template:dsc_inc"," 11.05%   61.965      1 Template:cpp/locale/codecvt/navbar"," 10.94%   61.381      1 Template:navbar"," 10.73%   60.205     36 Template:dsc","  6.01%   33.700      1 Template:cpp/locale/navbar_content","  5.26%   29.519    102 Template:nv","  4.40%   24.697     59 Template:nv_ln"]},"cachereport":{"timestamp":"20260422010759","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422010759 --></html>
+</body>
+<!-- Cached 20260422010759 -->
+</html>

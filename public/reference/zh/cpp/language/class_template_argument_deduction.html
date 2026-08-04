@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>类模板实参推导（CTAD）(C++17 起)</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"33deea42b5b61d6ff7825f91","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/language/class_template_argument_deduction","wgTitle":"cpp/language/class template argument deduction","wgCurRevisionId":99661,"wgRevisionId":99661,"wgArticleId":9014,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","带有未审核 CWG DR 记号的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/language/class_template_argument_deduction","wgRelevantArticleId":9014,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em}
-.shiki .line{display:block;min-height:1em}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_language_class_template_argument_deduction rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -43,7 +38,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
@@ -72,7 +67,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">一般主题</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -138,10 +133,10 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">说明符</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="cv.html" title="cpp/language/cv"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code>/<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="auto.html" title="cpp/language/auto"><tt>auto</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="consteval.html" title="cpp/language/consteval"><tt>consteval</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="constinit.html" title="cpp/language/constinit"><tt>constinit</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 </tbody></table></div></td></tr>
@@ -213,7 +208,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">类特有的函数性质</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="virtual.html" title="cpp/language/virtual">虚函数</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code>override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code>override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="final.html" title="cpp/language/final"><code>final</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="explicit.html" title="cpp/language/explicit"><tt>explicit</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
@@ -246,7 +241,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr class="t-nv"><td colspan="5"><a href="history.html" title="cpp/language/history">C++ 的历史</a></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="declarations.html" title="cpp/language/declarations">声明</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="declarations.html" title="cpp/language/declarations">声明</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">概览</td></tr>
@@ -264,7 +259,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="consteval.html" title="cpp/language/consteval"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">consteval</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="constinit.html" title="cpp/language/constinit"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">constinit</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="storage_duration.html" title="cpp/language/storage duration">存储类说明符</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="tu_local.html" title="cpp/language/tu local">翻译单元局部</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tu_local.html" title="cpp/language/tu local">翻译单元局部</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span>      </td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="class.html" title="cpp/language/class"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">class</span></code>/<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">struct</span></code></span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="union.html" title="cpp/language/union"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">union</span></code></span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="enum.html" title="cpp/language/enum"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">enum</span></code></span></span></a></div></div></td></tr>
@@ -272,7 +267,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="auto.html" title="cpp/language/auto"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">auto</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="alignas.html" title="cpp/language/alignas"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">alignas</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="cv.html" title="cpp/language/cv"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code></span><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="pack_indexing.html#%E5%8C%85%E7%B4%A2%E5%BC%95%E8%AF%B4%E6%98%8E%E7%AC%A6" title="cpp/language/pack indexing">包索引说明符</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="pack_indexing.html#%E5%8C%85%E7%B4%A2%E5%BC%95%E8%AF%B4%E6%98%8E%E7%AC%A6" title="cpp/language/pack indexing">包索引说明符</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span>    </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="elaborated_type_specifier.html" title="cpp/language/elaborated type specifier">详述类型说明符</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="attributes.html" title="cpp/language/attributes">属性</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -282,7 +277,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="array.html" title="cpp/language/array">数组</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5">块声明</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="declarations.html" title="cpp/language/declarations">简单声明</a></td></tr>
-<tr class="t-nv"><td colspan="5">&nbsp;&nbsp;→<a href="structured_binding.html" title="cpp/language/structured binding">结构化绑定声明</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5">  →<a href="structured_binding.html" title="cpp/language/structured binding">结构化绑定声明</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="type_alias.html" title="cpp/language/type alias">别名声明</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="namespace_alias.html" title="cpp/language/namespace alias">命名空间别名定义</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="using_declaration.html" title="cpp/language/using declaration"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">using</span></code> 声明</a></td></tr>
@@ -304,7 +299,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="expressions.html" title="cpp/language/expressions"> 表达式</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="expressions.html" title="cpp/language/expressions"> 表达式</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">概述</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="value_category.html" title="cpp/language/value category">值类别</a></td></tr>
@@ -357,7 +352,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="implicit_conversion.html" title="cpp/language/implicit conversion">隐式转换</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="explicit_cast.html" title="cpp/language/explicit cast">显式转换</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="usual_arithmetic_conversions.html" title="cpp/language/usual arithmetic conversions">一般算术转换</a>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="usual_arithmetic_conversions.html" title="cpp/language/usual arithmetic conversions">一般算术转换</a>    </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="cast_operator.html" title="cpp/language/cast operator">用户定义转换</a></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="const_cast.html" title="cpp/language/const cast"><code>const_cast</code></a></td></tr>
@@ -365,7 +360,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="dynamic_cast.html" title="cpp/language/dynamic cast"><code>dynamic_cast</code></a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="reinterpret_cast.html" title="cpp/language/reinterpret cast"><code>reinterpret_cast</code></a></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="templates.html" title="cpp/language/templates">模板</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="templates.html" title="cpp/language/templates">模板</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"> <a href="template_parameters.html" title="cpp/language/template parameters">模板形参与实参</a> </td></tr>
 <tr class="t-nv"><td colspan="5"> <a href="class_template.html" title="cpp/language/class template">类模板</a> </td></tr>
@@ -378,52 +373,52 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"> <a href="partial_specialization.html" title="cpp/language/partial specialization">部分特化</a> </td></tr>
 <tr class="t-nv"><td colspan="5"> <a href="dependent_name.html" title="cpp/language/dependent name">待决名</a> </td></tr>
 <tr class="t-nv"><td colspan="5"> <a href="pack.html" title="cpp/language/pack">包</a><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
-<tr class="t-nv"><td colspan="5"> &nbsp;&nbsp;<a href="sizeof....html" title="cpp/language/sizeof..."> <code>sizeof...</code></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
-<tr class="t-nv"><td colspan="5"> &nbsp;&nbsp;<a href="fold.html" title="cpp/language/fold"> 折叠表达式</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
-<tr class="t-nv"><td colspan="5"> &nbsp;&nbsp;<a href="pack_indexing.html" title="cpp/language/pack indexing"> 形参包索引</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
+<tr class="t-nv"><td colspan="5">   <a href="sizeof....html" title="cpp/language/sizeof..."> <code>sizeof...</code></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
+<tr class="t-nv"><td colspan="5">   <a href="fold.html" title="cpp/language/fold"> 折叠表达式</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5">   <a href="pack_indexing.html" title="cpp/language/pack indexing"> 形参包索引</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
 <tr class="t-nv"><td colspan="5"> <a href="sfinae.html" title="cpp/language/sfinae"> SFINAE</a> </td></tr>
 <tr class="t-nv"><td colspan="5"> <a href="constraints.html" title="cpp/language/constraints">约束与概念</a><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span> </td></tr>
 <tr class="t-nv"><td colspan="5"> <a href="requires.html" title="cpp/language/requires"> requires 表达式</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span> </td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <p>为了实例化一个<a href="class_template.html" title="cpp/language/class template">类模板</a>，需要知晓每个模板实参，但并非每个模板实参都必须指定。在下列语境中，编译器会从初始化式的类型推导缺失的模板实参：
 </p>
 <ul><li>任意指定变量及变量模板的初始化的<a href="declarations.html" title="cpp/language/declarations">声明</a>，其声明的类型是类模板（可有 <a href="cv.html" title="cpp/language/cv">cv 限定</a>）：</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">pair</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4.5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">     // 推导出 std::pair&lt;int, double&gt; p(2, 4.5);</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">tuple</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2.5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 同 auto t = std::make_tuple(4, 3, 2.5);</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">less</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> l</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">             // 同 std::less&lt;void&gt; l;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">4.5</span><span class="p">);</span><span class="w">     </span><span class="c1">// 推导出 std::pair&lt;int, double&gt; p(2, 4.5);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 同 auto t = std::make_tuple(4, 3, 2.5);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">less</span><span class="w"> </span><span class="n">l</span><span class="p">;</span><span class="w">             </span><span class="c1">// 同 std::less&lt;void&gt; l;</span>
+</pre></div>
 <ul><li><a href="new.html" title="cpp/language/new">new 表达式</a>：</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> y</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">new</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 分配的类型是 A&lt;int&gt;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">A</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">A</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span><span class="w"> </span><span class="c1">// 分配的类型是 A&lt;int&gt;</span>
+</pre></div>
 <ul><li><a href="explicit_cast.html" title="cpp/language/explicit cast">函数式转换</a>表达式：</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> lck</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">lock_guard</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">mtx</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">     // 推导出 std::lock_guard&lt;std::mutex&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">copy_n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">vi1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">back_insert_iterator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">vi2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 推导出 std::back_insert_iterator&lt;T&gt;，</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                                     // 其中 T 是容器 vi2 的类型</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">for_each</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">vi</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">begin</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(), </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">vi</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">end</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(),</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    Foo</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">([&amp;](</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {...}));</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">          // 推导出 Foo&lt;T&gt;，其中 T 是独有的 lambda 类型</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">lck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="p">(</span><span class="n">mtx</span><span class="p">);</span><span class="w">     </span><span class="c1">// 推导出 std::lock_guard&lt;std::mutex&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">copy_n</span><span class="p">(</span><span class="n">vi1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">back_insert_iterator</span><span class="p">(</span><span class="n">vi2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 推导出 std::back_insert_iterator&lt;T&gt;，</span>
+<span class="w">                                     </span><span class="c1">// 其中 T 是容器 vi2 的类型</span>
+<span class="n">std</span><span class="o">::</span><span class="n">for_each</span><span class="p">(</span><span class="n">vi</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">vi</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">Foo</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{...}));</span><span class="w">          </span><span class="c1">// 推导出 Foo&lt;T&gt;，其中 T 是独有的 lambda 类型</span>
+</pre></div>
 <table class="t-rev-begin">
 <tbody><tr class="t-rev t-since-cxx20"><td>
 <ul><li><a href="template_parameters.html#%E9%9D%9E%E7%B1%BB%E5%9E%8B%E6%A8%A1%E6%9D%BF%E5%BD%A2%E5%8F%82" title="cpp/language/template parameters">非类型模板形参</a>的类型：</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> X</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    constexpr</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> X</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">X</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Y</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> {};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">Y</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">y</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK, Y&lt;X&lt;int&gt;(0)&gt;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">X</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="n">X</span><span class="w"> </span><span class="n">x</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Y</span><span class="w"> </span><span class="p">{};</span>
+
+<span class="n">Y</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK, Y&lt;X&lt;int&gt;(0)&gt;</span>
+</pre></div>
 </td>
 <td><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span></td></tr>
 </tbody></table>
@@ -473,113 +468,113 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <li>如果包是尾部的聚合体元素，那么将对应它的尾部形参序列替换成形为 <code>T<sub>i</sub> ...</code> 的单个形参。</li></ul></dd></dl></dd>
 <dd>聚合推导候选是从假想构造函数 <code>C(T<sub>1</sub>, T<sub>2</sub>, ..., T<sub>n</sub>)</code> 按上述方式得到的虚设函数模板。</dd></dl>
 <dl><dd>在聚合推导候选的模板实参推导中，只有在尾部的形参包的元素数无法从其他情况下推导时，才会从尾部的函数实参数推导。</dd></dl>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    T</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    struct</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">        long</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    } </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">u</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 聚合推导候选：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//   template&lt;class T&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//   A&lt;T&gt; F(T, long, long);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">... </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Args</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : std::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">tuple</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;Args...&gt;, Args... {};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">B</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">tuple</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">any</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">string</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;{}, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">any</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{}};</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 聚合推导候选：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//   template&lt;class... Args&gt; </span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//   B&lt;Args...&gt; F(std::tuple&lt;Args...&gt;, Args...);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 推导出 b 的类型是 B&lt;std::any, std::string&gt;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">A</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">struct</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="n">u</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<span class="c1">// 聚合推导候选：</span>
+<span class="c1">//   template&lt;class T&gt;</span>
+<span class="c1">//   A&lt;T&gt; F(T, long, long);</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Args</span><span class="p">...</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Args</span><span class="p">...</span><span class="w"> </span><span class="p">{};</span>
+
+<span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">{</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">any</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">{},</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">any</span><span class="p">{}};</span>
+<span class="c1">// 聚合推导候选：</span>
+<span class="c1">//   template&lt;class... Args&gt; </span>
+<span class="c1">//   B&lt;Args...&gt; F(std::tuple&lt;Args...&gt;, Args...);</span>
+
+<span class="c1">// 推导出 b 的类型是 B&lt;std::any, std::string&gt;</span>
+</pre></div>
 </td>
 <td><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span></td></tr>
 </tbody></table>
 <p>然后，针对某个假想类类型的虚设对象的初始化，进行<a href="template_argument_deduction.html" title="cpp/language/template argument deduction">模板实参推导</a>和<a href="overload_resolution.html" title="cpp/language/overload resolution">重载决议</a>，对于组成重载集而言，该类的各构造函数的签名与各个指引（除了返回类型）相匹配，并且由进行类模板实参推导的语境提供它的初始化式。但如果它的初始化式列表由单个（可有 cv 限定的）<code>U</code> 类型的表达式组成，其中 <code>U</code> 是 <code>C</code> 的特化或派生自 <code>C</code> 的特化的类，那么跳过<a href="overload_resolution.html#%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96" title="cpp/language/overload resolution">列表初始化</a>的第一阶段（考虑初始化式列表构造函数）。
 </p><p>这些虚设构造函数是该假想类类型的公开成员。如果推导指引从显式的构造函数组成，那么它们也是显式的。如果重载决议失败，那么程序非良构。否则，选中的 <code>F</code> 的返回类型就成为推导出的类模板特化。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> UniquePtr</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    UniquePtr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">UniquePtr</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> dp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">new</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> auto</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2.0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 一个声明的构造函数：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// C1：UniquePtr(T*);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 隐式生成的推导指引集：</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// F1：template&lt;class T&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     UniquePtr&lt;T&gt; F(T *p);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// F2：template&lt;class T&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     UniquePtr&lt;T&gt; F(UniquePtr&lt;T&gt;); // 复制推导候选</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 要初始化的假想类：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// struct X</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// {</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     template&lt;class T&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     X(T *p);         // 从 F1</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     </span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     template&lt;class T&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     X(UniquePtr&lt;T&gt;); // 从 F2</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// };</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// X 对象的以“new double(2.0)”为初始化式的直接初始化</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 会选择与 T = double 对应的指引 F1 的构造函数</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 对于 T=double 的 F1，返回类型是 UniquePtr&lt;double&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 结果：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// UniquePtr&lt;double&gt; dp{new auto(2.0)}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UniquePtr</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">UniquePtr</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="n">UniquePtr</span><span class="w"> </span><span class="n">dp</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="k">auto</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)};</span>
+
+<span class="c1">// 一个声明的构造函数：</span>
+<span class="c1">// C1：UniquePtr(T*);</span>
+
+<span class="c1">// 隐式生成的推导指引集：</span>
+
+<span class="c1">// F1：template&lt;class T&gt;</span>
+<span class="c1">//     UniquePtr&lt;T&gt; F(T *p);</span>
+
+<span class="c1">// F2：template&lt;class T&gt;</span>
+<span class="c1">//     UniquePtr&lt;T&gt; F(UniquePtr&lt;T&gt;); // 复制推导候选</span>
+
+<span class="c1">// 要初始化的假想类：</span>
+<span class="c1">// struct X</span>
+<span class="c1">// {</span>
+<span class="c1">//     template&lt;class T&gt;</span>
+<span class="c1">//     X(T *p);         // 从 F1</span>
+<span class="c1">//     </span>
+<span class="c1">//     template&lt;class T&gt;</span>
+<span class="c1">//     X(UniquePtr&lt;T&gt;); // 从 F2</span>
+<span class="c1">// };</span>
+
+<span class="c1">// X 对象的以“new double(2.0)”为初始化式的直接初始化</span>
+<span class="c1">// 会选择与 T = double 对应的指引 F1 的构造函数</span>
+<span class="c1">// 对于 T=double 的 F1，返回类型是 UniquePtr&lt;double&gt;</span>
+
+<span class="c1">// 结果：</span>
+<span class="c1">// UniquePtr&lt;double&gt; dp{new auto(2.0)}</span>
+</pre></div>
 <p>或者，对于更加复杂的例子（注意：“S::N”无法编译：作用域解析限定符不是可推导物）：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> S</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> N</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        N</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        N</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">        template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> V</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        N</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">V</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    };</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">S</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">N</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2.0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 隐式生成的推导指引是（注意已知 T 是 int）</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// F1：template&lt;class U&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     S&lt;int&gt;::N&lt;U&gt; F(int);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// F2：template&lt;class U&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     S&lt;int&gt;::N&lt;U&gt; F(int, U);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// F3：template&lt;class U, class V&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     S&lt;int&gt;::N&lt;U&gt; F(V, U);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// F4：template&lt;class U&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     S&lt;int&gt;::N&lt;U&gt; F(S&lt;int&gt;::N&lt;U&gt;);（复制推导候选）</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 以“{2.0, 1}”为初始化式的直接列表初始化的重载决议</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 选择 U=int 与 V=double 的 F3。</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 返回类型是 S&lt;int&gt;::N&lt;int&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 结果：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// S&lt;int&gt;::N&lt;int&gt; x{2.0, 1};</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">S</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">N</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">N</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+<span class="w">        </span><span class="n">N</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">V</span><span class="o">&gt;</span>
+<span class="w">        </span><span class="n">N</span><span class="p">(</span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="p">);</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">};</span>
+<span class="w"> </span>
+<span class="n">S</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">N</span><span class="w"> </span><span class="n">x</span><span class="p">{</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
+
+<span class="c1">// 隐式生成的推导指引是（注意已知 T 是 int）</span>
+
+<span class="c1">// F1：template&lt;class U&gt;</span>
+<span class="c1">//     S&lt;int&gt;::N&lt;U&gt; F(int);</span>
+
+<span class="c1">// F2：template&lt;class U&gt;</span>
+<span class="c1">//     S&lt;int&gt;::N&lt;U&gt; F(int, U);</span>
+
+<span class="c1">// F3：template&lt;class U, class V&gt;</span>
+<span class="c1">//     S&lt;int&gt;::N&lt;U&gt; F(V, U);</span>
+
+<span class="c1">// F4：template&lt;class U&gt;</span>
+<span class="c1">//     S&lt;int&gt;::N&lt;U&gt; F(S&lt;int&gt;::N&lt;U&gt;);（复制推导候选）</span>
+
+<span class="c1">// 以“{2.0, 1}”为初始化式的直接列表初始化的重载决议</span>
+<span class="c1">// 选择 U=int 与 V=double 的 F3。</span>
+<span class="c1">// 返回类型是 S&lt;int&gt;::N&lt;int&gt;</span>
+
+<span class="c1">// 结果：</span>
+<span class="c1">// S&lt;int&gt;::N&lt;int&gt; x{2.0, 1};</span>
+</pre></div>
 <h4><span id=".E7.94.A8.E6.88.B7.E5.AE.9A.E4.B9.89.E7.9A.84.E6.8E.A8.E5.AF.BC.E6.8C.87.E5.BC.95"></span><span class="mw-headline" id="用户定义的推导指引">用户定义的推导指引</span></h4>
 <p>用户定义的推导指引的语法是带尾随返回类型的函数声明的语法，但它以类模板名作为函数名：
 </p>
@@ -671,80 +666,80 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>用户定义的推导指引必须指名一个类模板，且必须在类模板的同一语义作用域（可以是命名空间或外围类）中引入，而且对于成员类模板必须拥有同样的访问，但推导指引不会成为该作用域的成员。
 </p><p>推导指引不是函数且没有函数体。推导指引不会被名字查找所找到，并且除了在推导类模板实参时<a href="overload_resolution.html#%E6%9C%80%E4%BD%B3%E5%8F%AF%E8%A1%8C%E5%87%BD%E6%95%B0" title="cpp/language/overload resolution">与其他推导指引之间的重载决议</a>之外不会参与重载决议。不能在同一翻译单元中为同一类模板再次声明推导指引。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 模板的声明</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> container</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    container</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Iter</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    container</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> beg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> end</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 额外的推导指引</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Iter</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">container</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> e</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">container</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">typename</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">iterator_traits</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Iter</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">value_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 使用</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">container</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">7</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK：用隐式生成的指引推导出 T=int</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">vector</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">double</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">v</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = {</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/* ... */</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> d</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">container</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">v</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">begin</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(), </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">v</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">end</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">());</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK：推导出 T=double</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">container</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> e</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">6</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 错误：std::iterator_traits&lt;int&gt;::value_type 不存在</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// 模板的声明</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">container</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">container</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Iter</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="n">container</span><span class="p">(</span><span class="n">Iter</span><span class="w"> </span><span class="n">beg</span><span class="p">,</span><span class="w"> </span><span class="n">Iter</span><span class="w"> </span><span class="n">end</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// 额外的推导指引</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Iter</span><span class="o">&gt;</span>
+<span class="n">container</span><span class="p">(</span><span class="n">Iter</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Iter</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">container</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">iterator_traits</span><span class="o">&lt;</span><span class="n">Iter</span><span class="o">&gt;::</span><span class="n">value_type</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// 使用</span>
+<span class="n">container</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK：用隐式生成的指引推导出 T=int</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="cm">/* ... */</span><span class="p">};</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">container</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"> </span><span class="c1">// OK：推导出 T=double</span>
+<span class="n">container</span><span class="w"> </span><span class="n">e</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">};</span><span class="w"> </span><span class="c1">// 错误：std::iterator_traits&lt;int&gt;::value_type 不存在</span>
+</pre></div>
 <p>为重载决议而虚设的构造函数（如上文所述）在对应到从显式构造函数组成的隐式生成的推导指引，或对应到声明为 <a href="explicit.html" title="cpp/language/explicit"><code>explicit</code></a> 的用户定义推导指引时是 explicit 的。像往常一样，在复制初始化语境中忽略这些构造函数：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    explicit</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ...) </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">noexcept</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #1</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ...);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                        // #2</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = {</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 错误：不能从 #2 的右值引用推导</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">               // 且 #1 是 explicit 的，所以复制初始化中不予考虑。</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // OK，#1 推导出 A&lt;int&gt; 并且初始化</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // OK，#2 推导出 A&lt;int&gt; 并且初始化</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = {</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK，#2 推导出 A&lt;int&gt; 并且初始化</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;&gt;;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #3</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">explicit</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;&amp;, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;&amp;)  -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  // #4</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = {</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 错误：#3 推导出 A&lt;int&amp;&gt; 且 #1 和 #2 会生成形参相同的构造函数。</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a6</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // OK，#4 推导出 A&lt;int&gt; 并以 #2 初始化</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a7</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = {</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 错误：#3 推导出 A&lt;int&amp;&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a8</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 错误：#3 推导出 A&lt;int&amp;&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 注：请查看 https://github.com/cplusplus/CWG/issues/647，</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 称示例 a7 与 a8 不正确，可替换为</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//A a7 = {0, i}; // 错误：#2 与 #3 都匹配，重载解析失败</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//A a8{i,i};     // 错误：#3 推导出 A&lt;int&amp;&gt;，#1 和 #2 声明同一个构造函数</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">A</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span><span class="w"> </span><span class="c1">// #1</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;&amp;</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w">                        </span><span class="c1">// #2</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">};</span><span class="w"> </span><span class="c1">// 错误：不能从 #2 的右值引用推导</span>
+<span class="w">               </span><span class="c1">// 且 #1 是 explicit 的，所以复制初始化中不予考虑。</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a2</span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">};</span><span class="w">    </span><span class="c1">// OK，#1 推导出 A&lt;int&gt; 并且初始化</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a3</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">};</span><span class="w">    </span><span class="c1">// OK，#2 推导出 A&lt;int&gt; 并且初始化</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">};</span><span class="w"> </span><span class="c1">// OK，#2 推导出 A&lt;int&gt; 并且初始化</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="n">A</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">A</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&amp;&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// #3</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">explicit</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;&amp;</span><span class="p">)</span><span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">A</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span><span class="w">  </span><span class="c1">// #4</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">a5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span><span class="w"> </span><span class="c1">// 错误：#3 推导出 A&lt;int&amp;&gt; 且 #1 和 #2 会生成形参相同的构造函数。</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a6</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span><span class="w">    </span><span class="c1">// OK，#4 推导出 A&lt;int&gt; 并以 #2 初始化</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">};</span><span class="w"> </span><span class="c1">// 错误：#3 推导出 A&lt;int&amp;&gt;</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a8</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">};</span><span class="w">    </span><span class="c1">// 错误：#3 推导出 A&lt;int&amp;&gt;</span>
+
+<span class="c1">// 注：请查看 https://github.com/cplusplus/CWG/issues/647，</span>
+<span class="c1">// 称示例 a7 与 a8 不正确，可替换为</span>
+<span class="c1">//A a7 = {0, i}; // 错误：#2 与 #3 都匹配，重载解析失败</span>
+<span class="c1">//A a8{i,i};     // 错误：#3 推导出 A&lt;int&amp;&gt;，#1 和 #2 声明同一个构造函数</span>
+</pre></div>
 <p>在构造函数或构造函数模板的形参列表中使用成员 typedef 或别名模板的行为自身不会使隐式生成的指引的对应形参变为不推导语境。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> B</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> TA</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">TA</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #1</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 从 #1 产生的隐式推导指引等价于</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//   template&lt;class T, class U&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//   B(U, T) -&gt; B&lt;T&gt;;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 而不是</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//   template&lt;class T, class U&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//   B(U, typename B&lt;T&gt;::template TA&lt;U&gt;) -&gt; B&lt;T&gt;;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 后者无法被推导</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">B</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*)</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*)</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK，推导出 B&lt;char*&gt;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">B</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">TA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="n">B</span><span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="n">TA</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="p">);</span><span class="w"> </span><span class="c1">// #1</span>
+<span class="p">};</span>
+
+<span class="c1">// 从 #1 产生的隐式推导指引等价于</span>
+<span class="c1">//   template&lt;class T, class U&gt;</span>
+<span class="c1">//   B(U, T) -&gt; B&lt;T&gt;;</span>
+<span class="c1">// 而不是</span>
+<span class="c1">//   template&lt;class T, class U&gt;</span>
+<span class="c1">//   B(U, typename B&lt;T&gt;::template TA&lt;U&gt;) -&gt; B&lt;T&gt;;</span>
+<span class="c1">// 后者无法被推导</span>
+
+<span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">{(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="mi">0</span><span class="p">};</span><span class="w"> </span><span class="c1">// OK，推导出 B&lt;char*&gt;</span>
+</pre></div>
 <table class="t-rev-begin">
 <tbody><tr class="t-rev t-since-cxx20"><td>
 <h3><span id=".E5.88.AB.E5.90.8D.E6.A8.A1.E7.89.88.E7.9A.84.E6.8E.A8.E5.AF.BC"></span><span class="mw-headline" id="别名模版的推导">别名模版的推导</span></h3>
@@ -759,255 +754,255 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <li>如果再次找到默认模板实参，那么递归地包含在这些默认模板实参中出现的 <code>A</code> 的所有模板形参（包含其默认模板实参）</li>
 <li>后随 <code>f</code> 未被推导的模板形参（包含其默认模板实参）</li></ul></dd></dl>
 <ul><li><code>f'</code> 的关联<a href="constraints.html" title="cpp/language/constraints">约束</a>是 <code>g</code> 的关联约束和当且仅当 <code>A</code> 的实参可以从结果类型推导这一约束的合取。</li></ul></dd></dl>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> unique_ptr</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    /* ... */</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> unique_ptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[]&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    /* ... */</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">unique_ptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">unique_ptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // #1</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">unique_ptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">unique_ptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[]&gt;;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #2</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">concept</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> NonArray</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = !</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">is_array_v</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">NonArray</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> unique_ptr_nonarray</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">unique_ptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> unique_ptr_array</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">unique_ptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[]&gt;;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 对 unique_ptr_nonarray 生成的推导指引：</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 从 #1（unique_ptr&lt;T&gt; 从 unique_ptr&lt;A&gt; 的推导产生 T = A）：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class A&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     requires(argument_of_unique_ptr_nonarray_is_deducible_from&lt;unique_ptr&lt;A&gt;&gt;)</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// auto F(A*) -&gt; unique_ptr&lt;A&gt;;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 从 #2（unique_ptr&lt;T[]&gt; 从 unique_ptr&lt;A&gt; 的推导不产生结果）：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class T&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     requires(argument_of_unique_ptr_nonarray_is_deducible_from&lt;unique_ptr&lt;T[]&gt;&gt;)</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// auto F(T*) -&gt; unique_ptr&lt;T[]&gt;;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 其中 argument_of_unique_ptr_nonarray_is_deducible_from 能定义为</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// class AA;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class A&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// class AA&lt;unique_ptr_nonarray&lt;A&gt;&gt; {};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class T&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// concept argument_of_unique_ptr_nonarray_is_deducible_from =</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     requires { sizeof(AA&lt;T&gt;); };</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 对 unique_ptr_array 生成的推导指引：</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 从 #1（unique_ptr&lt;T&gt;从 unique_ptr&lt;A[]&gt; 的推导生成 T = A[]）：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class A&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     requires(argument_of_unique_ptr_array_is_deducible_from&lt;unique_ptr&lt;A[]&gt;&gt;)</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// auto F(A(*)[]) -&gt; unique_ptr&lt;A[]&gt;;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 从 #2（unique_ptr&lt;T[]&gt; 从 unique_ptr&lt;A[]&gt; 的推导生成 T = A）：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class A&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     requires(argument_of_unique_ptr_array_is_deducible_from&lt;unique_ptr&lt;A[]&gt;&gt;)</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// auto F(A*) -&gt; unique_ptr&lt;A[]&gt;;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 其中 argument_of_unique_ptr_array_is_deducible_from 能定义为</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// class BB;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class A&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// class BB&lt;unique_ptr_array&lt;A&gt;&gt; {};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// template&lt;class T&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// concept argument_of_unique_ptr_array_is_deducible_from =</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//     requires { sizeof(BB&lt;T&gt;); };</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 用法：</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">unique_ptr_nonarray</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">new</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 推导出 unique_ptr&lt;int&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 从 #1 生成的推导指引返回 unique_ptr&lt;int&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 从 #2 生成的推导指引返回 unique_ptr&lt;int[]&gt;，它被忽略，因为</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//   argument_of_unique_ptr_nonarray_is_deducible_from&lt;unique_ptr&lt;int[]&gt;&gt; 得不到满足</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">unique_ptr_array</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> q</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">new</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">42</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 推导出 unique_ptr&lt;int[]&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 从 #1 生成的推导指引失败（不能从 new int[42] 推导出 A(*)[] 中的 A）</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 从 #2 生成的推导指引返回 unique_ptr&lt;int[]&gt;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">unique_ptr</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="cm">/* ... */</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">unique_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="p">[]</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="cm">/* ... */</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="n">unique_ptr</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span><span class="w">   </span><span class="c1">// #1</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="n">unique_ptr</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// #2</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">concept</span><span class="w"> </span><span class="nc">NonArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_array_v</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="n">NonArray</span><span class="w"> </span><span class="n">A</span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">unique_ptr_nonarray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">unique_ptr_array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">A</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// 对 unique_ptr_nonarray 生成的推导指引：</span>
+
+<span class="c1">// 从 #1（unique_ptr&lt;T&gt; 从 unique_ptr&lt;A&gt; 的推导产生 T = A）：</span>
+<span class="c1">// template&lt;class A&gt;</span>
+<span class="c1">//     requires(argument_of_unique_ptr_nonarray_is_deducible_from&lt;unique_ptr&lt;A&gt;&gt;)</span>
+<span class="c1">// auto F(A*) -&gt; unique_ptr&lt;A&gt;;</span>
+
+<span class="c1">// 从 #2（unique_ptr&lt;T[]&gt; 从 unique_ptr&lt;A&gt; 的推导不产生结果）：</span>
+<span class="c1">// template&lt;class T&gt;</span>
+<span class="c1">//     requires(argument_of_unique_ptr_nonarray_is_deducible_from&lt;unique_ptr&lt;T[]&gt;&gt;)</span>
+<span class="c1">// auto F(T*) -&gt; unique_ptr&lt;T[]&gt;;</span>
+
+<span class="c1">// 其中 argument_of_unique_ptr_nonarray_is_deducible_from 能定义为</span>
+
+<span class="c1">// template&lt;class&gt;</span>
+<span class="c1">// class AA;</span>
+
+<span class="c1">// template&lt;class A&gt;</span>
+<span class="c1">// class AA&lt;unique_ptr_nonarray&lt;A&gt;&gt; {};</span>
+
+<span class="c1">// template&lt;class T&gt;</span>
+<span class="c1">// concept argument_of_unique_ptr_nonarray_is_deducible_from =</span>
+<span class="c1">//     requires { sizeof(AA&lt;T&gt;); };</span>
+
+<span class="c1">// 对 unique_ptr_array 生成的推导指引：</span>
+
+<span class="c1">// 从 #1（unique_ptr&lt;T&gt;从 unique_ptr&lt;A[]&gt; 的推导生成 T = A[]）：</span>
+<span class="c1">// template&lt;class A&gt;</span>
+<span class="c1">//     requires(argument_of_unique_ptr_array_is_deducible_from&lt;unique_ptr&lt;A[]&gt;&gt;)</span>
+<span class="c1">// auto F(A(*)[]) -&gt; unique_ptr&lt;A[]&gt;;</span>
+
+<span class="c1">// 从 #2（unique_ptr&lt;T[]&gt; 从 unique_ptr&lt;A[]&gt; 的推导生成 T = A）：</span>
+<span class="c1">// template&lt;class A&gt;</span>
+<span class="c1">//     requires(argument_of_unique_ptr_array_is_deducible_from&lt;unique_ptr&lt;A[]&gt;&gt;)</span>
+<span class="c1">// auto F(A*) -&gt; unique_ptr&lt;A[]&gt;;</span>
+
+<span class="c1">// 其中 argument_of_unique_ptr_array_is_deducible_from 能定义为</span>
+
+<span class="c1">// template&lt;class&gt;</span>
+<span class="c1">// class BB;</span>
+
+<span class="c1">// template&lt;class A&gt;</span>
+<span class="c1">// class BB&lt;unique_ptr_array&lt;A&gt;&gt; {};</span>
+
+<span class="c1">// template&lt;class T&gt;</span>
+<span class="c1">// concept argument_of_unique_ptr_array_is_deducible_from =</span>
+<span class="c1">//     requires { sizeof(BB&lt;T&gt;); };</span>
+
+<span class="c1">// 用法：</span>
+<span class="n">unique_ptr_nonarray</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span><span class="w"> </span><span class="c1">// 推导出 unique_ptr&lt;int&gt;</span>
+<span class="c1">// 从 #1 生成的推导指引返回 unique_ptr&lt;int&gt;</span>
+<span class="c1">// 从 #2 生成的推导指引返回 unique_ptr&lt;int[]&gt;，它被忽略，因为</span>
+<span class="c1">//   argument_of_unique_ptr_nonarray_is_deducible_from&lt;unique_ptr&lt;int[]&gt;&gt; 得不到满足</span>
+
+<span class="n">unique_ptr_array</span><span class="w"> </span><span class="nf">q</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">42</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 推导出 unique_ptr&lt;int[]&gt;</span>
+<span class="c1">// 从 #1 生成的推导指引失败（不能从 new int[42] 推导出 A(*)[] 中的 A）</span>
+<span class="c1">// 从 #2 生成的推导指引返回 unique_ptr&lt;int[]&gt;</span>
+</pre></div>
 </td>
 <td><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span></td></tr>
 </tbody></table>
 <h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
 <p>只有在不存在模板实参列表时才会进行类模板实参推导。如果指定了模板实参列表，那么就不会发生推导。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">tuple</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> t1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                // OK：推导</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">tuple</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">t2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK：提供了所有实参</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">tuple</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;&gt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">t3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 错误：tuple&lt;&gt; 中没有匹配的构造函数。不进行推导。</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">tuple</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">t4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 错误</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="nf">t1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">                </span><span class="c1">// OK：推导</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK：提供了所有实参</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">t3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">    </span><span class="c1">// 错误：tuple&lt;&gt; 中没有匹配的构造函数。不进行推导。</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t4</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// 错误</span>
+</pre></div>
 <table class="t-rev-begin">
 <tbody><tr class="t-rev t-until-cxx20"><td>
 <p>聚合体的类模板实参推导通常需要用户定义的推导指引：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Agg</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    B</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 隐式生成的指引由默认、复制及移动构造函数组成</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">Agg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">B</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">Agg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// ^ 此推导指引在 C++20 中能隐式生成</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Agg</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> agg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2.0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 从用户定义指引推导出 Agg&lt;int, double&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">... </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">array</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;&amp;... </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">array</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">common_type_t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">...&gt;, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">sizeof...</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)&gt;;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">array</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">5u</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 从用户定义指引推导出 array&lt;unsigned, 3&gt;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Agg</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="c1">// 隐式生成的指引由默认、复制及移动构造函数组成</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="o">&gt;</span>
+<span class="n">Agg</span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Agg</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="c1">// ^ 此推导指引在 C++20 中能隐式生成</span>
+
+<span class="n">Agg</span><span class="w"> </span><span class="n">agg</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">};</span><span class="w"> </span><span class="c1">// 从用户定义指引推导出 Agg&lt;int, double&gt;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="p">...</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span>
+<span class="n">array</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">array</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">common_type_t</span><span class="o">&lt;</span><span class="n">T</span><span class="p">...</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">...(</span><span class="n">T</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5u</span><span class="p">};</span><span class="w"> </span><span class="c1">// 从用户定义指引推导出 array&lt;unsigned, 3&gt;</span>
+</pre></div>
 </td>
 <td><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></td></tr>
 </tbody></table>
 <p>用户定义指引不必是模板：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> S</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    S</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">S</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">S</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">string</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">S</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"hello"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 推导出 S&lt;std::string&gt;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">S</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">S</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="n">S</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">S</span><span class="w"> </span><span class="n">s</span><span class="p">{</span><span class="s">"hello"</span><span class="p">};</span><span class="w"> </span><span class="c1">// 推导出 S&lt;std::string&gt;</span>
+</pre></div>
 <p>在类模板的作用域中，没有形参列表的模板名是注入类名，并可以用作类型。这种情况下不发生类模板推导，但必须显式提供它的模板形参：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> X</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    X</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Iter</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    X</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> e</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Iter</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    auto</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> foo</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> e</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        return</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> X</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">e</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 不推导：X 是当前的 X&lt;T&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Iter</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    auto</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> bar</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Iter</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> e</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        return</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> X</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">typename</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Iter</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">value_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">e</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">); 必须指定所需的模板实参</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    auto</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> baz</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        return</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">X</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 不是注入类名；推导为 X&lt;int&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">X</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">X</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Iter</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="n">X</span><span class="p">(</span><span class="n">Iter</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Iter</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Iter</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">foo</span><span class="p">(</span><span class="n">Iter</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Iter</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w"> </span><span class="c1">// 不推导：X 是当前的 X&lt;T&gt;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Iter</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">bar</span><span class="p">(</span><span class="n">Iter</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Iter</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Iter</span><span class="o">::</span><span class="n">value_type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w"> </span><span class="n">必须指定所需的模板实参</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">baz</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">::</span><span class="n">X</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 不是注入类名；推导为 X&lt;int&gt;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
 <p>在<a href="overload_resolution.html#%E6%9C%80%E4%BD%B3%E5%8F%AF%E8%A1%8C%E5%87%BD%E6%95%B0" title="cpp/language/overload resolution">重载决议</a>中，偏序的优先级高于是否从用户定义推导指引生成函数模板：如果从构造函数生成的函数模板比从用户定义的推导指引生成者更特化，那么会选择从构造函数生成的。因为复制推导候选常常比包装构造函数更特殊，所以此规则表明复制通常优于包装。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int*</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">     // #1</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int*</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #2</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    enum</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> { </span><span style="--shiki-dark:#4FC1FF;--shiki-light:#0070C1">value</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> };</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> N</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">value</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;&amp;, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #3</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 使用 #1 推导出 A&lt;int&gt; 并以 #1 初始化</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 使用 #2（比 #3 更特殊）推导出 A&lt;int&gt; 并以 #2 初始化</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">A</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="p">);</span><span class="w">     </span><span class="c1">// #1</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">A</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="p">);</span><span class="w"> </span><span class="c1">// #2</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">};</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">::</span><span class="n">value</span><span class="o">&gt;</span>
+<span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;&amp;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">A</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// #3</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span><span class="w"> </span><span class="c1">// 使用 #1 推导出 A&lt;int&gt; 并以 #1 初始化</span>
+<span class="n">A</span><span class="w"> </span><span class="n">b</span><span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span><span class="w"> </span><span class="c1">// 使用 #2（比 #3 更特殊）推导出 A&lt;int&gt; 并以 #2 初始化</span>
+</pre></div>
 <p>当之前的决胜规则（包括偏序）无法分辨两个候选函数模板时，应用下列规则：
 </p>
 <ul><li>由用户定义指引生成的函数模板比从构造函数或构造函数模板隐式生成的函数模板更受偏好。</li>
 <li>复制推导候选比所有其他从构造函数或构造函数模板隐式生成的函数模板更受偏好。</li>
 <li>从非模板构造函数隐式生成的函数模板比从构造函数模板隐式生成的函数模板更受偏好。</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> value_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">value_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #1</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // #2</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  // #3</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  // #4</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                 // #5，复制推导候选 A(A);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 使用 #3，从非模板构造函数生成</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #6，比 #5 更不特殊</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">42</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 使用 #6 推导出 A&lt;int&gt; 并以 #1 初始化</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 使用 #5 推导出 A&lt;int&gt; 并以 #2 初始化</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;&gt;;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  // #7，与 #5 一样特殊</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 使用 #7 推导出 A&lt;A&lt;int&gt;&gt; 并以 #1 初始化</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">A</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">value_type</span><span class="p">);</span><span class="w"> </span><span class="c1">// #1</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">A</span><span class="o">&amp;</span><span class="p">);</span><span class="w">   </span><span class="c1">// #2</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span><span class="w">  </span><span class="c1">// #3</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="p">);</span><span class="w">  </span><span class="c1">// #4</span>
+<span class="p">};</span><span class="w">                 </span><span class="c1">// #5，复制推导候选 A(A);</span>
+
+<span class="n">A</span><span class="w"> </span><span class="nf">x</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// 使用 #3，从非模板构造函数生成</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">A</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// #6，比 #5 更不特殊</span>
+
+<span class="n">A</span><span class="w"> </span><span class="nf">a</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span><span class="w"> </span><span class="c1">// 使用 #6 推导出 A&lt;int&gt; 并以 #1 初始化</span>
+<span class="n">A</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用 #5 推导出 A&lt;int&gt; 并以 #2 初始化</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="n">A</span><span class="p">(</span><span class="n">A</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">A</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">;</span><span class="w">  </span><span class="c1">// #7，与 #5 一样特殊</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用 #7 推导出 A&lt;A&lt;int&gt;&gt; 并以 #1 初始化</span>
+</pre></div>
 <p>如果模板形参是类模板形参，那么到该形参的无 cv 限定的右值引用不是<a href="template_argument_deduction.html" title="cpp/language/template argument deduction">转发引用</a>：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">U</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int*</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #1：T&amp;&amp; 不是转发引用</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                       //     U&amp;&amp; 是转发引用</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int*</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">      // #2：T&amp;&amp; 不是转发引用</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;&amp;, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*) -&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #3：T&amp;&amp; 是转发引用</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ip</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ip</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  // 错误，不能从 #1 推导</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ip</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 使用 #1 推导出 A&lt;int&gt; 并以 #1 初始化</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">A</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ip</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 使用 #3 推导出 A&lt;int&amp;&gt; 并以 #2 初始化</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">A</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="o">&amp;&amp;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="p">);</span><span class="w"> </span><span class="c1">// #1：T&amp;&amp; 不是转发引用</span>
+<span class="w">                       </span><span class="c1">//     U&amp;&amp; 是转发引用</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;&amp;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="p">);</span><span class="w">      </span><span class="c1">// #2：T&amp;&amp; 不是转发引用</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="n">A</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;&amp;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">A</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// #3：T&amp;&amp; 是转发引用</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">ip</span><span class="p">;</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">};</span><span class="w">  </span><span class="c1">// 错误，不能从 #1 推导</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a0</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">};</span><span class="w"> </span><span class="c1">// 使用 #1 推导出 A&lt;int&gt; 并以 #1 初始化</span>
+<span class="n">A</span><span class="w"> </span><span class="n">a2</span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">};</span><span class="w">    </span><span class="c1">// 使用 #3 推导出 A&lt;int&amp;&gt; 并以 #2 初始化</span>
+</pre></div>
 <p>当从类模板的某个特化类型的单个实参进行的初始化有问题时，通常与默认的包装相比，更偏好复制推导：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">tuple</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> t1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  //std::tuple&lt;int&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">tuple</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> t2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">t1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> //std::tuple&lt;int&gt;，不是 std::tuple&lt;std::tuple&lt;int&gt;&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">vector</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> v1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // std::vector&lt;int&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">vector</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> v2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">v1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">     // std::vector&lt;int&gt;，不是 std::vector&lt;std::vector&lt;int&gt;&gt;（P0702R1）</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">vector</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> v3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">v1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">v2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // std::vector&lt;std::vector&lt;int&gt;&gt;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="n">t1</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span><span class="w">  </span><span class="c1">//std::tuple&lt;int&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="n">t2</span><span class="p">{</span><span class="n">t1</span><span class="p">};</span><span class="w"> </span><span class="c1">//std::tuple&lt;int&gt;，不是 std::tuple&lt;std::tuple&lt;int&gt;&gt;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="w"> </span><span class="n">v1</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span><span class="w">   </span><span class="c1">// std::vector&lt;int&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="w"> </span><span class="n">v2</span><span class="p">{</span><span class="n">v1</span><span class="p">};</span><span class="w">     </span><span class="c1">// std::vector&lt;int&gt;，不是 std::vector&lt;std::vector&lt;int&gt;&gt;（P0702R1）</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="w"> </span><span class="n">v3</span><span class="p">{</span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">};</span><span class="w"> </span><span class="c1">// std::vector&lt;std::vector&lt;int&gt;&gt;</span>
+</pre></div>
 <p>除了复制 VS. 包装的特殊情形外，列表初始化中保持对初始化器列表构造函数的强偏好。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">vector</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> v1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // std::vector&lt;int&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">vector</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> v2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">v1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">begin</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(), </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">v1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">end</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">());</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // std::vector&lt;int&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">vector</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> v3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">v1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">begin</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(), </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">v1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">end</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // std::vector&lt;std::vector&lt;int&gt;::iterator&gt;</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="w"> </span><span class="n">v1</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span><span class="w"> </span><span class="c1">// std::vector&lt;int&gt;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="w"> </span><span class="nf">v2</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"> </span><span class="c1">// std::vector&lt;int&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="w"> </span><span class="n">v3</span><span class="p">{</span><span class="n">v1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="n">end</span><span class="p">()};</span><span class="w"> </span><span class="c1">// std::vector&lt;std::vector&lt;int&gt;::iterator&gt;</span>
+</pre></div>
 <p>在引入类模板实参推导前，避免显式指定实参的常用手段是使用函数模板：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">tuple</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1.0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">             // std::tuple&lt;int, double&gt;，使用推导</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">make_tuple</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1.0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // std::tuple&lt;int, double&gt;，C++17 前</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="n">p1</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">};</span><span class="w">             </span><span class="c1">// std::tuple&lt;int, double&gt;，使用推导</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_tuple</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span><span class="w"> </span><span class="c1">// std::tuple&lt;int, double&gt;，C++17 前</span>
+</pre></div>
 <table class="wikitable">
 
 <tbody><tr>
@@ -1162,6 +1157,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":4096,"wgPageParseReport":{"limitreport":{"cputime":"0.228","walltime":"3.699","ppvisitednodes":{"value":8045,"limit":1000000},"postexpandincludesize":{"value":277506,"limit":4194304},"templateargumentsize":{"value":57951,"limit":4194304},"expansiondepth":{"value":19,"limit":100},"expensivefunctioncount":{"value":52,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":63657,"limit":5000000},"timingprofile":["100.00% 3601.477      1 -total"," 95.35% 3433.880     21 Template:source"," 18.09%  651.442      6 Template:rrev"," 18.00%  648.354      6 Template:rev","  2.33%   84.094      1 Template:cpp/language/declarations/expressions/templates/navbar","  2.30%   82.933      1 Template:navbar","  1.40%   50.555    218 Template:nv","  0.90%   32.273      1 Template:cpp/language/navbar_content","  0.76%   27.376      1 Template:cpp/language/declarations/navbar_content","  0.56%   20.177     13 Template:nv_ln"]},"cachereport":{"timestamp":"20260422005049","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422005049 --></html>
+</body>
+<!-- Cached 20260422005049 -->
+</html>

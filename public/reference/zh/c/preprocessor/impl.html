@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>实现定义行为的控制</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"de56281f9e7b8bd80eccd6f7","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/preprocessor/impl","wgTitle":"c/preprocessor/impl","wgCurRevisionId":96828,"wgRevisionId":96828,"wgArticleId":7959,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面","有原因的 todo","无示例的 todo"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/preprocessor/impl","wgRelevantArticleId":7959,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki .line{display:inline-block;width:100%}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_preprocessor_impl rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -43,7 +38,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
@@ -61,7 +56,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../language.html" title="c/language">C 语言</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="c/language">C 语言</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5"> <a href="../language/basic_concepts.html" title="c/language/basic concepts">基本概念</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"> <a href="../keyword.html" title="c/keyword">关键词</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"> <a href="../preprocessor.html" title="c/preprocessor">预处理器</a></td></tr>
@@ -73,7 +68,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"> 杂项</td></tr>
 <tr class="t-nv-h2"><td colspan="5"> <a href="../language/history.html" title="c/language/history">C 的历史</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"> <a href="../experimental.html" title="c/experimental">技术规范</a> </td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../preprocessor.html" title="c/preprocessor"> 预处理器</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../preprocessor.html" title="c/preprocessor"> 预处理器</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="conditional.html" title="c/preprocessor/conditional"><span class="t-lines"><span>#if</span><span>#ifdef</span><span>#ifndef</span><span>#else</span><span>#elif</span><span>#elifdef</span><span>#elifndef</span><span>#endif</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span></span><span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="replace.html" title="c/preprocessor/replace"><span class="t-lines"><span>#define</span><span>#undef</span><span>#,## 运算符</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="include.html" title="c/preprocessor/include"><span class="t-lines"><span>#include</span><span>__has_include</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
@@ -81,7 +76,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../cpp/preprocessor/impl.html" title="cpp/preprocessor/impl"><span class="t-lines"><span>#pragma</span><span>_Pragma</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="line.html" title="c/preprocessor/line"><span class="t-lines"><span>#line</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="embed.html" title="c/preprocessor/embed"><span class="t-lines"><span>#embed</span><span>__has_embed</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span><span><span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></span></span></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <p>由 <code>#pragma</code> 指令控制实现定义行为。
 </p>
 <h3><span id=".E8.AF.AD.E6.B3.95"></span><span class="mw-headline" id="语法">语法</span></h3>
@@ -180,17 +175,17 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p><span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="cp">#pragma once</span></code></span> 是受到<a href="https://en.wikipedia.org/wiki/Pragma_once#Portability" class="extiw" title="enwiki:Pragma once">绝大多数现代编译器</a>支持的非标准语用。当某个头文件中包含它时，指示编译器只对其分析一次，即使它在同一源文件中（直接或间接）被包含了多次也是如此。
 </p><p>阻止同一头文件的多次包含的标准方式是使用<a href="https://en.wikipedia.org/wiki/Include_guard" class="extiw" title="enwiki:Include guard">包含防护</a>：
 </p>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#ifndef</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> LIBRARY_FILENAME_H</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#define</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> LIBRARY_FILENAME_H</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 头文件的内容</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#endif</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /* LIBRARY_FILENAME_H */</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#ifndef LIBRARY_FILENAME_H</span>
+<span class="cp">#define LIBRARY_FILENAME_H</span>
+<span class="c1">// 头文件的内容</span>
+<span class="cp">#endif </span><span class="cm">/* LIBRARY_FILENAME_H */</span>
+</pre></div>
 <p>从而在任何翻译单元中，该头文件除首次以外被包含时都被排除出编译。所有现代编译器都记录头文件使用了包含防护的事实，只要该防护仍有定义，再遇到该头文件时就不再分析它。（例子见 <a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/cpp/Once-Only-Headers.html">gcc</a> ）
 </p><p>使用 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="cp">#pragma once</span></code></span> 时，同一个头文件可以变为
 </p>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#pragma</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#E50000"> once</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 头文件的内容</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#pragma once</span>
+<span class="c1">// 头文件的内容</span>
+</pre></div>
 <p>不同于头文件防护，这条 pragma 使得，不会错误地在多个文件中使用相同的宏名。另一方面，因为带 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="cp">#pragma once</span></code></span> 的文件是基于其文件系统层次的身份所排除的，所以若头文件在项目中多处出现，则不可避免地再次包含它。
 </p>
 <h4><span id=".23pragma_pack"></span><span class="mw-headline" id="#pragma_pack"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="cp">#pragma pack</span></code></span></h4>
@@ -311,25 +306,25 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <table style="border-top:solid 1px;border-bottom:none;border-left:none;border-right:none;">
 
 <tbody><tr style="vertical-align:top;">
-<td>1.&nbsp;</td>
+<td>1. </td>
 <td><a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/cpp/preprocessor/pragma-directives-and-the-pragma-keyword?view=vs-2019">Visual Studio 2019 的 C++ 语用</a>
 <p>{{elink|1=GCC 接受的 <a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcc/Pragmas.html">语用</a>
 </p>
 </td></tr>
 <tr style="vertical-align:top;">
-<td>2.&nbsp;</td>
+<td>2. </td>
 <td>IBM AIX XL C 16.1 的<a rel="nofollow" class="external text" href="https://www.ibm.com/support/knowledgecenter/en/SSGH3R_16.1.0/com.ibm.xlcpp161.aix.doc/compiler_ref/pragma_descriptions.html">单独语用描述</a>及<a rel="nofollow" class="external text" href="https://www.ibm.com/support/knowledgecenter/en/SSGH3R_16.1.0/com.ibm.xlcpp161.aix.doc/language_ref/std_pragmas.html">标准语用</a>
 </td></tr>
 <tr style="vertical-align:top;">
-<td>3.&nbsp;</td>
+<td>3. </td>
 <td>Sun Studio 11 C++ 用户手册的 <a rel="nofollow" class="external text" href="http://download.oracle.com/docs/cd/E19422-01/819-3690/Pragmas_App.html#73499">附录 B 语用</a>
 </td></tr>
 <tr style="vertical-align:top;">
-<td>4.&nbsp;</td>
+<td>4. </td>
 <td><a rel="nofollow" class="external text" href="https://software.intel.com/content/www/us/en/develop/documentation/cpp-compiler-developer-guide-and-reference/top/compiler-reference/pragmas.html">Intel C++ 编译器语用</a>
 </td></tr>
 <tr style="vertical-align:top;">
-<td>5.&nbsp;</td>
+<td>5. </td>
 <td><a rel="nofollow" class="external text" href="http://h21007.www2.hp.com/portal/download/files/unprot/aCxx/Online_Help/pragmas.htm">HP aCC 编译器语用</a>
 </td></tr></tbody></table></div>
 <!-- 
@@ -388,6 +383,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":598,"wgPageParseReport":{"limitreport":{"cputime":"0.097","walltime":"0.476","ppvisitednodes":{"value":2937,"limit":1000000},"postexpandincludesize":{"value":62246,"limit":4194304},"templateargumentsize":{"value":12473,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":9,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1928,"limit":5000000},"timingprofile":["100.00%  440.225      1 -total"," 78.62%  346.105      1 Template:cpp/preprocessor/pragma_once"," 77.17%  339.714      2 Template:source","  6.13%   26.998      1 Template:cpp/preprocessor/pragma_pack","  5.41%   23.812      1 Template:c/preprocessor/navbar","  5.25%   23.132      1 Template:navbar","  4.10%   18.047      2 Template:todo","  3.87%   17.016      2 Template:ambox","  3.06%   13.467      2 Template:cat_handler","  2.91%   12.795      1 Template:c/preprocessor/navbar_content"]},"cachereport":{"timestamp":"20260422000602","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422000602 --></html>
+</body>
+<!-- Cached 20260422000602 -->
+</html>

@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>scanf, fscanf, sscanf, scanf_s, fscanf_s, sscanf_s</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"aa9c63bc9b5b918855755a00","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/io/fscanf","wgTitle":"c/io/fscanf","wgCurRevisionId":97836,"wgRevisionId":97836,"wgArticleId":979,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/io/fscanf","wgRelevantArticleId":979,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki .line{display:inline-block;width:100%}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_io_fscanf rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -41,7 +36,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../io.html" title="c/io">io</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
@@ -59,11 +54,11 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../io.html" title="c/io"> 文件输入/输出</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../io.html" title="c/io"> 文件输入/输出</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">类型与对象</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="std_streams.html" title="c/io/std streams"><span class="t-lines"><span>stdin</span><span>stdout</span><span>stderr</span></span></a></div><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="std_streams.html" title="c/io/std streams"><span class="t-lines"><span>stdin</span><span>stdout</span><span>stderr</span></span></a></div><div><span class="t-lines"><span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">        </code></span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FILE.html" title="c/io/FILE"><span class="t-lines"><span>FILE</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fpos_t.html" title="c/io/fpos t"><span class="t-lines"><span>fpos_t</span></span></a></div></div></td></tr>
@@ -76,7 +71,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">文件访问</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fopen.html" title="c/io/fopen"><span class="t-lines"><span>fopen</span><span>fopen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="freopen.html" title="c/io/freopen"><span class="t-lines"><span>freopen</span><span>freopen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="freopen.html" title="c/io/freopen"><span class="t-lines"><span>freopen</span><span>freopen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwide.html" title="c/io/fwide"><span class="t-lines"><span>fwide</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="setbuf.html" title="c/io/setbuf"><span class="t-lines"><span>setbuf</span></span></a></div></div></td></tr>
@@ -114,7 +109,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwscanf.html" title="c/io/fwscanf"><span class="t-lines"><span>wscanf</span><span>fwscanf</span><span>swscanf</span><span>wscanf_s</span><span>fwscanf_s</span><span>swscanf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfscanf.html" title="c/io/vfscanf"><span class="t-lines"><span>vscanf</span><span>vfscanf</span><span>vsscanf</span><span>vscanf_s</span><span>vfscanf_s</span><span>vsscanf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfwscanf.html" title="c/io/vfwscanf"><span class="t-lines"><span>vwscanf</span><span>vfwscanf</span><span>vswscanf</span><span>vwscanf_s</span><span>vfwscanf_s</span><span>vswscanf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfwscanf.html" title="c/io/vfwscanf"><span class="t-lines"><span>vwscanf</span><span>vfwscanf</span><span>vswscanf</span><span>vwscanf_s</span><span>vfwscanf_s</span><span>vswscanf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">直接输入/输出</td></tr>
@@ -126,7 +121,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">有格式输出</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fprintf.html" title="c/io/fprintf"><span class="t-lines"><span>printf</span><span>fprintf</span><span>sprintf</span><span>snprintf</span><span>printf_s</span><span>fprintf_s</span><span>sprintf_s</span><span>snprintf_s</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwprintf.html" title="c/io/fwprintf"><span class="t-lines"><span>wprintf</span><span>fwprintf</span><span>swprintf</span><span>wprintf_s</span><span>fwprintf_s</span><span>swprintf_s</span><span>snwprintf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwprintf.html" title="c/io/fwprintf"><span class="t-lines"><span>wprintf</span><span>fwprintf</span><span>swprintf</span><span>wprintf_s</span><span>fwprintf_s</span><span>swprintf_s</span><span>snwprintf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfprintf.html" title="c/io/vfprintf"><span class="t-lines"><span>vprintf</span><span>vfprintf</span><span>vsprintf</span><span>vsnprintf</span><span>vprintf_s</span><span>vfprintf_s</span><span>vsprintf_s</span><span>vsnprintf_s</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfwprintf.html" title="c/io/vfwprintf"><span class="t-lines"><span>vwprintf</span><span>vfwprintf</span><span>vswprintf</span><span>vwprintf_s</span><span>vfwprintf_s</span><span>vswprintf_s</span><span>vsnwprintf_s</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c95" style="white-space: nowrap;">(C95)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
@@ -159,7 +154,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tmpnam.html" title="c/io/tmpnam"><span class="t-lines"><span>tmpnam</span><span>tmpnam_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../header/stdio.html" title="c/header/stdio"><tt>&lt;stdio.h&gt;</tt></a></code> 定义
@@ -173,14 +168,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-until-c99">
-<td> <div><div style="max-width: min(calc(7.68332px * 46 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> scanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">          *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ... );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 46 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">scanf</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">          </span><span class="o">*</span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-until-c99" style="white-space: nowrap;">(C99 前)</span> </td>
 </tr>
 <tr class="t-dcl t-since-c99">
-<td> <div><div style="max-width: min(calc(7.68332px * 46 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> scanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ... );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 46 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">scanf</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span> </td>
 </tr>
@@ -191,14 +186,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-until-c99">
-<td> <div><div style="max-width: min(calc(7.68332px * 70 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> fscanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( FILE          *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">stream</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">          *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ... );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 70 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">fscanf</span><span class="p">(</span><span class="w"> </span><span class="kt">FILE</span><span class="w">          </span><span class="o">*</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">          </span><span class="o">*</span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-until-c99" style="white-space: nowrap;">(C99 前)</span> </td>
 </tr>
 <tr class="t-dcl t-since-c99">
-<td> <div><div style="max-width: min(calc(7.68332px * 70 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> fscanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( FILE *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> stream</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ... );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 70 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">fscanf</span><span class="p">(</span><span class="w"> </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span> </td>
 </tr>
@@ -209,33 +204,33 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-until-c99">
-<td> <div><div style="max-width: min(calc(7.68332px * 76 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> sscanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">          *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">buffer</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">          *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ... );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 76 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">sscanf</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">          </span><span class="o">*</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">          </span><span class="o">*</span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-until-c99" style="white-space: nowrap;">(C99 前)</span> </td>
 </tr>
 <tr class="t-dcl t-since-c99">
-<td> <div><div style="max-width: min(calc(7.68332px * 76 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> sscanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> buffer</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ... );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 76 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">sscanf</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span> </td>
 </tr>
 <tr class="t-dcl-rev-end" style="display:none" aria-hidden="true"><td colspan="3"></td></tr>
 <tr class="t-dcl t-since-c11">
-<td> <div><div style="max-width: min(calc(7.68332px * 46 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> scanf_s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ...);</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 46 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">scanf_s</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+</pre></div></div></td>
 <td> (4) </td>
 <td> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span> </td>
 </tr>
 <tr class="t-dcl t-since-c11">
-<td> <div><div style="max-width: min(calc(7.68332px * 70 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> fscanf_s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(FILE *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> stream</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ...);</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 70 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">fscanf_s</span><span class="p">(</span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+</pre></div></div></td>
 <td> (5) </td>
 <td> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span> </td>
 </tr>
 <tr class="t-dcl t-since-c11">
-<td> <div><div style="max-width: min(calc(7.68332px * 76 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> sscanf_s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> buffer</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">restrict</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, ...);</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 76 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">sscanf_s</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+</pre></div></div></td>
 <td> (6) </td>
 <td> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span> </td>
 </tr>
@@ -300,7 +295,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <table class="wikitable" style="text-align: center;">
 
 <tbody><tr>
-<th style="word-break: keep-all;">&nbsp;转换指示符&nbsp;
+<th style="word-break: keep-all;"> 转换指示符 
 </th>
 <th>解释
 </th>
@@ -379,7 +374,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>匹配一个<b>字符</b>或<b>字符</b>的序列。
 </p>
 <ul><li>如果使用了宽度指示符，那么匹配恰好<i>宽度</i>个字符（该实参必须是指向有充足空间的数组的指针）。</li>
-<li>与 %s 和&nbsp;%[ 不同，它不会在数组后附加空字符。</li></ul>
+<li>与 %s 和 %[ 不同，它不会在数组后附加空字符。</li></ul>
 </td>
 <td rowspan="3" style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>不适用</small>
 </td>
@@ -563,73 +558,73 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
 <p>因为多数转换指示符首先消耗掉所有连续空白符，如下的代码
 </p>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">scanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%d</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">scanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%d</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+</pre></div>
 <p>将读取在不同行上（第二个 %d 会消耗第一个剩下的换行符）或同一行由空格或制表符分隔（第二个 %d 会消耗空格或制表符）的整数。
 </p><p>不消耗前导空白符的转换指示符，如 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="o">%</span><span class="n">c</span></code></span>，可以通过在格式字符串中前置一个空白符令它如此：
 </p>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">scanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%d</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">scanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">" </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%c</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 消耗 %d 后的所有后继空白符，然后读一个 char</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">" %c"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="c1">// 消耗 %d 后的所有后继空白符，然后读一个 char</span>
+</pre></div>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#define</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> __STDC_WANT_LIB_EXT1__ </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdio.h&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stddef.h&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;locale.h&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> i, j;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    float</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> x, y;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> str1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">10</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">], </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">str2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">];</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    wchar_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> warr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">];</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    setlocale</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(LC_ALL, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"en_US.utf8"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> input</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">[]</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"25 54.32E-1 Thompson 56789 0123 56ß水"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    /* 按下列分析：</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       %d ：整数</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       %f ：浮点值</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       %9s ：最多有 9 个非空白符的字符串</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       %2d ：两位整数（数位 5 和 6）</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       %f ：浮点值（数位 7、8、9）</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">      &nbsp;%*d ：不存储于任何位置的整数</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       ' ' ：所有连续空白符</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       %3[0-9] ：至多有 3 个十进制数字的字符串（数位 5 和 6）</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       %2lc ：两个宽字符，使用多字节到宽转换  */</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ret = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sscanf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(input, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%d%f%9s%2d%f%*d</span><span style="--shiki-dark:#F44747;--shiki-light:#CD3131"> %</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">3[0-9]</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%2lc</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">                     &amp;i, &amp;x, str1, &amp;j, &amp;y, str2, warr);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"Converted </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%d</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> fields:</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
-<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">           "i = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%d</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
-<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">           "x = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%f</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
-<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">           "str1 = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%s</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
-<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">           "j = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%d</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
-<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">           "y = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%f</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
-<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">           "str2 = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%s</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
-<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">           "warr[0] = U+</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%x</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
-<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">           "warr[1] = U+</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%x</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">           ret, i, x, str1, j, y, str2, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">warr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">], </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">warr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#ifdef</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> __STDC_LIB_EXT1__</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> n = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sscanf_s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(input, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%d%f%s</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, &amp;i, &amp;x, str1, (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">rsize_t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">sizeof</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> str1);</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 向 i 写入 25，向 x 写入 5.432，向 str1 写入 9 个字节 "thompson\0"，并向 n 写入 3。</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#endif</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define __STDC_WANT_LIB_EXT1__ 1</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stddef.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;locale.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">str1</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span><span class="w"> </span><span class="n">str2</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">wchar_t</span><span class="w"> </span><span class="n">warr</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">    </span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span><span class="w"> </span><span class="s">"en_US.utf8"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">input</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"25 54.32E-1 Thompson 56789 0123 56ß水"</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/* 按下列分析：</span>
+<span class="cm">       %d ：整数</span>
+<span class="cm">       %f ：浮点值</span>
+<span class="cm">       %9s ：最多有 9 个非空白符的字符串</span>
+<span class="cm">       %2d ：两位整数（数位 5 和 6）</span>
+<span class="cm">       %f ：浮点值（数位 7、8、9）</span>
+<span class="cm">       %*d ：不存储于任何位置的整数</span>
+<span class="cm">       ' ' ：所有连续空白符</span>
+<span class="cm">       %3[0-9] ：至多有 3 个十进制数字的字符串（数位 5 和 6）</span>
+<span class="cm">       %2lc ：两个宽字符，使用多字节到宽转换  */</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sscanf</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="s">"%d%f%9s%2d%f%*d %3[0-9]%2lc"</span><span class="p">,</span>
+<span class="w">                     </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">str1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">str2</span><span class="p">,</span><span class="w"> </span><span class="n">warr</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Converted %d fields:</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">           </span><span class="s">"i = %d</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">           </span><span class="s">"x = %f</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">           </span><span class="s">"str1 = %s</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">           </span><span class="s">"j = %d</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">           </span><span class="s">"y = %f</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">           </span><span class="s">"str2 = %s</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">           </span><span class="s">"warr[0] = U+%x</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">           </span><span class="s">"warr[1] = U+%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span>
+<span class="w">           </span><span class="n">ret</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">str1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">str2</span><span class="p">,</span><span class="w"> </span><span class="n">warr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">warr</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+<span class="cp">#ifdef __STDC_LIB_EXT1__</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sscanf_s</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="s">"%d%f%s"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">str1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">rsize_t</span><span class="p">)</span><span class="k">sizeof</span><span class="w"> </span><span class="n">str1</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// 向 i 写入 25，向 x 写入 5.432，向 str1 写入 9 个字节 "thompson\0"，并向 n 写入 3。</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+</pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>Converted 7 fields:</span></span>
-<span class="line"><span>i = 25</span></span>
-<span class="line"><span>x = 5.432000</span></span>
-<span class="line"><span>str1 = Thompson</span></span>
-<span class="line"><span>j = 56</span></span>
-<span class="line"><span>y = 789.000000</span></span>
-<span class="line"><span>str2 = 56</span></span>
-<span class="line"><span>warr[0] = U+df</span></span>
-<span class="line"><span>warr[1] = U+6c34</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Converted 7 fields:
+i = 25
+x = 5.432000
+str1 = Thompson
+j = 56
+y = 789.000000
+str2 = 56
+warr[0] = U+df
+warr[1] = U+6c34
+</pre></div> 
 </div>
 <h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
 <div class="t-ref-std-17">
@@ -679,7 +674,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td>打印格式化输出到 <span class="t-lc">stdout</span>、文件流或缓冲区  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
 
 <tr class="t-dsc">
-<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>scanf</span>, <span>fscanf</span>, <span>sscanf</span></span>&nbsp;的 <span><span><a href="../../cpp/io/c/fscanf.html" title="cpp/io/c/fscanf">C++ 文档</a></span></span></div>
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>scanf</span>, <span>fscanf</span>, <span>sscanf</span></span> 的 <span><span><a href="../../cpp/io/c/fscanf.html" title="cpp/io/c/fscanf">C++ 文档</a></span></span></div>
 </td></tr>
 
 </tbody></table></div></div>
@@ -739,6 +734,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1302,"wgPageParseReport":{"limitreport":{"cputime":"0.232","walltime":"1.065","ppvisitednodes":{"value":10640,"limit":1000000},"postexpandincludesize":{"value":273061,"limit":4194304},"templateargumentsize":{"value":53495,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":79,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":30606,"limit":5000000},"timingprofile":["100.00%  934.981      1 -total"," 53.72%  502.253      4 Template:source"," 28.05%  262.288      1 Template:example"," 13.08%  122.335      1 Template:cpp/io/c/scanf_format"," 11.41%  106.651      1 Template:c/io/navbar"," 11.27%  105.359      1 Template:navbar","  9.74%   91.030      1 Template:c/io/navbar_content","  7.99%   74.659     46 Template:c","  6.85%   64.058     49 Template:nv_ln","  6.29%   58.774     66 Template:nv"]},"cachereport":{"timestamp":"20260422031822","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422031822 --></html>
+</body>
+<!-- Cached 20260422031822 -->
+</html>

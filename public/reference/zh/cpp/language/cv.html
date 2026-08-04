@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>cv（const 与 volatile）类型限定符</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"cea97e2fd0f5124798199608","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/language/cv","wgTitle":"cpp/language/cv","wgCurRevisionId":97999,"wgRevisionId":97999,"wgArticleId":2699,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/language/cv","wgRelevantArticleId":2699,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em}
-.shiki .line{display:block;min-height:1em}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_language_cv rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -43,7 +38,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
@@ -72,7 +67,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">一般主题</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -138,10 +133,10 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">说明符</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code>/<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="auto.html" title="cpp/language/auto"><tt>auto</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="consteval.html" title="cpp/language/consteval"><tt>consteval</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="constinit.html" title="cpp/language/constinit"><tt>constinit</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 </tbody></table></div></td></tr>
@@ -213,7 +208,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">类特有的函数性质</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="virtual.html" title="cpp/language/virtual">虚函数</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code>override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code>override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="final.html" title="cpp/language/final"><code>final</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="explicit.html" title="cpp/language/explicit"><tt>explicit</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
@@ -246,7 +241,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr class="t-nv"><td colspan="5"><a href="history.html" title="cpp/language/history">C++ 的历史</a></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="declarations.html" title="cpp/language/declarations">声明</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="declarations.html" title="cpp/language/declarations">声明</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">概览</td></tr>
@@ -264,7 +259,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="consteval.html" title="cpp/language/consteval"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">consteval</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="constinit.html" title="cpp/language/constinit"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">constinit</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="storage_duration.html" title="cpp/language/storage duration">存储类说明符</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="tu_local.html" title="cpp/language/tu local">翻译单元局部</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tu_local.html" title="cpp/language/tu local">翻译单元局部</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span>      </td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="class.html" title="cpp/language/class"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">class</span></code>/<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">struct</span></code></span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="union.html" title="cpp/language/union"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">union</span></code></span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="enum.html" title="cpp/language/enum"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">enum</span></code></span></span></a></div></div></td></tr>
@@ -272,7 +267,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="auto.html" title="cpp/language/auto"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">auto</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="alignas.html" title="cpp/language/alignas"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">alignas</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code></span><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="pack_indexing.html#%E5%8C%85%E7%B4%A2%E5%BC%95%E8%AF%B4%E6%98%8E%E7%AC%A6" title="cpp/language/pack indexing">包索引说明符</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="pack_indexing.html#%E5%8C%85%E7%B4%A2%E5%BC%95%E8%AF%B4%E6%98%8E%E7%AC%A6" title="cpp/language/pack indexing">包索引说明符</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span>    </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="elaborated_type_specifier.html" title="cpp/language/elaborated type specifier">详述类型说明符</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="attributes.html" title="cpp/language/attributes">属性</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -282,7 +277,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="array.html" title="cpp/language/array">数组</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5">块声明</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="declarations.html" title="cpp/language/declarations">简单声明</a></td></tr>
-<tr class="t-nv"><td colspan="5">&nbsp;&nbsp;→<a href="structured_binding.html" title="cpp/language/structured binding">结构化绑定声明</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5">  →<a href="structured_binding.html" title="cpp/language/structured binding">结构化绑定声明</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="type_alias.html" title="cpp/language/type alias">别名声明</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="namespace_alias.html" title="cpp/language/namespace alias">命名空间别名定义</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="using_declaration.html" title="cpp/language/using declaration"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">using</span></code> 声明</a></td></tr>
@@ -304,7 +299,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <p>可出现于任何类型说明符（包括<a href="declarations.html" title="cpp/language/declarations">声明语法</a>的 <span class="t-spar">声明说明符序列</span>）中，以指定被声明对象或被命名类型的常量性（constness）或易变性（volatility）。
 </p>
 <ul><li><code><b>const</b></code> ——定义类型为<i>常量</i> ﻿类型。</li>
@@ -344,33 +339,33 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <ul><li><code><b>mutable</b></code> - 允许常量类类型对象修改相应类成员（即类成员可变）。</li></ul>
 <p>可以在非引用非常量类型的非静态<a href="data_members.html" title="cpp/language/data members">数据成员</a>的声明中出现：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> X</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    mutable</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    mutable</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> q</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 非良构</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    mutable</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;       </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">r</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 非良构</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">X</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">mutable</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK</span>
+<span class="w">    </span><span class="k">mutable</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">q</span><span class="p">;</span><span class="w"> </span><span class="c1">// 非良构</span>
+<span class="w">    </span><span class="k">mutable</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w">       </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// 非良构</span>
+<span class="p">};</span>
+</pre></div>
 <p><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">mutable</span></code> 用于指定不影响类的外部可观察状态的成员（通常用于互斥量、记忆缓存、惰性求值和访问指令等）。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> ThreadsafeCounter</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    mutable</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">mutex</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // “M&amp;M 规则”：mutable 与 mutex 一起出现</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> data</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">public:</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> get</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">lock_guard</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">mutex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">lk</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        return</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> data</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> inc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">lock_guard</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">mutex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">lk</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        ++</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">data</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ThreadsafeCounter</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">mutable</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="c1">// “M&amp;M 规则”：mutable 与 mutex 一起出现</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">get</span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lk</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">inc</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lk</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+<span class="w">        </span><span class="o">++</span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
 <h3><span id=".E8.BD.AC.E6.8D.A2"></span><span class="mw-headline" id="转换">转换</span></h3>
 <p>存在一种基于限制性的增长顺序的 cv 限定符的偏序。从而可以称类型具有<i>更多</i> ﻿或<i>更少</i> ﻿的 cv 限定：
 </p>
@@ -404,48 +399,48 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstdlib&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">          // 非 const 对象</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // const 对象</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // const 对象（同 n2）</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    volatile</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // volatile 对象</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> struct</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">        int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">        mutable</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    } </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = {</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">        // 带 mutable 成员的 const 对象</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    n1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK，可修改对象</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//  n2 = 2; // 错误：不可修改对象</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    n4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK，当做副作用</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//  x.n1 = 4; // 错误：const 对象的成员为 const</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK，const 对象的 mutable 成员不是 const</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> r1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 绑定到非 const 对象的 const 引用</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//  r1 = 2; // 错误：试图通过到 const 的引用修改</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const_cast</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;&gt;(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">r1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK，修改非 const 对象 n1</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> r2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 绑定到 const 对象的 const 引用</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//  r2 = 2; // 错误：试图通过到 const 的引用修改</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//  const_cast&lt;int&amp;&gt;(r2) = 2; // 未定义行为：试图修改 const 对象 n2</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">system</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"g++ -O3 -Wa,-adhln ./main.cpp"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 在 POSIX 系统上可能给出汇编</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">          </span><span class="c1">// 非 const 对象</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">    </span><span class="c1">// const 对象</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">n3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">    </span><span class="c1">// const 对象（同 n2）</span>
+<span class="w">    </span><span class="k">volatile</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// volatile 对象</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">mutable</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span><span class="w">        </span><span class="c1">// 带 mutable 成员的 const 对象</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK，可修改对象</span>
+<span class="c1">//  n2 = 2; // 错误：不可修改对象</span>
+<span class="w">    </span><span class="n">n4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK，当做副作用</span>
+<span class="c1">//  x.n1 = 4; // 错误：const 对象的成员为 const</span>
+<span class="w">    </span><span class="n">x</span><span class="p">.</span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK，const 对象的 mutable 成员不是 const</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 绑定到非 const 对象的 const 引用</span>
+<span class="c1">//  r1 = 2; // 错误：试图通过到 const 的引用修改</span>
+<span class="w">    </span><span class="k">const_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK，修改非 const 对象 n1</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 绑定到 const 对象的 const 引用</span>
+<span class="c1">//  r2 = 2; // 错误：试图通过到 const 的引用修改</span>
+<span class="c1">//  const_cast&lt;int&amp;&gt;(r2) = 2; // 未定义行为：试图修改 const 对象 n2</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">system</span><span class="p">(</span><span class="s">"g++ -O3 -Wa,-adhln ./main.cpp"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 在 POSIX 系统上可能给出汇编</span>
+<span class="p">}</span>
+</pre></div>
 <p>可能的输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span># x86_64 平台上生成的典型机器码</span></span>
-<span class="line"><span># （只输出贡献可观测副效应的代码）</span></span>
-<span class="line"><span>main:</span></span>
-<span class="line"><span>    movl    $0, -4(%rsp) # volatile int n4 = 0;</span></span>
-<span class="line"><span>    movl    $3, -4(%rsp) # n4 = 3;</span></span>
-<span class="line"><span>    xorl    %eax, %eax   # return 0 （隐式）</span></span>
-<span class="line"><span>    ret</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span># x86_64 平台上生成的典型机器码
+# （只输出贡献可观测副效应的代码）
+main:
+    movl    $0, -4(%rsp) # volatile int n4 = 0;
+    movl    $3, -4(%rsp) # n4 = 3;
+    xorl    %eax, %eax   # return 0 （隐式）
+    ret
+</pre></div> 
 </div>
 <h3><span id=".E7.BC.BA.E9.99.B7.E6.8A.A5.E5.91.8A"></span><span class="mw-headline" id="缺陷报告">缺陷报告</span></h3>
 <p>下列更改行为的缺陷报告追溯地应用于以前出版的 C++ 标准。
@@ -556,6 +551,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":195,"wgPageParseReport":{"limitreport":{"cputime":"0.160","walltime":"1.284","ppvisitednodes":{"value":5609,"limit":1000000},"postexpandincludesize":{"value":191645,"limit":4194304},"templateargumentsize":{"value":29908,"limit":4194304},"expansiondepth":{"value":19,"limit":100},"expensivefunctioncount":{"value":52,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":16435,"limit":5000000},"timingprofile":["100.00%  956.070      1 -total"," 51.40%  491.447      1 Template:cpp/language/declarations/navbar"," 49.94%  477.484      1 Template:navbar"," 31.82%  304.210    157 Template:nv"," 21.12%  201.966     48 Template:c/core"," 17.05%  163.004      1 Template:cpp/language/declarations/navbar_content"," 16.57%  158.380      1 Template:cpp/language/navbar_content"," 11.71%  111.964      1 Template:cpp/navbar_content"," 10.89%  104.138     13 Template:nv_ln","  8.81%   84.265     37 Template:ltt/core"]},"cachereport":{"timestamp":"20260421232637","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422005957 --></html>
+</body>
+<!-- Cached 20260422005957 -->
+</html>

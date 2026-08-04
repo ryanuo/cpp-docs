@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>std::deque&lt;T,Allocator&gt;::resize</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"b3f1c084c7818c1647ce0c66","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/container/deque/resize","wgTitle":"cpp/container/deque/resize","wgCurRevisionId":82200,"wgRevisionId":82200,"wgArticleId":1648,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/container/deque/resize","wgRelevantArticleId":1648,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki .line{display:inline-block;width:100%}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_container_deque_resize rootpage-cpp skin-cppreference2 action-view cpp-page-template cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -45,7 +40,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>
 </p>
 </div>
-<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -74,7 +69,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../container.html" title="cpp/container">容器库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../container.html" title="cpp/container">容器库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"><a href="../../container.html#%E5%BA%8F%E5%88%97%E5%AE%B9%E5%99%A8" title="cpp/container">序列</a></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../array.html" title="cpp/container/array"><span class="t-lines"><span>array</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../vector.html" title="cpp/container/vector"><span class="t-lines"><span>vector</span></span></a></div></div></td></tr>
@@ -109,7 +104,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5"><a href="../../container.html#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%A4%B1%E6%95%88" title="cpp/container">迭代器失效</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"><a href="../../container.html#%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E8%A1%A8%E6%A0%BC" title="cpp/container">成员函数表格</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"><a href="../../container.html#%E9%9D%9E%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E8%A1%A8%E6%A0%BC" title="cpp/container">非成员函数表格</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../deque.html" title="cpp/container/deque"><tt>std::deque</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../deque.html" title="cpp/container/deque"><tt>std::deque</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"><a href="../deque.html#%E6%88%90%E5%91%98%E7%B1%BB%E5%9E%8B" title="cpp/container/deque">成员类型</a></td></tr>
 <tr class="t-nv-h1"><td colspan="5"><a href="../deque.html#%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0" title="cpp/container/deque">成员函数</a></td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -117,7 +112,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="~deque.html" title="cpp/container/deque/~deque"><span class="t-lines"><span>deque::~deque</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%3D.html" title="cpp/container/deque/operator="><span class="t-lines"><span>deque::operator=</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="assign.html" title="cpp/container/deque/assign"><span class="t-lines"><span>deque::assign</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="assign_range.html" title="cpp/container/deque/assign range"><span class="t-lines"><span>deque::assign_range</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="assign_range.html" title="cpp/container/deque/assign range"><span class="t-lines"><span>deque::assign_range</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="get_allocator.html" title="cpp/container/deque/get allocator"><span class="t-lines"><span>deque::get_allocator</span></span></a></div></div></td></tr>
 <tr class="t-nv-h2"><td colspan="5"><a href="../deque.html#%E5%85%83%E7%B4%A0%E8%AE%BF%E9%97%AE" title="cpp/container/deque">元素访问</a></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="at.html" title="cpp/container/deque/at"><span class="t-lines"><span>deque::at</span></span></a></div></div></td></tr>
@@ -163,17 +158,17 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator_cmp.html" title="cpp/container/deque/operator cmp"><span class="t-lines"><span>operator!=</span><span>operator&lt;</span><span>operator&gt;</span><span>operator&lt;=</span><span>operator&gt;=</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></span><span><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></span><span><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></span><span><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></span><span><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
 <tr class="t-nv-h1"><td colspan="5"><a href="deduction_guides.html" title="cpp/container/deque/deduction guides">推导指引</a><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dcl t-since-cxx98">
-<td><div><span id="Version_1"></span><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> resize</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">size_type</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td><div><span id="Version_1"></span><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">resize</span><span class="p">(</span><span class="w"> </span><span class="n">size_type</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td> (1)</td>
 <td class="t-dcl-nopad"></td>
 </tr>
 <tr class="t-dcl t-since-cxx98">
-<td><div><span id="Version_2"></span><div style="max-width: min(calc(7.68332px * 56 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> resize</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">size_type</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> value_type</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> value</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td><div><span id="Version_2"></span><div style="max-width: min(calc(7.68332px * 56 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">resize</span><span class="p">(</span><span class="w"> </span><span class="n">size_type</span><span class="w"> </span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">value_type</span><span class="o">&amp;</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td> (2)</td>
 <td class="t-dcl-nopad"></td>
 </tr>
@@ -220,38 +215,38 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;deque&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> print</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> rem</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">deque</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">rem</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> el</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">el</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">' '</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">deque</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = {</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    print</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"deque 持有："</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">resize</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    print</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"在增加大小到 5 之后："</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">resize</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    print</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"在减少大小到 2 之后："</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">resize</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">6</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    print</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"在增加大小到 6 之后（初始化式 = 4）："</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;deque&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">rem</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rem</span><span class="p">;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">"deque 持有："</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">"在增加大小到 5 之后："</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">"在减少大小到 2 之后："</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">"在增加大小到 6 之后（初始化式 = 4）："</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>deque 持有：1 2 3</span></span>
-<span class="line"><span>在增加大小到 5 之后：1 2 3 0 0</span></span>
-<span class="line"><span>在减少大小到 2 之后：1 2</span></span>
-<span class="line"><span>在增加大小到 6 之后（初始化式 = 4）：1 2 4 4 4 4</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>deque 持有：1 2 3
+在增加大小到 5 之后：1 2 3 0 0
+在减少大小到 2 之后：1 2
+在增加大小到 6 之后（初始化式 = 4）：1 2 4 4 4 4
+</pre></div> 
 </div>
 <h3><span id=".E7.BC.BA.E9.99.B7.E6.8A.A5.E5.91.8A"></span><span class="mw-headline" id="缺陷报告">缺陷报告</span></h3>
 <p>下列更改行为的缺陷报告追溯地应用于以前出版的 C++ 标准。
@@ -392,6 +387,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":671,"wgPageParseReport":{"limitreport":{"cputime":"0.165","walltime":"0.513","ppvisitednodes":{"value":8537,"limit":1000000},"postexpandincludesize":{"value":298557,"limit":4194304},"templateargumentsize":{"value":42888,"limit":4194304},"expansiondepth":{"value":30,"limit":100},"expensivefunctioncount":{"value":13,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":9243,"limit":5000000},"timingprofile":["100.00%  458.000      1 -total"," 99.61%  456.215      1 Template:include_page"," 99.28%  454.707      1 Template:cpp/container/resize"," 74.64%  341.846      1 Template:example"," 74.26%  340.119      2 Template:source"," 13.34%   61.102      1 Template:cpp/container/deque/navbar"," 13.22%   60.556      1 Template:navbar","  7.22%   33.076     90 Template:nv","  5.58%   25.541      1 Template:cpp/container/deque/navbar_content","  4.98%   22.826      1 Template:cpp/container/navbar_content"]},"cachereport":{"timestamp":"20260422050945","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422050945 --></html>
+</body>
+<!-- Cached 20260422050945 -->
+</html>

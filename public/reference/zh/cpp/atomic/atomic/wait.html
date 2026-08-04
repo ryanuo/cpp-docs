@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>std::atomic&lt;T&gt;::wait</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"9b01db8d3996145e1b1fafe6","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/atomic/atomic/wait","wgTitle":"cpp/atomic/atomic/wait","wgCurRevisionId":64524,"wgRevisionId":64524,"wgArticleId":12663,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/atomic/atomic/wait","wgRelevantArticleId":12663,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki .line{display:inline-block;width:100%}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_atomic_atomic_wait rootpage-cpp skin-cppreference2 action-view cpp-page-template cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -45,7 +40,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>
 </p>
 </div>
-<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -74,7 +69,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../thread.html" title="cpp/thread"> 并发支持库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../thread.html" title="cpp/thread"> 并发支持库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"><a href="../../thread.html#%E7%BA%BF%E7%A8%8B" title="cpp/thread">线程</a></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../thread/thread.html" title="cpp/thread/thread"><span class="t-lines"><span>thread</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
@@ -94,7 +89,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/inplace stop token（页面不存在）"><span class="t-lines"><span>inplace_stop_token</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../thread/never_stop_token.html" title="cpp/thread/never stop token"><span class="t-lines"><span>never_stop_token</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../thread/stop_source.html" title="cpp/thread/stop source"><span class="t-lines"><span>stop_source</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/inplace stop source（页面不存在）"><span class="t-lines"><span>inplace_stop_source</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code>&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/inplace stop source（页面不存在）"><span class="t-lines"><span>inplace_stop_source</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code>  </code></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../thread/stop_callback.html" title="cpp/thread/stop callback"><span class="t-lines"><span>stop_callback</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/inplace stop callback（页面不存在）"><span class="t-lines"><span>inplace_stop_callback</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
@@ -102,7 +97,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../thread/stoppable_token.html" title="cpp/thread/stoppable token"><span class="t-lines"><span>stoppable_token</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../thread/unstoppable_token.html" title="cpp/thread/unstoppable token"><span class="t-lines"><span>unstoppable_token</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/stoppable source（页面不存在）"><span class="t-lines"><span><i>stoppable-source</i></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/stoppable callback for（页面不存在）"><span class="t-lines"><span><i>stoppable-callback-for</i></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code>&nbsp;&nbsp;</code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/stoppable callback for（页面不存在）"><span class="t-lines"><span><i>stoppable-callback-for</i></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code>  </code></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
 <tr class="t-nv-h1"><td colspan="5"><a href="../../thread.html#%E4%BA%92%E6%96%A5" title="cpp/thread">互斥</a></td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -206,7 +201,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../atomic_flag_notify_one.html" title="cpp/atomic/atomic flag notify one"><span class="t-lines"><span>atomic_flag_notify_one</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../atomic_flag_notify_all.html" title="cpp/atomic/atomic flag notify all"><span class="t-lines"><span>atomic_flag_notify_all</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../atomic.html" title="cpp/atomic/atomic"><tt>std::atomic</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../atomic.html" title="cpp/atomic/atomic"><tt>std::atomic</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"><a href="../atomic.html#%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0" title="cpp/atomic/atomic">成员函数</a></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="atomic.html" title="cpp/atomic/atomic/atomic"><span class="t-lines"><span>atomic::atomic</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%3D.html" title="cpp/atomic/atomic/operator="><span class="t-lines"><span>atomic::operator=</span></span></a></div></div></td></tr>
@@ -235,20 +230,20 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fetch_or.html" title="cpp/atomic/atomic/fetch or"><span class="t-lines"><span>atomic::fetch_or</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fetch_xor.html" title="cpp/atomic/atomic/fetch xor"><span class="t-lines"><span>atomic::fetch_xor</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator_arith3.html" title="cpp/atomic/atomic/operator arith3"><span class="t-lines"><span>atomic::operator&amp;=</span><span>atomic::operator|=</span><span>atomic::operator^=</span></span></a></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dcl t-since-cxx20">
-<td><div><span id="Version_1"></span><div style="max-width: min(calc(7.68332px * 109 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> wait</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> old</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">memory_order</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> order</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> =</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">                      std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">memory_order_seq_cst</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ) </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> noexcept</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td><div><span id="Version_1"></span><div style="max-width: min(calc(7.68332px * 109 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">wait</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">old</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span>
+<span class="w">                      </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_seq_cst</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</pre></div></div></td>
 <td> (1)</td>
 <td><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span> <br><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26 起为 constexpr)</span></td>
 </tr>
 <tr class="t-dcl t-since-cxx20">
-<td> <div><div style="max-width: min(calc(7.68332px * 122 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> wait</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> old</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">           std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">memory_order</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> order</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> =</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">               std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">memory_order_seq_cst</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ) </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> volatile</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> noexcept</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 122 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">wait</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">old</span><span class="p">,</span>
+<span class="w">           </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span>
+<span class="w">               </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_seq_cst</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">volatile</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</pre></div></div></td>
 <td> (2) </td>
 <td> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span> </td>
 </tr>
@@ -290,48 +285,48 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;atomic&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;chrono&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;future&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;thread&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> namespace</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">literals</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">atomic</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">all_tasks_completed</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">false</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">atomic</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">completion_count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{};</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">future</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">task_futures</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">16</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">];</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">atomic</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">outstanding_task_count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">16</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 生成数个需要花费不同时间的任务，然后减少未完成任务计数。</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">future</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> task_future</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">task_futures</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">        task_future</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">async</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">([&amp;]</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        {</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">            // 此 sleep 表示工作进行中</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">            std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">this_thread</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sleep_for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">50ms</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">            </span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">            ++</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">completion_count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">            --</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">outstanding_task_count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">            </span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">            // 当任务计数降到零的时候，通知等待者（在这里是主线程）。</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">            if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">outstanding_task_count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">load</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() == </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">            {</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">                all_tasks_completed</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">                all_tasks_completed</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">notify_one</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">            }</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        });</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    all_tasks_completed</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">wait</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">false</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"完成任务数 = "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">completion_count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">load</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;atomic&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;future&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">atomic</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">all_tasks_completed</span><span class="p">{</span><span class="nb">false</span><span class="p">};</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">atomic</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="w"> </span><span class="n">completion_count</span><span class="p">{};</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">task_futures</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">atomic</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="w"> </span><span class="n">outstanding_task_count</span><span class="p">{</span><span class="mi">16</span><span class="p">};</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 生成数个需要花费不同时间的任务，然后减少未完成任务计数。</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">task_future</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">task_futures</span><span class="p">)</span>
+<span class="w">        </span><span class="n">task_future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">async</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// 此 sleep 表示工作进行中</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="mi">50</span><span class="n">ms</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="o">++</span><span class="n">completion_count</span><span class="p">;</span>
+<span class="w">            </span><span class="o">--</span><span class="n">outstanding_task_count</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="c1">// 当任务计数降到零的时候，通知等待者（在这里是主线程）。</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">outstanding_task_count</span><span class="p">.</span><span class="n">load</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">all_tasks_completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">                </span><span class="n">all_tasks_completed</span><span class="p">.</span><span class="n">notify_one</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">all_tasks_completed</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"完成任务数 = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">completion_count</span><span class="p">.</span><span class="n">load</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>完成任务数 = 16</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>完成任务数 = 16
+</pre></div> 
 </div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
 <table class="t-dsc-begin">
@@ -412,6 +407,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1121,"wgPageParseReport":{"limitreport":{"cputime":"0.259","walltime":"0.990","ppvisitednodes":{"value":11910,"limit":1000000},"postexpandincludesize":{"value":574465,"limit":4194304},"templateargumentsize":{"value":92024,"limit":4194304},"expansiondepth":{"value":25,"limit":100},"expensivefunctioncount":{"value":12,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":9389,"limit":5000000},"timingprofile":["100.00%  924.516      1 -total"," 99.77%  922.425      1 Template:include_page"," 99.47%  919.643      1 Template:cpp/atomic/atomic/wait"," 34.95%  323.114      1 Template:example"," 34.76%  321.338      2 Template:source"," 20.56%  190.088      1 Template:dcl"," 19.78%  182.850      1 Template:dcla"," 11.98%  110.732      1 Template:cpp/atomic/atomic/navbar"," 11.88%  109.862      1 Template:navbar","  8.28%   76.577      1 Template:cpp/thread/navbar_content"]},"cachereport":{"timestamp":"20260422013107","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422013107 --></html>
+</body>
+<!-- Cached 20260422013107 -->
+</html>

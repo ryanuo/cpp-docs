@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>std::vwprintf, std::vfwprintf, std::vswprintf</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"7dd2694b2e51a0b164db79bd","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/io/c/vfwprintf","wgTitle":"cpp/io/c/vfwprintf","wgCurRevisionId":84572,"wgRevisionId":84572,"wgArticleId":2374,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面","无示例的 todo"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/io/c/vfwprintf","wgRelevantArticleId":2374,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em}
-.shiki .line{display:block;min-height:1em}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_io_c_vfwprintf rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -41,7 +36,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../../io.html" title="cpp/io">io</a></bdi> | <bdi dir="ltr"><a href="../c.html" title="cpp/io/c">c</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -70,7 +65,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../io.html" title="cpp/io">输入/输出库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../io.html" title="cpp/io">输入/输出库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../manip.html" title="cpp/io/manip">I/O 操纵符</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../io.html#%E6%89%93%E5%8D%B0%E5%87%BD%E6%95%B0_(C++23_%E8%B5%B7)" title="cpp/io">打印函数</a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../c.html" title="cpp/io/c">C 风格 I/O</a></td></tr>
@@ -112,7 +107,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h1"><td colspan="5">错误类别接口</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../iostream_category.html" title="cpp/io/iostream category"><span class="t-lines"><span>iostream_category</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../io_errc.html" title="cpp/io/io errc"><span class="t-lines"><span>io_errc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../c.html" title="cpp/io/c">C 风格 I/O</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../c.html" title="cpp/io/c">C 风格 I/O</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">类型与对象</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FILE.html" title="cpp/io/c/FILE"><span class="t-lines"><span>FILE</span></span></a></div></div></td></tr>
@@ -170,16 +165,16 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">有格式输入</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fscanf.html" title="cpp/io/c/fscanf"><span class="t-lines"><span>scanf</span><span>fscanf</span><span>sscanf</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfscanf.html" title="cpp/io/c/vfscanf"><span class="t-lines"><span>vscanf</span><span>vfscanf</span><span>vsscanf</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfscanf.html" title="cpp/io/c/vfscanf"><span class="t-lines"><span>vscanf</span><span>vfscanf</span><span>vsscanf</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>    </span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwscanf.html" title="cpp/io/c/fwscanf"><span class="t-lines"><span>wscanf</span><span>fwscanf</span><span>swscanf</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfwscanf.html" title="cpp/io/c/vfwscanf"><span class="t-lines"><span>vwscanf</span><span>vfwscanf</span><span>vswscanf</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfwscanf.html" title="cpp/io/c/vfwscanf"><span class="t-lines"><span>vwscanf</span><span>vfwscanf</span><span>vswscanf</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>    </span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">有格式输出</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fprintf.html" title="cpp/io/c/fprintf"><span class="t-lines"><span>printf</span><span>fprintf</span><span>sprintf</span><span>snprintf</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfprintf.html" title="cpp/io/c/vfprintf"><span class="t-lines"><span>vprintf</span><span>vfprintf</span><span>vsprintf</span><span>vsnprintf</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="vfprintf.html" title="cpp/io/c/vfprintf"><span class="t-lines"><span>vprintf</span><span>vfprintf</span><span>vsprintf</span><span>vsnprintf</span></span></a></div><div><span class="t-lines"><span></span><span></span><span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>    </span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fwprintf.html" title="cpp/io/c/fwprintf"><span class="t-lines"><span>wprintf</span><span>fwprintf</span><span>swprintf</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>vwprintf</span><span>vfwprintf</span><span>vswprintf</span></span></a></div></div></td></tr>
@@ -201,7 +196,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tmpfile.html" title="cpp/io/c/tmpfile"><span class="t-lines"><span>tmpfile</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="tmpnam.html" title="cpp/io/c/tmpnam"><span class="t-lines"><span>tmpnam</span></span></a></div></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../../header/cwchar.html" title="cpp/header/cwchar">&lt;cwchar&gt;</a></code> 定义
@@ -210,20 +205,20 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl">
-<td> <div><div style="max-width: calc(7.68332px * 53 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> vwprintf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> wchar_t*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">va_list</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> vlist</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: calc(7.68332px * 53 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">vwprintf</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">wchar_t</span><span class="o">*</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="kt">va_list</span><span class="w"> </span><span class="n">vlist</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td> (1) </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td> <div><div style="max-width: calc(7.68332px * 73 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> vfwprintf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">FILE</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> stream</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> wchar_t*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">va_list</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> vlist</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: calc(7.68332px * 73 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">vfwprintf</span><span class="p">(</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">FILE</span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">wchar_t</span><span class="o">*</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="kt">va_list</span><span class="w"> </span><span class="n">vlist</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td> (2) </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td> <div><div style="max-width: calc(7.68332px * 93 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> vswprintf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">wchar_t*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> buffer</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> buf_size</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> wchar_t*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> format</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">va_list</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> vlist</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: calc(7.68332px * 93 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">vswprintf</span><span class="p">(</span><span class="w"> </span><span class="kt">wchar_t</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">wchar_t</span><span class="o">*</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="kt">va_list</span><span class="w"> </span><span class="n">vlist</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td> (3) </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
@@ -292,7 +287,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <table class="wikitable" style="text-align: center;">
 
 <tbody><tr>
-<th style="word-break: keep-all;">&nbsp;转换指示符&nbsp;
+<th style="word-break: keep-all;"> 转换指示符 
 </th>
 <th>解释
 </th>
@@ -506,7 +501,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>不适用</small>
 </td></tr>
 <tr>
-<th><code>f</code><br><span style="display: inline-block;"><code>F</code>&nbsp;<span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span>
+<th><code>f</code><br><span style="display: inline-block;"><code>F</code> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span>
 </th>
 <td style="text-align: left;">
 <p>转换<b>浮点数</b>为 <i>[-]ddd.ddd</i> 样式的十进制记法。
@@ -643,7 +638,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </td>
 <td><div class="t-vertical"><div>※</div></div>
 </td>
-<td><div class="t-vertical"><div>&nbsp;<span class="t-lc">std::ptrdiff_t</span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">*</span></code>&nbsp;</div></div>
+<td><div class="t-vertical"><div> <span class="t-lc">std::ptrdiff_t</span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">*</span></code> </div></div>
 </td>
 <td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>不适用</small>
 </td></tr>
@@ -708,7 +703,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td>打印有格式宽字符输出到 <span class="t-lc">stdout</span>、文件流或缓冲区 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
 
 <tr class="t-dsc">
-<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>vwprintf</span>, <span>vfwprintf</span>, <span>vswprintf</span></span>&nbsp;的 <span><span><a href="../../../c/io/vfwprintf.html" title="c/io/vfwprintf">C 文档</a></span></span></div>
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>vwprintf</span>, <span>vfwprintf</span>, <span>vswprintf</span></span> 的 <span><span><a href="../../../c/io/vfwprintf.html" title="c/io/vfwprintf">C 文档</a></span></span></div>
 </td></tr>
 
 </tbody></table>
@@ -768,6 +763,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":348,"wgPageParseReport":{"limitreport":{"cputime":"0.204","walltime":"0.224","ppvisitednodes":{"value":10377,"limit":1000000},"postexpandincludesize":{"value":243120,"limit":4194304},"templateargumentsize":{"value":34423,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":64,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11668,"limit":5000000},"timingprofile":["100.00%  156.976      1 -total"," 37.04%   58.144      1 Template:cpp/io/c/printf_format"," 37.02%   58.107      1 Template:cpp/io/c/navbar"," 36.58%   57.429      1 Template:navbar"," 21.29%   33.416    109 Template:nv"," 19.04%   29.887     78 Template:nv_ln"," 14.30%   22.442      1 Template:cpp/io/c/navbar_content"," 12.03%   18.880      1 Template:cpp/io/navbar_content","  8.81%   13.829     41 Template:c/core","  8.41%   13.196     32 Template:vertical"]},"cachereport":{"timestamp":"20260421221631","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260421221631 --></html>
+</body>
+<!-- Cached 20260421221631 -->
+</html>

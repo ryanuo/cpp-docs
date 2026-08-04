@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh-Hans-CN" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh-Hans-CN" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>memory_order</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"5e5d119ee29af71f3642802e","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/atomic/memory_order","wgTitle":"c/atomic/memory order","wgCurRevisionId":93953,"wgRevisionId":93953,"wgArticleId":939,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["有原因的 todo","无示例的 todo"],"wgPageViewLanguage":"zh-cn","wgPageContentLanguage":"zh-cn","wgPageContentModel":"wikitext","wgRelevantPageName":"c/atomic/memory_order","wgRelevantArticleId":939,"wgUserVariant":"zh-cn","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki .line{display:inline-block;width:100%}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_atomic_memory_order rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -41,7 +36,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh-Hans-CN" dir="ltr"><div id="mw-content-subtitle" lang="zh-Hans-CN" dir="ltr"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../atomic.html" title="c/atomic">atomic</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh-Hans-CN" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh-Hans-CN" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
@@ -59,20 +54,20 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../thread.html" title="c/thread">并发支持库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../thread.html" title="c/thread">并发支持库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"> 线程</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_create.html" title="c/thread/thrd create"><span class="t-lines"><span>thrd_create</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_equal.html" title="c/thread/thrd equal"><span class="t-lines"><span>thrd_equal</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_current.html" title="c/thread/thrd current"><span class="t-lines"><span>thrd_current</span></span></a></div><div><span class="t-lines"><span>&nbsp;&nbsp;</span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_current.html" title="c/thread/thrd current"><span class="t-lines"><span>thrd_current</span></span></a></div><div><span class="t-lines"><span>  </span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_sleep.html" title="c/thread/thrd sleep"><span class="t-lines"><span>thrd_sleep</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_yield.html" title="c/thread/thrd yield"><span class="t-lines"><span>thrd_yield</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_exit.html" title="c/thread/thrd exit"><span class="t-lines"><span>thrd_exit</span></span></a></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_detach.html" title="c/thread/thrd detach"><span class="t-lines"><span>thrd_detach</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_join.html" title="c/thread/thrd join"><span class="t-lines"><span>thrd_join</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_errors.html" title="c/thread/thrd errors"><span class="t-lines"><span>thrd_success</span><span>thrd_timedout</span><span>thrd_busy</span><span>thrd_nomem</span><span>thrd_error</span></span></a></div><div><span class="t-lines"><span>&nbsp;&nbsp;</span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_errors.html" title="c/thread/thrd errors"><span class="t-lines"><span>thrd_success</span><span>thrd_timedout</span><span>thrd_busy</span><span>thrd_nomem</span><span>thrd_error</span></span></a></div><div><span class="t-lines"><span>  </span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
 <tr class="t-nv-h1"><td colspan="5"> 原子操作</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="atomic_init.html" title="c/atomic/atomic init"><span class="t-lines"><span>atomic_init</span></span></a></div></div></td></tr>
@@ -127,7 +122,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h1"><td colspan="5"> 线程局部存储</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thread_local.html" title="c/thread/thread local"><span class="t-lines"><span>thread_local</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/TSS_DTOR_ITERATIONS.html" title="c/thread/TSS DTOR ITERATIONS"><span class="t-lines"><span>TSS_DTOR_ITERATIONS</span></span></a></div><div><span class="t-lines"><span>&nbsp;&nbsp;</span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/TSS_DTOR_ITERATIONS.html" title="c/thread/TSS DTOR ITERATIONS"><span class="t-lines"><span>TSS_DTOR_ITERATIONS</span></span></a></div><div><span class="t-lines"><span>  </span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/tss_create.html" title="c/thread/tss create"><span class="t-lines"><span>tss_create</span></span></a></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/tss_get.html" title="c/thread/tss get"><span class="t-lines"><span>tss_get</span></span></a></div></div></td></tr>
@@ -135,7 +130,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/tss_delete.html" title="c/thread/tss delete"><span class="t-lines"><span>tss_delete</span></span></a></div></div></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../header/stdatomic.html" title="c/header/stdatomic"><tt>&lt;stdatomic.h&gt;</tt></a></code> 定义
@@ -144,16 +139,16 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-since-c11">
-<td> <div><div style="max-width: min(calc(7.68332px * 177 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">enum</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> memory_order</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    memory_order_relaxed,</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    memory_order_consume,</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    memory_order_acquire,</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    memory_order_release,</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    memory_order_acq_rel,</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    memory_order_seq_cst</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 177 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="n">memory_order</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">memory_order_relaxed</span><span class="p">,</span>
+<span class="w">    </span><span class="n">memory_order_consume</span><span class="p">,</span>
+<span class="w">    </span><span class="n">memory_order_acquire</span><span class="p">,</span>
+<span class="w">    </span><span class="n">memory_order_release</span><span class="p">,</span>
+<span class="w">    </span><span class="n">memory_order_acq_rel</span><span class="p">,</span>
+<span class="w">    </span><span class="n">memory_order_seq_cst</span>
+<span class="p">};</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span> </td>
 </tr>
@@ -308,23 +303,23 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <table style="border-top:solid 1px;border-bottom:none;border-left:none;border-right:none;">
 
 <tbody><tr style="vertical-align:top;">
-<td>1.&nbsp;</td>
+<td>1. </td>
 <td><a href="https://en.wikipedia.org/wiki/MOESI_protocol" class="extiw" title="enwiki:MOESI protocol">MOESI 协议</a>
 </td></tr>
 <tr style="vertical-align:top;">
-<td>2.&nbsp;</td>
+<td>2. </td>
 <td><a rel="nofollow" class="external text" href="http://www.cl.cam.ac.uk/~pes20/weakmemory/cacm.pdf">x86-TSO：x86 多处理器上严格而有用的程序员模型</a> P. Sewell 等，2010
 </td></tr>
 <tr style="vertical-align:top;">
-<td>3.&nbsp;</td>
+<td>3. </td>
 <td><a rel="nofollow" class="external text" href="http://www.cl.cam.ac.uk/~pes20/ppc-supplemental/test7.pdf">ARM 及 POWER 宽松内存模型的入门教程</a> P. Sewell 等，2012
 </td></tr>
 <tr style="vertical-align:top;">
-<td>4.&nbsp;</td>
+<td>4. </td>
 <td><a rel="nofollow" class="external text" href="https://researchspace.auckland.ac.nz/bitstream/handle/2292/11594/MESIF-2009.pdf?sequence=6">MESIF：点对点互联的两跳缓存一致性协议</a> J.R. Goodman, H.H.J. Hum，2009
 </td></tr>
 <tr style="vertical-align:top;">
-<td>5.&nbsp;</td>
+<td>5. </td>
 <td><a rel="nofollow" class="external text" href="https://research.swtch.com/mm">内存模型</a>  Russ Cox, 2021
 </td></tr></tbody></table>
 <table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成<br>原因：让我们在 QPI、MOESI，也许还有 Dragon 上找到好的参考资料。 </td></tr></tbody></table>
@@ -384,5 +379,5 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":280,"wgPageParseReport":{"limitreport":{"cputime":"0.156","walltime":"0.167","ppvisitednodes":{"value":6312,"limit":1000000},"postexpandincludesize":{"value":139296,"limit":4194304},"templateargumentsize":{"value":22863,"limit":4194304},"expansiondepth":{"value":20,"limit":100},"expensivefunctioncount":{"value":15,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5444,"limit":5000000},"timingprofile":["100.00%  105.929      1 -total"," 31.46%   33.324      1 Template:c/thread/navbar"," 30.87%   32.701      1 Template:navbar"," 24.15%   25.586      1 Template:c/thread/navbar_content"," 18.48%   19.580     50 Template:nv_ln"," 17.47%   18.509     67 Template:nv"," 12.23%   12.957      4 Template:todo"," 11.22%   11.885      4 Template:ambox","  8.31%    8.807      1 Template:ddcl","  7.77%    8.236      1 Template:cpp/atomic/external-links"]},"cachereport":{"timestamp":"20260502053457","ttl":2592000,"transientcontent":false}}});});</script>
-
-</body></html>
+</body>
+</html>

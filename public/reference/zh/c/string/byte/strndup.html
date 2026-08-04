@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>strndup</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"d72b9534cc3bf3d88b7982a9","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/string/byte/strndup","wgTitle":"c/string/byte/strndup","wgCurRevisionId":80922,"wgRevisionId":80922,"wgArticleId":13214,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/string/byte/strndup","wgRelevantArticleId":13214,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki .line{display:inline-block;width:100%}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_string_byte_strndup rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -41,7 +36,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../../string.html" title="c/string">string</a></bdi> | <bdi dir="ltr"><a href="../byte.html" title="c/string/byte">byte</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="c/language">语言</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../header.html" title="c/header">头文件</a></td></tr>
@@ -59,11 +54,11 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="c/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../string.html" title="c/string">字符串库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../string.html" title="c/string">字符串库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../byte.html" title="c/string/byte">空终止字节字符串</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../multibyte.html" title="c/string/multibyte">空终止多字节字符串</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../wide.html" title="c/string/wide">空终止宽字符串</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../byte.html" title="c/string/byte">空终止字节字符串</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../byte.html" title="c/string/byte">空终止字节字符串</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"> 函数</td></tr>
 <tr class="t-nv-h2"><td colspan="5"> 字符操作</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -136,7 +131,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </tbody></table></div></td></tr>
 <tr class="t-nv-h2"><td colspan="5"> 杂项</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strerror.html" title="c/string/byte/strerror"><span class="t-lines"><span>strerror</span><span>strerror_s</span><span>strerrorlen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../../header/string.html" title="c/header/string"><tt>&lt;string.h&gt;</tt></a></code> 定义
@@ -145,8 +140,8 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-since-c23">
-<td> <div><div style="max-width: min(calc(7.68332px * 46 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">strndup</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">src</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> size</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 46 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">strndup</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span> </td>
 </tr>
@@ -182,36 +177,36 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string.h&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdio.h&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdlib.h&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> size_t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> n = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *src = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"Replica"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *dup = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">strndup</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(src, n);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"strndup(</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%s</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%lu</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">) == </span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%s</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, src, n, dup);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    free</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(dup);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    src = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"Hi"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    dup = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">strndup</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(src, n);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"strndup(</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%s</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%lu</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">) == </span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%s</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, src, n, dup);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    free</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(dup);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> arr</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">[]</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = {</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'A'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'B'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'C'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'D'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // NB ：无尾随 '\0'</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    dup = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">strndup</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(arr, n);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"strndup({'A','B','C','D'}, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%lu</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">) == </span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%s</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\"\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, n, dup);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    free</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(dup);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Replica"</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">dup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strndup</span><span class="p">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"strndup(</span><span class="se">\"</span><span class="s">%s</span><span class="se">\"</span><span class="s">, %lu) == </span><span class="se">\"</span><span class="s">%s</span><span class="se">\"\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">dup</span><span class="p">);</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">dup</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hi"</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strndup</span><span class="p">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"strndup(</span><span class="se">\"</span><span class="s">%s</span><span class="se">\"</span><span class="s">, %lu) == </span><span class="se">\"</span><span class="s">%s</span><span class="se">\"\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">dup</span><span class="p">);</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">dup</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">arr</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="sc">'A'</span><span class="p">,</span><span class="sc">'B'</span><span class="p">,</span><span class="sc">'C'</span><span class="p">,</span><span class="sc">'D'</span><span class="p">};</span><span class="w"> </span><span class="c1">// NB ：无尾随 '\0'</span>
+<span class="w">    </span><span class="n">dup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strndup</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"strndup({'A','B','C','D'}, %lu) == </span><span class="se">\"</span><span class="s">%s</span><span class="se">\"\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">dup</span><span class="p">);</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">dup</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>strndup("Replica", 3) == "Rep"</span></span>
-<span class="line"><span>strndup("Hi", 3) == "Hi"</span></span>
-<span class="line"><span>strndup({'A','B','C','D'}, 3) == "ABC"</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>strndup("Replica", 3) == "Rep"
+strndup("Hi", 3) == "Hi"
+strndup({'A','B','C','D'}, 3) == "ABC"
+</pre></div> 
 </div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
 <table class="t-dsc-begin">
@@ -292,6 +287,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":137,"wgPageParseReport":{"limitreport":{"cputime":"0.089","walltime":"0.286","ppvisitednodes":{"value":4705,"limit":1000000},"postexpandincludesize":{"value":144517,"limit":4194304},"templateargumentsize":{"value":26042,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":3,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6202,"limit":5000000},"timingprofile":["100.00%  259.331      1 -total"," 73.13%  189.645      1 Template:example"," 72.79%  188.756      2 Template:source"," 13.90%   36.048      1 Template:c/string/byte/navbar"," 13.67%   35.445      1 Template:navbar"," 10.06%   26.089      1 Template:c/string/byte/navbar_content","  7.39%   19.175     46 Template:nv_ln","  7.11%   18.431     66 Template:nv","  4.61%   11.943      4 Template:dsc_inc","  3.62%    9.390      1 Template:ddcl"]},"cachereport":{"timestamp":"20260422083807","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422094250 --></html>
+</body>
+<!-- Cached 20260422094250 -->
+</html>

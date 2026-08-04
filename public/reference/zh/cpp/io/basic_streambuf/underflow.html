@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>std::basic_streambuf&lt;CharT,Traits&gt;::underflow</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"67ec2a7fd321c3605e8a4904","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/io/basic_streambuf/underflow","wgTitle":"cpp/io/basic streambuf/underflow","wgCurRevisionId":84495,"wgRevisionId":84495,"wgArticleId":2342,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/io/basic_streambuf/underflow","wgRelevantArticleId":2342,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em}
-.shiki .line{display:block;min-height:1em}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_io_basic_streambuf_underflow rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -41,7 +36,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../../io.html" title="cpp/io">io</a></bdi> | <bdi dir="ltr"><a href="../basic_streambuf.html" title="cpp/io/basic streambuf">basic streambuf</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -70,7 +65,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../io.html" title="cpp/io">输入/输出库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../io.html" title="cpp/io">输入/输出库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../manip.html" title="cpp/io/manip">I/O 操纵符</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../io.html#%E6%89%93%E5%8D%B0%E5%87%BD%E6%95%B0_(C++23_%E8%B5%B7)" title="cpp/io">打印函数</a> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../c.html" title="cpp/io/c">C 风格 I/O</a></td></tr>
@@ -112,7 +107,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h1"><td colspan="5">错误类别接口</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../iostream_category.html" title="cpp/io/iostream category"><span class="t-lines"><span>iostream_category</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../io_errc.html" title="cpp/io/io errc"><span class="t-lines"><span>io_errc</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../basic_streambuf.html" title="cpp/io/basic streambuf"><tt>std::basic_streambuf</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../basic_streambuf.html" title="cpp/io/basic streambuf"><tt>std::basic_streambuf</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">公开成员函数</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="~basic_streambuf.html" title="cpp/io/basic streambuf/~basic streambuf"><span class="t-lines"><span>basic_streambuf::~basic_streambuf</span></span></a></div></div></td></tr>
 <tr class="t-nv-h2"><td colspan="5">本地环境</td></tr>
@@ -162,13 +157,13 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="setp.html" title="cpp/io/basic streambuf/setp"><span class="t-lines"><span>basic_streambuf::setp</span></span></a></div></div></td></tr>
 <tr class="t-nv-h2"><td colspan="5">回放</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="pbackfail.html" title="cpp/io/basic streambuf/pbackfail"><span class="t-lines"><span>basic_streambuf::pbackfail</span></span></a></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 
 <tbody><tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: calc(7.68332px * 40 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">protected:</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">virtual</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> int_type</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> underflow</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: calc(7.68332px * 40 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">protected</span><span class="o">:</span>
+<span class="k">virtual</span><span class="w"> </span><span class="n">int_type</span><span class="w"> </span><span class="n">underflow</span><span class="p">();</span>
+</pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
@@ -191,54 +186,54 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-template-editlink" style="">
 </div><div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;sstream&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> null_filter_buf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">public</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">streambuf</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">streambuf</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> src</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 单字节缓冲区</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">protected:</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> underflow</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        traits_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">int_type</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        while</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ((</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">src</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">-&gt;</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sbumpc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()) == </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\0</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">            ;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 跳过零</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (!</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">traits_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">eq_int_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">traits_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">eof</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()))</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        {</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">            ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">traits_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">to_char_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">            setg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">+</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 使得一个读取位置可用</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        }</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        return</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">public:</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    null_filter_buf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">streambuf</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> buf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">src</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">buf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        setg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> + </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> + </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 缓冲区初始为满</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> filtered_read</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">istream</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">streambuf</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> orig</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rdbuf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    null_filter_buf</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> buf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">orig</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rdbuf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">buf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">get</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);)</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rdbuf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">orig</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[] = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"This i</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\0</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">s </span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\0</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">an e</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\0\0\0</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">xample"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">istringstream</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">string</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">begin</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">), </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">end</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)));</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    filtered_read</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">null_filter_buf</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">streambuf</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">streambuf</span><span class="o">*</span><span class="w"> </span><span class="n">src</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span><span class="w"> </span><span class="c1">// 单字节缓冲区</span>
+<span class="k">protected</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">underflow</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">traits_type</span><span class="o">::</span><span class="n">int_type</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">src</span><span class="o">-&gt;</span><span class="n">sbumpc</span><span class="p">())</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'\0'</span><span class="p">)</span>
+<span class="w">            </span><span class="p">;</span><span class="w"> </span><span class="c1">// 跳过零</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">traits_type</span><span class="o">::</span><span class="n">eq_int_type</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">traits_type</span><span class="o">::</span><span class="n">eof</span><span class="p">()))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">traits_type</span><span class="o">::</span><span class="n">to_char_type</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">            </span><span class="n">setg</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ch</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 使得一个读取位置可用</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">null_filter_buf</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">streambuf</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">src</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">setg</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 缓冲区初始为满</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">filtered_read</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">streambuf</span><span class="o">*</span><span class="w"> </span><span class="n">orig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">();</span>
+<span class="w">    </span><span class="n">null_filter_buf</span><span class="w"> </span><span class="n">buf</span><span class="p">(</span><span class="n">orig</span><span class="p">);</span>
+<span class="w">    </span><span class="n">in</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">buf</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="n">in</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">);)</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="n">in</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="n">orig</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"This i</span><span class="se">\0</span><span class="s">s </span><span class="se">\0</span><span class="s">an e</span><span class="se">\0\0\0</span><span class="s">xample"</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">istringstream</span><span class="w"> </span><span class="n">in</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">begin</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">a</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">filtered_read</span><span class="p">(</span><span class="n">in</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>This is an example</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>This is an example
+</pre></div> 
 </div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
 <table class="t-dsc-begin">
@@ -324,6 +319,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":479,"wgPageParseReport":{"limitreport":{"cputime":"0.148","walltime":"0.353","ppvisitednodes":{"value":6909,"limit":1000000},"postexpandincludesize":{"value":184495,"limit":4194304},"templateargumentsize":{"value":36515,"limit":4194304},"expansiondepth":{"value":33,"limit":100},"expensivefunctioncount":{"value":11,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":10545,"limit":5000000},"timingprofile":["100.00%  301.344      1 -total"," 58.84%  177.313      1 Template:include"," 58.11%  175.099      1 Template:cpp/io/basic_streambuf/example1"," 57.65%  173.722      1 Template:example"," 57.28%  172.624      2 Template:source"," 15.48%   46.637      5 Template:dsc_inc"," 14.61%   44.021      1 Template:cpp/io/basic_streambuf/navbar"," 14.44%   43.519      1 Template:navbar"," 12.46%   37.537      5 Template:dsc_prot_mem_vfun"," 11.93%   35.951      5 Template:dsc"]},"cachereport":{"timestamp":"20260422000307","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422000307 --></html>
+</body>
+<!-- Cached 20260422000307 -->
+</html>

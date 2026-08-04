@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>consteval 说明符 (C++20 起)</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"563fb497417a8f3617af95e9","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/language/consteval","wgTitle":"cpp/language/consteval","wgCurRevisionId":97637,"wgRevisionId":97637,"wgArticleId":11718,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/language/consteval","wgRelevantArticleId":11718,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em}
-.shiki .line{display:block;min-height:1em}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_language_consteval rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -43,7 +38,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
@@ -72,7 +67,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">一般主题</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -138,10 +133,10 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">说明符</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="cv.html" title="cpp/language/cv"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code>/<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="auto.html" title="cpp/language/auto"><tt>auto</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
 <tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink"><tt>consteval</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="constinit.html" title="cpp/language/constinit"><tt>constinit</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 </tbody></table></div></td></tr>
@@ -213,7 +208,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">类特有的函数性质</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="virtual.html" title="cpp/language/virtual">虚函数</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code>override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code>override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="final.html" title="cpp/language/final"><code>final</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="explicit.html" title="cpp/language/explicit"><tt>explicit</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
@@ -246,7 +241,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr class="t-nv"><td colspan="5"><a href="history.html" title="cpp/language/history">C++ 的历史</a></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="declarations.html" title="cpp/language/declarations">声明</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="declarations.html" title="cpp/language/declarations">声明</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">概览</td></tr>
@@ -264,7 +259,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">consteval</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="constinit.html" title="cpp/language/constinit"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">constinit</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="storage_duration.html" title="cpp/language/storage duration">存储类说明符</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="tu_local.html" title="cpp/language/tu local">翻译单元局部</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="tu_local.html" title="cpp/language/tu local">翻译单元局部</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span>      </td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="class.html" title="cpp/language/class"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">class</span></code>/<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">struct</span></code></span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="union.html" title="cpp/language/union"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">union</span></code></span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="enum.html" title="cpp/language/enum"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">enum</span></code></span></span></a></div></div></td></tr>
@@ -272,7 +267,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="auto.html" title="cpp/language/auto"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">auto</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="alignas.html" title="cpp/language/alignas"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">alignas</span></code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="cv.html" title="cpp/language/cv"><span class="t-lines"><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code></span><span><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="pack_indexing.html#%E5%8C%85%E7%B4%A2%E5%BC%95%E8%AF%B4%E6%98%8E%E7%AC%A6" title="cpp/language/pack indexing">包索引说明符</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr class="t-nv"><td colspan="5"><a href="pack_indexing.html#%E5%8C%85%E7%B4%A2%E5%BC%95%E8%AF%B4%E6%98%8E%E7%AC%A6" title="cpp/language/pack indexing">包索引说明符</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span>    </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="elaborated_type_specifier.html" title="cpp/language/elaborated type specifier">详述类型说明符</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="attributes.html" title="cpp/language/attributes">属性</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -282,7 +277,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="array.html" title="cpp/language/array">数组</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5">块声明</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="declarations.html" title="cpp/language/declarations">简单声明</a></td></tr>
-<tr class="t-nv"><td colspan="5">&nbsp;&nbsp;→<a href="structured_binding.html" title="cpp/language/structured binding">结构化绑定声明</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
+<tr class="t-nv"><td colspan="5">  →<a href="structured_binding.html" title="cpp/language/structured binding">结构化绑定声明</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="type_alias.html" title="cpp/language/type alias">别名声明</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="namespace_alias.html" title="cpp/language/namespace alias">命名空间别名定义</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="using_declaration.html" title="cpp/language/using declaration"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">using</span></code> 声明</a></td></tr>
@@ -304,7 +299,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <dl><dd><ul><li><code><b>consteval</b></code> - 指定函数是<i>立即函数（immediate function）</i>，即每次调用该函数必须产生编译时常量。</li></ul></dd></dl>
 <h3><span id=".E8.A7.A3.E9.87.8A"></span><span class="mw-headline" id="解释">解释</span></h3>
 <p><code>consteval</code> 说明符声明函数或函数模板为<i>立即函数</i>，即该函数的每次<a href="expressions.html#%E6%BD%9C%E5%9C%A8%E6%B1%82%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F" title="cpp/language/expressions">潜在求值</a>的调用都必须（直接或间接）产生编译时<a href="constant_expression.html" title="cpp/language/constant expression">常量表达式</a>。
@@ -312,33 +307,33 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p><p>指定了 <code>consteval</code> 的函数或函数模板声明不能同时指定 <code>constexpr</code>，而且该函数或函数模板的任何重复声明也都必须指定 <code>consteval</code>。
 </p><p>当最内层的非块作用域不是某个立即函数的<a href="scope.html#%E5%87%BD%E6%95%B0%E5%BD%A2%E5%8F%82%E4%BD%9C%E7%94%A8%E5%9F%9F" title="cpp/language/scope">函数形参作用域</a><span class="t-rev-inl t-since-cxx23"><span>或 <a href="if.html#consteval_if" title="cpp/language/if">consteval if 语句</a>的 true 分支</span><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起)</span></span></span>时，对立即函数的<a href="expressions.html#%E6%BD%9C%E5%9C%A8%E6%B1%82%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F" title="cpp/language/expressions">潜在求值</a>的调用必须产生常量表达式；这种调用称为<i>立即调用（immediate invocation）</i>。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">consteval</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> sqr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">constexpr</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> r</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sqr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">100</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">100</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> r2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sqr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">            // 错误：调用未能产生常量</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">consteval</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> sqrsqr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> sqr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sqr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">     // 在此处不是常量表达式，但是 OK</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">constexpr</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> dblsqr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> * </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sqr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">      // 错误：外围函数并非 consteval 且 sqr(n) 不是常量</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">consteval</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sqr</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqr</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqr</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">            </span><span class="c1">// 错误：调用未能产生常量</span>
+
+<span class="k">consteval</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sqrsqr</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sqr</span><span class="p">(</span><span class="n">sqr</span><span class="p">(</span><span class="n">n</span><span class="p">));</span><span class="w">     </span><span class="c1">// 在此处不是常量表达式，但是 OK</span>
+<span class="p">}</span>
+
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">dblsqr</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sqr</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">      </span><span class="c1">// 错误：外围函数并非 consteval 且 sqr(n) 不是常量</span>
+<span class="p">}</span>
+</pre></div>
 <p>指代某个立即函数的<a href="identifiers.html#%E5%9C%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AD" title="cpp/language/identifiers">标识表达式</a>，仅可出现在立即调用的子表达式内，或某个<i>立即函数语境</i>（即前述的语境，在其中对立即函数的调用不需要是常量表达式）内。可以取得立即函数的指针或引用，但它们不可逃出常量表达式求值：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">consteval</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 42</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">consteval</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> auto</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> g</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">consteval</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> h</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)() = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">g</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()) { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(); }</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">constexpr</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> r</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">h</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // OK</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">constexpr</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> e</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">g</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  // 非良构：指向立即函数的指针不是常量表达式的容许结果</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">consteval</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="k">consteval</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">g</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="n">f</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="k">consteval</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">h</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">p</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">();</span><span class="w">   </span><span class="c1">// OK</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="p">();</span><span class="w">  </span><span class="c1">// 非良构：指向立即函数的指针不是常量表达式的容许结果</span>
+</pre></div>
 <h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
 <table class="wikitable">
 
@@ -367,37 +362,37 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 此函数在输入在编译时已知的情况下可以在编译时求值。否则在运行时执行。</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">constexpr</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> unsigned</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> factorial</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ? </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> * </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">factorial</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> - </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 我们用 consteval 强制函数在编译时求值。</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">consteval</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> unsigned</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> combination</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> factorial</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) / </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">factorial</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) / </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">factorial</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> - </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">static_assert</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">factorial</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">6</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) == </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">720</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">static_assert</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">combination</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">8</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) == </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">70</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> argc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char*</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[])</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    constexpr</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">factorial</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)};</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    [[</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">maybe_unused</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]]</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> y</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">factorial</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">argc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK</span></span>
-<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//  unsigned z = combination(argc, 7); // 错误：'argc' 不是常量表达式</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// 此函数在输入在编译时已知的情况下可以在编译时求值。否则在运行时执行。</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// 我们用 consteval 强制函数在编译时求值。</span>
+<span class="k">consteval</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">combination</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static_assert</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">720</span><span class="p">);</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">combination</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">70</span><span class="p">);</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">[])</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">x</span><span class="p">{</span><span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)};</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="p">[[</span><span class="n">maybe_unused</span><span class="p">]]</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">argc</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK</span>
+<span class="c1">//  unsigned z = combination(argc, 7); // 错误：'argc' 不是常量表达式</span>
+<span class="p">}</span>
+</pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>24</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>24
+</pre></div> 
 </div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
 <table class="t-dsc-begin">
@@ -475,6 +470,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":134,"wgPageParseReport":{"limitreport":{"cputime":"0.121","walltime":"0.339","ppvisitednodes":{"value":4651,"limit":1000000},"postexpandincludesize":{"value":190193,"limit":4194304},"templateargumentsize":{"value":26016,"limit":4194304},"expansiondepth":{"value":19,"limit":100},"expensivefunctioncount":{"value":33,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":14126,"limit":5000000},"timingprofile":["100.00%  268.720      1 -total"," 71.15%  191.188      4 Template:source"," 70.97%  190.703      1 Template:example"," 18.48%   49.669      1 Template:cpp/language/declarations/navbar"," 18.29%   49.155      1 Template:navbar"," 10.73%   28.831    157 Template:nv","  8.48%   22.795      1 Template:cpp/language/navbar_content","  6.52%   17.525      1 Template:cpp/language/declarations/navbar_content","  4.08%   10.977     13 Template:nv_ln","  3.43%    9.215     29 Template:c/core"]},"cachereport":{"timestamp":"20260421212921","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260421223814 --></html>
+</body>
+<!-- Cached 20260421223814 -->
+</html>

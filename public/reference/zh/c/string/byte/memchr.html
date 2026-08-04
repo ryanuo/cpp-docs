@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>memchr</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"faed2924f1d1bcefa3f68d42","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/string/byte/memchr","wgTitle":"c/string/byte/memchr","wgCurRevisionId":91450,"wgRevisionId":91450,"wgArticleId":1266,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/string/byte/memchr","wgRelevantArticleId":1266,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki .line{display:inline-block;width:100%}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_string_byte_memchr rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -41,7 +36,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../../string.html" title="c/string">string</a></bdi> | <bdi dir="ltr"><a href="../byte.html" title="c/string/byte">byte</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="c/language">语言</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../header.html" title="c/header">头文件</a></td></tr>
@@ -59,11 +54,11 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="c/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../string.html" title="c/string">字符串库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../string.html" title="c/string">字符串库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../byte.html" title="c/string/byte">空终止字节字符串</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../multibyte.html" title="c/string/multibyte">空终止多字节字符串</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../wide.html" title="c/string/wide">空终止宽字符串</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../byte.html" title="c/string/byte">空终止字节字符串</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../byte.html" title="c/string/byte">空终止字节字符串</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"> 函数</td></tr>
 <tr class="t-nv-h2"><td colspan="5"> 字符操作</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -136,7 +131,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </tbody></table></div></td></tr>
 <tr class="t-nv-h2"><td colspan="5"> 杂项</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="strerror.html" title="c/string/byte/strerror"><span class="t-lines"><span>strerror</span><span>strerror_s</span><span>strerrorlen_s</span></span></a></div><div><span class="t-lines"><span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span><span><span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></span></span></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../../header/string.html" title="c/header/string"><tt>&lt;string.h&gt;</tt></a></code> 定义
@@ -145,14 +140,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl">
-<td> <div><div style="max-width: min(calc(7.68332px * 54 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">memchr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 54 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">memchr</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td> (1) </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl t-since-c23">
-<td> <div><div style="max-width: min(calc(7.68332px * 58 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/*QVoid*/</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">memchr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /*QVoid*/</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> ch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 58 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/*QVoid*/</span><span class="w"> </span><span class="o">*</span><span class="n">memchr</span><span class="p">(</span><span class="w"> </span><span class="cm">/*QVoid*/</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td> (2) </td>
 <td> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23 起)</span> </td>
 </tr>
@@ -203,28 +198,28 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdio.h&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string.h&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> str</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">[]</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ABCDEFG"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> chars</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">[]</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = {</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'D'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'d'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> i = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; i &lt; </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">sizeof</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> chars / (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">sizeof</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> chars</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]); ++i)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">        const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> c = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">chars</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[i];</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">        const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *ps = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">memchr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(str, c, </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">strlen</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(str));</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        ps ? </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"找到字符 '</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%c</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%i</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">): </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%s</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, c, c, ps)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">           : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"未找到字符 '</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%c</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%i</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">)</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, c, c);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">str</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"ABCDEFG"</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chars</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="sc">'D'</span><span class="p">,</span><span class="w"> </span><span class="sc">'d'</span><span class="p">};</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="n">chars</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="k">sizeof</span><span class="w"> </span><span class="n">chars</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chars</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memchr</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">));</span>
+<span class="w">        </span><span class="n">ps</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"找到字符 '%c'(%i): %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">)</span>
+<span class="w">           </span><span class="o">:</span><span class="w"> </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"未找到字符 '%c'(%i)</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 <p>可能的输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>找到字符 'D'(68): DEFG</span></span>
-<span class="line"><span>未找到字符 'd'(100)</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>找到字符 'D'(68): DEFG
+未找到字符 'd'(100)
+</pre></div> 
 </div>
 <h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
 <div class="t-ref-std-23">
@@ -256,7 +251,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td>查找字符的首次出现 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
 
 <tr class="t-dsc">
-<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>memchr</span></span>&nbsp;的 <span><span><a href="../../../cpp/string/byte/memchr.html" title="cpp/string/byte/memchr">C++ 文档</a></span></span></div>
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>memchr</span></span> 的 <span><span><a href="../../../cpp/string/byte/memchr.html" title="cpp/string/byte/memchr">C++ 文档</a></span></span></div>
 </td></tr>
 
 </tbody></table>
@@ -316,6 +311,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":794,"wgPageParseReport":{"limitreport":{"cputime":"0.117","walltime":"0.637","ppvisitednodes":{"value":5043,"limit":1000000},"postexpandincludesize":{"value":135642,"limit":4194304},"templateargumentsize":{"value":24337,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":17,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":9140,"limit":5000000},"timingprofile":["100.00%  567.835      1 -total"," 68.22%  387.382      1 Template:example"," 67.10%  381.004      2 Template:source"," 13.20%   74.949      1 Template:c/string/byte/navbar"," 13.11%   74.416      1 Template:navbar","  8.53%   48.434      1 Template:c/string/byte/navbar_content","  5.59%   31.745     46 Template:nv_ln","  5.40%   30.668     66 Template:nv","  2.63%   14.929      1 Template:rrev","  2.42%   13.760      1 Template:c/navbar_content"]},"cachereport":{"timestamp":"20260422094242","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422094242 --></html>
+</body>
+<!-- Cached 20260422094242 -->
+</html>

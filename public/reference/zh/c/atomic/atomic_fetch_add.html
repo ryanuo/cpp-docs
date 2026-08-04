@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
+<!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <title>atomic_fetch_add, atomic_fetch_add_explicit</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"ebbb4ff217fd087d396a8fd3","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/atomic/atomic_fetch_add","wgTitle":"c/atomic/atomic fetch add","wgCurRevisionId":73855,"wgRevisionId":73855,"wgArticleId":924,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/atomic/atomic_fetch_add","wgRelevantArticleId":924,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -13,14 +15,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-<style data-shiki="">
-.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
-.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
-.shiki .line{display:inline-block;width:100%}
-@media (prefers-color-scheme:light){
-  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
-}
-</style></head>
+</head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_atomic_atomic_fetch_add rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -41,7 +36,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../atomic.html" title="c/atomic">atomic</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
@@ -59,20 +54,20 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../thread.html" title="c/thread">并发支持库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../thread.html" title="c/thread">并发支持库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"> 线程</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_create.html" title="c/thread/thrd create"><span class="t-lines"><span>thrd_create</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_equal.html" title="c/thread/thrd equal"><span class="t-lines"><span>thrd_equal</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_current.html" title="c/thread/thrd current"><span class="t-lines"><span>thrd_current</span></span></a></div><div><span class="t-lines"><span>&nbsp;&nbsp;</span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_current.html" title="c/thread/thrd current"><span class="t-lines"><span>thrd_current</span></span></a></div><div><span class="t-lines"><span>  </span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_sleep.html" title="c/thread/thrd sleep"><span class="t-lines"><span>thrd_sleep</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_yield.html" title="c/thread/thrd yield"><span class="t-lines"><span>thrd_yield</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_exit.html" title="c/thread/thrd exit"><span class="t-lines"><span>thrd_exit</span></span></a></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_detach.html" title="c/thread/thrd detach"><span class="t-lines"><span>thrd_detach</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_join.html" title="c/thread/thrd join"><span class="t-lines"><span>thrd_join</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_errors.html" title="c/thread/thrd errors"><span class="t-lines"><span>thrd_success</span><span>thrd_timedout</span><span>thrd_busy</span><span>thrd_nomem</span><span>thrd_error</span></span></a></div><div><span class="t-lines"><span>&nbsp;&nbsp;</span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thrd_errors.html" title="c/thread/thrd errors"><span class="t-lines"><span>thrd_success</span><span>thrd_timedout</span><span>thrd_busy</span><span>thrd_nomem</span><span>thrd_error</span></span></a></div><div><span class="t-lines"><span>  </span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
 <tr class="t-nv-h1"><td colspan="5"> 原子操作</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="atomic_init.html" title="c/atomic/atomic init"><span class="t-lines"><span>atomic_init</span></span></a></div></div></td></tr>
@@ -127,7 +122,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h1"><td colspan="5"> 线程局部存储</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/thread_local.html" title="c/thread/thread local"><span class="t-lines"><span>thread_local</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/TSS_DTOR_ITERATIONS.html" title="c/thread/TSS DTOR ITERATIONS"><span class="t-lines"><span>TSS_DTOR_ITERATIONS</span></span></a></div><div><span class="t-lines"><span>&nbsp;&nbsp;</span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/TSS_DTOR_ITERATIONS.html" title="c/thread/TSS DTOR ITERATIONS"><span class="t-lines"><span>TSS_DTOR_ITERATIONS</span></span></a></div><div><span class="t-lines"><span>  </span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/tss_create.html" title="c/thread/tss create"><span class="t-lines"><span>tss_create</span></span></a></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/tss_get.html" title="c/thread/tss get"><span class="t-lines"><span>tss_get</span></span></a></div></div></td></tr>
@@ -135,7 +130,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread/tss_delete.html" title="c/thread/tss delete"><span class="t-lines"><span>tss_delete</span></span></a></div></div></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../header/stdatomic.html" title="c/header/stdatomic"><tt>&lt;stdatomic.h&gt;</tt></a></code> 定义
@@ -144,14 +139,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-since-c11">
-<td> <div><div style="max-width: min(calc(7.68332px * 45 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">C </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">atomic_fetch_add</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">volatile</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> A* </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">obj</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, M </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">arg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 45 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">C</span><span class="w"> </span><span class="nf">atomic_fetch_add</span><span class="p">(</span><span class="w"> </span><span class="k">volatile</span><span class="w"> </span><span class="n">A</span><span class="o">*</span><span class="w"> </span><span class="n">obj</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">arg</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td> (1) </td>
 <td> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span> </td>
 </tr>
 <tr class="t-dcl t-since-c11">
-<td> <div><div style="max-width: min(calc(7.68332px * 74 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">C </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">atomic_fetch_add_explicit</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">volatile</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> A* </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">obj</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, M </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">arg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">memory_order</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> order</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
-<span class="line"></span></code></pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 74 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">C</span><span class="w"> </span><span class="nf">atomic_fetch_add_explicit</span><span class="p">(</span><span class="w"> </span><span class="k">volatile</span><span class="w"> </span><span class="n">A</span><span class="o">*</span><span class="w"> </span><span class="n">obj</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">arg</span><span class="p">,</span><span class="w"> </span><span class="n">memory_order</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="p">);</span>
+</pre></div></div></td>
 <td> (2) </td>
 <td> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11 起)</span> </td>
 </tr>
@@ -192,39 +187,39 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdio.h&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;threads.h&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdatomic.h&gt;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">atomic_int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> acnt;</span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> cnt;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">thr_data</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> n = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; n &lt; </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1000</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; ++n) {</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        atomic_fetch_add_explicit</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(&amp;acnt, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, memory_order_relaxed);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 原子的</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        ++cnt;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 未定义行为，实际上会失去一些更新</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
-<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
-<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    thrd_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> thr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">10</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">];</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> n = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; n &lt; </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">10</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; ++n)</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        thrd_create</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">thr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[n], f, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">NULL</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> n = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; n &lt; </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">10</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; ++n)</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        thrd_join</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">thr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[n], </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">NULL</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"The atomic counter is </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%u</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, acnt);</span></span>
-<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"The non-atomic counter is </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%u</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, cnt);</span></span>
-<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
-<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;threads.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdatomic.h&gt;</span>
+<span class="w"> </span>
+<span class="kt">atomic_int</span><span class="w"> </span><span class="n">acnt</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">thr_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">atomic_fetch_add_explicit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acnt</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">memory_order_relaxed</span><span class="p">);</span><span class="w"> </span><span class="c1">// 原子的</span>
+<span class="w">        </span><span class="o">++</span><span class="n">cnt</span><span class="p">;</span><span class="w"> </span><span class="c1">// 未定义行为，实际上会失去一些更新</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">thrd_t</span><span class="w"> </span><span class="n">thr</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span>
+<span class="w">        </span><span class="n">thrd_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">thr</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span>
+<span class="w">        </span><span class="n">thrd_join</span><span class="p">(</span><span class="n">thr</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"The atomic counter is %u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">acnt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"The non-atomic counter is %u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">cnt</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
 <p>可能的输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>The atomic counter is 10000</span></span>
-<span class="line"><span>The non-atomic counter is 9511</span></span>
-<span class="line"><span></span></span></code></pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>The atomic counter is 10000
+The non-atomic counter is 9511
+</pre></div> 
 </div>
 <h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
 <div class="t-ref-std-17">
@@ -244,7 +239,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td>原子减法  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
 
 <tr class="t-dsc">
-<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>atomic_fetch_add</span>, <span>atomic_fetch_add_explicit</span></span>&nbsp;的 <span><span><a href="../../cpp/atomic/atomic_fetch_add.html" title="cpp/atomic/atomic fetch add">C++ 文档</a></span></span></div>
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>atomic_fetch_add</span>, <span>atomic_fetch_add_explicit</span></span> 的 <span><span><a href="../../cpp/atomic/atomic_fetch_add.html" title="cpp/atomic/atomic fetch add">C++ 文档</a></span></span></div>
 </td></tr>
 
 </tbody></table>
@@ -304,6 +299,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1043,"wgPageParseReport":{"limitreport":{"cputime":"0.144","walltime":"0.973","ppvisitednodes":{"value":4447,"limit":1000000},"postexpandincludesize":{"value":105693,"limit":4194304},"templateargumentsize":{"value":16948,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":5,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":7212,"limit":5000000},"timingprofile":["100.00%  916.379      1 -total"," 38.93%  356.757      2 Template:dcl"," 35.65%  326.677      1 Template:example"," 35.44%  324.757      2 Template:source"," 17.03%  156.071      1 Template:c/atomic/type-requirements"," 16.90%  154.849      1 Template:c","  3.72%   34.046      1 Template:c/thread/navbar","  3.66%   33.546      1 Template:navbar","  2.98%   27.285      1 Template:c/thread/navbar_content","  2.25%   20.602     50 Template:nv_ln"]},"cachereport":{"timestamp":"20260422071032","ttl":2592000,"transientcontent":false}}});});</script>
-
-
-</body><!-- Cached 20260422071032 --></html>
+</body>
+<!-- Cached 20260422071032 -->
+</html>
