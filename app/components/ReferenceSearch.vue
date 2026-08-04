@@ -148,13 +148,14 @@ defineExpose({
       variant="ghost"
       color="neutral"
       icon="i-lucide-search"
-      class="items-center gap-2 cursor-pointer ring ring-inset ring-accented w-full"
+      class="items-center gap-2 cursor-pointer ring ring-inset ring-accented w-full flex"
       @click="openModal"
     >
       <span class="hidden lg:inline text-sm text-gray-500 dark:text-gray-400">
         搜索手册
       </span>
-      <div class="hidden lg:flex items-center gap-0.5">
+
+      <div class="hidden lg:flex items-center gap-1 ml-auto">
         <UKbd size="sm">
           ⌘
         </UKbd>
