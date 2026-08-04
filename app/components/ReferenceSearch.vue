@@ -148,7 +148,7 @@ defineExpose({
       variant="ghost"
       color="neutral"
       icon="i-lucide-search"
-      class="items-center gap-2 cursor-pointer"
+      class="items-center gap-2 cursor-pointer ring ring-inset ring-accented w-full"
       @click="openModal"
     >
       <span class="hidden lg:inline text-sm text-gray-500 dark:text-gray-400">
@@ -343,9 +343,3 @@ defineExpose({
     </UModal>
   </div>
 </template>
-
-<style scoped>
-.reference-search-wrapper {
-  display: contents;
-}
-</style>
