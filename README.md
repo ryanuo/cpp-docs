@@ -54,6 +54,20 @@ public/reference/
 │   └── common/               # 公共资源（CSS/字体）
 ```
 
+## 代码高亮
+
+参考手册的 HTML 文件使用 `div.mw-highlight` 标记代码块，原本采用 cppreference 自带的高亮样式。本项目通过 `scripts/shiki-highlight.mjs` 脚本在构建前对所有离线文档进行 **Shiki 语法高亮预处理**，替换为 VS Code 风格的 `dark-plus`/`light-plus` 双主题高亮，并自动跟随系统深浅色模式切换。
+
+### 运行方式
+
+```bash
+node scripts/shiki-highlight.mjs
+```
+
+脚本会递归扫描 `public/reference/zh/` 下的所有 `.html` 文件，将每个 `div.mw-highlight` 内的代码用 Shiki 重新渲染，并将所需 CSS 注入到 `<head>` 中。处理过程按 200 个文件一批并发执行，终端会输出进度。
+
+> 注意：该脚本尚未加入 npm scripts，需手动运行。建议在下载/更新离线文档后、构建之前执行一次。
+
 ## 技术栈
 
 - [Nuxt 4](https://nuxt.com) - Vue 全栈框架
