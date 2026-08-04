@@ -618,9 +618,9 @@ body.skin-cppreference .t-navbar-head:nth-child(2), body.skin-vector .t-navbar-h
     white-space: nowrap
 }
 
-.t-dsc > td, .t-dsc-hitem > td {
+/* .t-dsc > td, .t-dsc-hitem > td {
     border-top: 1px solid #CCCCCC
-}
+} */
 
 .t-dsc-header > td {
     padding: 0;
@@ -2200,108 +2200,354 @@ pre,
 /**
   ** 新增样式，重写样式
 */
-.t-dcl-begin{
-  margin: 10px 0;
+/* ============================================================
+   cppreference 页面表格美化（合并整理版）
+   ============================================================ */
+:root {
+    --cr-border:       #e1e4e8;
+    --cr-border-light: #f0f1f3;
+    --cr-bg-head:      #f6f8fa;
+    --cr-bg-hover:     #f9fafb;
+    --cr-bg-chip:      #eff1f3;
+    --cr-text-muted:   #6a737d;
+    --cr-link:         #0969da;
+    --cr-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
 }
 
+/* ========== 1. 版本徽章（全局，基础样式只写一次） ========== */
+.t-mark-rev,
+.t-mark {
+    display: inline-block;
+    font-size: 11.5px;
+    line-height: 1.6;
+    padding: 1px 10px;
+    margin: 1px 0;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.t-mark-rev[class*="t-since"] {          /* 「起」绿 */
+    color: #1a7f37;
+    background: #dafbe1;
+    border-color: #aceebb;
+}
+
+.t-mark-rev[class*="t-until"] {          /* 「前」琥珀 */
+    color: #9a6700;
+    background: #fff8c5;
+    border-color: #ecd98b;
+}
+
+.t-mark {                                /* 中性标注 (C++17) */
+    color: #57606a;
+    background: var(--cr-bg-chip);
+    border-color: var(--cr-border);
+}
+
+/* ========== 2. 声明表 .t-dcl-begin（每条声明一张独立卡片） ========== */
+.t-dcl-begin {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;               /* 卡片间距；想连成一体就改 0 */
+    margin: 10px 0;
+}
+
+/* 干掉 Shiki 输出的内联怪异样式 */
 .t-dcl .mw-content-ltr {
     max-width: none !important;
     overflow-x: auto !important;
     border-right: none !important;
-    border-radius: 0 !important;   /* 圆角交给行级卡片 */
+    border-radius: 0 !important;
 }
 
-/* ========== 2. 代码块融入卡片，去掉"卡中卡" ========== */
+/* 代码块融入卡片 */
 .t-dcl pre.shiki {
-    background: transparent !important;   /* 关键：透掉白底 */
-    box-shadow: none !important;          /* 关键：去掉阴影 */
+    background: transparent !important;
+    box-shadow: none !important;
     border: none !important;
     margin: 0 !important;
     padding: 6px 4px !important;
     line-height: 1.7 !important;
 }
-.t-dcl pre.shiki span{
+
+.t-dcl pre.shiki span {
     background-color: transparent !important;
 }
 
 .t-dcl pre.shiki code {
-    font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+    font-family: var(--cr-mono);
     font-size: 13.5px;
 }
 
-/* ========== 3. 行级卡片：背景连续不断 ========== */
+/* 行卡片：四边收边 + 左右圆角 */
 .t-dcl td {
-    background: #f6f8fa;
-    border-top: 1px solid #e1e4e8;
+    background: var(--cr-bg-head);
+    border-top: 1px solid var(--cr-border);
+    border-bottom: 1px solid var(--cr-border);
     padding: 12px 16px;
     vertical-align: middle;
 }
 
 .t-dcl td:first-child {
-    border-left: 1px solid #e1e4e8;
+    border-left: 1px solid var(--cr-border);
+    border-radius: 10px 0 0 10px;
 }
 
-/* 中间空格：不再透明，让卡片连续 */
 .t-dcl td.t-dcl-nopad {
     padding: 0;
 }
 
-/* 徽章列收缩到内容宽度，不再占半行 */
 .t-dcl td:last-child {
     width: 1%;
-    border-right: 1px solid #e1e4e8;
-    padding-right: 8px;
+    border-right: 1px solid var(--cr-border);
+    border-radius: 0 10px 10px 0;
 }
 
-/* ========== 4. 徽章 ========== */
-.t-mark-rev,.t-mark
- {
-    display: inline-block;
-    font-size: 12px;
-    line-height: 1.2;
-    color: #1a7f37;
-    background: #dafbe1;
-    border: 1px solid #aceebb;
-    padding: 1px 2px;
-    border-radius: 4px;
-    margin: 1px 0;
-}
-
-/* ========== 分组标题行 ========== */
+/* ========== 3. 分组标题行（在标头 <list> 定义） ========== */
 .t-dsc-header td {
-    background: transparent !important;  /* 不继承卡片底色 */
+    background: transparent !important;
     border: none !important;
-    padding: 20px 16px 8px;              /* 上方留白，形成分组感 */
+    padding: 12px 4px 4px;
     font-size: 13px;
-    color: #6a737d;
+    color: var(--cr-text-muted);
     letter-spacing: .02em;
 }
 
-/* 表格第一行的标题不用额外留白 */
 .t-dsc-header:first-child td {
-    padding-top: 6px;
+    padding-top: 2px;
 }
 
-/* 标题里的 <list> 代码片段 */
 .t-dsc-header code {
-    font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+    font-family: var(--cr-mono);
     font-size: 12.5px;
-    background: #eff1f3;
-    border: 1px solid #e1e4e8;
+    background: var(--cr-bg-chip);
+    border: 1px solid var(--cr-border);
     padding: 1px 7px;
     border-radius: 5px;
 }
 
-/* 链接颜色与悬停 */
-.t-dsc-header code a {
-    color: #0969da;
+.t-dsc-header a {
+    color: var(--cr-link);
     text-decoration: none;
 }
 
-.t-dsc-header code a:hover {
+.t-dsc-header a:hover {
     text-decoration: underline;
 }
 
-.t-dsc-header > td:first-child > div{
-    margin-left: 0em;
+/* ========== 4. 成员类型 / 成员函数表 .t-dsc-begin ========== */
+.t-dsc-begin {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border: 1px solid var(--cr-border);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+/* 列表头（成员类型 / 定义） */
+.t-dsc-hitem td {
+    background: var(--cr-bg-head);
+    color: var(--cr-text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--cr-border);
+}
+
+/* 数据行 —— 全程只用 > 子选择器，避免误伤嵌套版本表 */
+.t-dsc > td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--cr-border-light);
+    vertical-align: top;
+    line-height: 1.7;
+}
+
+.t-dsc:last-child > td {
+    border-bottom: none;
+}
+
+.t-dsc > td:first-child {
+    width: 1%;
+    white-space: nowrap;
+    padding-right: 24px;
+}
+
+.t-dsc:hover > td {
+    background: var(--cr-bg-hover);
+}
+
+/* 分区标题行（元素访问 / 迭代器 …） */
+.t-dsc-begin td:has(> h5) {
+    background: var(--cr-bg-head);
+    padding: 6px 16px;
+    border-top: 1px solid var(--cr-border);
+    border-bottom: 1px solid var(--cr-border);
+}
+
+.t-dsc-begin h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: #57606a;
+}
+
+.t-dsc-begin h5::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 12px;
+    background: var(--cr-link);
+    border-radius: 2px;
+    margin-right: 8px;
+    vertical-align: -1px;
+}
+
+/* ========== 5. 行内代码（各类表通用） ========== */
+.t-dsc-begin code, .t-dsc-begin .t-lc,
+.t-par-begin code, .t-par-begin tt, .t-par-begin .t-lc {
+    font-family: var(--cr-mono);
+    font-size: .92em;
+    background: var(--cr-bg-chip);
+    border: 1px solid var(--cr-border);
+    border-radius: 5px;
+    padding: 1px 6px;
+}
+
+/* 语法高亮代码全局透明，不加胶囊底 */
+code.mw-highlight {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* ========== 6. 链接 ========== */
+.t-dsc-begin a, .t-par-begin a, .t-rev-begin a {
+    color: var(--cr-link);
+    text-decoration: none;
+}
+
+.t-dsc-begin a:hover, .t-par-begin a:hover, .t-rev-begin a:hover {
+    text-decoration: underline;
+}
+
+/* ========== 7. 嵌套版本表 .t-rev-begin ========== */
+.t-rev-begin {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.t-rev td {
+    padding: 4px 0;
+    vertical-align: middle;
+}
+
+.t-rev td p {
+    margin: 0;                           /* 关键：去掉 <p> 默认外边距 */
+}
+
+.t-rev + .t-rev td {
+    border-top: 1px dashed var(--cr-border);
+    padding-top: 8px;
+}
+
+.t-rev td:last-child {
+    width: 1%;
+    padding-left: 12px;
+}
+
+/* ========== 8. 模板参数表 .t-par-begin ========== */
+.t-par-begin {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border: 1px solid var(--cr-border);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.t-par > td {
+    padding: 12px 16px;
+    vertical-align: top;
+    line-height: 1.75;
+    border-bottom: 1px solid var(--cr-border-light);
+}
+
+.t-par:last-child > td {
+    border-bottom: none;
+}
+
+/* 参数名列 */
+.t-par > td:first-child {
+    width: 1%;
+    white-space: nowrap;
+    font-family: var(--cr-mono);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #0550ae;
+}
+
+/* 短横线列 */
+.t-par > td:nth-child(2) {
+    width: 1%;
+    padding-left: 0;
+    padding-right: 10px;
+    color: #c0c6cc;
+}
+
+.t-par:hover > td {
+    background: var(--cr-bg-hover);
+}
+
+.t-par > td > p:empty {
+    display: none;
+}
+
+/* ========== 9. 特性测试宏表 .ftm-begin ========== */
+.wikitable.ftm-begin {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 12px 0 4px;
+    font-size: 13px;
+    background: #fff;
+    border: 1px solid var(--cr-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ftm-begin th {
+    background: var(--cr-bg-head);
+    color: var(--cr-text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--cr-border);
+}
+
+.ftm-begin td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--cr-border-light);
+}
+
+.ftm-begin tr:last-child td {
+    border-bottom: none;
+}
+
+.ftm-begin abbr {
+    text-decoration: underline dotted;
+    cursor: help;
 }
