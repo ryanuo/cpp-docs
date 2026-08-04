@@ -134,7 +134,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-since-cxx11">
-<td><div><div style="max-width: calc(7.68332px * 48 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">exception_ptr</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> current_exception</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">noexcept</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<td><div><div style="max-width: calc(7.68332px * 48 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">exception_ptr</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> current_exception</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">noexcept</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
 <span class="line"></span></code></pre></div></div></td>
 <td class="t-dcl-nopad"> </td>
 <td><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span> <br><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26 起为 constexpr)</span></td>
@@ -154,7 +154,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>在遵循 <a rel="nofollow" class="external text" href="https://itanium-cxx-abi.github.io/cxx-abi/abi.html">Itanium C++ ABI</a> 的实现（GCC, Clang, 等）中，异常是于抛出时在堆上分配的（除了某些情况下的 <span class="t-lc">std::bad_alloc</span>），而此函数则单纯地创建指代之前分配对象的智能指针。在 MSVC 中，异常是于抛出时在栈上分配的，而此函数会进行堆分配并复制异常对象。
 </p><p>在 Windows 的托管 CLR 环境中（<a rel="nofollow" class="external autonumber" href="https://learn.microsoft.com/en-us/cpp/dotnet/exceptions-in-cpp-cli">[1]</a>），实现会在当前异常是托管异常时存储一个 <span class="t-lc">std::bad_exception</span>（<a rel="nofollow" class="external autonumber" href="https://github.com/microsoft/STL/blob/65aab97a8e75e7ba409002e518ed799006dfb285/stl/src/excptptr.cpp#L367">[2]</a>）。注意，<span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">catch</span><span class="p">(...)</span></code></span> 也会捕获托管异常：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;exception&gt;</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;exception&gt;</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
@@ -197,7 +197,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-template-editlink" style="">
 </div><div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;exception&gt;</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;exception&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdexcept&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string&gt;</span></span>
@@ -235,7 +235,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <span class="line"></span></code></pre></div>
 <p>可能的输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>Caught exception: 'basic_string::at: __n (which is 1) &gt;= this-&gt;size() (which is 0)'</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>Caught exception: 'basic_string::at: __n (which is 1) &gt;= this-&gt;size() (which is 0)'</span></span>
 <span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>

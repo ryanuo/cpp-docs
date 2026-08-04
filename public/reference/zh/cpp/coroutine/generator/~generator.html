@@ -380,7 +380,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <table class="t-dcl-begin">
 
 <tbody><tr class="t-dcl t-since-cxx23">
-<td> <div><div style="max-width: min(calc(7.68332px * 13 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">~</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">generator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<td> <div><div style="max-width: min(calc(7.68332px * 13 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">~</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">generator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
 <span class="line"></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23 起)</span> </td>
@@ -390,7 +390,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>销毁生成器对象。
 </p><p>令 <a href="../generator.html#%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98" title="cpp/coroutine/generator"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><i>coroutine_</i></code></a> 表示底层的协程对象，此函数等价于：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">coroutine_</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">coroutine_</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
 <span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    coroutine_</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">destroy</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
 <span class="line"></span></code></pre></div>
 <p>注意，销毁根生成器事实上会销毁整个生成器生成的栈，因为递归生成的生成器的所有权被当前生成器的协程栈帧中的可等待体对象持有。

@@ -391,7 +391,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></td></tr>
 <tr class="t-rev t-since-cxx20"><td>
 <dl><dd><ul><li>按<a href="aggregate_initialization.html" title="cpp/language/aggregate initialization">聚合初始化</a>初始化数组，但允许窄化转换，并<a href="value_initialization.html" title="cpp/language/value initialization">值初始化</a>任何不带初始化器的元素。</li></ul></dd></dl>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> A</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    explicit</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
@@ -413,7 +413,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <table class="t-rev-begin">
 <tbody><tr class="t-rev t-since-cxx20"><td>
 <dl><dd><ul><li>否则，如果目标类型是（可能有 cv 限定）的聚合类，则按<a href="aggregate_initialization.html" title="cpp/language/aggregate initialization">聚合初始化</a>中所述进行初始化，但允许窄化转换，不允许使用指派初始化器，不延长引用所绑定到的临时量的生存期，不进行花括号消除，并<a href="value_initialization.html" title="cpp/language/value initialization">值初始化</a>任何无初始化器的元素。</li></ul></dd></dl>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> B</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> B</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int&amp;&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> r</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
@@ -439,7 +439,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p><p>在使用直接初始化语法 <span class="t-v">(1)</span>（带圆括号）的变量声明和<a href="function.html" title="cpp/language/function">函数声明</a>之间有歧义的情况下，编译器始终选择函数声明。此消歧义规则有时是反直觉的，并且已被称为<a href="https://en.wikipedia.org/wiki/most_vexing_parse" class="extiw" title="enwiki:most vexing parse">最烦人的分析</a>。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;fstream&gt;</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;fstream&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iterator&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string&gt;</span></span>
 <span class="line"></span>
@@ -466,7 +466,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </div>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;memory&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string&gt;</span></span>
 <span class="line"></span>
@@ -494,7 +494,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>test aaaaaaaaaa 1 2</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>test aaaaaaaaaa 1 2</span></span>
 <span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>

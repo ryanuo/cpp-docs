@@ -433,7 +433,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p><p>语法 <span class="t-v">(2)</span> 的意图是搜索不被实现所掌控的文件。典型实现首先于当前文件所在的目录搜索，然后退回使用语法 <span class="t-v">(1)</span>。
 </p><p>包含一个文件时，它将经过<a href="../language/translation_phases.html" title="cpp/language/translation phases">翻译阶段</a> 1-4 的处理，这可能递归地包含嵌套 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cp">#include</span></code> 指令的展开，直到一个由实现定义的嵌套限制。为避免（可能传递性地）重复包含相同文件，和由文件包含自身造成的无限递归，通常使用<i>头文件防护</i>：整个头文件被包装在下列结构中
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#ifndef</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> FOO_H_INCLUDED</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /* 任何唯一地映射到文件名的名称 */</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#ifndef</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> FOO_H_INCLUDED</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /* 任何唯一地映射到文件名的名称 */</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#define</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> FOO_H_INCLUDED</span></span>
 <span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 文件内容在此</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#endif</span></span>
@@ -444,7 +444,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#if</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> __has_include(</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">optional</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">)</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#if</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> __has_include(</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">optional</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">)</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    #include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;optional&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    #define</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> has_optional </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
@@ -492,7 +492,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>&lt;optional&gt; 存在</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>&lt;optional&gt; 存在</span></span>
 <span class="line"><span>op = -1</span></span>
 <span class="line"><span>op = 42</span></span>
 <span class="line"><span></span></span></code></pre></div> 

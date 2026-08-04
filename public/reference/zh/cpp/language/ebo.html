@@ -292,7 +292,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p><p>然而，基类子对象不受这种制约，而且可以完全从对象布局中被优化掉：
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Base</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> {};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 空类</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Base</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> {};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 空类</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Derived1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : Base</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
@@ -313,7 +313,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p><p>这种情况的典例是 <span class="t-lc">std::reverse_iterator</span> 的朴素实现（派生自空基类 <span class="t-lc">std::iterator</span>），它持有其底层迭代器（同样派生自 <span class="t-lc">std::iterator</span>）为其首个非静态数据成员。 
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Base</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> {};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 空类</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Base</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> {};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 空类</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Derived1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : Base</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
@@ -358,7 +358,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>如果空成员子对象使用属性 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">[[<a href="attributes/no_unique_address.html" title="cpp/language/attributes/no unique address">no_unique_address</a>]]</code>，那么允许像空基类一样优化掉它们。取这种成员的地址会产生可能等于同一个对象的某个其他成员的地址。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Empty</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> {};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 空类</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Empty</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> {};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 空类</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> X</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>

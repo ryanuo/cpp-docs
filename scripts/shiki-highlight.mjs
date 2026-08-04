@@ -72,6 +72,8 @@ async function main() {
           defaultColor: false
         })
         $pre.replaceWith(result)
+        // 移除 mw-highlight 相关类，防止运行时 pygments 重复处理
+        $el.removeClass((_, className) => (className.match(/mw-highlight[^\s]*/g) || []).join(' '))
         changed = true
         totalBlocks++
       } catch {

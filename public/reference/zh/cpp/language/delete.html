@@ -407,7 +407,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr class="t-rev t-since-cxx11"><td>
 <p>因为关键词 <code>delete</code> 之后的一对方括号始终被解释为 delete 的数组形式，所以紧跟在 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">delete</span></code> 之后的拥有空捕获列表的 <a href="lambda.html" title="cpp/language/lambda">lambda 表达式</a>必须以括号包围。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// delete []{ return new int; }(); // 解析错误</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// delete []{ return new int; }(); // 解析错误</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">delete</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ([]{ </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> new</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; })();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  // OK</span></span>
 <span class="line"></span></code></pre></div>
 </td>

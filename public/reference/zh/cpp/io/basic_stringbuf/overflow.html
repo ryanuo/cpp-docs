@@ -135,7 +135,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <table class="t-dcl-begin">
 
 <tbody><tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 68 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">protected:</span></span>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 68 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">protected:</span></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">virtual</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> int_type</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> overflow</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ( </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">int_type</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Traits</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">eof</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() );</span></span>
 <span class="line"></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
@@ -167,7 +167,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><p>在用于执行此示例的实现（如 GCC-4.9）中，<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">overflow()</code> 过分配写入区域为 512 字节：调用 <span class="t-lc">str()</span> 只会返回四个初始字节，但剩下的 508 次对 <span class="t-lc">sputc()</span> 的调用不会要求对 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">overflow()</code> 的新调用。</p><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;sstream&gt;</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;sstream&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> mybuf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : std::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">stringbuf</span></span>
@@ -212,7 +212,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <span class="line"></span></code></pre></div>
 <p>可能的输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>读写流：</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>读写流：</span></span>
 <span class="line"><span>调用 stringbuf::overflow('4')</span></span>
 <span class="line"><span>调用前：读取区域大小：3</span></span>
 <span class="line"><span>       写入区域大小：3</span></span>

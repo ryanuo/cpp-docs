@@ -250,7 +250,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <h3><span id=".E5.90.91_std_.E6.B7.BB.E5.8A.A0.E5.A3.B0.E6.98.8E"></span><span class="mw-headline" id="向_std_添加声明">向 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std</code> 添加声明</span></h3>
 <p>向命名空间 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std</code> 或 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std</code> 中嵌套的任何命名空间添加声明或定义，除了下面提到的少数例外的情况下都是未定义行为。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;utility&gt;</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;utility&gt;</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">namespace</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
@@ -265,7 +265,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <h4><span id=".E7.B1.BB.E6.A8.A1.E6.9D.BF"></span><span class="mw-headline" id="类模板">类模板</span></h4>
 <p>对于任何标准库类模板的模板特化，只有在它的声明依赖至少一个<a href="type.html#%E7%94%B1%E7%A8%8B%E5%BA%8F%E5%AE%9A%E4%B9%89%E7%9A%84%E7%B1%BB%E5%9E%8B" title="cpp/language/type">由程序定义的类型</a>，且该特化满足原模板的所有要求时，才能向命名空间 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">std</code> 中添加，除非这种特化被禁止。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 获取主 std::hash 模板的声明。不能自己声明它。</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 获取主 std::hash 模板的声明。不能自己声明它。</span></span>
 <span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 保证 &lt;typeindex&gt; 提供这种声明，包含它比 &lt;functional&gt; 低廉很多。</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;typeindex&gt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> </span></span>
@@ -351,7 +351,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>如果 C++ 程序显式或隐式地尝试形成到标准库函数或标准库函数模板实例化的指针、引用（对于自由函数和静态成员函数）或成员指针（对于非静态成员函数），那么程序行为未指明（可能非良构），除非该函数被指定为<i>可取址函数</i>（见下文）。
 </p><p>下列代码在 C++17 中良定义，但从 C++20 起将导致未指定的行为，并且可能无法编译：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cmath&gt;</span></span>
+<div class="mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cmath&gt;</span></span>
 <span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;memory&gt;</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
