@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import { ref, watch, nextTick, onMounted, onUnmounted } from 'vue'
+import { ref, nextTick, onMounted, onUnmounted } from 'vue'
 import { useReferenceSearch } from '~/composables/useReferenceSearch'
 
 const {
   isLoading,
   error,
   query,
-  activeCategory,
   results,
   loadIndex,
-  setQuery,
-  setCategory
+  setQuery
 } = useReferenceSearch()
 
 const modalOpen = ref(false)
@@ -18,27 +16,6 @@ const selectedIndex = ref(0)
 const inputRef = ref<HTMLInputElement | null>(null)
 const listRef = ref<HTMLElement | null>(null)
 const loaded = ref(false)
-
-const categories = [
-  { value: 'all', label: '全部', icon: 'i-lucide-code' },
-  { value: 'function', label: '函数', icon: 'i-lucide-function-square' },
-  { value: 'type', label: '类型', icon: 'i-lucide-box' }
-]
-
-const categoryMap = {
-  function: '函数',
-  template: '模板',
-  type: '类型'
-} as Record<string, string>
-
-function getCategoryColor(category: string) {
-  switch (category) {
-    case 'function': return 'primary'
-    case 'template': return 'secondary'
-    case 'type': return 'success'
-    default: return 'neutral'
-  }
-}
 
 async function openModal() {
   modalOpen.value = true
@@ -123,10 +100,6 @@ function handleKeydown(e: KeyboardEvent) {
   }
 }
 
-watch(activeCategory, () => {
-  selectedIndex.value = 0
-})
-
 onMounted(() => {
   window.addEventListener('keydown', handleKeydown)
 })
@@ -189,20 +162,6 @@ defineExpose({
                 icon="i-lucide-x"
                 @click="closeModal"
               />
-            </div>
-
-            <div class="flex gap-1 px-4 pb-3">
-              <UButton
-                v-for="cat in categories"
-                :key="cat.value"
-                :variant="activeCategory === cat.value ? 'soft' : 'ghost'"
-                :color="activeCategory === cat.value ? 'primary' : 'neutral'"
-                size="sm"
-                :icon="cat.icon"
-                @click="setCategory(cat.value)"
-              >
-                {{ cat.label }}
-              </UButton>
             </div>
           </div>
 
@@ -281,15 +240,10 @@ defineExpose({
                 @click="goToResult(index)"
               >
                 <div
-                  class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-                  :class="{
-                    'bg-green-100 dark:bg-green-800/30 text-green-600 dark:text-green-400': entry.category === 'function',
-                    'bg-purple-100 dark:bg-purple-800/30 text-purple-600 dark:text-purple-400': entry.category === 'template',
-                    'bg-blue-100 dark:bg-blue-800/30 text-blue-600 dark:text-blue-400': entry.category === 'type'
-                  }"
+                  class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400"
                 >
                   <UIcon
-                    :name="entry.category === 'function' ? 'i-lucide-function-square' : entry.category === 'type' ? 'i-lucide-box' : 'i-lucide-layout-template'"
+                    name="i-lucide-book-open"
                     class="w-4 h-4"
                   />
                 </div>
@@ -302,16 +256,6 @@ defineExpose({
                     {{ entry.path }}
                   </div>
                 </div>
-
-                <UBadge
-                  v-if="activeCategory === 'all'"
-                  :color="getCategoryColor(entry.category)"
-                  variant="subtle"
-                  size="sm"
-                  class="shrink-0"
-                >
-                  {{ categoryMap[entry.category] }}
-                </UBadge>
 
                 <UIcon
                   v-if="index === selectedIndex"

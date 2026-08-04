@@ -5,7 +5,6 @@ export interface ReferenceEntry {
   name: string
   path: string
   title: string
-  category: 'function' | 'template' | 'type'
   letter: string
 }
 
@@ -21,7 +20,6 @@ export function useReferenceSearch() {
   const isLoading = ref(false)
   const error = ref<string | null>(null)
   const query = ref('')
-  const activeCategory = ref('all')
 
   async function loadIndex(): Promise<IndexData | null> {
     if (indexCache) return indexCache
@@ -60,12 +58,7 @@ export function useReferenceSearch() {
     const q = query.value.toLowerCase().trim()
     if (!indexCache || !q) return []
 
-    let entries = indexCache.entries
-
-    // 分类筛选
-    if (activeCategory.value !== 'all') {
-      entries = entries.filter(e => e.category === activeCategory.value)
-    }
+    const entries = indexCache.entries
 
     // 匹配并评分
     const scored = entries.map((entry) => {
@@ -110,18 +103,12 @@ export function useReferenceSearch() {
     query.value = q
   }
 
-  function setCategory(cat: string) {
-    activeCategory.value = cat
-  }
-
   return {
     isLoading,
     error,
     query,
-    activeCategory,
     results,
     loadIndex,
-    setQuery,
-    setCategory
+    setQuery
   }
 }
