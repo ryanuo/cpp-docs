@@ -2227,16 +2227,37 @@ pre,
     white-space: nowrap;
 }
 
-.t-mark-rev[class*="t-since"] {          /* 「起」绿 */
-    color: #1a7f37;
-    background: #dafbe1;
-    border-color: #aceebb;
-}
+/* ========== 版本色板：颜色=版本，形态=起/前 ========== */
+/* C++11 —— 蓝 */
+.t-mark-rev.t-since-cxx11 { color: #0969da; background: #ddf4ff; border-color: #9fd0ff; }
+.t-mark-rev.t-until-cxx11 { color: #0969da; background: #fff;    border-color: #9fd0ff; border-style: dashed; }
 
-.t-mark-rev[class*="t-until"] {          /* 「前」琥珀 */
-    color: #9a6700;
-    background: #fff8c5;
-    border-color: #ecd98b;
+/* C++14 —— 青 */
+.t-mark-rev.t-since-cxx14 { color: #0e7490; background: #cffafe; border-color: #a5f3fc; }
+.t-mark-rev.t-until-cxx14 { color: #0e7490; background: #fff;    border-color: #a5f3fc; border-style: dashed; }
+
+/* C++17 —— 绿 */
+.t-mark-rev.t-since-cxx17 { color: #1a7f37; background: #dafbe1; border-color: #aceebb; }
+.t-mark-rev.t-until-cxx17 { color: #1a7f37; background: #fff;    border-color: #aceebb; border-style: dashed; }
+
+/* C++20 —— 紫 */
+.t-mark-rev.t-since-cxx20 { color: #8250df; background: #fbefff; border-color: #e3c9ff; }
+.t-mark-rev.t-until-cxx20 { color: #8250df; background: #fff;    border-color: #e3c9ff; border-style: dashed; }
+
+/* C++23 —— 品红 */
+.t-mark-rev.t-since-cxx23 { color: #bf3989; background: #ffeef7; border-color: #ffc9e5; }
+.t-mark-rev.t-until-cxx23 { color: #bf3989; background: #fff;    border-color: #ffc9e5; border-style: dashed; }
+
+/* C++26 —— 橙 */
+.t-mark-rev.t-since-cxx26 { color: #bc4c00; background: #fff1e5; border-color: #ffd8b5; }
+.t-mark-rev.t-until-cxx26 { color: #bc4c00; background: #fff;    border-color: #ffd8b5; border-style: dashed; }
+
+/* 兜底：出现新版本（如 C++29）时按老逻辑显示 */
+.t-mark-rev[class*="t-since"]:not([class*="cxx11"]):not([class*="cxx14"]):not([class*="cxx17"]):not([class*="cxx20"]):not([class*="cxx23"]):not([class*="cxx26"]) {
+    color: #1a7f37; background: #dafbe1; border-color: #aceebb;
+}
+.t-mark-rev[class*="t-until"]:not([class*="cxx11"]):not([class*="cxx14"]):not([class*="cxx17"]):not([class*="cxx20"]):not([class*="cxx23"]):not([class*="cxx26"]) {
+    color: #9a6700; background: #fff8c5; border-color: #ecd98b;
 }
 
 .t-mark {                                /* 中性标注 (C++17) */
