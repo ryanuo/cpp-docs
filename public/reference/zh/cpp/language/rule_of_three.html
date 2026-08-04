@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>三/五/零原则</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"7d72cf1ce7bb9302b78bbcc1","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/language/rule_of_three","wgTitle":"cpp/language/rule of three","wgCurRevisionId":99702,"wgRevisionId":99702,"wgArticleId":8460,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/language/rule_of_three","wgRelevantArticleId":8460,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_language_rule_of_three rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -38,7 +43,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
@@ -67,7 +72,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">一般主题</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -133,10 +138,10 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">说明符</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="cv.html" title="cpp/language/cv"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code>/<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="auto.html" title="cpp/language/auto"><tt>auto</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="consteval.html" title="cpp/language/consteval"><tt>consteval</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="constinit.html" title="cpp/language/constinit"><tt>constinit</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 </tbody></table></div></td></tr>
@@ -208,7 +213,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">类特有的函数性质</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="virtual.html" title="cpp/language/virtual">虚函数</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="final.html" title="cpp/language/final"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">final</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="explicit.html" title="cpp/language/explicit"><tt>explicit</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
@@ -241,71 +246,71 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr class="t-nv"><td colspan="5"><a href="history.html" title="cpp/language/history">C++ 的历史</a></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <h3><span id=".E4.B8.89.E5.8E.9F.E5.88.99"></span><span class="mw-headline" id="三原则">三原则</span></h3>
 <p>如果某个类需要用户定义的<a href="destructor.html" title="cpp/language/destructor">析构函数</a>、用户定义的<a href="copy_constructor.html" title="cpp/language/copy constructor">复制构造函数</a>或用户定义的<a href="as_operator.html" class="mw-redirect" title="cpp/language/as operator">复制赋值运算符</a>，那么它几乎肯定需要全部三个。
 </p><p>因为 C++ 在各种场合（按值传递/返回、操纵容器等）对用户定义类型的对象进行复制和复制赋值时，如果这些特殊成员函数可以访问，就会调用它们，并且如果它们没有被用户定义，那么它们就会被编译器隐式定义。
 </p><p>如果类<a href="raii.html" title="cpp/language/raii">管理的资源</a>的句柄是个非类类型对象（原始指针、POSIX 文件描述符等），其析构函数不执行任何操作，且复制构造函数/赋值运算符进行“浅复制”（复制句柄的值，而不复制底层资源），则不应使用隐式定义的特殊成员函数。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;utility&gt;</span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">rule_of_three</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">cstring</span><span class="p">;</span><span class="w"> </span><span class="c1">// 以裸指针为动态分配内存的句柄</span>
-
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">rule_of_three</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">cstring</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">cstring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="p">[</span><span class="n">std</span><span class="o">::</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// 分配</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">strcpy</span><span class="p">(</span><span class="n">cstring</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w"> </span><span class="c1">// 填充</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="o">~</span><span class="n">rule_of_three</span><span class="p">()</span><span class="w"> </span><span class="c1">// I. 析构函数</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">cstring</span><span class="p">;</span><span class="w"> </span><span class="c1">// 解分配</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="n">rule_of_three</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rule_of_three</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="c1">// II. 复制构造函数</span>
-<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">rule_of_three</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">cstring</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-
-<span class="w">    </span><span class="n">rule_of_three</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rule_of_three</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="c1">// III. 复制赋值</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// 为简洁采用复制后交换（copy-and-swap）手法实现</span>
-<span class="w">        </span><span class="c1">// 注意这样做妨碍潜在的存储重用</span>
-<span class="w">        </span><span class="n">rule_of_three</span><span class="w"> </span><span class="nf">temp</span><span class="p">(</span><span class="n">other</span><span class="p">);</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">swap</span><span class="p">(</span><span class="n">cstring</span><span class="p">,</span><span class="w"> </span><span class="n">temp</span><span class="p">.</span><span class="n">cstring</span><span class="p">);</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">c_str</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="c1">// 访问器</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">cstring</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">};</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">rule_of_three</span><span class="w"> </span><span class="n">o1</span><span class="p">{</span><span class="s">"abc"</span><span class="p">};</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">o1</span><span class="p">.</span><span class="n">c_str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="p">;</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">o2</span><span class="p">{</span><span class="n">o1</span><span class="p">};</span><span class="w"> </span><span class="c1">// II. 使用复制构造函数</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">o2</span><span class="p">.</span><span class="n">c_str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="p">;</span>
-<span class="w">    </span><span class="n">rule_of_three</span><span class="w"> </span><span class="n">o3</span><span class="p">(</span><span class="s">"def"</span><span class="p">);</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">o3</span><span class="p">.</span><span class="n">c_str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="p">;</span>
-<span class="w">    </span><span class="n">o3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o2</span><span class="p">;</span><span class="w"> </span><span class="c1">// III. 使用赋值赋值</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">o3</span><span class="p">.</span><span class="n">c_str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
-<span class="p">}</span><span class="w">   </span><span class="c1">// I. 此处调用所有析构函数</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstddef&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstring&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;utility&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> rule_of_three</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 以裸指针为动态分配内存的句柄</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">public:</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    explicit</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> rule_of_three</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">""</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">nullptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">            cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">new</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">strlen</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) + </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">];</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 分配</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">            std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">strcpy</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 填充</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    ~rule_of_three</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // I. 析构函数</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        delete[]</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 解分配</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    rule_of_three</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> rule_of_three</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // II. 复制构造函数</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rule_of_three</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    rule_of_three</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> rule_of_three</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // III. 复制赋值</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">        // 为简洁采用复制后交换（copy-and-swap）手法实现</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">        // 注意这样做妨碍潜在的存储重用</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        rule_of_three</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> temp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">swap</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">temp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        return</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">this</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char*</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> c_str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 访问器</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        return</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    rule_of_three</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> o1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abc"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">o1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">c_str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">' '</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> o2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">o1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // II. 使用复制构造函数</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">o2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">c_str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">' '</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    rule_of_three</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> o3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"def"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">o3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">c_str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">' '</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    o3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">o2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // III. 使用赋值赋值</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">o3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">c_str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // I. 此处调用所有析构函数</span></span>
+<span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>abc abc def abc
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>abc abc def abc</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <p>通过可复制句柄来管理不可复制资源的类，可能必须将它的复制赋值和复制构造函数声明为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">private</span></code> 并且不提供它们的定义，或将它们定义为弃置的。这是三原则的另一种应用：只删除其一却任由其他特殊成员被隐式定义很可能会导致错误。
 通过可复制的句柄管理不可复制资源的类可能必须<span class="t-rev-inl t-until-cxx11"><span>声明复制赋值和复制构造函数为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">private</span></code></span> 并不提供它们的定义</span><span><span class="t-mark-rev t-until-cxx11" style="white-space: nowrap;">(C++11 前)</span></span></span><span class="t-rev-inl t-since-cxx11"><span>定义复制赋值和复制构造函数为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">=</span><span class="w"> </span><span class="k">delete</span></code></span></span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span></span></span>。这也是“三原则”的另一种应用：删除其中一个而让另一个隐式定义，通常不正确。
@@ -313,77 +318,77 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <h3><span id=".E4.BA.94.E5.8E.9F.E5.88.99"></span><span class="mw-headline" id="五原则">五原则</span></h3>
 <p>因为用户定义（包括 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">=</span><span class="w"> </span><span class="k">default</span></code></span> 或 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">=</span><span class="w"> </span><span class="k">delete</span></code></span>）的析构函数、复制构造函数或复制赋值运算符，会阻止隐式定义<a href="move_constructor.html" title="cpp/language/move constructor">移动构造函数</a>和<a href="move_assignment.html" title="cpp/language/move assignment">移动赋值运算符</a>，所以任何想要移动语义的类必须声明全部五个特殊成员函数：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">rule_of_five</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">cstring</span><span class="p">;</span><span class="w"> </span><span class="c1">// 以裸指针为动态分配内存的句柄</span>
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">rule_of_five</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">cstring</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">cstring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="p">[</span><span class="n">std</span><span class="o">::</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// 分配</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">strcpy</span><span class="p">(</span><span class="n">cstring</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w"> </span><span class="c1">// 填充</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="o">~</span><span class="n">rule_of_five</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">cstring</span><span class="p">;</span><span class="w"> </span><span class="c1">// 解分配</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="n">rule_of_five</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rule_of_five</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="c1">// 复制构造函数</span>
-<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">rule_of_five</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">cstring</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-
-<span class="w">    </span><span class="n">rule_of_five</span><span class="p">(</span><span class="n">rule_of_five</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="c1">// 移动构造函数</span>
-<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">cstring</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">exchange</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">cstring</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">))</span><span class="w"> </span><span class="p">{}</span>
-
-<span class="w">    </span><span class="n">rule_of_five</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rule_of_five</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="c1">// 复制赋值</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// 为简便而实现为从临时副本移动赋值</span>
-<span class="w">        </span><span class="c1">// 注意这样做妨碍了潜在的存储重用</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rule_of_five</span><span class="p">(</span><span class="n">other</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="n">rule_of_five</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">rule_of_five</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="c1">// 移动赋值</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">swap</span><span class="p">(</span><span class="n">cstring</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">cstring</span><span class="p">);</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="c1">// 此外，还可以将两个赋值运算符都改为复制后交换（copy-and-swap）实现，</span>
-<span class="c1">// 这样做仍会无法在复制赋值中重用存储。</span>
-<span class="c1">//  rule_of_five&amp; operator=(rule_of_five other) noexcept</span>
-<span class="c1">//  {</span>
-<span class="c1">//      std::swap(cstring, other.cstring);</span>
-<span class="c1">//      return *this;</span>
-<span class="c1">//  }</span>
-<span class="p">};</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> rule_of_five</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 以裸指针为动态分配内存的句柄</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">public:</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    explicit</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> rule_of_five</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">""</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">nullptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">            cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">new</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">strlen</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) + </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">];</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 分配</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">            std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">strcpy</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 填充</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    ~rule_of_five</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        delete[]</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 解分配</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    rule_of_five</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> rule_of_five</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 复制构造函数</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rule_of_five</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    rule_of_five</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">rule_of_five</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">noexcept</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 移动构造函数</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">exchange</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">nullptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)) {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    rule_of_five</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> rule_of_five</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 复制赋值</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">        // 为简便而实现为从临时副本移动赋值</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">        // 注意这样做妨碍了潜在的存储重用</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        return</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">this</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rule_of_five</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    rule_of_five</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">rule_of_five</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">noexcept</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 移动赋值</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">swap</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        return</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">this</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 此外，还可以将两个赋值运算符都改为复制后交换（copy-and-swap）实现，</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 这样做仍会无法在复制赋值中重用存储。</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//  rule_of_five&amp; operator=(rule_of_five other) noexcept</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//  {</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//      std::swap(cstring, other.cstring);</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//      return *this;</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//  }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"></span></code></pre></div>
 <p>与三原则不同的是，不提供移动构造函数和移动赋值运算符通常不是错误，而只是错过了优化机会。
 </p>
 <h3><span id=".E9.9B.B6.E5.8E.9F.E5.88.99"></span><span class="mw-headline" id="零原则">零原则</span></h3>
 <p>有自定义析构函数、复制/移动构造函数或复制/移动赋值运算符的类应该专门处理所有权（这遵循<a href="https://en.wikipedia.org/wiki/Single_responsibility_principle" class="extiw" title="enwiki:Single responsibility principle">单一责任原则</a>）。其他类都不应该拥有自定义的析构函数、复制/移动构造函数或复制/移动赋值运算符<sup id="cite_ref-1" class="reference"><a href="rule_of_three.html#cite_note-1"><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup>
 </p><p>这条原则也在 C++ 核心指南（C++ Core Guidelines）中出现—— <a rel="nofollow" class="external text" href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rc-zero">C.20：如果可以避免定义默认操作，就不要定义它们</a>。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">rule_of_zero</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">cppstring</span><span class="p">;</span>
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">rule_of_zero</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">arg</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">cppstring</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-<span class="p">};</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> rule_of_zero</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> cppstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">public:</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    rule_of_zero</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> arg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">cppstring</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">arg</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"></span></code></pre></div>
 <p>当有意将某个基类用于多态用途时，可能需要将它的析构函数声明为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">public</span></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">virtual</span></code>。由于这会阻止生成隐式移动（并弃用隐式复制），因此必须将各特殊成员函数定义为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">=</span><span class="w"> </span><span class="k">default</span></code></span><sup id="cite_ref-2" class="reference"><a href="rule_of_three.html#cite_note-2"><span class="cite-bracket">[</span>2<span class="cite-bracket">]</span></a></sup>。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">base_of_five_defaults</span>
-<span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">base_of_five_defaults</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">base_of_five_defaults</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
-<span class="w">    </span><span class="n">base_of_five_defaults</span><span class="p">(</span><span class="n">base_of_five_defaults</span><span class="o">&amp;&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
-<span class="w">    </span><span class="n">base_of_five_defaults</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">base_of_five_defaults</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
-<span class="w">    </span><span class="n">base_of_five_defaults</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">base_of_five_defaults</span><span class="o">&amp;&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
-<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">base_of_five_defaults</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
-<span class="p">};</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> base_of_five_defaults</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">public:</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    base_of_five_defaults</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> base_of_five_defaults</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">default</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    base_of_five_defaults</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">base_of_five_defaults</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">default</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    base_of_five_defaults</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> base_of_five_defaults</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">default</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    base_of_five_defaults</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">base_of_five_defaults</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">default</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    virtual</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> ~base_of_five_defaults</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">default</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"></span></code></pre></div>
 <p>然而这使得类有可能被切片，这是多态类经常把复制定义 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">=</span><span class="w"> </span><span class="k">delete</span></code></span> 的原因（见 C++ 核心指南中的 <a rel="nofollow" class="external text" href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rc-copy-virtual">C.67：多态类应该抑制复制操作</a>），这带来了下列的五原则的通用说法：
 </p>
 <dl><dd><a rel="nofollow" class="external text" href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rc-five">C.21：如果你定义或 =delete 任何复制、移动或析构函数，则定义或 =delete 它们全部</a></dd></dl>
@@ -450,6 +455,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":96,"wgPageParseReport":{"limitreport":{"cputime":"0.142","walltime":"2.293","ppvisitednodes":{"value":2815,"limit":1000000},"postexpandincludesize":{"value":126238,"limit":4194304},"templateargumentsize":{"value":18036,"limit":4194304},"expansiondepth":{"value":17,"limit":100},"expensivefunctioncount":{"value":21,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":23720,"limit":5000000},"timingprofile":["100.00% 1945.109      1 -total"," 69.24% 1346.838      5 Template:source"," 43.09%  838.148      1 Template:example"," 25.78%  501.387      1 Template:cpp/language/navbar"," 25.01%  486.495      1 Template:navbar"," 14.39%  279.984      1 Template:cpp/language/navbar_content"," 13.13%  255.403    112 Template:nv","  7.54%  146.643      1 Template:cpp/navbar_content","  2.90%   56.414     10 Template:c/core","  1.97%   38.332     20 Template:ltt"]},"cachereport":{"timestamp":"20260427032556","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260427040011 -->
-</html>
+
+
+</body><!-- Cached 20260427040011 --></html>

@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>setjmp</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"21739d1127441116f20a0097","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/program/setjmp","wgTitle":"c/program/setjmp","wgCurRevisionId":98222,"wgRevisionId":98222,"wgArticleId":1246,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/program/setjmp","wgRelevantArticleId":1246,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_program_setjmp rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -36,7 +41,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../program.html" title="c/program">program</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
@@ -54,7 +59,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../program.html" title="c/program">程序支持工具</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../program.html" title="c/program">程序支持工具</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"> 程序终止</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="abort.html" title="c/program/abort"><span class="t-lines"><span>abort</span></span></a></div></div></td></tr>
@@ -101,7 +106,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </tbody></table></div></td></tr>
 <tr class="t-nv-h2"><td colspan="5">类型</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="jmp_buf.html" title="c/program/jmp buf"><span class="t-lines"><span>jmp_buf</span></span></a></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../header/setjmp.html" title="c/header/setjmp"><tt>&lt;setjmp.h&gt;</tt></a></code> 定义
@@ -110,8 +115,8 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: calc(7.68332px * 31 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define setjmp(env) </span><span class="cm">/* 由实现定义 */</span>
-</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: calc(7.68332px * 31 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#define</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> setjmp(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">env</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">)</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /* 由实现定义 */</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
@@ -121,17 +126,17 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p><p><code>setjmp</code> 的调用必须只出现在下列语境之一中：
 </p>
 <ol><li>选择或迭代语句（<a href="../language/if.html" title="c/language/if"><tt>if</tt></a>、<a href="../language/switch.html" title="c/language/switch"><tt>switch</tt></a>、<a href="../language/while.html" title="c/language/while"><tt>while</tt></a>、<a href="../language/do.html" title="c/language/do"><tt>do-while</tt></a>、<a href="../language/for.html" title="c/language/for"><tt>for</tt></a>）的完整控制表达式</li></ol>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">switch</span><span class="p">(</span><span class="n">setjmp</span><span class="p">(</span><span class="n">env</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// ...</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">switch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setjmp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(env)) {</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // ...</span></span>
+<span class="line"></span></code></pre></div>
 <ol><li>关系或相等性运算符的一个操作数，其另一操作数为整数常量表达式，产生的表达式为选择或迭代语句的完整控制表达式</li></ol>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">setjmp</span><span class="p">(</span><span class="n">env</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// ...</span>
-</pre></div>
-<ol><li>一元 ! 运算符的操作数，其结果为选择或迭代语句的完整控制表达式</li></ol>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">setjmp</span><span class="p">(</span><span class="n">env</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// ...</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setjmp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(env) &gt; </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">10</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // ...</span></span>
+<span class="line"></span></code></pre></div>
+<ol><li>一元&nbsp;! 运算符的操作数，其结果为选择或迭代语句的完整控制表达式</li></ol>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">while</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(!</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setjmp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(env)) {</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // ...</span></span>
+<span class="line"></span></code></pre></div>
 <ol><li><a href="../language/statements.html#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E5%8F%A5" title="c/language/statements">表达式语句</a>的完整表达式（可以将其转型到 <code>void</code>）。</li></ol>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">setjmp</span><span class="p">(</span><span class="n">env</span><span class="p">);</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setjmp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(env);</span></span>
+<span class="line"></span></code></pre></div>
 <p>若 <code>setjmp</code> 出现于其他语境中，则行为未定义。
 </p><p>一旦返回到 <code>setjmp</code> 的作用域:
 </p>
@@ -157,32 +162,32 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;setjmp.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdnoreturn.h&gt;</span>
-
-<span class="kt">jmp_buf</span><span class="w"> </span><span class="n">my_jump_buffer</span><span class="p">;</span>
-
-<span class="k">noreturn</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"foo(%d) called</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">);</span>
-<span class="w">    </span><span class="n">longjmp</span><span class="p">(</span><span class="n">my_jump_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 将从 setjmp 返回 status+1</span>
-<span class="p">}</span>
-<span class="w"> </span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">volatile</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// setjmp 作用域内要修改的局部变量必须为 volatile</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">setjmp</span><span class="p">(</span><span class="n">my_jump_buffer</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="c1">// 在一个 if 内与常数比较</span>
-<span class="w">        </span><span class="n">foo</span><span class="p">(</span><span class="o">++</span><span class="n">count</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdio.h&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;setjmp.h&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdnoreturn.h&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">jmp_buf my_jump_buffer;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">noreturn </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> foo</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> status</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) </span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"foo(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%d</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">) called</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, status);</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    longjmp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(my_jump_buffer, status + </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 将从 setjmp 返回 status+1</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    volatile</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> count = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // setjmp 作用域内要修改的局部变量必须为 volatile</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setjmp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(my_jump_buffer) != </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 在一个 if 内与常数比较</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        foo</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(++count);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>foo(1) called
-foo(2) called
-foo(3) called
-foo(4) called
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>foo(1) called</span></span>
+<span class="line"><span>foo(2) called</span></span>
+<span class="line"><span>foo(3) called</span></span>
+<span class="line"><span>foo(4) called</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
 <div class="t-ref-std-17">
@@ -210,7 +215,7 @@ foo(4) called
 <td>跳转到指定位置 <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
 
 <tr class="t-dsc">
-<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>setjmp</span></span> 的 <span><span><a href="../../cpp/utility/program/setjmp.html" title="cpp/utility/program/setjmp">C++ 文档</a></span></span></div>
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>setjmp</span></span>&nbsp;的 <span><span><a href="../../cpp/utility/program/setjmp.html" title="cpp/utility/program/setjmp">C++ 文档</a></span></span></div>
 </td></tr>
 
 </tbody></table>
@@ -270,6 +275,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":523,"wgPageParseReport":{"limitreport":{"cputime":"0.099","walltime":"0.447","ppvisitednodes":{"value":3045,"limit":1000000},"postexpandincludesize":{"value":66628,"limit":4194304},"templateargumentsize":{"value":10787,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":8,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5084,"limit":5000000},"timingprofile":["100.00%  408.339      1 -total"," 45.39%  185.340      1 Template:ddcl"," 43.74%  178.625      1 Template:dcl"," 39.61%  161.757      6 Template:source"," 38.87%  158.740      1 Template:example","  4.93%   20.144      1 Template:c/program/navbar","  4.79%   19.549      1 Template:navbar","  3.42%   13.961      1 Template:c/program/navbar_content","  2.34%    9.560     38 Template:nv","  2.31%    9.449     21 Template:nv_ln"]},"cachereport":{"timestamp":"20260421223438","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260421223438 -->
-</html>
+
+
+</body><!-- Cached 20260421223438 --></html>

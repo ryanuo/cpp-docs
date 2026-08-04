@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh-Hans-CN" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh-Hans-CN" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>std::regex_iterator&lt;BidirIt,CharT,Traits&gt;::regex_iterator</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"aaca3fc6abdca9e7024aaa85","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/regex/regex_iterator/regex_iterator","wgTitle":"cpp/regex/regex iterator/regex iterator","wgCurRevisionId":88353,"wgRevisionId":88353,"wgArticleId":9634,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh-cn","wgPageContentLanguage":"zh-cn","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/regex/regex_iterator/regex_iterator","wgRelevantArticleId":9634,"wgUserVariant":"zh-cn","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_regex_regex_iterator_regex_iterator rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -36,7 +41,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh-Hans-CN" dir="ltr"><div id="mw-content-subtitle" lang="zh-Hans-CN" dir="ltr"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../../regex.html" title="cpp/regex">regex</a></bdi> | <bdi dir="ltr"><a href="../regex_iterator.html" title="cpp/regex/regex iterator">regex iterator</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh-Hans-CN" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh-Hans-CN" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -65,7 +70,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../text.html" title="cpp/text">文本处理库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../text.html" title="cpp/text">文本处理库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../locale.html" title="cpp/locale">本地化库</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../regex.html" title="cpp/regex">正则表达式库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../utility/format.html" title="cpp/utility/format">格式化库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
@@ -85,7 +90,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../text/text_encoding.html" title="cpp/text/text encoding"><span class="t-lines"><span>text_encoding</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../regex.html" title="cpp/regex">正则表达式库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../regex.html" title="cpp/regex">正则表达式库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">类</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../basic_regex.html" title="cpp/regex/basic regex"><span class="t-lines"><span>basic_regex</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../sub_match.html" title="cpp/regex/sub match"><span class="t-lines"><span>sub_match</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
@@ -107,7 +112,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../error_type.html" title="cpp/regex/error type"><span class="t-lines"><span>error_type</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv-h1"><td colspan="5">正则表达式文法</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../ecmascript.html" title="cpp/regex/ecmascript"><span class="t-lines"><span>有改动的 ECMAScript-262 文法</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../regex_iterator.html" title="cpp/regex/regex iterator"><tt>std::regex_iterator</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../regex_iterator.html" title="cpp/regex/regex iterator"><tt>std::regex_iterator</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">成员函数</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>regex_iterator::regex_iterator</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%3D.html" title="cpp/regex/regex iterator/operator="><span class="t-lines"><span>regex_iterator::operator=</span></span></a></div></div></td></tr>
@@ -117,35 +122,35 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator%252A.html" title="cpp/regex/regex iterator/operator*"><span class="t-lines"><span>regex_iterator::operator*</span><span>regex_iterator::operator-&gt;</span></span></a></div></div></td></tr>
 <tr class="t-nv-h2"><td colspan="5">修改器</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="operator_arith.html" title="cpp/regex/regex iterator/operator arith"><span class="t-lines"><span>regex_iterator::operator++</span><span>regex_iterator::operator++(int)</span></span></a></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dcl t-since-cxx11">
-<td> <div><div style="max-width: min(calc(7.68332px * 17 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">regex_iterator</span><span class="p">();</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 17 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex_iterator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (1) </td>
 <td> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span> </td>
 </tr>
 <tr class="t-dcl t-since-cxx11">
-<td> <div><div style="max-width: min(calc(7.68332px * 192 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">regex_iterator</span><span class="p">(</span><span class="w"> </span><span class="n">BidirIt</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">BidirIt</span><span class="w"> </span><span class="n">b</span><span class="p">,</span>
-<span class="w">                </span><span class="k">const</span><span class="w"> </span><span class="n">regex_type</span><span class="o">&amp;</span><span class="w"> </span><span class="n">re</span><span class="p">,</span>
-<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">regex_constants</span><span class="o">::</span><span class="n">match_flag_type</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span>
-<span class="w">                    </span><span class="n">std</span><span class="o">::</span><span class="n">regex_constants</span><span class="o">::</span><span class="n">match_default</span><span class="w"> </span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 192 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex_iterator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">BidirIt</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">BidirIt</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">                const</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> regex_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">                std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">regex_constants</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">match_flag_type</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> =</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">                    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">regex_constants</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">match_default</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (2) </td>
 <td> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span> </td>
 </tr>
 <tr class="t-dcl t-since-cxx11">
-<td> <div><div style="max-width: min(calc(7.68332px * 40 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">regex_iterator</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">regex_iterator</span><span class="o">&amp;</span><span class="w"> </span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 40 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex_iterator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> regex_iterator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp; );</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (3) </td>
 <td> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span> </td>
 </tr>
 <tr class="t-dcl t-since-cxx11">
-<td> <div><div style="max-width: min(calc(7.68332px * 193 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">regex_iterator</span><span class="p">(</span><span class="w"> </span><span class="n">BidirIt</span><span class="p">,</span><span class="w"> </span><span class="n">BidirIt</span><span class="p">,</span>
-<span class="w">                </span><span class="k">const</span><span class="w"> </span><span class="n">regex_type</span><span class="o">&amp;&amp;</span><span class="p">,</span>
-<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">regex_constants</span><span class="o">::</span><span class="n">match_flag_type</span><span class="w"> </span><span class="o">=</span>
-<span class="w">                    </span><span class="n">std</span><span class="o">::</span><span class="n">regex_constants</span><span class="o">::</span><span class="n">match_default</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span><span class="p">;</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 193 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex_iterator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">BidirIt</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">BidirIt</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">                const</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> regex_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&amp;&amp;,</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">                std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">regex_constants</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">match_flag_type</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> =</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">                    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">regex_constants</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">match_default</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ) = </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">delete</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (4) </td>
 <td> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span> </td>
 </tr>
@@ -154,7 +159,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>构造新的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">regex_iterator</code>：
 </p>
 <div class="t-li1"><span class="t-li">1)</span> 默认构造函数。构造序列尾迭代器。</div>
-<div class="t-li1"><span class="t-li">2)</span> 从字符序列 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">[</code><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">a</span></code></span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">, </code><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">b</span></code></span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">)</code>、正则表达式 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">re</span></code></span> 和掌管匹配行为的标志 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">m</span></code></span> 构造 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">regex_iterator</code>。此构造函数以此数据进行 <span class="t-lc">std::regex_search</span> 的初始调用。若此初始调用结构为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">false</span></code></span>，则设置 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">*</span><span class="k">this</span></code></span> 为序列尾迭代器。</div>
+<div class="t-li1"><span class="t-li">2)</span> 从字符序列 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">[</code><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">a</span></code></span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">,&nbsp;</code><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">b</span></code></span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">)</code>、正则表达式 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">re</span></code></span> 和掌管匹配行为的标志 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">m</span></code></span> 构造 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">regex_iterator</code>。此构造函数以此数据进行 <span class="t-lc">std::regex_search</span> 的初始调用。若此初始调用结构为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">false</span></code></span>，则设置 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="o">*</span><span class="k">this</span></code></span> 为序列尾迭代器。</div>
 <div class="t-li1"><span class="t-li">3)</span> 复制 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">regex_iterator</code>。</div>
 <div class="t-li1"><span class="t-li">4)</span> 不允许以正则表达式临时量调用重载 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">2</code>，因为返回的迭代器会立即失效。</div>
 <h3><span id=".E5.8F.82.E6.95.B0"></span><span class="mw-headline" id="参数">参数</span></h3>
@@ -191,35 +196,35 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </td></tr></tbody></table>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string_view&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">str</span><span class="p">{</span><span class="sa">R</span><span class="s">"</span><span class="dl">(</span>
-<span class="s">        #ONE: *p = &amp;Mass;</span>
-<span class="s">        #Two: MOV %rd, 42</span>
-<span class="s">    </span><span class="dl">)</span><span class="s">"</span><span class="p">};</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">regex</span><span class="w"> </span><span class="n">re</span><span class="p">(</span><span class="s">"[a-w]"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 创建 regex_iterator，重载 (2)</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">regex_iterator</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="o">::</span><span class="n">iterator</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">str</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span>
-<span class="w">        </span><span class="n">re</span><span class="w"> </span><span class="c1">// re 是左值；如果改用立即表达式，如 std::regex{"[a-z]"}</span>
-<span class="w">           </span><span class="c1">// 则会由于重载 (4) 被弃置而产生错误</span>
-<span class="w">    </span><span class="p">};</span>
-
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">decltype</span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="cm">/* overload (1) */</span><span class="p">;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">last</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">it</span><span class="p">)</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">it</span><span class="p">).</span><span class="n">str</span><span class="p">();</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;regex&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string_view&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    constexpr</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string_view</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">R"(</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">        #ONE: *p = &amp;Mass;</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">        #Two: MOV %rd, 42</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">    )"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">regex</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"[a-w]"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 创建 regex_iterator，重载 (2)</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> it</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">regex_iterator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string_view</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">iterator</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">        str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">cbegin</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(), </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">cend</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(),</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">        re</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // re 是左值；如果改用立即表达式，如 std::regex{"[a-z]"}</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">           // 则会由于重载 (4) 被弃置而产生错误</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    };</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">decltype</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">it</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">last</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /* overload (1) */</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">it</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> != </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">last</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; ++</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">it</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">it</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">).</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>password
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>password</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E7.BC.BA.E9.99.B7.E6.8A.A5.E5.91.8A"></span><span class="mw-headline" id="缺陷报告">缺陷报告</span></h3>
 <p>下列更改行为的缺陷报告追溯地应用于以前出版的 C++ 标准。
@@ -299,5 +304,5 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":992,"wgPageParseReport":{"limitreport":{"cputime":"0.148","walltime":"0.880","ppvisitednodes":{"value":4355,"limit":1000000},"postexpandincludesize":{"value":118822,"limit":4194304},"templateargumentsize":{"value":23834,"limit":4194304},"expansiondepth":{"value":19,"limit":100},"expensivefunctioncount":{"value":13,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":8888,"limit":5000000},"timingprofile":["100.00%  810.326      1 -total"," 70.33%  569.896      4 Template:dcl"," 20.50%  166.141      1 Template:example"," 20.40%  165.327      2 Template:source","  5.71%   46.278      1 Template:cpp/regex/regex_iterator/navbar","  5.62%   45.544      1 Template:navbar","  2.81%   22.782     59 Template:nv","  1.83%   14.843     20 Template:nv_ln","  1.55%   12.593      1 Template:cpp/text/navbar_content","  1.42%   11.511      1 Template:cpp/regex/navbar_content"]},"cachereport":{"timestamp":"20260502050211","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-</html>
+
+</body></html>

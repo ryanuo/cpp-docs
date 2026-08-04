@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>std::counting_semaphore&lt;LeastMaxValue&gt;::acquire</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"c6dc9f3ecdd17e9fad42aa5f","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/thread/counting_semaphore/acquire","wgTitle":"cpp/thread/counting semaphore/acquire","wgCurRevisionId":88715,"wgRevisionId":88715,"wgArticleId":12635,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/thread/counting_semaphore/acquire","wgRelevantArticleId":12635,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_thread_counting_semaphore_acquire rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -36,7 +41,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../../thread.html" title="cpp/thread">thread</a></bdi> | <bdi dir="ltr"><a href="../counting_semaphore.html" title="cpp/thread/counting semaphore">counting semaphore</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -65,7 +70,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../thread.html" title="cpp/thread"> 并发支持库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../thread.html" title="cpp/thread"> 并发支持库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"><a href="../../thread.html#%E7%BA%BF%E7%A8%8B" title="cpp/thread">线程</a></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../thread.html" title="cpp/thread/thread"><span class="t-lines"><span>thread</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
@@ -85,7 +90,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/inplace stop token（页面不存在）"><span class="t-lines"><span>inplace_stop_token</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../never_stop_token.html" title="cpp/thread/never stop token"><span class="t-lines"><span>never_stop_token</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../stop_source.html" title="cpp/thread/stop source"><span class="t-lines"><span>stop_source</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/inplace stop source（页面不存在）"><span class="t-lines"><span>inplace_stop_source</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/inplace stop source（页面不存在）"><span class="t-lines"><span>inplace_stop_source</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&nbsp;&nbsp;</code></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../stop_callback.html" title="cpp/thread/stop callback"><span class="t-lines"><span>stop_callback</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/inplace stop callback（页面不存在）"><span class="t-lines"><span>inplace_stop_callback</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
@@ -93,7 +98,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../stoppable_token.html" title="cpp/thread/stoppable token"><span class="t-lines"><span>stoppable_token</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../unstoppable_token.html" title="cpp/thread/unstoppable token"><span class="t-lines"><span>unstoppable_token</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/stoppable source（页面不存在）"><span class="t-lines"><span><i>stoppable-source</i></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/stoppable callback for（页面不存在）"><span class="t-lines"><span><i>stoppable-callback-for</i></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/thread/stoppable callback for（页面不存在）"><span class="t-lines"><span><i>stoppable-callback-for</i></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&nbsp;&nbsp;</code></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
 <tr class="t-nv-h1"><td colspan="5"><a href="../../thread.html#%E4%BA%92%E6%96%A5" title="cpp/thread">互斥</a></td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -197,7 +202,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../atomic/atomic_flag_notify_one.html" title="cpp/atomic/atomic flag notify one"><span class="t-lines"><span>atomic_flag_notify_one</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../atomic/atomic_flag_notify_all.html" title="cpp/atomic/atomic flag notify all"><span class="t-lines"><span>atomic_flag_notify_all</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../counting_semaphore.html" title="cpp/thread/counting semaphore"><tt>std::counting_semaphore</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../counting_semaphore.html" title="cpp/thread/counting semaphore"><tt>std::counting_semaphore</tt></a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"> 成员函数</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="counting_semaphore.html" title="cpp/thread/counting semaphore/counting semaphore"><span class="t-lines"><span>counting_semaphore::counting_semaphore</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="~counting_semaphore.html" title="cpp/thread/counting semaphore/~counting semaphore"><span class="t-lines"><span>counting_semaphore::~counting_semaphore</span></span></a></div></div></td></tr>
@@ -209,11 +214,11 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="try_acquire_until.html" title="cpp/thread/counting semaphore/try acquire until"><span class="t-lines"><span>counting_semaphore::try_acquire_until</span></span></a></div></div></td></tr>
 <tr class="t-nv-h2"><td colspan="5"> 常量</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="max.html" title="cpp/thread/counting semaphore/max"><span class="t-lines"><span>counting_semaphore::max</span></span></a></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dcl t-since-cxx20">
-<td> <div><div style="max-width: min(calc(7.68332px * 15 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">acquire</span><span class="p">();</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 15 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> acquire</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span> </td>
 </tr>
@@ -232,148 +237,148 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><p>此示例可视化数个随机化线程的并发作业，不多于 N 个线程函数活跃，而其他则在信号量上等待（N 为信号量 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><i>desired</i></code> 值）。</p><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;array&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mutex&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;new&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;semaphore&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
-
-<span class="k">constexpr</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">max_threads</span><span class="p">{</span><span class="mi">10U</span><span class="p">};</span><span class="w"> </span><span class="c1">// 更改并查看效果</span>
-<span class="k">constexpr</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">ptrdiff_t</span><span class="w"> </span><span class="n">max_sema_threads</span><span class="p">{</span><span class="mi">3</span><span class="p">};</span><span class="w"> </span><span class="c1">// 对二元信号量为 {1}</span>
-<span class="n">std</span><span class="o">::</span><span class="n">counting_semaphore</span><span class="w"> </span><span class="n">semaphore</span><span class="p">{</span><span class="n">max_sema_threads</span><span class="p">};</span>
-<span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">time_tick</span><span class="p">{</span><span class="mi">10</span><span class="n">ms</span><span class="p">};</span>
-
-<span class="kt">unsigned</span><span class="w"> </span><span class="nf">rnd</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">uniform_int_distribution</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="w"> </span><span class="n">distribution</span><span class="p">{</span><span class="mi">2U</span><span class="p">,</span><span class="w"> </span><span class="mi">9U</span><span class="p">};</span><span class="w"> </span><span class="c1">// [延迟]</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">random_device</span><span class="w"> </span><span class="n">engine</span><span class="p">;</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">mt19937</span><span class="w"> </span><span class="n">noise</span><span class="p">{</span><span class="n">engine</span><span class="p">()};</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">distribution</span><span class="p">(</span><span class="n">noise</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">alignas</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">hardware_destructive_interference_size</span><span class="p">)</span><span class="w"> </span><span class="n">Guide</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="w"> </span><span class="n">cout_mutex</span><span class="p">;</span>
-<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">&gt;</span><span class="w"> </span><span class="n">started_at</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">delay</span><span class="p">{</span><span class="n">rnd</span><span class="p">()},</span><span class="w"> </span><span class="n">occupy</span><span class="p">{</span><span class="n">rnd</span><span class="p">()},</span><span class="w"> </span><span class="n">wait_on_sema</span><span class="p">{};</span>
-
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">start_time</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">started_at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">initial_delay</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="n">delay</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">time_tick</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">occupy_sema</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">wait_on_sema</span><span class="w"> </span><span class="o">=</span>
-<span class="w">            </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">::</span><span class="n">now</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">started_at</span><span class="w"> </span><span class="o">-</span>
-<span class="w">                </span><span class="n">delay</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">time_tick</span><span class="p">).</span><span class="n">count</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">time_tick</span><span class="p">.</span><span class="n">count</span><span class="p">());</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="n">occupy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">time_tick</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">visualize</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">x_scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">const</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">cout_n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="k">auto</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">x_scale</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="o">--</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
-<span class="w">                </span><span class="p">;</span>
-<span class="w">        </span><span class="p">};</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="w"> </span><span class="n">lk</span><span class="p">{</span><span class="n">cout_mutex</span><span class="p">};</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'#'</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">setw</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="p">;</span>
-<span class="w">        </span><span class="n">cout_n</span><span class="p">(</span><span class="s">"░"</span><span class="p">,</span><span class="w"> </span><span class="n">delay</span><span class="p">);</span>
-<span class="w">        </span><span class="n">cout_n</span><span class="p">(</span><span class="s">"▒"</span><span class="p">,</span><span class="w"> </span><span class="n">wait_on_sema</span><span class="p">);</span>
-<span class="w">        </span><span class="n">cout_n</span><span class="p">(</span><span class="s">"█"</span><span class="p">,</span><span class="w"> </span><span class="n">occupy</span><span class="p">);</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">show_info</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">线程数: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max_threads</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">", 吞吐量: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max_sema_threads</span>
-<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" │ 凡例: 初始延迟 ░░ │ 等待状态 ▒▒ │ 信号量占据 ██ </span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">};</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Guide</span><span class="p">,</span><span class="w"> </span><span class="n">max_threads</span><span class="o">&gt;</span><span class="w"> </span><span class="n">guides</span><span class="p">;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">workerThread</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">id</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">guides</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">initial_delay</span><span class="p">();</span><span class="w"> </span><span class="c1">// 模拟获取信号量前的某些工作</span>
-<span class="w">    </span><span class="n">semaphore</span><span class="p">.</span><span class="n">acquire</span><span class="p">();</span><span class="w">        </span><span class="c1">// 等待直至空信号量槽位可用</span>
-<span class="w">    </span><span class="n">guides</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">occupy_sema</span><span class="p">();</span><span class="w">   </span><span class="c1">// 模拟获取信号量时的某些工作</span>
-<span class="w">    </span><span class="n">semaphore</span><span class="p">.</span><span class="n">release</span><span class="p">();</span>
-<span class="w">    </span><span class="n">guides</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">visualize</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">jthread</span><span class="o">&gt;</span><span class="w"> </span><span class="n">threads</span><span class="p">;</span>
-<span class="w">    </span><span class="n">threads</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">max_threads</span><span class="p">);</span>
-
-<span class="w">    </span><span class="n">Guide</span><span class="o">::</span><span class="n">show_info</span><span class="p">();</span>
-<span class="w">    </span><span class="n">Guide</span><span class="o">::</span><span class="n">start_time</span><span class="p">();</span>
-
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="p">{</span><span class="mi">0U</span><span class="p">};</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">max_threads</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">id</span><span class="p">)</span>
-<span class="w">        </span><span class="n">threads</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">jthread</span><span class="p">(</span><span class="n">workerThread</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">));</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;array&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;chrono&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstddef&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iomanip&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;mutex&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;new&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;random&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;semaphore&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;thread&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;vector&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> namespace</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">literals</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">constexpr</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> max_threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">10U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 更改并查看效果</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">constexpr</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">ptrdiff_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> max_sema_threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 对二元信号量为 {1}</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">counting_semaphore</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> semaphore</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">max_sema_threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">constexpr</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> time_tick</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">10ms</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> rnd</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    static</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">uniform_int_distribution</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">distribution</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">9U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // [延迟]</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    static</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">random_device</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> engine</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    static</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">mt19937</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> noise</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">engine</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()};</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> distribution</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">noise</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> alignas(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">hardware_destructive_interference_size</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Guide</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    inline</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> static</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">mutex</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> cout_mutex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    inline</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> static</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">chrono</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">time_point</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">chrono</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">high_resolution_clock</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">started_at</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> delay</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rnd</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()}, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">occupy</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rnd</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()}, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">wait_on_sema</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">public:</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    static</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> start_time</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">started_at</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">chrono</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">high_resolution_clock</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">now</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(); }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> initial_delay</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">this_thread</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sleep_for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">delay</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> * </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">time_tick</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">); }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> occupy_sema</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">        wait_on_sema</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> =</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">            static_cast</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">chrono</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">duration_cast</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">chrono</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">milliseconds</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;(</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">                std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">chrono</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">high_resolution_clock</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">now</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() - </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">started_at</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> -</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">                delay</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> * </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">time_tick</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">).</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() / </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">time_tick</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">());</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">this_thread</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sleep_for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">occupy</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> * </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">time_tick</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> visualize</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> x_scale</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">        auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> cout_n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = [=](</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        {</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">            for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *= </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">x_scale</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">-- &gt; </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">str</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">                ;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        };</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">lock_guard</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> lk</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout_mutex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'#'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">setw</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">' '</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        cout_n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"░"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">delay</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        cout_n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"▒"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">wait_on_sema</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">        cout_n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"█"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">occupy</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    static</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> show_info</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">线程数: "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">max_threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">", 吞吐量: "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">max_sema_threads</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">                  &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">" │ 凡例: 初始延迟 ░░ │ 等待状态 ▒▒ │ 信号量占据 ██ </span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">                  &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">endl</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">array</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">Guide</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">max_threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">guides</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> workerThread</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    guides</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">].</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">initial_delay</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 模拟获取信号量前的某些工作</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    semaphore</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">acquire</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">        // 等待直至空信号量槽位可用</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    guides</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">].</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">occupy_sema</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // 模拟获取信号量时的某些工作</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    semaphore</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">release</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    guides</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">].</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">visualize</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">vector</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">jthread</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">reserve</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">max_threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    Guide</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">show_info</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    Guide</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">start_time</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0U</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> != </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">max_threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; ++</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">        threads</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">push_back</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">jthread</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">workerThread</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">id</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>可能的输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>缺省情况: max_threads{10U}, max_sema_threads{3}
-
-线程数: 10, 吞吐量: 3 │ 凡例: 初始延迟 ░░ │ 等待状态 ▒▒ │ 信号量占据 ██
-
-# 1 ░░░░██████
-# 2 ░░░░████████
-# 5 ░░░░░░██████████
-# 8 ░░░░░░░░░░░░████████████
-# 9 ░░░░░░░░░░░░██████████████
-# 7 ░░░░░░░░░░░░▒▒▒▒████████████████
-# 4 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒████████
-# 6 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒██████████████████
-# 3 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████████
-# 0 ░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████
-
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────
-“每人都有”的情况（没有等等状态！）: max_threads{10U}, max_sema_threads{10}
-
-线程数: 10, 吞吐量: 10 │ 凡例: 初始延迟 ░░ │ 等待状态 ▒▒ │ 信号量占据 ██
-
-# 4 ░░░░██████
-# 5 ░░░░░░████
-# 3 ░░░░██████████
-# 1 ░░░░██████████
-# 8 ░░░░░░░░████████████
-# 6 ░░░░░░░░░░░░░░░░██████
-# 7 ░░░░░░░░░░░░░░░░██████
-# 9 ░░░░░░░░░░░░░░░░██████████
-# 0 ░░░░░░░░░░░░██████████████████
-# 2 ░░░░░░░░░░░░░░░░░░████████████
-
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────
-二元信号量的情况: max_threads{10U}, max_sema_threads{1}
-
-线程数: 10, 吞吐量: 1 │ 凡例: 初始延迟 ░░ │ 等待状态 ▒▒ │ 信号量占据 ██
-
-# 6 ░░░░████
-# 5 ░░░░▒▒▒▒████
-# 4 ░░░░░░░░░░▒▒██████████
-# 7 ░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒████████████████
-# 2 ░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████
-# 3 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████████████
-# 0 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████████
-# 1 ░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████
-# 8 ░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████
-# 9 ░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>缺省情况: max_threads{10U}, max_sema_threads{3}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>线程数: 10, 吞吐量: 3 │ 凡例: 初始延迟 ░░ │ 等待状态 ▒▒ │ 信号量占据 ██</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 1 ░░░░██████</span></span>
+<span class="line"><span># 2 ░░░░████████</span></span>
+<span class="line"><span># 5 ░░░░░░██████████</span></span>
+<span class="line"><span># 8 ░░░░░░░░░░░░████████████</span></span>
+<span class="line"><span># 9 ░░░░░░░░░░░░██████████████</span></span>
+<span class="line"><span># 7 ░░░░░░░░░░░░▒▒▒▒████████████████</span></span>
+<span class="line"><span># 4 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒████████</span></span>
+<span class="line"><span># 6 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒██████████████████</span></span>
+<span class="line"><span># 3 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████████</span></span>
+<span class="line"><span># 0 ░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>──────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span>
+<span class="line"><span>“每人都有”的情况（没有等等状态！）: max_threads{10U}, max_sema_threads{10}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>线程数: 10, 吞吐量: 10 │ 凡例: 初始延迟 ░░ │ 等待状态 ▒▒ │ 信号量占据 ██</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 4 ░░░░██████</span></span>
+<span class="line"><span># 5 ░░░░░░████</span></span>
+<span class="line"><span># 3 ░░░░██████████</span></span>
+<span class="line"><span># 1 ░░░░██████████</span></span>
+<span class="line"><span># 8 ░░░░░░░░████████████</span></span>
+<span class="line"><span># 6 ░░░░░░░░░░░░░░░░██████</span></span>
+<span class="line"><span># 7 ░░░░░░░░░░░░░░░░██████</span></span>
+<span class="line"><span># 9 ░░░░░░░░░░░░░░░░██████████</span></span>
+<span class="line"><span># 0 ░░░░░░░░░░░░██████████████████</span></span>
+<span class="line"><span># 2 ░░░░░░░░░░░░░░░░░░████████████</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>──────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span>
+<span class="line"><span>二元信号量的情况: max_threads{10U}, max_sema_threads{1}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>线程数: 10, 吞吐量: 1 │ 凡例: 初始延迟 ░░ │ 等待状态 ▒▒ │ 信号量占据 ██</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 6 ░░░░████</span></span>
+<span class="line"><span># 5 ░░░░▒▒▒▒████</span></span>
+<span class="line"><span># 4 ░░░░░░░░░░▒▒██████████</span></span>
+<span class="line"><span># 7 ░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒████████████████</span></span>
+<span class="line"><span># 2 ░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████</span></span>
+<span class="line"><span># 3 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████████████</span></span>
+<span class="line"><span># 0 ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████████</span></span>
+<span class="line"><span># 1 ░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████</span></span>
+<span class="line"><span># 8 ░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████</span></span>
+<span class="line"><span># 9 ░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <!-- 
 NewPP limit report
@@ -431,6 +436,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":620,"wgPageParseReport":{"limitreport":{"cputime":"0.139","walltime":"0.515","ppvisitednodes":{"value":9328,"limit":1000000},"postexpandincludesize":{"value":364488,"limit":4194304},"templateargumentsize":{"value":97140,"limit":4194304},"expansiondepth":{"value":20,"limit":100},"expensivefunctioncount":{"value":6,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":23407,"limit":5000000},"timingprofile":["100.00%  428.595      1 -total"," 76.58%  328.209      1 Template:example"," 76.37%  327.324      2 Template:source"," 19.87%   85.174      1 Template:cpp/thread/counting_semaphore/navbar"," 19.76%   84.701      1 Template:navbar"," 16.31%   69.887      1 Template:cpp/thread/navbar_content"," 12.80%   54.848    127 Template:nv"," 12.74%   54.611     91 Template:nv_ln","  1.82%    7.790    117 Template:ltt/core","  1.39%    5.950     91 Template:lines"]},"cachereport":{"timestamp":"20260422095524","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260422095524 -->
-</html>
+
+
+</body><!-- Cached 20260422095524 --></html>

@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>求值顺序</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"b714e9266939f9f7262d20e6","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/language/eval_order","wgTitle":"c/language/eval order","wgCurRevisionId":100030,"wgRevisionId":100030,"wgArticleId":1067,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/language/eval_order","wgRelevantArticleId":1067,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_language_eval_order rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -38,7 +43,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="c/language">语言</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../header.html" title="c/header">头文件</a></td></tr>
@@ -56,7 +61,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="c/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="c/language">C 语言</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../language.html" title="c/language">C 语言</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5"> <a href="basic_concepts.html" title="c/language/basic concepts">基本概念</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"> <a href="../keyword.html" title="c/keyword">关键词</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"> <a href="../preprocessor.html" title="c/preprocessor">预处理器</a></td></tr>
@@ -68,7 +73,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"> 杂项</td></tr>
 <tr class="t-nv-h2"><td colspan="5"> <a href="history.html" title="c/language/history">C 的历史</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"> <a href="../experimental.html" title="c/experimental">技术规范</a> </td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="expressions.html" title="c/language/expressions"> 表达式</a><div class="t-navbar-menu"><div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="expressions.html" title="c/language/expressions"> 表达式</a><div class="t-navbar-menu"><div>
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">通用</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="value_category.html" title="c/language/value category">值类别</a></td></tr>
@@ -97,7 +102,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="_Alignof.html" title="c/language/ Alignof"><span class="t-lines"><span><code>_Alignof</code></span></span></a></div><div><span class="t-lines"><span><span class="t-mark" style="white-space: nowrap;">(<span title="C23 弃用">C11*</span>)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="cast.html" title="c/language/cast">转换运算符</a></td></tr>
 </tbody></table></div>
-<div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+<div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <p>除下列标出者，任意 C 运算符的运算数求值顺序，包括函数调用表达式的函数参数求值顺序，及任何表达式的子表达式求值顺序都是未指定的。编译器会以任意顺序对其求值，而且在同一表达式被再度求值时可选用另一种顺序。
 </p><p>C 中没有从左到右或从右到左求值的概念，不要将其与运算符的从左到右或从右到左结合性混淆：表达式 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">f1</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f2</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f3</span><span class="p">()</span></code></span> 因为 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">operator</span><span class="o">+</span></code> 的从左到右结合性而被分析成 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="p">(</span><span class="n">f1</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f2</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f3</span><span class="p">()</span></code></span>，但运行时对 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">f3</span><span class="p">()</span></code></span> 的函数调用可以最先、最后，或在 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">f1</span><span class="p">()</span></code></span> 与 <span class="t-c"><code class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><span class="n">f2</span><span class="p">()</span></code></span> 之间求值。
 </p>
@@ -148,15 +153,15 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </tbody></table>
 <h3><span id=".E6.9C.AA.E5.AE.9A.E4.B9.89.E8.A1.8C.E4.B8.BA"></span><span class="mw-headline" id="未定义行为">未定义行为</span></h3>
 <div class="t-li1"><span class="t-li">1)</span> 若对一个标量对象的副效应与另一个对同一标量对象的副效应相对无顺序，则<a href="behavior.html#UB_%E4%B8%8E%E4%BC%98%E5%8C%96" title="c/language/behavior">行为未定义</a>。
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 未定义行为</span>
-<span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 未定义行为</span>
-<span class="n">f</span><span class="p">(</span><span class="o">++</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">);</span><span class="w"> </span><span class="c1">// 未定义行为</span>
-<span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 未定义行为</span>
-</pre></div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">i = ++i + i++;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 未定义行为</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">i = i++ + </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 未定义行为</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(++i, ++i);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 未定义行为</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(i = -</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, i = -</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 未定义行为</span></span>
+<span class="line"></span></code></pre></div></div>
 <div class="t-li1"><span class="t-li">2)</span> 若一个标量对象上的副效应与另一个使用同一标量对象之值的值计算相对无顺序，则行为未定义。
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">);</span><span class="w"> </span><span class="c1">// 未定义行为</span>
-<span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 未定义行为</span>
-</pre></div></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(i, i++);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 未定义行为</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[i] = i++;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 未定义行为</span></span>
+<span class="line"></span></code></pre></div></div>
 <div class="t-li1"><span class="t-li">3)</span> 只要至少一个子表达式的排序容许这种无顺序副效应，就应用上述规则。</div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
 <p><a href="operator_precedence.html" title="c/language/operator precedence">运算符优先级</a>，定义自源代码表示构建表达式的方式。
@@ -224,6 +229,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":97,"wgPageParseReport":{"limitreport":{"cputime":"0.096","walltime":"7.045","ppvisitednodes":{"value":1998,"limit":1000000},"postexpandincludesize":{"value":52755,"limit":4194304},"templateargumentsize":{"value":8390,"limit":4194304},"expansiondepth":{"value":20,"limit":100},"expensivefunctioncount":{"value":17,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4663,"limit":5000000},"timingprofile":["100.00% 6714.986      1 -total"," 59.49% 3994.462     10 Template:c"," 31.08% 2086.787      5 Template:c/core","  5.14%  345.443      1 Template:c/language/expressions/navbar","  5.09%  341.661      1 Template:navbar","  2.09%  140.532      1 Template:c/language/expressions/navbar_content","  2.05%  137.978     41 Template:nv","  1.38%   92.683      4 Template:nv_ln","  0.90%   60.183      1 Template:c/language/navbar_content","  0.68%   45.531      1 Template:c/navbar_content"]},"cachereport":{"timestamp":"20260421232623","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260421234611 -->
-</html>
+
+
+</body><!-- Cached 20260421234611 --></html>

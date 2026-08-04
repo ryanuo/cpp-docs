@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>std::unordered_set&lt;Key,Hash,KeyEqual,Allocator&gt;::rehash</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"9ba5bd5cbebd2953576e6c0d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/container/unordered_set/rehash","wgTitle":"cpp/container/unordered set/rehash","wgCurRevisionId":48569,"wgRevisionId":48569,"wgArticleId":2025,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/container/unordered_set/rehash","wgRelevantArticleId":2025,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_container_unordered_set_rehash rootpage-cpp skin-cppreference2 action-view cpp-page-template cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -40,7 +45,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>
 </p>
 </div>
-<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -69,7 +74,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../container.html" title="cpp/container">容器库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../container.html" title="cpp/container">容器库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"><a href="../../container.html#%E5%BA%8F%E5%88%97%E5%AE%B9%E5%99%A8" title="cpp/container">序列</a></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../array.html" title="cpp/container/array"><span class="t-lines"><span>array</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../vector.html" title="cpp/container/vector"><span class="t-lines"><span>vector</span></span></a></div></div></td></tr>
@@ -104,7 +109,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5"><a href="../../container.html#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%A4%B1%E6%95%88" title="cpp/container">迭代器失效</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"><a href="../../container.html#%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E8%A1%A8%E6%A0%BC" title="cpp/container">成员函数表格</a></td></tr>
 <tr class="t-nv-h2"><td colspan="5"><a href="../../container.html#%E9%9D%9E%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E8%A1%A8%E6%A0%BC" title="cpp/container">非成员函数表格</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><a href="../unordered_set.html" title="cpp/container/unordered set">std::unordered_set</a></code><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><a href="../unordered_set.html" title="cpp/container/unordered set">std::unordered_set</a></code><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"><a href="../unordered_set.html#%E6%88%90%E5%91%98%E7%B1%BB%E5%9E%8B" title="cpp/container/unordered set">成员类型</a></td></tr>
 <tr class="t-nv-h1"><td colspan="5"><a href="../unordered_set.html#%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0" title="cpp/container/unordered set">成员函数</a></td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -126,7 +131,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="extract.html" title="cpp/container/unordered set/extract"><span class="t-lines"><span>unordered_set::extract</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="merge.html" title="cpp/container/unordered set/merge"><span class="t-lines"><span>unordered_set::merge</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="insert.html" title="cpp/container/unordered set/insert"><span class="t-lines"><span>unordered_set::insert</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="insert_range.html" title="cpp/container/unordered set/insert range"><span class="t-lines"><span>unordered_set::insert_range</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">  </code></span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="insert_range.html" title="cpp/container/unordered set/insert range"><span class="t-lines"><span>unordered_set::insert_range</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx23" style="white-space: nowrap;">(C++23)</span><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">&nbsp;&nbsp;</code></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="emplace.html" title="cpp/container/unordered set/emplace"><span class="t-lines"><span>unordered_set::emplace</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="emplace_hint.html" title="cpp/container/unordered set/emplace hint"><span class="t-lines"><span>unordered_set::emplace_hint</span></span></a></div></div></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -161,11 +166,11 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="erase_if.html" title="cpp/container/unordered set/erase if"><span class="t-lines"><span>erase_if<span class="t-dsc-small">(std::unordered_set)</span></span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
 <tr class="t-nv-h1"><td colspan="5"><a href="deduction_guides.html" title="cpp/container/unordered set/deduction guides">推导指引</a> <span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17)</span></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dcl t-since-cxx11">
-<td> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">rehash</span><span class="p">(</span><span class="w"> </span><span class="n">size_type</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> rehash</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">size_type</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> count</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span> </td>
 </tr>
@@ -257,6 +262,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":344,"wgPageParseReport":{"limitreport":{"cputime":"0.124","walltime":"0.210","ppvisitednodes":{"value":6131,"limit":1000000},"postexpandincludesize":{"value":242781,"limit":4194304},"templateargumentsize":{"value":32862,"limit":4194304},"expansiondepth":{"value":24,"limit":100},"expensivefunctioncount":{"value":4,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1418,"limit":5000000},"timingprofile":["100.00%  170.784      1 -total"," 97.04%  165.724      1 Template:include_page"," 96.18%  164.260      1 Template:cpp/container/rehash"," 72.96%  124.608      1 Template:cpp/container/unordered_set/navbar"," 72.67%  124.109      1 Template:navbar"," 39.57%   67.585     90 Template:nv"," 38.82%   66.293      1 Template:cpp/container/unordered_set/navbar_content"," 22.78%   38.897     34 Template:nv_mem_ln"," 21.23%   36.258      1 Template:cpp/container/navbar_content"," 19.65%   33.558     28 Template:nv_ln"]},"cachereport":{"timestamp":"20260422094833","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260422094833 -->
-</html>
+
+
+</body><!-- Cached 20260422094833 --></html>

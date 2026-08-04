@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh-Hans-CN" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh-Hans-CN" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>模块 (C++20 起)</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"014f6812c08d99f4168da060","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/language/modules","wgTitle":"cpp/language/modules","wgCurRevisionId":94210,"wgRevisionId":94210,"wgArticleId":12030,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh-cn","wgPageContentLanguage":"zh-cn","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/language/modules","wgRelevantArticleId":12030,"wgUserVariant":"zh-cn","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_language_modules rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -38,7 +43,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh-Hans-CN" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
@@ -67,7 +72,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">一般主题</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -133,10 +138,10 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">说明符</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="cv.html" title="cpp/language/cv"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code>/<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="auto.html" title="cpp/language/auto"><tt>auto</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="consteval.html" title="cpp/language/consteval"><tt>consteval</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="constinit.html" title="cpp/language/constinit"><tt>constinit</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 </tbody></table></div></td></tr>
@@ -208,7 +213,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">类特有的函数性质</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="virtual.html" title="cpp/language/virtual">虚函数</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="final.html" title="cpp/language/final"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">final</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="explicit.html" title="cpp/language/explicit"><tt>explicit</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
@@ -241,7 +246,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr class="t-nv"><td colspan="5"><a href="history.html" title="cpp/language/history">C++ 的历史</a></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="basic_concepts.html" title="cpp/language/basic concepts">基本概念</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="basic_concepts.html" title="cpp/language/basic concepts">基本概念</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../comment.html" title="cpp/comment">注释</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="ascii.html" title="cpp/language/ascii">ASCII</a></td></tr>
@@ -267,30 +272,30 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink">模块</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="contracts.html" title="cpp/language/contracts">约定</a> <span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <p>大多数 C++ 项目用到了多个翻译单元，因此它们需要在那些单元间共享<a href="declarations.html" title="cpp/language/declarations">声明</a>和<a href="definition.html" title="cpp/language/definition">定义</a>。正是因为这样，使用<a href="../standard_library.html#%E6%A0%87%E5%A4%B4" title="cpp/standard library">标头</a>非常重要，例如<a href="../standard_library.html" title="cpp/standard library">标准库</a>的声明可以通过<a href="../standard_library.html#%E5%8C%85%E5%90%AB%E6%A0%87%E5%A4%B4" title="cpp/standard library">包含对应的标头</a>提供。
 </p><p>模块是一个用于在翻译单元间分享声明和定义的语言特性。
 它们可以在某些地方替代标头的使用。
 </p><p>模块和<a href="namespace.html" title="cpp/language/namespace">命名空间</a>是正交的。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// helloworld.cpp</span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">helloworld</span><span class="p">;</span><span class="w"> </span><span class="c1">// 模块声明</span>
-
-<span class="k">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">iostream</span><span class="o">&gt;</span><span class="p">;</span><span class="w">        </span><span class="c1">// 导入声明</span>
-
-<span class="k">export</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hello</span><span class="p">()</span><span class="w">       </span><span class="c1">// 导出声明</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello world!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// main.cpp</span>
-<span class="k">import</span><span class="w"> </span><span class="n">helloworld</span><span class="p">;</span><span class="w"> </span><span class="c1">// 导入声明</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">hello</span><span class="p">();</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// helloworld.cpp</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> helloworld</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 模块声明</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">iostream</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">        // 导入声明</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> hello</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       // 导出声明</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"Hello world!</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// main.cpp</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> helloworld</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 导入声明</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    hello</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <h3><span id=".E8.AF.AD.E6.B3.95"></span><span class="mw-headline" id="语法">语法</span></h3>
 <table class="t-sdsc-begin">
 
@@ -389,7 +394,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td colspan="10" class="t-sdsc-sep">
 </td></tr>
 <tr class="t-sdsc">
-<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>module : private;</b></code>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>module&nbsp;: private;</b></code>
 </td>
 <td>(8)
 </td>
@@ -434,14 +439,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p><p>声明中带有关键词 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">export</span></code> 的模块单元是<i>模块接口单元</i>。其他模块单元被称为<i>模块实现单元</i>。
 </p><p>对于每个具名模块，必须有且仅有一个未指定模块分区的模块接口单元。这个模块单元被称为<i>主模块接口单元</i>。在导入对应的具名模块时可以使用它导出的内容。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// （每行表示一个单独的翻译单元）</span>
-
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w">   </span><span class="c1">// 为具名模块 'A' 声明主模块接口单元</span>
-<span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w">          </span><span class="c1">// 为具名模块 'A' 声明一个模块实现单元</span>
-<span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w">          </span><span class="c1">// 为具名模块 'A' 声明另一个模块实现单元</span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="c1">// 为具名模块 'A.B' 声明主模块接口单元</span>
-<span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">B</span><span class="p">;</span><span class="w">        </span><span class="c1">// 为具名模块 'A.B' 声明一个模块实现单元</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// （每行表示一个单独的翻译单元）</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // 为具名模块 'A' 声明主模块接口单元</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">          // 为具名模块 'A' 声明一个模块实现单元</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">          // 为具名模块 'A' 声明另一个模块实现单元</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 为具名模块 'A.B' 声明主模块接口单元</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">        // 为具名模块 'A.B' 声明一个模块实现单元</span></span>
+<span class="line"></span></code></pre></div>
 <h3><span id=".E5.AF.BC.E5.87.BA.E5.A3.B0.E6.98.8E.E5.92.8C.E5.AE.9A.E4.B9.89"></span><span class="mw-headline" id="导出声明和定义">导出声明和定义</span></h3>
 <p>模块接口单元可以导出声明（包括定义），这些内容可以导入到其他翻译单元。为导出一条声明，可以用 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">export</span></code> 关键词作为前缀，或者处于 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">export</span></code> 块中。
 </p>
@@ -476,28 +481,28 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr>
 <td colspan="10" class="t-sdsc-sep">
 </td></tr></tbody></table>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w"> </span><span class="c1">// 为具名模块 'A' 声明主模块接口单元</span>
-
-<span class="c1">// hello() 会在所有导入 'A' 的翻译单元中可见</span>
-<span class="k">export</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">hello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
-
-<span class="c1">// world() 不可见</span>
-<span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">world</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"world"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-
-<span class="c1">// one() 和 zero() 均可见</span>
-<span class="k">export</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">one</span><span class="p">()</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">zero</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// 也可以导出命名空间：hi::english() 和 hi::french() 均可见</span>
-<span class="k">export</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">hi</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">english</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Hi!"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">french</span><span class="p">()</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Salut!"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 为具名模块 'A' 声明主模块接口单元</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// hello() 会在所有导入 'A' 的翻译单元中可见</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">hello</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "hello"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; } </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// world() 不可见</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">world</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "world"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// one() 和 zero() 均可见</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> one</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()  { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> zero</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 也可以导出命名空间：hi::english() 和 hi::french() 均可见</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> namespace</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> hi</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">english</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "Hi!"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">french</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()  { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "Salut!"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <h3><span id=".E5.AF.BC.E5.85.A5.E6.A8.A1.E5.9D.97.E5.92.8C.E6.A0.87.E5.A4.B4"></span><span class="mw-headline" id="导入模块和标头">导入模块和标头</span></h3>
 <p>可以通过<i>导入声明</i> ﻿导入模块：
 </p>
@@ -523,27 +528,27 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p><p>导入的声明在模块接口单元里可以再导出。也就是说，如果模块 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">A</code> 导入 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">B</code> 后又导出，那么导入 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">A</code> 也会使所有从 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">B</code> 导出的内容可见。
 </p><p>在模块单元里，所有导入声明（包括带导出的导入）必须集中在模块声明后以及所有其他声明前。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// A.cpp （'A' 的主模块接口单元）</span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-
-<span class="k">export</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">hello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-
-<span class="c1">/////// B.cpp （'B' 的主模块接口单元）</span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
-
-<span class="k">export</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-
-<span class="k">export</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">world</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"world"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-
-<span class="c1">/////// main.cpp （非模块单元）</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="k">import</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">hello</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">world</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// A.cpp （'A' 的主模块接口单元）</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">hello</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "hello"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// B.cpp （'B' 的主模块接口单元）</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> import</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">world</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "world"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// main.cpp （非模块单元）</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">hello</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">' '</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">world</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>在模块单元里（<i>全局模块片段</i> ﻿以外）不能使用 <a href="../preprocessor/include.html" title="cpp/preprocessor/include"><tt>
 #include</tt></a>，因为所有被包含的声明和定义都会被当作模块的一部分。可以改为将标头通过<i>导入声明</i> ﻿作为<i>标头单元</i> ﻿导入：
 </p>
@@ -568,26 +573,26 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>标头单元是从标头合成的一个独立翻译单元。导入一个标头单元会使它所有的声明和定义可访问。预处理宏也会可访问（因为预处理器会识别导入声明）。
 </p><p>然而与 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="cp">#include</span></code> 相反的是，在导入声明处已经定义的预处理宏不会影响标头的处理。这在某些场合会不方便（某些标头用预处理宏作为配置方式），这种情况下需要使用<i>全局模块片段</i>。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// A.cpp （'A' 的主模块接口单元）</span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-
-<span class="k">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">iostream</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="k">export</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">string_view</span><span class="o">&gt;</span><span class="p">;</span>
-
-<span class="k">export</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">/////// main.cpp （非模块单元）</span>
-<span class="k">import</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hello, world!"</span><span class="p">;</span>
-<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// A.cpp （'A' 的主模块接口单元）</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">iostream</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">string_view</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> print</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">string_view</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> message</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">message</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">endl</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// main.cpp （非模块单元）</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string_view</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> message</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"Hello, world!"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    print</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">message</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <h3><span id=".E5.85.A8.E5.B1.80.E6.A8.A1.E5.9D.97.E7.89.87.E6.AE.B5"></span><span class="mw-headline" id="全局模块片段">全局模块片段</span></h3>
 <p>模块单元可以有<i>全局模块片段</i> ﻿前缀，它可以在无法导入标头时（尤其是在标头用预处理宏进行配置时）包含它们。
 </p>
@@ -614,39 +619,39 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </td></tr></tbody></table>
 <p>如果一个模块单元有一个全局模块片段，那么它的首个声明必须是 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>module;</b></code>。因此在全局模块片段中只能出现<a href="../preprocessor.html#%E6%8C%87%E4%BB%A4" title="cpp/preprocessor">预处理指令</a>。然后用一条标准的模块声明标记这个全局模块片段的结束，后面就是模块内容。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// A.cpp （'A' 的主模块接口单元）</span>
-<span class="k">module</span><span class="p">;</span>
-
-<span class="c1">// 按照 POSIX 标准，定义 _POSIX_C_SOURCE 会向标准标头中添加函数。</span>
-<span class="cp">#define _POSIX_C_SOURCE 200809L</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
-
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-
-<span class="k">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ctime</span><span class="o">&gt;</span><span class="p">;</span>
-
-<span class="c1">// 仅用于演示（差的随机源）。应改为使用 C++ &lt;random&gt;。</span>
-<span class="k">export</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">weak_random</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">timespec</span><span class="w"> </span><span class="n">ts</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">timespec_get</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ts</span><span class="p">,</span><span class="w"> </span><span class="n">TIME_UTC</span><span class="p">);</span><span class="w"> </span><span class="c1">// 来自 &lt;ctime&gt;</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="c1">// 按照 POSIX 标准从 &lt;stdlib.h&gt; 提供。</span>
-<span class="w">    </span><span class="n">srand48</span><span class="p">(</span><span class="n">ts</span><span class="p">.</span><span class="n">tv_nsec</span><span class="p">);</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="c1">// drand48() 返回 0 与 1 之间的一个随机数</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">drand48</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="c1">/////// main.cpp （非模块单元）</span>
-<span class="k">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">iostream</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="k">import</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"0 与 1 之间的随机值："</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">weak_random</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// A.cpp （'A' 的主模块接口单元）</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">module</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 按照 POSIX 标准，定义 _POSIX_C_SOURCE 会向标准标头中添加函数。</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#define</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> _POSIX_C_SOURCE </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">200809L</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdlib.h&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ctime</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 仅用于演示（差的随机源）。应改为使用 C++ &lt;random&gt;。</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> double</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> weak_random</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">timespec</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> ts</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">timespec_get</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ts</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">TIME_UTC</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 来自 &lt;ctime&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 按照 POSIX 标准从 &lt;stdlib.h&gt; 提供。</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    srand48</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ts</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">tv_nsec</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // drand48() 返回 0 与 1 之间的一个随机数</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> drand48</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// main.cpp （非模块单元）</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">iostream</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"0 与 1 之间的随机值："</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">weak_random</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <h3><span id=".E7.A7.81.E6.9C.89.E6.A8.A1.E5.9D.97.E7.89.87.E6.AE.B5"></span><span class="mw-headline" id="私有模块片段">私有模块片段</span></h3>
 <p>主模块接口单元可以后随一个<i>私有模块片段</i>，这样就可以在不会把模块的所有内容暴露给导入方的情况下将模块表示为单个编译单元。
 </p>
@@ -656,7 +661,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td colspan="10" class="t-sdsc-sep">
 </td></tr>
 <tr class="t-sdsc">
-<td class="t-sdsc-nopad"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>module : private;</b></code>
+<td class="t-sdsc-nopad"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>module&nbsp;: private;</b></code>
 <p><span class="t-spar">声明序列</span> ﻿<span class="t-mark" style="white-space: nowrap;">(可选)</span>
 </p>
 </td>
@@ -672,23 +677,23 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </td></tr></tbody></table>
 <p><i>私有模块片段</i> ﻿会终止模块接口单元中可以影响其他翻译单元的行为的部分。如果模块单元包含了私有模块片段，那么它就是它的模块中唯一的模块单元。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">foo</span><span class="p">;</span>
-
-<span class="k">export</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span>
-
-<span class="nl">module</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">private</span><span class="p">;</span><span class="w"> </span><span class="c1">// 终止模块接口单元中可以影响其他翻译单元的行为的部分</span>
-<span class="w">                  </span><span class="c1">// 开始私有模块片段</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w">           </span><span class="c1">// 定义对 foo 的导入方不可及</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> foo</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">module</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">private</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 终止模块接口单元中可以影响其他翻译单元的行为的部分</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                  // 开始私有模块片段</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">           // 定义对 foo 的导入方不可及</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 42</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <h3><span id=".E6.A8.A1.E5.9D.97.E5.88.86.E5.8C.BA"></span><span class="mw-headline" id="模块分区">模块分区</span></h3>
 <p>一个模块可以有<i>模块分区单元</i>。它们是模块声明中包含模块分区的模块单元，模块分区在模块名之后，以一个冒号 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>:</b></code> 开头。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="o">:</span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="c1">// 为模块 'A' 分区 ':B' 声明一个模块接口单元。</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">:</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 为模块 'A' 分区 ':B' 声明一个模块接口单元。</span></span>
+<span class="line"></span></code></pre></div>
 <p>一个模块分区表示恰好一个模块单元（两个模块单元不能指定同一个模块分区）。它们只在自己所在的具名模块内部可见（在该具名模块外的翻译单元不能直接导入这些模块分区）。
 </p><p>模块分区只能被相同具名模块的模块单元导入。
 </p>
@@ -710,22 +715,22 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr>
 <td colspan="10" class="t-sdsc-sep">
 </td></tr></tbody></table>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// A-B.cpp   </span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="o">:</span><span class="n">B</span><span class="p">;</span>
-<span class="p">...</span>
-
-<span class="c1">/////// A-C.cpp</span>
-<span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="o">:</span><span class="n">C</span><span class="p">;</span>
-<span class="p">...</span>
-
-<span class="c1">/////// A.cpp</span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-
-<span class="nl">import</span><span class="w"> </span><span class="p">:</span><span class="n">C</span><span class="p">;</span>
-<span class="k">export</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="o">:</span><span class="n">B</span><span class="p">;</span>
-
-<span class="p">...</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// A-B.cpp   </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">:</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// A-C.cpp</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">:</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">C</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// A.cpp</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> :</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">C</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> :</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">...</span></span>
+<span class="line"></span></code></pre></div>
 <p>模块分区内的所有声明和定义在将它导入的模块单元中均可见，无论它们是否被导出。
 </p><p>模块分区可以是模块接口单元（如果模块声明中有 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>export</b></code>）。它们必须被主模块接口单元在导入同时导出，并且它们导出的语句在模块被导入时均可见。
 </p>
@@ -747,91 +752,91 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr>
 <td colspan="10" class="t-sdsc-sep">
 </td></tr></tbody></table>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">///////  A.cpp   </span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w">     </span><span class="c1">// 主模块接口单元</span>
-
-<span class="k">export</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="o">:</span><span class="n">B</span><span class="p">;</span><span class="w">    </span><span class="c1">// Hello() 在导入 'A' 时可见</span>
-<span class="nl">import</span><span class="w"> </span><span class="p">:</span><span class="n">C</span><span class="p">;</span><span class="w">           </span><span class="c1">// 现在 WorldImpl() 只对 'A.cpp' 可见</span>
-<span class="c1">// export import :C; // 错误：无法导出模块实现单元</span>
-
-<span class="c1">// World() 对所有导入 'A' 的翻译单元均可见</span>
-<span class="k">export</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">World</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">WorldImpl</span><span class="p">();</span>
-<span class="p">}</span>
-</pre></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// A-B.cpp </span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="o">:</span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="c1">// 模块分区接口单元</span>
-
-<span class="c1">// Hello() 对所有导入 'A' 的翻译单元均可见</span>
-<span class="k">export</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">Hello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Hello"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</pre></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// A-C.cpp </span>
-<span class="k">module</span><span class="w"> </span><span class="n">A</span><span class="o">:</span><span class="n">C</span><span class="p">;</span><span class="w"> </span><span class="c1">// 模块分区实现单元</span>
-
-<span class="c1">// WorldImpl() 对 'A' 中所有导入 ':C' 的翻译单元均可见</span>
-<span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">WorldImpl</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"World"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</pre></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// main.cpp </span>
-<span class="k">import</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-<span class="k">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">iostream</span><span class="o">&gt;</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Hello</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">' '</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">World</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">// WorldImpl(); // 错误：WorldImpl() 不可见</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">///////  A.cpp   </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">     // 主模块接口单元</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> :</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // Hello() 在导入 'A' 时可见</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> :</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">C</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">           // 现在 WorldImpl() 只对 'A.cpp' 可见</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// export import :C; // 错误：无法导出模块实现单元</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// World() 对所有导入 'A' 的翻译单元均可见</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">World</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> WorldImpl</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// A-B.cpp </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">:</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 模块分区接口单元</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Hello() 对所有导入 'A' 的翻译单元均可见</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">Hello</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "Hello"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// A-C.cpp </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">:</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">C</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 模块分区实现单元</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// WorldImpl() 对 'A' 中所有导入 ':C' 的翻译单元均可见</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">WorldImpl</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "World"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// main.cpp </span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">iostream</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">Hello</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">' '</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">World</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // WorldImpl(); // 错误：WorldImpl() 不可见</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <h3><span id=".E6.A8.A1.E5.9D.97.E6.89.80.E6.9C.89.E6.9D.83"></span><span class="mw-headline" id="模块所有权">模块所有权</span></h3>
 <p>通常来说，在模块单元中的模块声明后出现的声明都<i>附着于</i> ﻿该模块。
 </p><p>如果一个实体的声明附着于一个具名模块，该实体只能在该模块中定义。每个这种实体的所有声明都必须附着于同一模块。
 </p><p>如果一个声明附着于一个具名模块，并且该声明没有被导出，那么声明的名字具有<a href="storage_duration.html#%E6%A8%A1%E5%9D%97%E9%93%BE%E6%8E%A5" title="cpp/language/storage duration">模块链接</a>。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">lib_A</span><span class="p">;</span>
-<span class="w"> </span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// f 具有模块链接</span>
-<span class="k">export</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">();</span><span class="w">   </span><span class="c1">// x 等于 0</span>
-</pre></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">lib_B</span><span class="p">;</span>
-<span class="w"> </span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// OK，lib_A 中的 f 和 lib_B 中的 f 指代不同的实体</span>
-<span class="k">export</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">();</span><span class="w"> </span><span class="c1">// y 等于 1</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> lib_A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // f 具有模块链接</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // x 等于 0</span></span>
+<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> lib_B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK，lib_A 中的 f 和 lib_B 中的 f 指代不同的实体</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> y</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // y 等于 1</span></span>
+<span class="line"></span></code></pre></div>
 <p>如果<a href="conflicting_declarations.html#%E7%9B%B8%E5%90%8C%E5%AE%9E%E4%BD%93%E7%9A%84%E5%A4%9A%E6%AC%A1%E5%A3%B0%E6%98%8E" title="cpp/language/conflicting declarations">同一实体的两个声明</a>附着于不同的模块，那么程序非良构；如果两个声明都无法从对方可及，那么不要求诊断。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// decls.h</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span><span class="w"> </span><span class="c1">// #1，附着于全局模块</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">g</span><span class="p">();</span><span class="w"> </span><span class="c1">// #2，附着于全局模块</span>
-</pre></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// M 的模块接口</span>
-<span class="k">module</span><span class="p">;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">"decls.h"</span>
-<span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
-<span class="k">export</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="o">::</span><span class="n">f</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK，不声明实体，导出 #1</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">g</span><span class="p">();</span><span class="w">          </span><span class="c1">// 错误：与 #2 匹配，但附着于 M</span>
-<span class="k">export</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">h</span><span class="p">();</span><span class="w">   </span><span class="c1">// #3</span>
-<span class="k">export</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">k</span><span class="p">();</span><span class="w">   </span><span class="c1">// #4</span>
-</pre></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">/////// 其他翻译单元</span>
-<span class="k">import</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
-<span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">h</span><span class="p">();</span><span class="w">   </span><span class="c1">// 错误：与 #3 匹配</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">k</span><span class="p">();</span><span class="w">          </span><span class="c1">// 错误：与 #4 匹配</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// decls.h</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #1，附着于全局模块</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> g</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // #2，附着于全局模块</span></span>
+<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// M 的模块接口</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">module</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "decls.h"</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> M</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> using</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> ::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // OK，不声明实体，导出 #1</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> g</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">          // 错误：与 #2 匹配，但附着于 M</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> h</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // #3</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> k</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // #4</span></span>
+<span class="line"></span></code></pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/////// 其他翻译单元</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">import</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> M</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">static</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> h</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // 错误：与 #3 匹配</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> k</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">          // 错误：与 #4 匹配</span></span>
+<span class="line"></span></code></pre></div>
 <p>以下声明不附着于任何具名模块（因此声明的这些实体可以在模块外定义）：
 </p>
 <ul><li>具有外部链接的<a href="namespace.html" title="cpp/language/namespace">命名空间</a>定义</li>
 <li>在<a href="language_linkage.html" title="cpp/language/language linkage">语言链接</a>说明中的声明</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">lib_A</span><span class="p">;</span>
-<span class="w"> </span>
-<span class="k">namespace</span><span class="w"> </span><span class="nn">ns</span><span class="w"> </span><span class="c1">// ns 不附着于 lib_A</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">export</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="s">"C++"</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="p">();</span><span class="w"> </span><span class="c1">// f 不附着于 lib_A</span>
-<span class="w">           </span><span class="k">extern</span><span class="w"> </span><span class="s">"C++"</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="p">();</span><span class="w"> </span><span class="c1">// g 不附着于 lib_A</span>
-<span class="w">    </span><span class="k">export</span><span class="w">              </span><span class="kt">int</span><span class="w"> </span><span class="nf">h</span><span class="p">();</span><span class="w"> </span><span class="c1">// h 附着于 lib_A</span>
-<span class="p">}</span>
-<span class="c1">// ns::h 必须在 lib_A 中定义，但 ns::f 和 ns::g 可以在其他地方定义</span>
-<span class="c1">// （例如在传统源文件中）</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> module</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> lib_A</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">namespace</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> ns</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // ns 不附着于 lib_A</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> extern</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "C++"</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // f 不附着于 lib_A</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">           extern</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "C++"</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> g</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // g 不附着于 lib_A</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    export</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">              int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> h</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // h 附着于 lib_A</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// ns::h 必须在 lib_A 中定义，但 ns::f 和 ns::g 可以在其他地方定义</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// （例如在传统源文件中）</span></span>
+<span class="line"></span></code></pre></div>
 <h3><span id=".E6.B3.A8.E8.A7.A3"></span><span class="mw-headline" id="注解">注解</span></h3>
 <table class="wikitable">
 
@@ -949,5 +954,5 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":153,"wgPageParseReport":{"limitreport":{"cputime":"0.168","walltime":"0.721","ppvisitednodes":{"value":5634,"limit":1000000},"postexpandincludesize":{"value":190573,"limit":4194304},"templateargumentsize":{"value":35669,"limit":4194304},"expansiondepth":{"value":17,"limit":100},"expensivefunctioncount":{"value":33,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":31989,"limit":5000000},"timingprofile":["100.00%  646.863      1 -total"," 82.79%  535.506     20 Template:source","  7.11%   45.990      1 Template:cpp/language/basics/navbar","  7.04%   45.536      1 Template:navbar","  4.87%   31.473    126 Template:trim","  4.81%   31.138     17 Template:sdsc","  4.76%   30.816      1 Template:cpp/language/navbar_content","  3.58%   23.168    135 Template:nv","  1.88%   12.133     15 Template:spar_optional","  1.13%    7.330     17 Template:spar_sep"]},"cachereport":{"timestamp":"20260502044107","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-</html>
+
+</body></html>

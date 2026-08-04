@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>std::experimental::filesystem::is_other</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"586d88c8e4d6da792ed9c468","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/experimental/fs/is_other","wgTitle":"cpp/experimental/fs/is other","wgCurRevisionId":82946,"wgRevisionId":82946,"wgArticleId":15026,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["无条件 noexcept","带有未评审的无条件 noexcept 模板的页面","带有未评审的 noexcept 模板的页面","无原因的 todo"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/experimental/fs/is_other","wgRelevantArticleId":15026,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_experimental_fs_is_other rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -36,7 +41,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../../experimental.html" title="cpp/experimental">experimental</a></bdi> | <bdi dir="ltr"><a href="../fs.html" title="cpp/experimental/fs">fs</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -65,7 +70,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../experimental.html" title="cpp/experimental">实验性</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../experimental.html" title="cpp/experimental">实验性</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5"><a href="../../experimental.html#%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../fs.html" title="cpp/experimental/fs">文件系统库</a> <span class="t-mark-rev t-since-fs-ts t-mark-ts" style="white-space: nowrap;">(文件系统 TS)</span> </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../lib_extensions.html" title="cpp/experimental/lib extensions">库基础</a> <span class="t-mark-rev t-since-libfund-ts t-mark-ts" style="white-space: nowrap;">(库基础 TS)</span></td></tr>
@@ -85,7 +90,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../execution.html" class="mw-redirect" title="cpp/experimental/execution">std::execution</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../contracts.html" title="cpp/experimental/contracts">契约</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/experimental/2dgraphics（页面不存在）">2D 图形</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../fs.html" title="cpp/experimental/fs">文件系统库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../fs.html" title="cpp/experimental/fs">文件系统库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">类</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="path.html" title="cpp/experimental/fs/path"><span class="t-lines"><span>filesystem::path</span></span></a></div></div></td></tr>
@@ -142,7 +147,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="is_socket.html" title="cpp/experimental/fs/is socket"><span class="t-lines"><span>filesystem::is_socket</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="is_symlink.html" title="cpp/experimental/fs/is symlink"><span class="t-lines"><span>filesystem::is_symlink</span></span></a></div></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../../header/experimental/filesystem.html" title="cpp/header/experimental/filesystem">&lt;experimental/filesystem&gt;</a></code> 定义
@@ -151,20 +156,20 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-since-fs_ts">
-<td> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">is_other</span><span class="p">(</span><span class="w"> </span><span class="n">file_status</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> is_other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">file_status</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (1) </td>
 <td> <span class="t-mark-rev t-since-fs-ts t-mark-ts" style="white-space: nowrap;">(文件系统 TS)</span> </td>
 </tr>
 <tr class="t-dcl t-since-fs_ts">
-<td> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">is_other</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">path</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 31 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> is_other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> path</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (2) </td>
 <td> <span class="t-mark-rev t-since-fs-ts t-mark-ts" style="white-space: nowrap;">(文件系统 TS)</span> </td>
 </tr>
 <tr class="t-dcl t-since-fs_ts">
-<td> <div><div style="max-width: min(calc(7.68332px * 47 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">is_other</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">path</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">error_code</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ec</span><span class="w"> </span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 47 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> is_other</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> path</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">error_code</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> ec</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (3) </td>
 <td> <span class="t-mark-rev t-since-fs-ts t-mark-ts" style="white-space: nowrap;">(文件系统 TS)</span> </td>
 </tr>
@@ -204,7 +209,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>如果给定路径或文件状态对应于某个“其他”文件则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">true</span></code></span>，否则为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="nb">false</span></code></span>。
 </p>
 <h3><span id=".E5.BC.82.E5.B8.B8"></span><span class="mw-headline" id="异常">异常</span></h3>
-<div class="t-li1"><span class="t-li">1,3)</span> <div class="t-noexcept-inline"><a href="../../language/noexcept_spec.html" title="cpp/language/noexcept spec"><tt>noexcept</tt></a> 规定：  <div class="t-noexcept-box"><span class="t-cc"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">noexcept</span></code></span></div>  </div></div>
+<div class="t-li1"><span class="t-li">1,3)</span> <div class="t-noexcept-inline"><a href="../../language/noexcept_spec.html" title="cpp/language/noexcept spec"><tt>noexcept</tt></a> 规定：&nbsp;&nbsp;<div class="t-noexcept-box"><span class="t-cc"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">noexcept</span></code></span></div>&nbsp;&nbsp;</div></div>
 <div class="t-li1"><span class="t-li">2)</span> 当发生错误时抛出 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">filesystem_error</span></code></span>。以 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span></code></span> 为实参构造异常对象。错误码被设置为对于造成失败的错误合适的错误码。</div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
 <table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成 </td></tr></tbody></table>
@@ -264,6 +269,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":278,"wgPageParseReport":{"limitreport":{"cputime":"0.122","walltime":"0.142","ppvisitednodes":{"value":4517,"limit":1000000},"postexpandincludesize":{"value":119859,"limit":4194304},"templateargumentsize":{"value":18657,"limit":4194304},"expansiondepth":{"value":18,"limit":100},"expensivefunctioncount":{"value":15,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5373,"limit":5000000},"timingprofile":["100.00%   96.970      1 -total"," 45.09%   43.726      1 Template:cpp/experimental/fs/navbar"," 44.37%   43.030      1 Template:navbar"," 25.48%   24.707     89 Template:nv"," 17.69%   17.153      1 Template:cpp/experimental/fs/navbar_content"," 14.95%   14.496      1 Template:cpp/experimental/navbar_content"," 14.83%   14.381     11 Template:c"," 12.46%   12.080     44 Template:nv_ln"," 10.80%   10.477      3 Template:dcl","  7.30%    7.083      1 Template:todo"]},"cachereport":{"timestamp":"20260422061657","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260422061657 -->
-</html>
+
+
+</body><!-- Cached 20260422061657 --></html>

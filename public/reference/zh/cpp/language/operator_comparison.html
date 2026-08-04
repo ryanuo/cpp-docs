@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>比较运算符</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"79b8a0c4ee1a489c6821608d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/language/operator_comparison","wgTitle":"cpp/language/operator comparison","wgCurRevisionId":96403,"wgRevisionId":96403,"wgArticleId":2737,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","有过多高开销解析器函数调用的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/language/operator_comparison","wgRelevantArticleId":2737,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_language_operator_comparison rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -38,7 +43,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
@@ -67,7 +72,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">一般主题</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -133,10 +138,10 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">说明符</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="cv.html" title="cpp/language/cv"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code>/<code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="auto.html" title="cpp/language/auto"><tt>auto</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="consteval.html" title="cpp/language/consteval"><tt>consteval</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="constinit.html" title="cpp/language/constinit"><tt>constinit</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 </tbody></table></div></td></tr>
@@ -208,7 +213,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">类特有的函数性质</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="virtual.html" title="cpp/language/virtual">虚函数</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="final.html" title="cpp/language/final"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">final</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="explicit.html" title="cpp/language/explicit"><tt>explicit</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
@@ -241,7 +246,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr class="t-nv"><td colspan="5"><a href="history.html" title="cpp/language/history">C++ 的历史</a></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="expressions.html" title="cpp/language/expressions"> 表达式</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="expressions.html" title="cpp/language/expressions"> 表达式</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">概述</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="value_category.html" title="cpp/language/value category">值类别</a></td></tr>
@@ -294,7 +299,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="implicit_conversion.html" title="cpp/language/implicit conversion">隐式转换</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="explicit_cast.html" title="cpp/language/explicit cast">显式转换</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="usual_arithmetic_conversions.html" title="cpp/language/usual arithmetic conversions">一般算术转换</a>    </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="usual_arithmetic_conversions.html" title="cpp/language/usual arithmetic conversions">一般算术转换</a>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="cast_operator.html" title="cpp/language/cast operator">用户定义转换</a></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="const_cast.html" title="cpp/language/const cast"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">const_cast</code></a></td></tr>
@@ -302,7 +307,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="dynamic_cast.html" title="cpp/language/dynamic cast"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">dynamic_cast</code></a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="reinterpret_cast.html" title="cpp/language/reinterpret cast"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">reinterpret_cast</code></a></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <p>比较参数。
 </p>
 <table class="wikitable" style="font-size: 85%;">
@@ -310,7 +315,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr>
 <th rowspan="2">运算符名
 </th>
-<th rowspan="2" style="word-break: keep-all;">   语法   
+<th rowspan="2" style="word-break: keep-all;">&nbsp;&nbsp;&nbsp;语法&nbsp;&nbsp;&nbsp;
 </th>
 <th rowspan="2"><a href="operators.html" title="cpp/language/operators">可重载</a>
 </th>
@@ -335,7 +340,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr>
 <td>不等于
 </td>
-<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">a != b</code>
+<td><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">a&nbsp;!= b</code>
 </td>
 <td style="background: #90ff90; color: black; vertical-align: middle; text-align: center;" class="table-yes">是
 </td>
@@ -394,9 +399,9 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </td>
 <td style="background: #90ff90; color: black; vertical-align: middle; text-align: center;" class="table-yes">是
 </td>
-<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><i>R </i></code><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">&lt;=&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">U</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></code></span><sup id="cite_ref-R_1-0" class="reference"><a href="operator_comparison.html#cite_note-R-1"><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup>
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><i>R&nbsp;</i></code><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">&lt;=&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">U</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></code></span><sup id="cite_ref-R_1-0" class="reference"><a href="operator_comparison.html#cite_note-R-1"><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup>
 </td>
-<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><i>R </i></code><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">operator</span><span class="o">&lt;=&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">U</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span></code></span><sup id="cite_ref-R_1-1" class="reference"><a href="operator_comparison.html#cite_note-R-1"><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup>
+<td><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><i>R&nbsp;</i></code><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">operator</span><span class="o">&lt;=&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">U</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span></code></span><sup id="cite_ref-R_1-1" class="reference"><a href="operator_comparison.html#cite_note-R-1"><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup>
 </td></tr>
 <tr>
 <td colspan="5">
@@ -529,50 +534,50 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>如果两个操作数具有算术或（有作用域或无作用域）枚举类型，那么对两个操作数实施<a href="usual_arithmetic_conversions.html" title="cpp/language/usual arithmetic conversions">一般算术转换</a>。转换之后进行值的比较：
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">),</span>
-<span class="w">                  </span><span class="s">"不能正确地比较有符号值与较小的无符号值"</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span>
-<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"比较两个有符号值：</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="s">" -1 == 1 ? "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="s">" -1 &lt;  1 ? "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w">  </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="s">" -1 &gt;  1 ? "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="s">"比较有符号与无符号值：</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="c1">// 可能会产生“符号不同”警告信息</span>
-<span class="w">                 </span><span class="s">" -1 == 1 ? "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="c1">// 可能会产生“符号不同”警告信息</span>
-<span class="w">                 </span><span class="s">" -1 &lt;  1 ? "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w">  </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="c1">// 可能会产生“符号不同”警告信息</span>
-<span class="w">                 </span><span class="s">" -1 &gt;  1 ? "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="s">"比较有符号与较小的无符号值：</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="s">" -1 == 1 ? "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="s">" -1 &lt;  1 ? "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w">  </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-<span class="w">                 </span><span class="s">" -1 &gt;  1 ? "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    static_assert</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">sizeof</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt; </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">sizeof</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">),</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                  "不能正确地比较有符号值与较小的无符号值"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = -</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    unsigned</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    unsigned</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> d</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">boolalpha</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">              &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"比较两个有符号值：</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 " -1 == 1&nbsp;? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 " -1 &lt;  1&nbsp;? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 " -1 &gt;  1&nbsp;? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt;  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 "比较有符号与无符号值：</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                 // 可能会产生“符号不同”警告信息</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 " -1 == 1&nbsp;? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                 // 可能会产生“符号不同”警告信息</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 " -1 &lt;  1&nbsp;? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                 // 可能会产生“符号不同”警告信息</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 " -1 &gt;  1&nbsp;? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt;  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 "比较有符号与较小的无符号值：</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 " -1 == 1&nbsp;? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">d</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 " -1 &lt;  1&nbsp;? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">d</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                 " -1 &gt;  1&nbsp;? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt;  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">d</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>比较两个有符号值：
- -1 == 1 ? false
- -1 &lt;  1 ? true
- -1 &gt;  1 ? false
-比较有符号与无符号值：
- -1 == 1 ? false
- -1 &lt;  1 ? false
- -1 &gt;  1 ? true
-比较无符号值和较小的有符号值：
- -1 == 1 ? false
- -1 &lt;  1 ? true
- -1 &gt;  1 ? false
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>比较两个有符号值：</span></span>
+<span class="line"><span> -1 == 1&nbsp;? false</span></span>
+<span class="line"><span> -1 &lt;  1&nbsp;? true</span></span>
+<span class="line"><span> -1 &gt;  1&nbsp;? false</span></span>
+<span class="line"><span>比较有符号与无符号值：</span></span>
+<span class="line"><span> -1 == 1&nbsp;? false</span></span>
+<span class="line"><span> -1 &lt;  1&nbsp;? false</span></span>
+<span class="line"><span> -1 &gt;  1&nbsp;? true</span></span>
+<span class="line"><span>比较无符号值和较小的有符号值：</span></span>
+<span class="line"><span> -1 == 1&nbsp;? false</span></span>
+<span class="line"><span> -1 &lt;  1&nbsp;? true</span></span>
+<span class="line"><span> -1 &gt;  1&nbsp;? false</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <h4><span id=".E5.86.85.E5.BB.BA.E6.8C.87.E9.92.88.E7.9B.B8.E7.AD.89.E6.80.A7.E6.AF.94.E8.BE.83"></span><span class="mw-headline" id="内建指针相等性比较">内建指针相等性比较</span></h4>
 <p>相等性运算符 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">==</code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">!=</code> 的转换后的操作数也可以具有<span class="t-rev-inl t-since-cxx11"><span> <span class="t-lc">std::nullptr_t</span> 类型、</span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span></span></span>指针类型或成员指针类型。
@@ -581,7 +586,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <table class="wikitable" style="text-align: center;">
 
 <tbody><tr>
-<th rowspan="2"> <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span></code></span> 和 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">q</span></code></span> 的比较结果 
+<th rowspan="2">&nbsp;<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span></code></span> 和 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">q</span></code></span> 的比较结果&nbsp;
 </th>
 <th colspan="2">表达式产生的值
 </th></tr>
@@ -607,7 +612,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr>
 <td>未指定
 </td>
-<td colspan="2"> 未指定的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">bool</span></code> 值 
+<td colspan="2">&nbsp;未指定的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="kt">bool</span></code> 值&nbsp;
 </td></tr></tbody></table>
 <p>如果转换后的<span class="t-spar">左操作数</span> ﻿和<span class="t-spar">右操作数</span> ﻿中至少有一个是（非成员）指针，那么对转换后的两个操作数应用<a href="implicit_conversion.html#%E6%8C%87%E9%92%88%E8%BD%AC%E6%8D%A2" title="cpp/language/implicit conversion">指针转换</a><span class="t-rev-inl t-since-cxx17"><span>、<a href="implicit_conversion.html#%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E8%BD%AC%E6%8D%A2" title="cpp/language/implicit conversion">函数指针转换</a></span><span><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17 起)</span></span></span>和<a href="implicit_conversion.html#%E9%99%90%E5%AE%9A%E6%80%A7%E8%BD%AC%E6%8D%A2" title="cpp/language/implicit conversion">限定性转换</a>，以获得它们的<a href="pointer.html#%E5%90%88%E6%88%90%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B" title="cpp/language/pointer">合成指针类型</a>。具有合成指针类型的两个指针按以下方式进行比较：
 </p>
@@ -625,32 +630,32 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <li>如果一个成员指针表示类 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">C1</code> 的某个成员，而另一个成员指针表示另一个类 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">C2</code> 的某个成员，并且两个类都不是对方的基类，那么比较结果未指定。</li>
 <li>如果两个指针表示相同<a href="union.html" title="cpp/language/union">联合体</a>的（不一定相同）的成员，那么它们比较相等。</li>
 <li>否则，如果两个成员指针表示同一个<a href="object.html#%E5%AD%90%E5%AF%B9%E8%B1%A1" title="cpp/language/object">最终派生对象</a>的相同成员，或者在对关联类类型的某个虚设对象进行间接寻址的情况下它们表示同一个子对象的相同成员，那么它们比较相等，否则它们比较不相等。</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">P</span><span class="w"> </span><span class="p">{};</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">Q</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">R</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="n">P</span><span class="o">::*</span><span class="n">bx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="n">P</span><span class="o">::*</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Q</span><span class="o">::</span><span class="n">x</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">P</span><span class="o">::*</span><span class="n">cx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="n">P</span><span class="o">::*</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="n">R</span><span class="o">::</span><span class="n">x</span><span class="p">;</span>
-
-<span class="kt">bool</span><span class="w"> </span><span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">bx</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cx</span><span class="p">);</span><span class="w"> </span><span class="c1">// 未指定</span>
-
-<span class="k">struct</span><span class="w"> </span><span class="nc">B</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span>
-<span class="p">};</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">L</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="p">{};</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">R</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="p">{};</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="p">{};</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">B</span><span class="o">::*</span><span class="n">pb</span><span class="p">)()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">B</span><span class="o">::</span><span class="n">f</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">L</span><span class="o">::*</span><span class="n">pl</span><span class="p">)()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pb</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">R</span><span class="o">::*</span><span class="n">pr</span><span class="p">)()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pb</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">D</span><span class="o">::*</span><span class="n">pdl</span><span class="p">)()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pl</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">D</span><span class="o">::*</span><span class="n">pdr</span><span class="p">)()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pr</span><span class="p">;</span>
-
-<span class="kt">bool</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">pdl</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pdr</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">pb</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pl</span><span class="p">);</span><span class="w">   </span><span class="c1">// true</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> {};</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Q</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : P { </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; };</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : P { </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; };</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">bx</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::*)) &amp;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">Q</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cx</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::*)) &amp;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> b1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">bx</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cx</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 未指定</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> B</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> L</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : B {};</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : B {};</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> D</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : L, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> {};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pb</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)() = &amp;</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">B</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">L</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pl</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)() = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pb</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)() = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pb</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">D</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pdl</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)() = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pl</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">D</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pdr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)() = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> x</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pdl</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pdr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // false</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> y</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pb</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pl</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">   // true</span></span>
+<span class="line"></span></code></pre></div>
 <table class="t-rev-begin">
 <tbody><tr class="t-rev t-since-cxx11"><td>
 <p>两个 <span class="t-lc">std::nullptr_t</span> 类型的操作数比较相等。一个 <span class="t-lc">std::nullptr_t</span> 类型的操作数和另一个空指针常量操作数比较相等。
@@ -665,18 +670,18 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <table class="wikitable" style="text-align: center;">
 
 <tbody><tr>
-<th rowspan="2"> <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span></code></span> 和 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">q</span></code></span> 的比较结果 
+<th rowspan="2">&nbsp;<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span></code></span> 和 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">q</span></code></span> 的比较结果&nbsp;
 </th>
 <th colspan="4">表达式产生的值
 </th></tr>
 <tr>
-<th> <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span></code></span> 
+<th>&nbsp;<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span></code></span>&nbsp;
 </th>
-<th> <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">q</span></code></span> 
+<th>&nbsp;<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">q</span></code></span>&nbsp;
 </th>
-<th> <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">q</span></code></span> 
+<th>&nbsp;<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">q</span></code></span>&nbsp;
 </th>
-<th> <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">q</span></code></span> 
+<th>&nbsp;<span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">p</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">q</span></code></span>&nbsp;
 </th></tr>
 <tr>
 <td>相等
@@ -752,32 +757,32 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator&lt;(L, R);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator&lt;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">L</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator&gt;(L, R);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator&gt;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">L</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator&lt;=(L, R);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator&lt;=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">L</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator&gt;=(L, R);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator&gt;=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">L</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator==(L, R);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator==</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">L</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator!=(L, R);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator!=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">L</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
@@ -787,32 +792,32 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator&lt;(P, P);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator&lt;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator&gt;(P, P);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator&gt;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator&lt;=(P, P);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator&lt;=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator&gt;=(P, P);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator&gt;=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator==(P, P);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator==</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator!=(P, P);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 22 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator!=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">P</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
@@ -822,68 +827,68 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 24 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator==(MP, MP);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 24 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator==</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">MP</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">MP</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 24 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>bool operator!=(MP, MP);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 24 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">bool</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator!=</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">MP</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">MP</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
 <tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
 </tbody></table>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>#include &lt;iostream&gt;
-
-struct Foo
-{
-    int n1;
-    int n2;
-};
-
-union Union
-{
-    int n;
-    double d;
-};
-
-int main()
-{
-    std::cout &lt;&lt; std::boolalpha;
-    
-    char a[4] = "abc";
-    char* p1 = &amp;a[1];
-    char* p2 = &amp;a[2];
-    std::cout &lt;&lt; "指向数组元素的指针：\n"
-              &lt;&lt; "p1 == p2? " &lt;&lt; (p1 == p2) &lt;&lt; '\n'
-              &lt;&lt; "p1 &lt;  p2? " &lt;&lt; (p1 &lt;  p2) &lt;&lt; '\n';
-    
-    Foo f;
-    int* p3 = &amp;f.n1;
-    int* p4 = &amp;f.n2;
-    std::cout &lt;&lt; "指向类成员的指针：\n"
-              &lt;&lt; "p3 == p4? " &lt;&lt; (p3 == p4) &lt;&lt; '\n'
-              &lt;&lt; "p3 &lt;  p4? " &lt;&lt; (p3 &lt;  p4) &lt;&lt; '\n';
-    
-    Union u;
-    int* p5 = &amp;u.n;
-    double* p6 = &amp;u.d;
-    std::cout &lt;&lt; "指向联合体成员的指针：\n"
-              &lt;&lt; "p5 == (void*)p6? " &lt;&lt; (p5 == (void*)p6) &lt;&lt; '\n'
-              &lt;&lt; "p5 &lt;  (void*)p6? " &lt;&lt; (p5 &lt;  (void*)p6) &lt;&lt; '\n';
-}</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Foo</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">union</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> Union</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    double</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> d</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">boolalpha</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">] = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abc"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">];</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">];</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"指向数组元素的指针：</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">              &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"p1 == p2? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">              &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"p1 &lt;  p2? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    Foo</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"指向类成员的指针：</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">              &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"p3 == p4? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">              &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"p3 &lt;  p4? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    Union</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> u</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">u</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    double*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p6</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">u</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">d</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"指向联合体成员的指针：</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">              &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"p5 == (void*)p6? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*)</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p6</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">              &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"p5 &lt;  (void*)p6? "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;  (</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">*)</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p6</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre>指向数组元素的指针：
-p1 == p2? false
-p1 &lt;  p2? true
-指向类成员的指针：
-p3 == p4? false
-p3 &lt;  p4? true
-指向联合体成员的指针：
-p5 == (void*)p6? true
-p5 &lt;  (void*)p6? false</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>指向数组元素的指针：</span></span>
+<span class="line"><span>p1 == p2? false</span></span>
+<span class="line"><span>p1 &lt;  p2? true</span></span>
+<span class="line"><span>指向类成员的指针：</span></span>
+<span class="line"><span>p3 == p4? false</span></span>
+<span class="line"><span>p3 &lt;  p4? true</span></span>
+<span class="line"><span>指向联合体成员的指针：</span></span>
+<span class="line"><span>p5 == (void*)p6? true</span></span>
+<span class="line"><span>p5 &lt;  (void*)p6? false</span></span></code></pre></div> 
 </div>
 <table class="t-rev-begin">
 <tbody><tr class="t-rev t-since-cxx20"><td>
@@ -942,7 +947,7 @@ p5 &lt;  (void*)p6? false</pre></div>
 </p>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dcl">
-<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 20 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>R operator&lt;=&gt;(T, T);</pre></div></div></td>
+<td class="t-dcl-nopad"> <div><div style="max-width: min(calc(7.68332px * 20 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">R</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> operator&lt;=&gt;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td class="t-dcl-nopad">  </td>
 </tr>
@@ -951,28 +956,28 @@ p5 &lt;  (void*)p6? false</pre></div>
 <p>其中 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">R</code> 是上文所定义的顺序类别类型。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>#include &lt;compare&gt;
-#include &lt;iostream&gt;
- 
-int main()
-{
-    double foo = -0.0;
-    double bar = 0.0;
-    
-    auto res = foo &lt;=&gt; bar;
-    
-    if (res &lt; 0)
-        std::cout &lt;&lt; "-0 小于 0";
-    else if (res &gt; 0)
-        std::cout &lt;&lt; "-0 大于 0";
-    else if (res == 0)
-        std::cout &lt;&lt; "-0 与 0 相等";
-    else
-        std::cout &lt;&lt; "-0 与 0 无序";
-}</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;compare&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    double</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> foo</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = -</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0.0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    double</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> bar</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0.0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> res</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">foo</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;=&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">bar</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">res</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"-0 小于 0"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    else</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">res</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt; </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"-0 大于 0"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    else</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">res</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"-0 与 0 相等"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    else</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"-0 与 0 无序"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre>-0 与 0 相等</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>-0 与 0 相等</span></span></code></pre></div> 
 </div>
 </td>
 <td><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span></td></tr>
@@ -981,46 +986,46 @@ int main()
 <p>因为这些运算符从左到右组合，所以表达式 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a &lt; b &lt; c</code></span> 会被解析为 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">(a &lt; b) &lt; c</code></span>，而不是 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a &lt; (b &lt; c)</code></span> 或 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">(a &lt; b) &amp;&amp; (b &lt; c)</code></span>。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>#include &lt;iostream&gt;
-
-int main()
-{
-    int a = 3, b = 2, c = 1;
-    
-    std::cout &lt;&lt; std::boolalpha
-        &lt;&lt; (a &lt; b &lt; c) &lt;&lt; '\n' // true；可能会有警告
-        &lt;&lt; ((a &lt; b) &lt; c) &lt;&lt; '\n' // true
-        &lt;&lt; (a &lt; (b &lt; c)) &lt;&lt; '\n' // false
-        &lt;&lt; ((a &lt; b) &amp;&amp; (b &lt; c)) &lt;&lt; '\n'; // false
-}</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">boolalpha</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // true；可能会有警告</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        &lt;&lt; ((</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // true</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        &lt;&lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // false</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        &lt;&lt; ((</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">a</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) &amp;&amp; (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">b</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)) &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // false</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre>true
-true
-false
-false</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>true</span></span>
+<span class="line"><span>true</span></span>
+<span class="line"><span>false</span></span>
+<span class="line"><span>false</span></span></code></pre></div> 
 </div>
 <p>对<a href="operators.html#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6" title="cpp/language/operators">用户定义的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">operator&lt;</code></a> 的一项常见要求是<a href="https://en.wikipedia.org/wiki/Strict_weak_ordering" class="extiw" title="enwiki:Strict weak ordering">严格弱序</a>。尤其是用<a href="../named_req/Compare.html" title="cpp/named req/Compare"><span style="font-style:italic">比较</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(Compare)</span> </a>类型进行工作的标准算法和容器，如 <span class="t-lc">std::sort</span>、<span class="t-lc">std::max_element</span>、<span class="t-lc">std::map</span> 等，都对此有所要求。
 </p><p>指向相同类的不同成员的指针的<a href="operator_comparison.html#%E6%88%90%E5%91%98%E5%B8%83%E5%B1%80">比较结果</a>说明了<span class="t-rev-inl t-until-cxx23"><span>三个成员访问模式的每一者中的</span><span><span class="t-mark-rev t-until-cxx23" style="white-space: nowrap;">(C++23 前)</span></span></span>类成员按声明顺序置于内存中。
 </p><p>尽管未指明对随机来源（例如不都指向同一数组中的成员）的指针比较的结果，许多实现都提供指针的<a href="https://en.wikipedia.org/wiki/Total_order#Strict_total_order" class="extiw" title="enwiki:Total order">严格全序</a>，例如它们被实现为连续的虚拟地址空间中的地址。不这样做的实现（例如并非指针的所有位都是内存地址的一部分而在比较中必须被忽略，或要求进行额外的计算否则指针与整数并非一对一关系），为指针提供具有这项保证的 <span class="t-lc">std::less</span> 的特化。这使得程序可以将随机来源的所有指针都用作标准关联容器（如 <span class="t-lc">std::set</span> 或 <span class="t-lc">std::map</span>）的键。
-</p><p>对于同时满足<a href="../named_req/EqualityComparable.html" title="cpp/named req/EqualityComparable"><span style="font-style:italic">可相等比较</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(EqualityComparable)</span> </a>和<a href="../named_req/LessThanComparable.html" title="cpp/named req/LessThanComparable"><span style="font-style:italic">可小于比较</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(LessThanComparable)</span> </a>的类型，C++ 标准库在<i>相等</i>（即表达式 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a == b</code></span> 的值），和<i>等价</i>（即表达式 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">!(a &lt; b) &amp;&amp; !(b &lt; a)</code></span> 的值）之间做出区别。
+</p><p>对于同时满足<a href="../named_req/EqualityComparable.html" title="cpp/named req/EqualityComparable"><span style="font-style:italic">可相等比较</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(EqualityComparable)</span> </a>和<a href="../named_req/LessThanComparable.html" title="cpp/named req/LessThanComparable"><span style="font-style:italic">可小于比较</span> <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">(LessThanComparable)</span> </a>的类型，C++ 标准库在<i>相等</i>（即表达式 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a == b</code></span> 的值），和<i>等价</i>（即表达式 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">!(a &lt; b) &amp;&amp;&nbsp;!(b &lt; a)</code></span> 的值）之间做出区别。
 </p><p><a rel="nofollow" class="external text" href="https://wg21.link/N3624">N3624</a> 中包含的 <a rel="nofollow" class="external text" href="https://cplusplus.github.io/CWG/issues/583.html">CWG 问题 583</a> 的解决方案移除了指针与空指针常量间的比较。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>void f(char * p)
-{
-    if (p &gt; 0) { /*...*/ } // 用 N3624 出错，N3624 前可编译
-    if (p &gt; nullptr) { /*...*/ } // 用 N3624 出错，N3624 前可编译
-}
-
-int main() {}</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> f</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt; </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /*...*/</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> }</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 用 N3624 出错，N3624 前可编译</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt; </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">nullptr</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /*...*/</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> }</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 用 N3624 出错，N3624 前可编译</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() {}</span></span></code></pre></div>
 </div>
 <p>类类型可以自动生成三路比较，见<a href="default_comparisons.html" title="cpp/language/default comparisons">默认比较</a>。
 </p><p>如果两个运算数都是数组，那么三路比较非良构。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>unsigned int i = 1;
-auto r = -1 &lt; i;    // 既存陷阱：返回 false
-auto r2 = -1 &lt;=&gt; i; // 错误：要求窄化转换</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">unsigned</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> r</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = -</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 既存陷阱：返回 false</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">auto</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> r2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = -</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;=&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 错误：要求窄化转换</span></span></code></pre></div>
 <table class="wikitable">
 
 <tbody><tr>
@@ -1406,7 +1411,7 @@ auto r2 = -1 &lt;=&gt; i; // 错误：要求窄化转换</pre></div>
 </td></tr>
 <tr style="text-align:center">
 <td rowspan="3">
-<p><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a = b a += b a -= b a *= b a /= b a %= b a &amp;= b a |= b a ^= b a &lt;&lt;= b a &gt;&gt;= b</code></span>
+<p><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a = b a += b a -= b a *= b a /= b a&nbsp;%= b a &amp;= b a |= b a ^= b a &lt;&lt;= b a &gt;&gt;= b</code></span>
 </p>
 </td>
 <td rowspan="3">
@@ -1414,7 +1419,7 @@ auto r2 = -1 &lt;=&gt; i; // 错误：要求窄化转换</pre></div>
 </p>
 </td>
 <td rowspan="3">
-<p><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">+a -a a + b a - b a * b a / b a % b ~a a &amp; b a | b a ^ b a &lt;&lt; b a &gt;&gt; b</code></span>
+<p><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">+a -a a + b a - b a * b a / b a&nbsp;% b ~a a &amp; b a | b a ^ b a &lt;&lt; b a &gt;&gt; b</code></span>
 </p>
 </td>
 <td rowspan="3">
@@ -1422,7 +1427,7 @@ auto r2 = -1 &lt;=&gt; i; // 错误：要求窄化转换</pre></div>
 </p>
 </td>
 <td rowspan="3">
-<p><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a == b a != b a &lt; b a &gt; b a &lt;= b a &gt;= b a &lt;=&gt; b</code></span>
+<p><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a == b a&nbsp;!= b a &lt; b a &gt; b a &lt;= b a &gt;= b a &lt;=&gt; b</code></span>
 </p>
 </td>
 <td rowspan="3">
@@ -1435,7 +1440,7 @@ auto r2 = -1 &lt;=&gt; i; // 错误：要求窄化转换</pre></div>
 <td>逗号<br><br><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a, b</code></span>
 </td></tr>
 <tr style="text-align:center">
-<td>条件<br><br><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a ? b : c</code></span>
+<td>条件<br><br><span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">a&nbsp;? b&nbsp;: c</code></span>
 </td></tr>
 <tr>
 <th colspan="7">特殊运算符
@@ -1519,6 +1524,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":5356,"wgPageParseReport":{"limitreport":{"cputime":"0.523","walltime":"4.363","ppvisitednodes":{"value":25774,"limit":1000000},"postexpandincludesize":{"value":831041,"limit":4194304},"templateargumentsize":{"value":210922,"limit":4194304},"expansiondepth":{"value":33,"limit":100},"expensivefunctioncount":{"value":178,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":57871,"limit":5000000},"timingprofile":["100.00% 4049.043      1 -total"," 54.95% 2224.967     11 Template:source"," 41.59% 1684.063      5 Template:example"," 12.89%  521.732      1 Template:cpp/language/expressions/navbar"," 12.55%  508.070      1 Template:navbar","  7.21%  291.926     45 Template:dsc_inc","  6.86%  277.791      1 Template:cpp/language/navbar_content","  6.77%  274.210    156 Template:nv","  6.07%  245.638    121 Template:c","  3.48%  141.073     31 Template:c/core"]},"cachereport":{"timestamp":"20260427035109","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260427035109 -->
-</html>
+
+
+</body><!-- Cached 20260427035109 --></html>

@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>std::experimental::filesystem::copy_symlink</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"8d34b6f930c8664ea6221e3d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/experimental/fs/copy_symlink","wgTitle":"cpp/experimental/fs/copy symlink","wgCurRevisionId":82887,"wgRevisionId":82887,"wgArticleId":14986,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面","无条件 noexcept","带有未评审的无条件 noexcept 模板的页面","带有未评审的 noexcept 模板的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/experimental/fs/copy_symlink","wgRelevantArticleId":14986,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_experimental_fs_copy_symlink rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -36,7 +41,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../../experimental.html" title="cpp/experimental">experimental</a></bdi> | <bdi dir="ltr"><a href="../fs.html" title="cpp/experimental/fs">fs</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -65,7 +70,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../experimental.html" title="cpp/experimental">实验性</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../experimental.html" title="cpp/experimental">实验性</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5"><a href="../../experimental.html#%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../fs.html" title="cpp/experimental/fs">文件系统库</a> <span class="t-mark-rev t-since-fs-ts t-mark-ts" style="white-space: nowrap;">(文件系统 TS)</span> </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../lib_extensions.html" title="cpp/experimental/lib extensions">库基础</a> <span class="t-mark-rev t-since-libfund-ts t-mark-ts" style="white-space: nowrap;">(库基础 TS)</span></td></tr>
@@ -85,7 +90,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../execution.html" class="mw-redirect" title="cpp/experimental/execution">std::execution</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../contracts.html" title="cpp/experimental/contracts">契约</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/experimental/2dgraphics（页面不存在）">2D 图形</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../fs.html" title="cpp/experimental/fs">文件系统库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../fs.html" title="cpp/experimental/fs">文件系统库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">类</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="path.html" title="cpp/experimental/fs/path"><span class="t-lines"><span>filesystem::path</span></span></a></div></div></td></tr>
@@ -142,7 +147,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="is_socket.html" title="cpp/experimental/fs/is socket"><span class="t-lines"><span>filesystem::is_socket</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="is_symlink.html" title="cpp/experimental/fs/is symlink"><span class="t-lines"><span>filesystem::is_symlink</span></span></a></div></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../../header/experimental/filesystem.html" title="cpp/header/experimental/filesystem">&lt;experimental/filesystem&gt;</a></code> 定义
@@ -151,15 +156,15 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-since-fs_ts">
-<td> <div><div style="max-width: calc(7.68332px * 54 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">copy_symlink</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">path</span><span class="o">&amp;</span><span class="w"> </span><span class="n">from</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">path</span><span class="o">&amp;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: calc(7.68332px * 54 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> copy_symlink</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> path</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> from</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> path</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> to</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (1) </td>
 <td> <span class="t-mark-rev t-since-fs-ts t-mark-ts" style="white-space: nowrap;">(文件系统 TS)</span> </td>
 </tr>
 <tr class="t-dcl t-since-fs_ts">
-<td> <div><div style="max-width: calc(7.68332px * 89 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">copy_symlink</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">path</span><span class="o">&amp;</span><span class="w"> </span><span class="n">from</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">path</span><span class="o">&amp;</span><span class="w"> </span><span class="n">to</span><span class="p">,</span>
-<span class="w">                   </span><span class="n">error_code</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ec</span><span class="w"> </span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: calc(7.68332px * 89 + 27.1px); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> copy_symlink</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> path</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> from</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> path</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> to</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">                   error_code</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> ec</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (2) </td>
 <td> <span class="t-mark-rev t-since-fs-ts t-mark-ts" style="white-space: nowrap;">(文件系统 TS)</span> </td>
 </tr>
@@ -198,7 +203,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>（无）
 </p>
 <h3><span id=".E5.BC.82.E5.B8.B8"></span><span class="mw-headline" id="异常">异常</span></h3><p>
-不接受 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">error_code</span><span class="o">&amp;</span></code></span> 形参的重载，在发生底层 OS API 错误时抛出 <a href="filesystem_error.html" title="cpp/experimental/fs/filesystem error">filesystem_error</a>，它以 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">from</span></code></span> 为第一实参，以 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">to</span></code></span> 为第二实参，并以 OS 错误码为错误码实参构造。如果内存分配失败，则可抛出 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">bad_alloc</span></code></span>。接受 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">error_code</span><span class="o">&amp;</span></code></span> 形参的重载，当 OS API 调用失败时将之设置为 OS API 错误码，而未发生错误时执行 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">ec</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span></code></span>。此重载具有 </p><div class="t-noexcept-inline"><a href="../../language/noexcept_spec.html" title="cpp/language/noexcept spec"><tt>noexcept</tt></a> 规定：  <div class="t-noexcept-box"><span class="t-cc"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">noexcept</span></code></span></div>  </div>
+不接受 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">error_code</span><span class="o">&amp;</span></code></span> 形参的重载，在发生底层 OS API 错误时抛出 <a href="filesystem_error.html" title="cpp/experimental/fs/filesystem error">filesystem_error</a>，它以 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">from</span></code></span> 为第一实参，以 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">to</span></code></span> 为第二实参，并以 OS 错误码为错误码实参构造。如果内存分配失败，则可抛出 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">bad_alloc</span></code></span>。接受 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">error_code</span><span class="o">&amp;</span></code></span> 形参的重载，当 OS API 调用失败时将之设置为 OS API 错误码，而未发生错误时执行 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="n">ec</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span></code></span>。此重载具有 </p><div class="t-noexcept-inline"><a href="../../language/noexcept_spec.html" title="cpp/language/noexcept spec"><tt>noexcept</tt></a> 规定：&nbsp;&nbsp;<div class="t-noexcept-box"><span class="t-cc"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">noexcept</span></code></span></div>&nbsp;&nbsp;</div>
 <h3><span id=".E5.8F.82.E9.98.85"></span><span class="mw-headline" id="参阅">参阅</span></h3>
 <table class="t-dsc-begin">
 
@@ -278,6 +283,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1617,"wgPageParseReport":{"limitreport":{"cputime":"0.123","walltime":"1.206","ppvisitednodes":{"value":4654,"limit":1000000},"postexpandincludesize":{"value":136380,"limit":4194304},"templateargumentsize":{"value":21647,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":17,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4306,"limit":5000000},"timingprofile":["100.00% 1025.226      1 -total"," 59.22%  607.095     14 Template:c"," 24.15%  247.601      1 Template:cpp/experimental/fs/navbar"," 23.46%  240.542      1 Template:navbar"," 12.25%  125.592     89 Template:nv","  9.57%   98.067      1 Template:cpp/experimental/fs/navbar_content","  8.79%   90.069      1 Template:cpp/experimental/navbar_content","  5.38%   55.121      4 Template:dsc_inc","  5.10%   52.302     44 Template:nv_ln","  3.72%   38.100      1 Template:cpp/experimental/fs/error_handling"]},"cachereport":{"timestamp":"20260422004138","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260422004138 -->
-</html>
+
+
+</body><!-- Cached 20260422004138 --></html>
