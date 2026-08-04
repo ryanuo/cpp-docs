@@ -101,12 +101,10 @@ body.page-Main_Page h1.firstHeading, body.page-Заглавная_страниц
 }
 
 .mainpagetable tr.row td:first-child {
-    border-left: 1px solid silver;
     padding-left: 1em
 }
 
 .mainpagetable tr.row td:last-child {
-    border-right: 1px solid silver;
     padding-right: 1em
 }
 
@@ -127,13 +125,11 @@ body.page-Main_Page h1.firstHeading, body.page-Заглавная_страниц
 }
 
 .mainpagetable tr.row td {
-    border-bottom: 1px solid silver;
     padding: 0.5em;
     background: #fafafa
 }
 
 .mainpagetable tr.rowtop td {
-    border-top: 1px solid silver;
     background: #f8f8f8
 }
 
@@ -2578,4 +2574,107 @@ table.wikitable > * > tr > td{
 .ftm-begin abbr {
     text-decoration: underline dotted;
     cursor: help;
+}
+
+/* ========== 10. 主页索引表 .mainpagetable ========== */
+.mainpagetable {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    white-space: normal !important;      /* 压掉内联 nowrap，窄屏能换行 */
+    background: #fff;
+    border: 1px solid var(--cr-border);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    margin: 16px 0;
+}
+
+/* ---- 顶部 / 底部条带 ---- */
+.mainpagetable .rowtop td {
+    background: var(--cr-bg-head);
+    padding: 10px 20px;
+    font-size: 12.5px;
+}
+
+.mainpagetable .row td{
+    border-bottom: 1px solid var(--cr-border);
+}
+
+.mainpagetable .rowbottom td {
+    border-bottom: none;
+}
+
+.mainpagetable .rowbottom td {
+    background: var(--cr-bg-head);
+    padding: 10px 20px;
+}
+
+.mainpagetable .rowtop p,
+.mainpagetable .rowbottom p {
+    margin: 0;
+}
+
+/* ---- 三栏：加分隔线、撑开行距 ---- */
+.mainpagetable tr.row:not(.rowtop):not(.rowbottom) > td {
+    padding: 16px 20px;
+    vertical-align: top;
+    line-height: 2;
+}
+
+.mainpagetable tr.row:not(.rowtop):not(.rowbottom) > td + td {
+    border-left: 1px solid var(--cr-border-light);
+}
+
+/* ---- 关键：链接降饱和，黑字为主，hover 才变蓝 ---- */
+.mainpagetable a {
+    color: #24292f;
+    text-decoration: none;
+}
+
+.mainpagetable a:hover {
+    color: var(--cr-link);
+    text-decoration: underline;
+}
+
+/* 死链接（页面不存在）淡红 */
+.mainpagetable a.new {
+    color: #cf222e;
+}
+
+/* ---- 分组标题（语言 / 标准库 / 诊断库 …） ---- */
+.mainpagetable td > p {
+    margin: 12px 0 2px;
+}
+
+.mainpagetable td > p:first-child {
+    margin-top: 0;
+}
+
+.mainpagetable td > p > b > a {
+    color: #1f2328;
+    font-size: 14.5px;
+}
+
+/* ---- 组内容：左侧栏线，形成"组"的视觉边界 ---- */
+.mainpagetable .mainpagediv {
+    border-left: 2px solid var(--cr-border-light);
+    padding-left: 12px;
+    margin: 2px 0 12px;
+}
+
+.mainpagetable .mainpagediv p {
+    margin: 0;
+}
+
+/* ---- tt：纯等宽彩色字，不加胶囊底（这页太密，胶囊会更花） ---- */
+.mainpagetable tt {
+    font-family: var(--cr-mono);
+    font-size: .92em;
+    color: #0550ae;
+}
+
+/* ---- 徽章在这页缩小一号，降低存在感 ---- */
+.mainpagetable .t-mark-rev {
+    font-size: 10.5px;
+    padding: 0 6px;
 }
