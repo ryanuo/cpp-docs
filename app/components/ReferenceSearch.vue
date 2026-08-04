@@ -257,6 +257,15 @@ defineExpose({
                   </div>
                 </div>
 
+                <UBadge
+                  color="neutral"
+                  variant="subtle"
+                  size="sm"
+                  class="shrink-0"
+                >
+                  {{ entry.path.split('/').slice(-2, -1)[0] }}
+                </UBadge>
+
                 <UIcon
                   v-if="index === selectedIndex"
                   name="i-lucide-arrow-right"
