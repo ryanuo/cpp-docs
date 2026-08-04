@@ -2446,12 +2446,12 @@ code.mw-highlight {
 }
 
 .t-rev td {
-    padding: 4px 0;
+    padding: 4px;
     vertical-align: middle;
 }
 
 .t-rev td p {
-    margin: 0;                           /* 关键：去掉 <p> 默认外边距 */
+    margin: 0;
 }
 
 .t-rev + .t-rev td {
@@ -2525,6 +2525,13 @@ code.mw-highlight {
     border: 1px solid var(--cr-border);
     border-radius: 8px;
     overflow: hidden;
+}
+
+table.wikitable > tr > th,
+table.wikitable > tr > td,
+table.wikitable > * > tr > th,
+table.wikitable > * > tr > td{
+   border: none;
 }
 
 .ftm-begin th {
