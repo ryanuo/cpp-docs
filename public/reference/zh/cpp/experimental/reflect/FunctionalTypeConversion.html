@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>std::experimental::reflect::FunctionalTypeConversion</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"d745cd1e444e43a075df8291","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/experimental/reflect/FunctionalTypeConversion","wgTitle":"cpp/experimental/reflect/FunctionalTypeConversion","wgCurRevisionId":83284,"wgRevisionId":83284,"wgArticleId":15175,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["有原因的 todo"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/experimental/reflect/FunctionalTypeConversion","wgRelevantArticleId":15175,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_experimental_reflect_FunctionalTypeConversion rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -36,7 +41,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../cpp.html" title="cpp">cpp</a></bdi> | <bdi dir="ltr"><a href="../../experimental.html" title="cpp/experimental">experimental</a></bdi> | <bdi dir="ltr"><a href="../reflect.html" title="cpp/experimental/reflect">reflect</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="cpp/language">语言</a></td></tr>
@@ -65,7 +70,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../experimental.html" title="cpp/experimental">实验性</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../experimental.html" title="cpp/experimental">实验性</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5"><a href="../../experimental.html#%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../fs.html" title="cpp/experimental/fs">文件系统库</a> <span class="t-mark-rev t-since-fs-ts t-mark-ts" style="white-space: nowrap;">(文件系统 TS)</span> </td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../lib_extensions.html" title="cpp/experimental/lib extensions">库基础</a> <span class="t-mark-rev t-since-libfund-ts t-mark-ts" style="white-space: nowrap;">(库基础 TS)</span></td></tr>
@@ -85,12 +90,12 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../execution.html" class="mw-redirect" title="cpp/experimental/execution">std::execution</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../contracts.html" title="cpp/experimental/contracts">契约</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/experimental/2dgraphics（页面不存在）">2D 图形</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../reflect.html" title="cpp/experimental/reflect"> 反射扩展</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../reflect.html" title="cpp/experimental/reflect"> 反射扩展</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"> 概念</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Object.html" title="cpp/experimental/reflect/Object"><span class="t-lines"><span>Object</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ObjectSequence.html" title="cpp/experimental/reflect/ObjectSequence"><span class="t-lines"><span>ObjectSequence</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/experimental/reflect/TemplateParameterScope（页面不存在）"><span class="t-lines"><span>TemplateParameterScope</span></span></a></div><div><span class="t-lines"><span>    </span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/experimental/reflect/TemplateParameterScope（页面不存在）"><span class="t-lines"><span>TemplateParameterScope</span></span></a></div><div><span class="t-lines"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Named.html" title="cpp/experimental/reflect/Named"><span class="t-lines"><span>Named</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Alias.html" title="cpp/experimental/reflect/Alias"><span class="t-lines"><span>Alias</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="RecordMember.html" title="cpp/experimental/reflect/RecordMember"><span class="t-lines"><span>RecordMember</span></span></a></div></div></td></tr>
@@ -100,7 +105,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Typed.html" title="cpp/experimental/reflect/Typed"><span class="t-lines"><span>Typed</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Namespace.html" title="cpp/experimental/reflect/Namespace"><span class="t-lines"><span>Namespace</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="GlobalScope.html" title="cpp/experimental/reflect/GlobalScope"><span class="t-lines"><span>GlobalScope</span></span></a></div><div><span class="t-lines"><span>    </span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="GlobalScope.html" title="cpp/experimental/reflect/GlobalScope"><span class="t-lines"><span>GlobalScope</span></span></a></div><div><span class="t-lines"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Class.html" title="cpp/experimental/reflect/Class"><span class="t-lines"><span>Class</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Enum.html" title="cpp/experimental/reflect/Enum"><span class="t-lines"><span>Enum</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Record.html" title="cpp/experimental/reflect/Record"><span class="t-lines"><span>Record</span></span></a></div></div></td></tr>
@@ -114,7 +119,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Expression.html" title="cpp/experimental/reflect/Expression"><span class="t-lines"><span>Expression</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="ParenthesizedExpression.html" title="cpp/experimental/reflect/ParenthesizedExpression"><span class="t-lines"><span>ParenthesizedExpression</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FunctionCallExpression.html" title="cpp/experimental/reflect/FunctionCallExpression"><span class="t-lines"><span>FunctionCallExpression</span></span></a></div></div></td></tr>
-<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>FunctionalTypeConversion</span></span></a></div><div><span class="t-lines"><span>    </span></span></div></div></td></tr>
+<tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>FunctionalTypeConversion</span></span></a></div><div><span class="t-lines"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="Function.html" title="cpp/experimental/reflect/Function"><span class="t-lines"><span>Function</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"> <br>
 </td></tr>
@@ -216,7 +221,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/experimental/reflect/is explicitly captured（页面不存在）"><span class="t-lines"><span>is_explicitly_captured</span></span></a></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../../../../zh.cppreference.com/index.php" class="new" title="cpp/experimental/reflect/is init capture（页面不存在）"><span class="t-lines"><span>is_init_capture</span></span></a></div></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../../header/experimental/reflect.html" title="cpp/header/experimental/reflect">&lt;experimental/reflect&gt;</a></code> 定义
@@ -225,9 +230,9 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-since-reflection_ts">
-<td> <div><div style="max-width: min(calc(7.68332px * 82 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span>
-<span class="k">concept</span><span class="w"> </span><span class="nc">FunctionalTypeConversion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Expression</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="cm">/* 见下文 */</span><span class="p">;</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 82 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt; </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">concept</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> FunctionalTypeConversion</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">Expression</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; &amp;&amp;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /* 见下文 */</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td class="t-dcl-nopad">  </td>
 <td> <span class="t-mark-rev t-since-reflection-ts t-mark-ts" style="white-space: nowrap;">(反射 TS)</span> </td>
 </tr>
@@ -295,6 +300,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":380,"wgPageParseReport":{"limitreport":{"cputime":"0.110","walltime":"0.308","ppvisitednodes":{"value":7340,"limit":1000000},"postexpandincludesize":{"value":216230,"limit":4194304},"templateargumentsize":{"value":35735,"limit":4194304},"expansiondepth":{"value":18,"limit":100},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":925,"limit":5000000},"timingprofile":["100.00%  259.121      1 -total"," 72.50%  187.871      1 Template:ddcl"," 71.38%  184.966      1 Template:dcl"," 20.59%   53.357      1 Template:cpp/experimental/reflect/navbar"," 20.38%   52.802      1 Template:navbar"," 12.98%   33.629      1 Template:cpp/experimental/reflect/navbar_content"," 12.94%   33.533    136 Template:nv","  9.53%   24.707     91 Template:nv_ln","  4.84%   12.536      1 Template:cpp/experimental/navbar_content","  3.79%    9.824      2 Template:todo"]},"cachereport":{"timestamp":"20260422095248","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260422095248 -->
-</html>
+
+
+</body><!-- Cached 20260422095248 --></html>

@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>隐式转换</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"d8e78116338065cc2131f1f3","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/language/implicit_conversion","wgTitle":"cpp/language/implicit conversion","wgCurRevisionId":98330,"wgRevisionId":98330,"wgArticleId":2722,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","使用已弃用enclose属性的页面","有过多高开销解析器函数调用的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/language/implicit_conversion","wgRelevantArticleId":2722,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em}
+.shiki .line{display:block;min-height:1em}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_language_implicit_conversion rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -38,7 +43,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
@@ -67,7 +72,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../language.html" title="cpp/language">C++ 语言</a><div class="t-navbar-menu"><div><div style="display:inline-block">
 <div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">一般主题</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
@@ -133,10 +138,10 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">说明符</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="cv.html" title="cpp/language/cv"><code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">const</span></code>/<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="k">volatile</span></code></a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="decltype.html" title="cpp/language/decltype"><tt>decltype</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="auto.html" title="cpp/language/auto"><tt>auto</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
-<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tbody><tr class="t-nv"><td colspan="5"><a href="constexpr.html" title="cpp/language/constexpr"><tt>constexpr</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="consteval.html" title="cpp/language/consteval"><tt>consteval</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="constinit.html" title="cpp/language/constinit"><tt>constinit</tt></a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
 </tbody></table></div></td></tr>
@@ -208,7 +213,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-h2"><td colspan="5">类特有的函数性质</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="virtual.html" title="cpp/language/virtual">虚函数</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code>override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>  </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="override.html" title="cpp/language/override"><code>override</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span>&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="final.html" title="cpp/language/final"><code>final</code> 说明符</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="explicit.html" title="cpp/language/explicit"><tt>explicit</tt></a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
@@ -241,7 +246,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tbody><tr class="t-nv"><td colspan="5"><a href="history.html" title="cpp/language/history">C++ 的历史</a></td></tr>
 </tbody></table></div></td></tr>
 </tbody></table></div>
-</div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="expressions.html" title="cpp/language/expressions"> 表达式</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="expressions.html" title="cpp/language/expressions"> 表达式</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h2"><td colspan="5">概述</td></tr>
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="value_category.html" title="cpp/language/value category">值类别</a></td></tr>
@@ -294,7 +299,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a class="mw-selflink selflink">隐式转换</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="explicit_cast.html" title="cpp/language/explicit cast">显式转换</a></td></tr>
-<tr class="t-nv"><td colspan="5"><a href="usual_arithmetic_conversions.html" title="cpp/language/usual arithmetic conversions">一般算术转换</a>    </td></tr>
+<tr class="t-nv"><td colspan="5"><a href="usual_arithmetic_conversions.html" title="cpp/language/usual arithmetic conversions">一般算术转换</a>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 <tr class="t-nv"><td colspan="5"><a href="cast_operator.html" title="cpp/language/cast operator">用户定义转换</a></td></tr>
 </tbody></table></div></td><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="const_cast.html" title="cpp/language/const cast"><code>const_cast</code></a></td></tr>
@@ -302,7 +307,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="dynamic_cast.html" title="cpp/language/dynamic cast"><code>dynamic_cast</code></a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="reinterpret_cast.html" title="cpp/language/reinterpret cast"><code>reinterpret_cast</code></a></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <p>凡是在语境中使用了某种类型 <code>T1</code> 的表达式，但语境不接受该类型而接受另一类型 <code>T2</code> 的时候，会进行隐式转换；具体是：
 </p>
 <ul><li>调用以 <code>T2</code> 为形参声明的函数时，以该表达式作为实参；</li>
@@ -376,32 +381,32 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <ul><li><a href="delete.html" title="cpp/language/delete">delete 表达式</a>的实参（<code>T</code> 是任意对象指针类型）；</li>
 <li><a href="constant_expression.html#%E6%95%B4%E6%95%B0%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F" title="cpp/language/constant expression">整数常量表达式</a>，其中使用了字面类（<code>T</code> 是任意整数或<span class="t-rev-inl t-since-cxx11"><span>无作用域</span><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11 起)</span></span></span>枚举类型，所选中的用户定义转换函数必须是 <a href="constexpr.html" title="cpp/language/constexpr">constexpr</a>）；</li>
 <li><a href="switch.html" title="cpp/language/switch"><code>switch</code></a> 语句的控制表达式（<code>T</code> 是任意整数或枚举类型）。</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cassert&gt;</span>
-
-<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">zero_init</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">zero_init</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">val</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">    </span><span class="n">zero_init</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">val</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">    </span><span class="k">operator</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">val</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">operator</span><span class="w"> </span><span class="n">T</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">val</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="p">};</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">zero_init</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
-<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">     </span><span class="c1">// C++14 前错误（多于一个转换函数）</span>
-<span class="w">                      </span><span class="c1">// C++14 起 OK（两个函数均转换到同一类型 int）</span>
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">// 始终 OK（隐式转换）</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cassert&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">template</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">typename</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">class</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> zero_init</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    T</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> val</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">public:</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    zero_init</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">val</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">static_cast</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt;(</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)) {}</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    zero_init</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">T</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> val</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) : </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">val</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">val</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    operator</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> T&amp;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> val</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    operator</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> { </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">return</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> val</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    zero_init</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&gt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    assert</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">    i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">7</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    assert</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> == </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">7</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    switch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">     // C++14 前错误（多于一个转换函数）</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">                      // C++14 起 OK（两个函数均转换到同一类型 int）</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    switch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">i</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> + </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">) {}</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 始终 OK（隐式转换）</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <h3><span id=".E5.80.BC.E5.8F.98.E6.8D.A2"></span><span class="mw-headline" id="值变换">值变换</span></h3>
 <p>值变换是更改表达式<a href="value_category.html" title="cpp/language/value category">值类别</a>的转换。每当将表达式用作期待不同值类别的表达式的运算符的操作数时，发生值变换：
 </p>
@@ -464,10 +469,10 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <p>任何完整类型 <code>T</code> 的<a href="value_category.html#%E7%BA%AF%E5%8F%B3%E5%80%BC" title="cpp/language/value category">纯右值</a>，可转换成同类型 <code>T</code> 的亡值。此转换以该纯右值初始化一个 T 类型的<a href="lifetime.html#%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1%E7%94%9F%E5%AD%98%E6%9C%9F" title="cpp/language/lifetime">临时对象</a>（以临时对象作为求值该纯右值的结果对象），并产生一个代表该临时对象的亡值。
 </p><p>如果 <code>T</code> 是类类型或类类型的数组，那么它必须有可访问且未被弃置的析构函数：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">S</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">().</span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="c1">// C++17 起成员访问期待泛左值；</span>
-<span class="w">               </span><span class="c1">// S() 纯右值被转换成亡值</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> S</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> { </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; };</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> k</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">S</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">().</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // C++17 起成员访问期待泛左值；</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">               // S() 纯右值被转换成亡值</span></span>
+<span class="line"></span></code></pre></div>
 <p>临时量实质化在下例情况下发生：
 </p>
 <ul><li><a href="reference_initialization.html" title="cpp/language/reference initialization">绑定引用</a>到纯右值时；</li>
@@ -647,38 +652,38 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <li>“包含【某类型】元素且边界未知的数组”。</li></ul></dd></dl>
 <p>如果 <code>P_i</code> 指代数组，那么应用到元素类型的 cv 限定符 <code>cv_i+1</code> 也会作为引用到数组的 cv 限定符 <code>cv_i</code>。
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>// T 是 “指向指向 const int 的指针的指针”，它有 3 个限定性分解：
-// n = 0 -&gt; cv_0 为空，U 是“指向指向 const int 的指针的指针”
-// n = 1 -&gt; cv_0 为空，P_0 是 “指向【某类型】的指针”，
-//          cv_1 为空，U 是 “指向 const int 的指针”
-// n = 2 -&gt; cv_0 为空，P_0 是 “指向【某类型】的指针”，
-//          cv_1 为空，P_1 是 “指向【某类型】的指针”，
-//          cv_2 是 “const"，U 是 “int”
-using T = const int**;
-
-// 将 U 替换为以下类型之一就可以得到一个限定性分解：
-// U = U0 -&gt; n = 0 时的限定性分解：U0
-// U = U1 -&gt; n = 1 时的限定性分解：指向【U1】的指针
-// U = U2 -&gt; n = 2 时的限定性分解：指向【指向【const U2】的指针】的指针
-using U2 = int;
-using U1 = const U2*;
-using U0 = U1*;</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// T 是 “指向指向 const int 的指针的指针”，它有 3 个限定性分解：</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// n = 0 -&gt; cv_0 为空，U 是“指向指向 const int 的指针的指针”</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// n = 1 -&gt; cv_0 为空，P_0 是 “指向【某类型】的指针”，</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//          cv_1 为空，U 是 “指向 const int 的指针”</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// n = 2 -&gt; cv_0 为空，P_0 是 “指向【某类型】的指针”，</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//          cv_1 为空，P_1 是 “指向【某类型】的指针”，</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">//          cv_2 是 “const"，U 是 “int”</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int**</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 将 U 替换为以下类型之一就可以得到一个限定性分解：</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// U = U0 -&gt; n = 0 时的限定性分解：U0</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// U = U1 -&gt; n = 1 时的限定性分解：指向【U1】的指针</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// U = U2 -&gt; n = 2 时的限定性分解：指向【指向【const U2】的指针】的指针</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> U2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> U1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> U2</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">*</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> U0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">U1</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">*</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span></code></pre></div>
 <p>对于类型 <code>T1</code> 和 <code>T2</code>，如果它们各自有一个限定性分解，使得这两个限定性分解满足以下所有条件，那么这两个类型<i>相似</i>：
 </p>
 <ul><li>它们具有相同的 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">n</code></span>。</li>
 <li>它们的 <code>U</code> 指代的类型相同。</li>
 <li>所有的 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span> 对应的每对 <code>P_i</code> 组分都各自相同<span class="t-rev-inl t-since-cxx20"><span>或者一个是“包含 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">N_i</code></span> 个【某类型】元素的数组”而另一个是“包含【某类型】元素且边界未知的数组”</span><span><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span></span></span>。</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>// n = 2 时的限定性分解：
-// 指向【指向【const int】的 volatile 指针】的指针
-using T1 = const int* volatile *;
-
-// n = 2 时的限定性分解：
-// 指向【指向【int】的指针】的 const 指针
-// const pointer to [pointer to [int]]
-using T2 = int** const;
-
-// 以上两个限定性分解的 cv_0、cv_1 和 cv_2 都不同，
-// 但 n、U、P_0 和 P_1 都相同，因此 T1 和 T2 相似。</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// n = 2 时的限定性分解：</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 指向【指向【const int】的 volatile 指针】的指针</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">volatile</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> *;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// n = 2 时的限定性分解：</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 指向【指向【int】的指针】的 const 指针</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// const pointer to [pointer to [int]]</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">** </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 以上两个限定性分解的 cv_0、cv_1 和 cv_2 都不同，</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 但 n、U、P_0 和 P_1 都相同，因此 T1 和 T2 相似。</span></span></code></pre></div>
 <h4><span id=".E5.90.88.E5.B9.B6_cv_.E9.99.90.E5.AE.9A.E6.80.A7"></span><span class="mw-headline" id="合并_cv_限定性">合并 cv 限定性</span></h4>
 <p>在以下描述中，以 <code>Dn</code> 表示类型 <code>Tn</code> 的最长限定性分解，以 <code>cvn_i</code> 和 <code>Pn_i</code> 表示它的组分。
 </p>
@@ -688,12 +693,12 @@ using T2 = int** const;
 </p>
 <ul><li><code>T1</code> 和 <code>T2</code> 相似。</li>
 <li>对于每个非零 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span>，如果 <code>cv1_i</code> 中有 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">const</code>，那么 <code>cv2_i</code> 中也有 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">const</code>，<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">volatile</code> 也是类似。</li>
-<li>如果 <code>cv1_i</code> 和 <code>cv2_i</code> 不同，那么对于 <code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">1</code></span><code>, </code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span><code>)</code> 中的每个 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">k</code></span>，<code>cv2_k</code> 中都有 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">const</code>。</li></ul>
+<li>如果 <code>cv1_i</code> 和 <code>cv2_i</code> 不同，那么对于 <code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">1</code></span><code>,&nbsp;</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span><code>)</code> 中的每个 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">k</code></span>，<code>cv2_k</code> 中都有 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">const</code>。</li></ul>
 <p>类型 <code>T1</code> 和 <code>T2</code> 的 <i>限定性组合类型</i> ﻿是一个与 <code>T1</code> 相似且满足以下所有条件的类型 <code>T3</code>：
 </p>
 <ul><li><code>cv3_0</code> 为空。</li>
 <li>对于每个非零 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span>，<code>cv3_i</code> 是 <code>cv1_i</code> 和 <code>cv2_i</code> 的并集。</li>
-<li>如果 <code>cv3_i</code> 与 <code>cv1_i</code> 或 <code>cv2_i</code> 不同，那么对于 <code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">1</code></span><code>, </code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span><code>)</code> 中的每个 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">k</code></span>，<code>cv3_k</code> 中都会加上 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">const</code>。</li></ul>
+<li>如果 <code>cv3_i</code> 与 <code>cv1_i</code> 或 <code>cv2_i</code> 不同，那么对于 <code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">1</code></span><code>,&nbsp;</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span><code>)</code> 中的每个 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">k</code></span>，<code>cv3_k</code> 中都会加上 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">const</code>。</li></ul>
 </td>
 <td><span class="t-mark-rev t-until-cxx20" style="white-space: nowrap;">(C++20 前)</span></td></tr>
 <tr class="t-rev t-since-cxx20"><td>
@@ -701,59 +706,59 @@ using T2 = int** const;
 </p>
 <ul><li>对于每个非零 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span>，<code>cv3_i</code> 是 <code>cv1_i</code> 和 <code>cv2_i</code> 的并集。</li>
 <li>如果 <code>P1_i</code> 或 <code>P2_i</code> 是“包含【某类型】元素且边界未知的数组”，那么 <code>P3_i</code> 是“包含【某类型】元素且边界未知的数组”，否则它是 <code>P1_i</code>。</li>
-<li>如果 <code>cv3_i</code> 与 <code>cv1_i</code> 或 <code>cv2_i</code> 不同，或者 <code>P3_i</code> 与 <code>P1_i</code> 或 <code>P2_i</code> 不同，那么对于 <code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">1</code></span><code>, </code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span><code>)</code> 中的每个 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">k</code></span>，<code>cv3_k</code> 中都会加上 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">const</code>。</li></ul>
+<li>如果 <code>cv3_i</code> 与 <code>cv1_i</code> 或 <code>cv2_i</code> 不同，或者 <code>P3_i</code> 与 <code>P1_i</code> 或 <code>P2_i</code> 不同，那么对于 <code>[</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">1</code></span><code>,&nbsp;</code><span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">i</code></span><code>)</code> 中的每个 <span class="t-c"><code class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">k</code></span>，<code>cv3_k</code> 中都会加上 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">const</code>。</li></ul>
 <p>如果类型 <code>T1</code> 和 <code>T2</code> 的限定性组合类型是无 cv 限定的 <code>T2</code>，那么类型是 <code>T1</code> 的纯右值可以转换到 <code>T2</code>。
 </p>
 </td>
 <td><span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20 起)</span></td></tr>
 </tbody></table>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>// T1 的最长限定性分解（n = 2）：
-// 指向【指向【char】的指针】的指针
-using T1 = char**;
-
-// T2 的最长限定性分解（n = 2）：
-// 指向【指向【const char】的指针】的指针
-using T2 = const char**;
-
-// 确定 D3 的 cv3_i 和 T_i 组分（n = 2）：
-// cv3_1 = 空（空 cv1_1 和空 cv2_1 的并集）
-// cv3_2 = “const”（空 cv1_2 和 “const” cv2_2 的并集）
-// P3_0 = “指向【某类型】的指针”（没有边界未知的数组，因此采用 P1_0）
-// P3_1 = “指向【某类型】的指针”（没有边界未知的数组，因此采用 P1_1）
-// cv_2 以外的组分都相同，但 cv3_2 与 cv1_2 不同，
-// 因此对于 [1, 2) 中的每个 k，都会向 cv3_k 中添加 “const”：cv3_1 会变成 “const”。
-// T3 是“指向指向 const char 的 const 指针的指针”，即 const char* const *。
-using T3 = /* T1 和 T2 的限定性组合类型 */;
-
-int main()
-{
-    const char c = 'c';
-    char* pc;
-    T1 ppc = &amp;pc;
-    T2 pcc = ppc; // 错误：T3 与 无 cv 限定的 T2 不同，无法进行限定性转换。
-    
-    *pcc = &amp;c;
-    *pc = 'C'; // 如果允许上述错误赋值，那么就可以修改 const 对象 “c”，
-}</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// T1 的最长限定性分解（n = 2）：</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 指向【指向【char】的指针】的指针</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char**</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// T2 的最长限定性分解（n = 2）：</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 指向【指向【const char】的指针】的指针</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char**</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 确定 D3 的 cv3_i 和 T_i 组分（n = 2）：</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// cv3_1 = 空（空 cv1_1 和空 cv2_1 的并集）</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// cv3_2 = “const”（空 cv1_2 和 “const” cv2_2 的并集）</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// P3_0 = “指向【某类型】的指针”（没有边界未知的数组，因此采用 P1_0）</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// P3_1 = “指向【某类型】的指针”（没有边界未知的数组，因此采用 P1_1）</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// cv_2 以外的组分都相同，但 cv3_2 与 cv1_2 不同，</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// 因此对于 [1, 2) 中的每个 k，都会向 cv3_k 中添加 “const”：cv3_1 会变成 “const”。</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// T3 是“指向指向 const char 的 const 指针的指针”，即 const char* const *。</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">using</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> T3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">/* T1 和 T2 的限定性组合类型 */</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'c'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    char*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> pc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    T1</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> ppc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    T2</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> pcc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">ppc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 错误：T3 与 无 cv 限定的 T2 不同，无法进行限定性转换。</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    </span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pcc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">c</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    *</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">'C'</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 如果允许上述错误赋值，那么就可以修改 const 对象 “c”，</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span></code></pre></div>
 <p>注意在 C 编程语言中，只能添加 <code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">const</code>/<code style="white-space: pre;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr">volatile</code> 到第一级：
 </p>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>char** p = 0;
-char * const* p1 = p;       // C 与 C++ 中 OK
-const char* const * p2 = p; // C 中错误，C++ 中 OK</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">** </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> * </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000">       // C 与 C++ 中 OK</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> char</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">* </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> * </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p2</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // C 中错误，C++ 中 OK</span></span></code></pre></div>
 <table class="t-rev-begin">
 <tbody><tr class="t-rev t-since-cxx17"><td>
 <h3><span id=".E5.87.BD.E6.95.B0.E6.8C.87.E9.92.88.E8.BD.AC.E6.8D.A2"></span><span class="mw-headline" id="函数指针转换">函数指针转换</span></h3>
 <ul><li>指向无抛出函数的指针类型的<a href="value_category.html#%E7%BA%AF%E5%8F%B3%E5%80%BC" title="cpp/language/value category">纯右值</a>，可转换成指向潜在抛出函数的指针纯右值。</li>
 <li>指向无抛出成员函数指针类型的纯右值，可转换成指向潜在抛出成员函数的指针纯右值。</li></ul>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre>void (*p)();
-void (**pp)() noexcept = &amp;p; // 错误：不能转换成指向 noexcept 函数的指针
-
-struct S
-{
-    typedef void (*p)();
-    operator p();
-};
-void (*q)() noexcept = S(); // 错误：不能转换成指向 noexcept 函数的指针</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)();</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (**</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">pp</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)() </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">noexcept</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = &amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 错误：不能转换成指向 noexcept 函数的指针</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">struct</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> S</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    typedef</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)();</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    operator</span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB"> p</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">};</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (*</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">q</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)() </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">noexcept</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">S</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 错误：不能转换成指向 noexcept 函数的指针</span></span></code></pre></div>
 </td>
 <td><span class="t-mark-rev t-since-cxx17" style="white-space: nowrap;">(C++17 起)</span></td></tr>
 </tbody></table>
@@ -1035,6 +1040,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":809,"wgPageParseReport":{"limitreport":{"cputime":"0.296","walltime":"0.660","ppvisitednodes":{"value":14409,"limit":1000000},"postexpandincludesize":{"value":252718,"limit":4194304},"templateargumentsize":{"value":54333,"limit":4194304},"expansiondepth":{"value":17,"limit":100},"expensivefunctioncount":{"value":193,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":31750,"limit":5000000},"timingprofile":["100.00%  570.454      1 -total"," 61.07%  348.401      7 Template:source"," 40.79%  232.713     20 Template:rev"," 35.53%  202.657     10 Template:rrev","  9.21%   52.522      1 Template:cpp/language/expressions/navbar","  9.09%   51.849      1 Template:navbar","  6.41%   36.551     82 Template:c","  6.17%   35.179    104 Template:c/core","  5.35%   30.511      1 Template:cpp/language/navbar_content","  4.32%   24.632    156 Template:nv"]},"cachereport":{"timestamp":"20260422005936","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260422005936 -->
-</html>
+
+
+</body><!-- Cached 20260422005936 --></html>

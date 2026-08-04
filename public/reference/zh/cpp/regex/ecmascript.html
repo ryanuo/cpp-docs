@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>有改动的 ECMAScript 正则表达式文法</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"06712040d6d79166a0f60b18","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/regex/ecmascript","wgTitle":"cpp/regex/ecmascript","wgCurRevisionId":93538,"wgRevisionId":93538,"wgArticleId":10252,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面","无示例的 todo"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"cpp/regex/ecmascript","wgRelevantArticleId":10252,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em}
+.shiki .line{display:block;min-height:1em}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-cpp_regex_ecmascript rootpage-cpp skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -38,7 +43,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <!-- bodycontent -->
             <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><p><br>
 </p>
-<div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../cpp.html" title="cpp"> C++</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../compiler_support.html" title="cpp/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../freestanding.html" title="cpp/freestanding">自立实现与有宿主实现</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../language.html" title="cpp/language">语言</a></td></tr>
@@ -67,7 +72,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../experimental.html" title="cpp/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../symbol_index.html" title="cpp/symbol index">符号索引</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../links/libs.html" title="cpp/links/libs">外部库</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../text.html" title="cpp/text">文本处理库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../text.html" title="cpp/text">文本处理库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../locale.html" title="cpp/locale">本地化库</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../regex.html" title="cpp/regex">正则表达式库</a> <span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../utility/format.html" title="cpp/utility/format">格式化库</a> <span class="t-mark-rev t-since-cxx20" style="white-space: nowrap;">(C++20)</span></td></tr>
@@ -87,7 +92,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv-col-table"><td><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="../text/text_encoding.html" title="cpp/text/text encoding"><span class="t-lines"><span>text_encoding</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx26" style="white-space: nowrap;">(C++26)</span></span></span></div></div></td></tr>
 </tbody></table></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../regex.html" title="cpp/regex">正则表达式库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../regex.html" title="cpp/regex">正则表达式库</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5">类</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="basic_regex.html" title="cpp/regex/basic regex"><span class="t-lines"><span>basic_regex</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="sub_match.html" title="cpp/regex/sub match"><span class="t-lines"><span>sub_match</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
@@ -109,7 +114,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="error_type.html" title="cpp/regex/error type"><span class="t-lines"><span>error_type</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
 <tr class="t-nv-h1"><td colspan="5">正则表达式文法</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a class="mw-selflink selflink"><span class="t-lines"><span>有改动的 ECMAScript-262 文法</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-cxx11" style="white-space: nowrap;">(C++11)</span></span></span></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <p>此页面描述以设置为 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">ECMAScript</code>（默认值）的 <a href="syntax_option_type.html" title="cpp/regex/syntax option type"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">syntax_option_type</code></a> 构造 <span class="t-lc">std::basic_regex</span> 时使用的正则表达式文法。其他受支持的正则表达式文法见 <a href="syntax_option_type.html" title="cpp/regex/syntax option type"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;">syntax_option_type</code></a>。
 </p><p>C++ 中的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">ECMAScript</code> 3 正则表达式文法是 <a rel="nofollow" class="external text" href="http://ecma-international.org/ecma-262/5.1/#sec-15.10">ECMA-262 语法</a>，并带有一些修改，下文将之标记为 <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span>。
 </p>
@@ -122,10 +127,10 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E5.8F.AF.E9.80.89.E9.A1.B9"></span><span class="mw-headline" id="可选项">可选项</span></h3>
 <p>正则表达式模式是一或多个以析取运算符 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>|</b></code> 分隔的<i>可选项</i> ﻿的序列（换言之，析取运算符拥有最低优先级）
-</p><p><i>模式</i> ::
+</p><p><i>模式</i>&nbsp;::
 </p>
 <dl><dd><i>析取</i></dd></dl>
-<p><i>析取</i> ::
+<p><i>析取</i>&nbsp;::
 </p>
 <dl><dd><i>可选项</i></dd>
 <dd><i>可选项</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>|</b></code> <i>析取</i></dd></dl>
@@ -135,57 +140,57 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p><p>跳过的<i>可选项</i> ﻿内的任何捕获括号产生空子匹配。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">show_matches</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">re</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">smatch</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">regex_search</span><span class="p">(</span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">regex</span><span class="p">(</span><span class="n">re</span><span class="p">));</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">m</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">  "</span>
-<span class="w">                     </span><span class="s">"prefix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prefix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">  smatch: "</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"m["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"] "</span><span class="p">;</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">  suffix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">suffix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]: NO MATCH</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"abcdef"</span><span class="p">,</span><span class="w"> </span><span class="s">"abc|def"</span><span class="p">);</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"abc"</span><span class="p">,</span><span class="w"> </span><span class="s">"ab|abc"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 首先匹配左侧可选项</span>
-
-<span class="w">    </span><span class="c1">// 针对后随剩余正则表达式 (c|bc) 左侧可选项 (a) 的匹配成功</span>
-<span class="w">    </span><span class="c1">// 它生成 m[1]="a" 及 m[4]="bc"。</span>
-<span class="w">    </span><span class="c1">// 跳过的可选项 (ab) 和 (c) 将其子匹配 m[3] 和 m[5] 置为空。</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"abc"</span><span class="p">,</span><span class="w"> </span><span class="s">"((a)|(ab))((c)|(bc))"</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstddef&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;regex&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">smatch</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex_search</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (!</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">empty</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">())</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  "</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                     "prefix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">prefix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  smatch: "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">size</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(); ++</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">            std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"m["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">] &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"] "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  suffix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">suffix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    else</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]: NO MATCH</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abcdef"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abc|def"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abc"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ab|abc"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 首先匹配左侧可选项</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 针对后随剩余正则表达式 (c|bc) 左侧可选项 (a) 的匹配成功</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 它生成 m[1]="a" 及 m[4]="bc"。</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 跳过的可选项 (ab) 和 (c) 将其子匹配 m[3] 和 m[5] 置为空。</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abc"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"((a)|(ab))((c)|(bc))"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>input=[abcdef], regex=[abc|def]
-  prefix=[]
-  smatch: m[0]=[abc]
-  suffix=[def]
-input=[abc], regex=[ab|abc]
-  prefix=[]
-  smatch: m[0]=[ab]
-  suffix=[c]
-input=[abc], regex=[((a)|(ab))((c)|(bc))]
-  prefix=[]
-  smatch: m[0]=[abc] m[1]=[a] m[2]=[a] m[3]=[] m[4]=[bc] m[5]=[] m[6]=[bc]
-  suffix=[]
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>input=[abcdef], regex=[abc|def]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[abc]</span></span>
+<span class="line"><span>  suffix=[def]</span></span>
+<span class="line"><span>input=[abc], regex=[ab|abc]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[ab]</span></span>
+<span class="line"><span>  suffix=[c]</span></span>
+<span class="line"><span>input=[abc], regex=[((a)|(ab))((c)|(bc))]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[abc] m[1]=[a] m[2]=[a] m[3]=[] m[4]=[bc] m[5]=[] m[6]=[bc]</span></span>
+<span class="line"><span>  suffix=[]</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E9.A1.B9"></span><span class="mw-headline" id="项">项</span></h3>
 <p>每个<i>可选项</i> ﻿要么为空，要么是<i>项</i> ﻿的序列（<i>项</i> ﻿间无分隔符）
-</p><p><i>可选项</i> ::
+</p><p><i>可选项</i>&nbsp;::
 </p>
 <dl><dd><i>[空]</i></dd>
 <dd><i>可选项</i> <i>项</i></dd></dl>
@@ -194,59 +199,59 @@ input=[abc], regex=[((a)|(ab))((c)|(bc))]
 </p><p>如果左侧<i>可选项</i> ﻿、右侧<i>项</i> ﻿和剩余正则表达式都拥有选择点，那么在移动到右侧<i>项</i> ﻿中的下个选择前，尝试剩余正则表达式中的所有选择，并在移动到左侧<i>可选项</i> ﻿中的下个选择前，尝试右侧<i>项</i> ﻿中的所有选择。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">show_matches</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">re</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">smatch</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">regex_search</span><span class="p">(</span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">regex</span><span class="p">(</span><span class="n">re</span><span class="p">));</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">m</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">  "</span>
-<span class="w">                     </span><span class="s">"prefix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prefix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">  smatch: "</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"m["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"] "</span><span class="p">;</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">  suffix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">suffix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]: NO MATCH</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"abcdef"</span><span class="p">,</span><span class="w"> </span><span class="s">""</span><span class="p">);</span><span class="w"> </span><span class="c1">// 空正则表达式是单个空可选项</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"abc"</span><span class="p">,</span><span class="w"> </span><span class="s">"abc|"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 左可选项首先匹配</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"abc"</span><span class="p">,</span><span class="w"> </span><span class="s">"|abc"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 左可选项首先匹配，留待 abc 未匹配</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstddef&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;regex&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">smatch</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex_search</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (!</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">empty</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">())</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  "</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                     "prefix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">prefix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  smatch: "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">size</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(); ++</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">            std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"m["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">] &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"] "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  suffix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">suffix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    else</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]: NO MATCH</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abcdef"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">""</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 空正则表达式是单个空可选项</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abc"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abc|"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 左可选项首先匹配</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abc"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"|abc"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> // 左可选项首先匹配，留待 abc 未匹配</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>input=[abcdef], regex=[]
-  prefix=[]
-  smatch: m[0]=[]
-  suffix=[abcdef]
-input=[abc], regex=[abc|]
-  prefix=[]
-  smatch: m[0]=[abc]
-  suffix=[]
-input=[abc], regex=[|abc]
-  prefix=[]
-  smatch: m[0]=[]
-  suffix=[abc]
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>input=[abcdef], regex=[]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[]</span></span>
+<span class="line"><span>  suffix=[abcdef]</span></span>
+<span class="line"><span>input=[abc], regex=[abc|]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[abc]</span></span>
+<span class="line"><span>  suffix=[]</span></span>
+<span class="line"><span>input=[abc], regex=[|abc]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[]</span></span>
+<span class="line"><span>  suffix=[abc]</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E6.95.B0.E9.87.8F.E8.AF.8D"></span><span class="mw-headline" id="数量词">数量词</span></h3>
 <ul><li>每个<i>项</i> ﻿是<i>断言</i>（见下文）、<i>原子</i>（见下文），和<i>原子</i> ﻿立即后随<i>数量词</i> ﻿之一</li></ul>
-<p><i>项</i> ::
+<p><i>项</i>&nbsp;::
 </p>
 <dl><dd><i>断言</i></dd>
 <dd><i>原子</i></dd>
 <dd><i>原子</i> <i>数量词</i></dd></dl>
 <p>每个<i>数量词</i> ﻿要么是<i>贪心</i> ﻿数量词（仅由一个<i>数量词前缀</i> ﻿组成），要么是<i>非贪心</i> ﻿数量词（由一个<i>数量词前缀</i> ﻿后随问号 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>?</b></code> 组成）。
-</p><p><i>数量词</i> ::
+</p><p><i>数量词</i>&nbsp;::
 </p>
 <dl><dd><i>数量词前缀</i></dd>
 <dd><i>数量词前缀</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>?</b></code></dd></dl>
@@ -308,77 +313,77 @@ input=[abc], regex=[|abc]
 </p><p>每次重复<i>原子</i> ﻿时，清除它的捕获（见下文 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="s">"(z)((a+)?(b+)?(c))*"</span></code></span> 的示例）
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">show_matches</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">re</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">smatch</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">regex_search</span><span class="p">(</span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">regex</span><span class="p">(</span><span class="n">re</span><span class="p">));</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">m</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">  "</span>
-<span class="w">                     </span><span class="s">"prefix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prefix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">  smatch: "</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"m["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"] "</span><span class="p">;</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">  suffix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">suffix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]: NO MATCH</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">// 贪心匹配，重复 [a-z] 4 次</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"abcdefghi"</span><span class="p">,</span><span class="w"> </span><span class="s">"a[a-z]{2,4}"</span><span class="p">);</span>
-<span class="w">    </span><span class="c1">// 非贪心匹配，重复 [a-z] 2 次</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"abcdefghi"</span><span class="p">,</span><span class="w"> </span><span class="s">"a[a-z]{2,4}?"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 数量词的选择点顺序，生成带二个重复的匹配，</span>
-<span class="w">    </span><span class="c1">// 第一个匹配子串 "aa"，第二个匹配子串 "ba"，保留 "ac" 匹配</span>
-<span class="w">    </span><span class="c1">// （"ba" 出现于 m[1] 的捕获子句中）</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"aabaac"</span><span class="p">,</span><span class="w"> </span><span class="s">"(aa|aabaac|ba|b|c)*"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 数量词的选择点顺序令此 regex 计算 10 与 15 间的最大公约数</span>
-<span class="w">    </span><span class="c1">// （答案是 5，并以 "aaaaa" 填充 m[1]）</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"aaaaaaaaaa,aaaaaaaaaaaaaaa"</span><span class="p">,</span><span class="w"> </span><span class="s">"^(a+)</span><span class="se">\\</span><span class="s">1*,</span><span class="se">\\</span><span class="s">1+$"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 子串 "bbb" 不出现于捕获子句 m[4] 中</span>
-<span class="w">    </span><span class="c1">// 因为它在原子 (a+)?(b+)?(c) 的第二次重复匹配子串 "ac" 时被声明</span>
-<span class="w">    </span><span class="c1">// 注：gcc 理解有误——它没有正确地按 ECMA-262 21.2.2.5.1 清除</span>
-<span class="w">    </span><span class="c1">// matches[4] 捕获组，从而错误地对于该组捕获 "bbb"。</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"zaacbbbcac"</span><span class="p">,</span><span class="w"> </span><span class="s">"(z)((a+)?(b+)?(c))*"</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstddef&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;regex&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">smatch</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex_search</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (!</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">empty</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">())</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  "</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                     "prefix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">prefix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  smatch: "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">size</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(); ++</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">            std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"m["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">] &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"] "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  suffix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">suffix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    else</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]: NO MATCH</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 贪心匹配，重复 [a-z] 4 次</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abcdefghi"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"a[a-z]{2,4}"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 非贪心匹配，重复 [a-z] 2 次</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abcdefghi"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"a[a-z]{2,4}?"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 数量词的选择点顺序，生成带二个重复的匹配，</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 第一个匹配子串 "aa"，第二个匹配子串 "ba"，保留 "ac" 匹配</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // （"ba" 出现于 m[1] 的捕获子句中）</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"aabaac"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"(aa|aabaac|ba|b|c)*"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 数量词的选择点顺序令此 regex 计算 10 与 15 间的最大公约数</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // （答案是 5，并以 "aaaaa" 填充 m[1]）</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"aaaaaaaaaa,aaaaaaaaaaaaaaa"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"^(a+)</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\\</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">1*,</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\\</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">1+$"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 子串 "bbb" 不出现于捕获子句 m[4] 中</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 因为它在原子 (a+)?(b+)?(c) 的第二次重复匹配子串 "ac" 时被声明</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 注：gcc 理解有误——它没有正确地按 ECMA-262 21.2.2.5.1 清除</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // matches[4] 捕获组，从而错误地对于该组捕获 "bbb"。</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"zaacbbbcac"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"(z)((a+)?(b+)?(c))*"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>input=[abcdefghi], regex=[a[a-z]{2,4}]
-  prefix=[]
-  smatch: m[0]=[abcde]
-  suffix=[fghi]
-input=[abcdefghi], regex=[a[a-z]{2,4}?]
-  prefix=[]
-  smatch: m[0]=[abc]
-  suffix=[defghi]
-input=[aabaac], regex=[(aa|aabaac|ba|b|c)*]
-  prefix=[]
-  smatch: m[0]=[aaba] m[1]=[ba]
-  suffix=[ac]
-input=[aaaaaaaaaa,aaaaaaaaaaaaaaa], regex=[^(a+)\1*,\1+$]
-  prefix=[]
-  smatch: m[0]=[aaaaaaaaaa,aaaaaaaaaaaaaaa] m[1]=[aaaaa]
-  suffix=[]
-input=[zaacbbbcac], regex=[(z)((a+)?(b+)?(c))*]
-  prefix=[]
-  smatch: m[0]=[zaacbbbcac] m[1]=[z] m[2]=[ac] m[3]=[a] m[4]=[] m[5]=[c] 
-  suffix=[]
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>input=[abcdefghi], regex=[a[a-z]{2,4}]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[abcde]</span></span>
+<span class="line"><span>  suffix=[fghi]</span></span>
+<span class="line"><span>input=[abcdefghi], regex=[a[a-z]{2,4}?]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[abc]</span></span>
+<span class="line"><span>  suffix=[defghi]</span></span>
+<span class="line"><span>input=[aabaac], regex=[(aa|aabaac|ba|b|c)*]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[aaba] m[1]=[ba]</span></span>
+<span class="line"><span>  suffix=[ac]</span></span>
+<span class="line"><span>input=[aaaaaaaaaa,aaaaaaaaaaaaaaa], regex=[^(a+)\1*,\1+$]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[aaaaaaaaaa,aaaaaaaaaaaaaaa] m[1]=[aaaaa]</span></span>
+<span class="line"><span>  suffix=[]</span></span>
+<span class="line"><span>input=[zaacbbbcac], regex=[(z)((a+)?(b+)?(c))*]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[zaacbbbcac] m[1]=[z] m[2]=[ac] m[3]=[a] m[4]=[] m[5]=[c] </span></span>
+<span class="line"><span>  suffix=[]</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E6.96.AD.E8.A8.80"></span><span class="mw-headline" id="断言">断言</span></h3>
 <p><i>断言</i> 匹配条件，而非输入字符串的子串。它们不会消耗任何来自输入的字符。每个<i>断言</i> ﻿是下列之一
-</p><p><i>断言</i> ::
+</p><p><i>断言</i>&nbsp;::
 </p>
 <dl><dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>^</b></code></dd>
 <dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>$</b></code></dd>
@@ -412,80 +417,80 @@ input=[zaacbbbcac], regex=[(z)((a+)?(b+)?(c))*]
 </p><p>注意：前瞻断言可用于创建多个正则表达式间的逻辑与（见下方示例）。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">show_matches</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">re</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">smatch</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">regex_search</span><span class="p">(</span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">regex</span><span class="p">(</span><span class="n">re</span><span class="p">));</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">m</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">  "</span>
-<span class="w">                     </span><span class="s">"prefix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prefix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">  smatch: "</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"m["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"] "</span><span class="p">;</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">  suffix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">suffix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"]: NO MATCH</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">// 在输入结尾匹配 a</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"aaa"</span><span class="p">,</span><span class="w"> </span><span class="s">"a$"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 在第一个词结尾匹配 o</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"moo goo gai pan"</span><span class="p">,</span><span class="w"> </span><span class="s">"o</span><span class="se">\\</span><span class="s">b"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 前瞻匹配立即在第一个 b 之后的空字符串</span>
-<span class="w">    </span><span class="c1">// 这以 "aaa" 填充 m[1]，尽管 m[0] 为空</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"baaabac"</span><span class="p">,</span><span class="w"> </span><span class="s">"(?=(a+))"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 因为禁止回溯引用回撤到前瞻中，</span>
-<span class="w">    </span><span class="c1">// 这匹配 aba 而非 aaaba</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"baaabac"</span><span class="p">,</span><span class="w"> </span><span class="s">"(?=(a+))a*b</span><span class="se">\\</span><span class="s">1"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 经由前瞻的逻辑与：此密码匹配，若它含有</span>
-<span class="w">    </span><span class="c1">// 至少一个小写字母</span>
-<span class="w">    </span><span class="c1">// 与 至少一个大写字母</span>
-<span class="w">    </span><span class="c1">// 与 至少一个标点字符</span>
-<span class="w">    </span><span class="c1">// 与 至少有 6 个字符长</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"abcdef"</span><span class="p">,</span><span class="w"> </span><span class="s">"(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}"</span><span class="p">);</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"aB,def"</span><span class="p">,</span><span class="w"> </span><span class="s">"(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}"</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstddef&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;regex&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">smatch</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex_search</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (!</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">empty</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">())</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  "</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                     "prefix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">prefix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  smatch: "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">size</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(); ++</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">            std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"m["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">] &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"] "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  suffix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">suffix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    else</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">cout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"]: NO MATCH</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 在输入结尾匹配 a</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"aaa"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"a$"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 在第一个词结尾匹配 o</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"moo goo gai pan"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"o</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\\</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">b"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 前瞻匹配立即在第一个 b 之后的空字符串</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 这以 "aaa" 填充 m[1]，尽管 m[0] 为空</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"baaabac"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"(?=(a+))"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 因为禁止回溯引用回撤到前瞻中，</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 这匹配 aba 而非 aaaba</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"baaabac"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"(?=(a+))a*b</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\\</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">1"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 经由前瞻的逻辑与：此密码匹配，若它含有</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 至少一个小写字母</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 与 至少一个大写字母</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 与 至少一个标点字符</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 与 至少有 6 个字符长</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"abcdef"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"aB,def"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>input=[aaa], regex=[a$]
-  prefix=[aa]
-  smatch: m[0]=[a] 
-  suffix=[]
-input=[moo goo gai pan], regex=[o\b]
-  prefix=[mo]
-  smatch: m[0]=[o] 
-  suffix=[ goo gai pan]
-input=[baaabac], regex=[(?=(a+))]
-  prefix=[b]
-  smatch: m[0]=[] m[1]=[aaa] 
-  suffix=[aaabac]
-input=[baaabac], regex=[(?=(a+))a*b\1]
-  prefix=[baa]
-  smatch: m[0]=[aba] m[1]=[a] 
-  suffix=[c]
-input=[abcdef], regex=[(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}]: NO MATCH
-input=[aB,def], regex=[(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}]
-  prefix=[]
-  smatch: m[0]=[aB,def] 
-  suffix=[]
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>input=[aaa], regex=[a$]</span></span>
+<span class="line"><span>  prefix=[aa]</span></span>
+<span class="line"><span>  smatch: m[0]=[a] </span></span>
+<span class="line"><span>  suffix=[]</span></span>
+<span class="line"><span>input=[moo goo gai pan], regex=[o\b]</span></span>
+<span class="line"><span>  prefix=[mo]</span></span>
+<span class="line"><span>  smatch: m[0]=[o] </span></span>
+<span class="line"><span>  suffix=[ goo gai pan]</span></span>
+<span class="line"><span>input=[baaabac], regex=[(?=(a+))]</span></span>
+<span class="line"><span>  prefix=[b]</span></span>
+<span class="line"><span>  smatch: m[0]=[] m[1]=[aaa] </span></span>
+<span class="line"><span>  suffix=[aaabac]</span></span>
+<span class="line"><span>input=[baaabac], regex=[(?=(a+))a*b\1]</span></span>
+<span class="line"><span>  prefix=[baa]</span></span>
+<span class="line"><span>  smatch: m[0]=[aba] m[1]=[a] </span></span>
+<span class="line"><span>  suffix=[c]</span></span>
+<span class="line"><span>input=[abcdef], regex=[(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}]: NO MATCH</span></span>
+<span class="line"><span>input=[aB,def], regex=[(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  smatch: m[0]=[aB,def] </span></span>
+<span class="line"><span>  suffix=[]</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E5.8E.9F.E5.AD.90"></span><span class="mw-headline" id="原子">原子</span></h3>
 <p><i>原子</i> ﻿可以是下列之一：
-</p><p><i>原子</i> ::
+</p><p><i>原子</i>&nbsp;::
 </p>
 <dl><dd><i>模式字符</i></dd>
 <dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>.</b></code></dd>
@@ -494,7 +499,7 @@ input=[aB,def], regex=[(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}]
 <dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>(</b></code> <i>析取</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>)</b></code></dd>
 <dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>(</b></code> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>?</b></code> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>:</b></code> <i>析取</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>)</b></code></dd></dl>
 <p>其中
-<i>原子转义</i> ::
+<i>原子转义</i>&nbsp;::
 </p>
 <dl><dd><i>数字转义</i></dd>
 <dd><i>字符转义</i></dd>
@@ -508,7 +513,7 @@ input=[aB,def], regex=[(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}]
 </p>
 <table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成<br>原因：暂无示例 </td></tr></tbody></table>
 <h3><span id=".E5.9B.9E.E6.BA.AF.E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="回溯引用">回溯引用</span></h3>
-<p><i>数字转义</i> ::
+<p><i>数字转义</i>&nbsp;::
 </p>
 <dl><dd><i>十进制整数字面量</i> [<i>前瞻</i> ∉ <i>十进制位</i>]</dd></dl>
 <p>如果 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\</b></code> 后随首位非 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">0</code> 的十进制数 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">N</code>，那么认为该转义序列为<i>回溯引用</i>。通过在每个数位上调用 <span class="t-lc">std::regex_traits::value</span><span class="t-mark" style="white-space: nowrap;">(仅 C++)</span> 并用底 10 算术组合及其结果获得 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">N</code>。如果 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">N</code> 大于整个正则表达式中捕获括号的总数，那么就是错误。
@@ -519,14 +524,14 @@ input=[aB,def], regex=[(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}]
 <table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成<br>原因：暂无示例 </td></tr></tbody></table>
 <h3><span id=".E5.8D.95.E5.AD.97.E7.AC.A6.E5.8C.B9.E9.85.8D"></span><span class="mw-headline" id="单字符匹配">单字符匹配</span></h3>
 <p><i>原子</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>.</b></code> 匹配并消耗来自输入序列的任一字符，除了<i>行终止符</i>（<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+000A</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+000D</code>、<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+2028</code> 或 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+2029</code>）
-</p><p><i>原子</i> <i>模式字符</i> ，其中<i>模式字符</i> ﻿是任意<i>源字符</i> ，<b>除了</b>字符 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>^ $ \ . * + ? ( ) [ ] { } |</b></code>，匹配并消耗一个来自输入的字符，如果它等于此<i>模式字符</i>。
+</p><p><i>原子</i> <i>模式字符</i> ，其中<i>模式字符</i> ﻿是任意<i>源字符</i> ，<b>除了</b>字符 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>^ $ \ . * +&nbsp;? ( ) [ ] { } |</b></code>，匹配并消耗一个来自输入的字符，如果它等于此<i>模式字符</i>。
 </p><p>这个及所有其他单字符匹配定义如下：
 </p>
 <div class="t-li1"><span class="t-li">1)</span> 如果设置了 <span class="t-lc">std::regex_constants::icase</span>，那么在 <span class="t-lc">std::regex_traits::translate_nocase</span> 的返回值相等时字符相等。<span class="t-mark" style="white-space: nowrap;">(仅 C++)</span></div>
 <div class="t-li1"><span class="t-li">2)</span> 否则，如果设置了 <span class="t-lc">std::regex_constants::collate</span>，那么在 <span class="t-lc">std::regex_traits::translate</span> 的返回值相等时字符相等。<span class="t-mark" style="white-space: nowrap;">(仅 C++)</span></div>
 <div class="t-li1"><span class="t-li">3 )</span> 否则，如果 operator== 返回 true，那么字符相等。</div>
 <p>每个由转义字符 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\</b></code> 后随<i>字符转义</i> ﻿的<i>原子</i>，还有特殊十进制转义 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\0</b></code>，匹配消耗一个来自输入的字符，如果它等于<i>字符转义</i> ﻿所表示的字符。辨识下列字符转义序列：
-</p><p><i>字符转义</i> ::
+</p><p><i>字符转义</i>&nbsp;::
 </p>
 <dl><dd><i>控制转义</i></dd>
 <dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>c</b></code> <i>控制字母</i></dd>
@@ -577,69 +582,69 @@ input=[aB,def], regex=[(?=.*[[:lower:]])(?=.*[[:upper:]])(?=.*[[:punct:]]).{6,}]
 </td>
 <td>垂直制表
 </td></tr></tbody></table>
-<p><i>控制字母</i> ﻿是任何小写或大写 ASCII 字符，而此字符转义所匹配字符的编码单元等于<i>控制字母</i>的编码单元的值除以 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">32</span></code></span> <b>的余数</b>，例如 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\cD</b></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\cd</b></code> 都匹配编码单元 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+0004</code> (EOT)，因为 'D' 是 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+0044</code> 而 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">0x44 % 32 == 4</code> 并且 'd' 是 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+0064</code> 而 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">0x64 % 32 == 4</code>。
+<p><i>控制字母</i> ﻿是任何小写或大写 ASCII 字符，而此字符转义所匹配字符的编码单元等于<i>控制字母</i>的编码单元的值除以 <span class="t-c"><code style="white-space: pre; padding: 0; border: none; background-color: transparent;" class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><span class="mi">32</span></code></span> <b>的余数</b>，例如 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\cD</b></code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\cd</b></code> 都匹配编码单元 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+0004</code> (EOT)，因为 'D' 是 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+0044</code> 而 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">0x44&nbsp;% 32 == 4</code> 并且 'd' 是 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">U+0064</code> 而 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">0x64&nbsp;% 32 == 4</code>。
 </p><p><i>十六进制转义序列</i> ﻿是字母 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>x</b></code> 后随准确二个<i>十六进制位</i>（其中<i>十六进制位</i> ﻿是 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F</b></code> 之一）。此字符转义所匹配字符的编码单元等于二位十六进制数的数值。
 </p><p><i>Unicode 转义序列</i> ﻿是字母 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>u</b></code> 后随准确四个<i>十六进制位</i>。此字符转义所匹配字符的编码单元等于此四位十六进制数的数值。如果该值不适于此 <span class="t-lc">std::basic_regex</span> 的 CharT，那么就会抛出 <span class="t-lc">std::regex_error</span> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span>。
 </p><p><i>恒等转义</i> 能为任何非字母数字的字符：例如另一反斜杠。它照原样匹配字符。
 </p>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">show_matches</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="o">&amp;</span><span class="w"> </span><span class="n">re</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">wsmatch</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">regex_search</span><span class="p">(</span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">wregex</span><span class="p">(</span><span class="n">re</span><span class="p">));</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">m</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">wcout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"]</span><span class="se">\n</span><span class="s">  "</span>
-<span class="w">                      </span><span class="sa">L</span><span class="s">"prefix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prefix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"]</span><span class="se">\n</span><span class="s">  wsmatch: "</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">n</span><span class="p">)</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">wcout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"m["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"]=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"] "</span><span class="p">;</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">wcout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"</span><span class="se">\n</span><span class="s">  suffix=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">suffix</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"]</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">wcout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"input=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"], regex=["</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sa">L</span><span class="s">"]: NO MATCH</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">// 大多数转义类似 C++ ，为元字符保存。你将需要在斜杠情形使用双重转义或未处理字符串。</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="s">"C++</span><span class="se">\\</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">"</span><span class="dl">(</span><span class="s">C\+\+\\</span><span class="dl">)</span><span class="s">"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 转义序列与 NUL 。</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">(</span><span class="s">"ab</span><span class="se">\xff\0</span><span class="s">cd"</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
-<span class="w">    </span><span class="n">show_matches</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">"(</span><span class="se">\\</span><span class="s">0|</span><span class="se">\\</span><span class="s">u00ff)"</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 没有定义非 BMP Unicode 的匹配，因为 ECMAScript 使用 UTF-16 原子。</span>
-<span class="w">    </span><span class="c1">// 此 emoji 香蕉是否匹配能为平台依赖：</span>
-<span class="w">    </span><span class="c1">// XXX ：这些需要为宽字符串！</span>
-<span class="w">    </span><span class="c1">// show_matches(L"\U0001f34c", L"[\\u0000-\\ufffe]+");</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;cstddef&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;iostream&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;regex&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;string&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">wstring</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">const</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99"> std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">wstring</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">&amp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">wsmatch</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">regex_search</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">wregex</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    if</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (!</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">empty</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">())</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">wcout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  "</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">                      L"prefix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">prefix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  wsmatch: "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">        for</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">size_t</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> = </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">size</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(); ++</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">            std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">wcout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"m["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"]=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">[</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">n</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">] &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"] "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">wcout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  suffix=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">m</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">.</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">suffix</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">() &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"]</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    else</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">        std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">wcout</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"input=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">in</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"], regex=["</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">re</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &lt;&lt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">L"]: NO MATCH</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">()</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 大多数转义类似 C++ ，为元字符保存。你将需要在斜杠情形使用双重转义或未处理字符串。</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"C++</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\\</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">R"(C\+\+\\)"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 转义序列与 NUL 。</span></span>
+<span class="line"><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">    std</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">::</span><span style="--shiki-dark:#4EC9B0;--shiki-light:#267F99">string</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ab</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\xff\0</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">cd"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_matches</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">s</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"(</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\\</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">0|</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\\</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">u00ff)"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 没有定义非 BMP Unicode 的匹配，因为 ECMAScript 使用 UTF-16 原子。</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // 此 emoji 香蕉是否匹配能为平台依赖：</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // XXX ：这些需要为宽字符串！</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    // show_matches(L"\U0001f34c", L"[\\u0000-\\ufffe]+");</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>可能的输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>input=[C++\], regex=[C\+\+\\]
-  prefix=[]
-  wsmatch: m[0]=[C++\]
-  suffix=[]
-input=[ab?c], regex=[(\0{{!}}\u00ff)]
-  prefix=[ab]
-  wsmatch: m[0]=[?] m[1]=[?]
-  suffix=[c]
-input=[?], regex=[[\u0000-\ufffe]+]: NO MATCH
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>input=[C++\], regex=[C\+\+\\]</span></span>
+<span class="line"><span>  prefix=[]</span></span>
+<span class="line"><span>  wsmatch: m[0]=[C++\]</span></span>
+<span class="line"><span>  suffix=[]</span></span>
+<span class="line"><span>input=[ab?c], regex=[(\0{{!}}\u00ff)]</span></span>
+<span class="line"><span>  prefix=[ab]</span></span>
+<span class="line"><span>  wsmatch: m[0]=[?] m[1]=[?]</span></span>
+<span class="line"><span>  suffix=[c]</span></span>
+<span class="line"><span>input=[?], regex=[[\u0000-\ufffe]+]: NO MATCH</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E5.AD.97.E7.AC.A6.E7.B1.BB"></span><span class="mw-headline" id="字符类">字符类</span></h3>
 <p>原子能表示字符类，即它会匹配并消耗一个字符，若该字符属于预定义的字符组之一。
 </p><p>字符类能通过字符类转义引入：
-</p><p><i>原子</i> ::
+</p><p><i>原子</i>&nbsp;::
 </p>
 <dl><dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\</b></code> <i>字符类转义</i></dd></dl>
 <p>或直接为
-</p><p><i>原子</i> ::
+</p><p><i>原子</i>&nbsp;::
 </p>
 <dl><dd><i>字符类</i></dd></dl>
 <p>字符类转义是一些常用字符类的简洁写法，如下：
@@ -694,15 +699,15 @@ input=[?], regex=[[\u0000-\ufffe]+]: NO MATCH
 <td>异于字母数字或 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>_</b></code> 的字符
 </td></tr></tbody></table><p><span style="font-size:0.8em; line-height:125%">C++ 中这些字符类转义的准确含义以依赖本地环境的具名字符类定义，而非通过显式列举同 ECMAScript 中的可接受字符。</span>
 </p><p><i>字符类</i> ﻿是方括号环绕的<i>类范围</i> ﻿序列，可选地以取反运算符 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>^</b></code> 开始。如果它始于 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>^</b></code> ，那么此<i>原子</i> ﻿匹配任何<b>不在</b>所有<i>类范围</i> ﻿的并所表示的字符集合中的字符。否则，此<i>原子</i> ﻿匹配任何<b>在</b>所有<i>类范围</i> ﻿的并所表示的字符集合中的字符。
-</p><p><i>字符类</i> ::
+</p><p><i>字符类</i>&nbsp;::
 </p>
 <dl><dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>[</b></code> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>[</b></code> <i>前瞻 ∉ {</i><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>^</b></code><i>}]</i> <i>类范围</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>]</b></code></dd>
 <dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>[</b></code> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>^</b></code> <i>类范围</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>]</b></code></dd></dl>
-<p><i>类范围</i> ::
+<p><i>类范围</i>&nbsp;::
 </p>
 <dl><dd>[空]</dd>
 <dd><i>非空类范围</i></dd></dl>
-<p><i>非空类范围</i> ::
+<p><i>非空类范围</i>&nbsp;::
 </p>
 <dl><dd><i>类原子</i></dd>
 <dd><i>类原子</i> <i>非空无连字符类范围</i></dd>
@@ -721,24 +726,24 @@ input=[?], regex=[[\u0000-\ufffe]+]: NO MATCH
 <li>杠分隔范围规定的开始或结尾类原子</li>
 <li>立即在杠分隔范围规定之后。</li>
 <li>以反斜杠转义为<i>字符转义</i></li></ul>
-<p><i>非空无连字符类范围</i> ::
+<p><i>非空无连字符类范围</i>&nbsp;::
 </p>
 <dl><dd><i>类原子</i></dd>
 <dd><i>无连字符类原子</i> <i>非空无连字符类范围</i></dd>
 <dd><i>无连字符类原子</i> - <i>类原子</i> <i>类范围</i></dd></dl>
-<p><i>类原子</i> ::
+<p><i>类原子</i>&nbsp;::
 </p>
 <dl><dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>-</b></code></dd>
 <dd><i>无连字符类原子</i></dd>
 <dd><i>扩展类类原子</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span></dd>
 <dd><i>校排元素类原子</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span></dd>
 <dd><i>等价类原子</i><span class="t-mark" style="white-space: nowrap;">(仅 C++)</span></dd></dl>
-<p><i>无连字符类原子</i> ::
+<p><i>无连字符类原子</i>&nbsp;::
 </p>
 <dl><dd><i>源字符</i>（<code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\ ] -</b></code> 除外）</dd>
 <dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>\</b></code> <i>类转义</i></dd></dl>
 <p>每个<i>无连字符类原子</i> ﻿表示单个字符——原状的<i>源字符</i> ﻿或转义如下的字符：
-</p><p><i>类转义</i> ::
+</p><p><i>类转义</i>&nbsp;::
 </p>
 <dl><dd><i>数字转义</i></dd>
 <dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>b</b></code></dd>
@@ -751,27 +756,27 @@ input=[?], regex=[[\u0000-\ufffe]+]: NO MATCH
 <table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成<br>原因：暂无示例 </td></tr></tbody></table>
 <h3><span id=".E5.9F.BA.E4.BA.8E_POSIX_.E7.9A.84.E5.AD.97.E7.AC.A6.E7.B1.BB"></span><span class="mw-headline" id="基于_POSIX_的字符类">基于 POSIX 的字符类</span></h3>
 <p>这些字符类是对 ECMAScript 语法的扩展，并等价于 POSIX 正则表达式中找到的字符类。
-</p><p><i>扩展类类原子</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span> ::
+</p><p><i>扩展类类原子</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span>&nbsp;::
 </p>
 <dl><dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>[:</b></code> <i>类名</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>:]</b></code></dd></dl>
 <p>表示所有具名字符类<i>类名</i> ﻿中的成员。仅若 <span class="t-lc">std::regex_traits::lookup_classname</span> 对此名称返回非零字符串，名称才合法。如 <span class="t-lc">std::regex_traits::lookup_classname</span> 中描述，保证辨识下列名称：<code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>alnum, alpha, blank, cntrl, digit, graph, lower, print, punct, space, upper, xdigit, d, s, w</b></code>。额外的名称（如日文中的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>jdigit</b></code> 或 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>jkanji</b></code> ）可为系统提供的本地环境提供，或实现为用户定义的扩展：
-</p><p><i>校排元素类原子</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span> ::
+</p><p><i>校排元素类原子</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span>&nbsp;::
 </p>
 <dl><dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>[.</b></code> <i>类名</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>.]</b></code></dd></dl>
 <p>表示具名校排元素，它可表示单个字符，或在浸染的本地环境下作为单个单位校排的字符序列，例如 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">[.tilde.]</code> 或捷克文中的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">[.ch.]</code>。只有在 <span class="t-lc">std::regex_traits::lookup_collatename</span> 不是空字符串名称时才合法。
 </p><p>使用 <span class="t-lc">std::regex_constants::collate</span> 时，始终能以对照元素为范围的端点（例如匈牙利文中的 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">[[.dz.]-g]</code>）。
-</p><p><i>等价类原子</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span> ::
+</p><p><i>等价类原子</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span>&nbsp;::
 </p>
 <dl><dd><code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>[=</b></code> <i>类名</i> <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>=]</b></code></dd></dl>
 <p>表示与具名校排元素相同的等价类的所有成员字符，即它的主校排键与校排元素<i>类名</i> ﻿所拥有者相同的字符。只有在 <span class="t-lc">std::regex_traits::lookup_collatename</span> 对该名称返回非空字符串，且 <span class="t-lc">std::regex_traits::transform_primary</span> 对调用 <span class="t-lc">std::regex_traits::lookup_collatename</span> 的结果的返回值不是空字符串时名称才合法。
 </p><p>主排序键是忽略大小写、标音符或本地环境限定裁剪的键；因此例如 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;"></code> 匹配任何这些字符之一：<code style="white-space: pre; padding: 0; border: none; background-color: transparent;">a, À, Á, Â, Ã, Ä, Å, A, à, á, â, ã, ä</code> 和 <code style="white-space: pre; padding: 0; border: none; background-color: transparent;">å</code>。
-</p><p><i>类名</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span> ::
+</p><p><i>类名</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span>&nbsp;::
 </p>
 <dl><dd>类名字符</dd>
 <dd>类名字符 类名</dd></dl>
-<p><i>类名字符</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span> ::
+<p><i>类名字符</i> <span class="t-mark" style="white-space: nowrap;">(仅 C++)</span>&nbsp;::
 </p>
-<dl><dd><i>源字符</i> （<code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>. = :</b></code> 除外）</dd></dl>
+<dl><dd><i>源字符</i> （<code style="white-space: pre; padding: 0; border: none; background-color: transparent;"><b>. =&nbsp;:</b></code> 除外）</dd></dl>
 <table class="metadata plainlinks ambox mbox-small-left ambox-notice" style=""><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="">本节未完成<br>原因：暂无示例 </td></tr></tbody></table>
 <!-- 
 NewPP limit report
@@ -829,6 +834,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2283,"wgPageParseReport":{"limitreport":{"cputime":"0.165","walltime":"2.132","ppvisitednodes":{"value":6613,"limit":1000000},"postexpandincludesize":{"value":147193,"limit":4194304},"templateargumentsize":{"value":42041,"limit":4194304},"expansiondepth":{"value":20,"limit":100},"expensivefunctioncount":{"value":13,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":45754,"limit":5000000},"timingprofile":["100.00% 2032.167      1 -total"," 95.15% 1933.674     11 Template:source"," 87.49% 1777.953      9 Template:example","  1.41%   28.597      1 Template:cpp/regex/navbar","  1.37%   27.916      1 Template:navbar","  0.66%   13.346     54 Template:nv","  0.62%   12.552      1 Template:todo","  0.51%   10.456      1 Template:ambox","  0.46%    9.299     20 Template:nv_ln","  0.43%    8.820      1 Template:cpp/text/navbar_content"]},"cachereport":{"timestamp":"20260422045245","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260422045245 -->
-</html>
+
+
+</body><!-- Cached 20260422045245 --></html>

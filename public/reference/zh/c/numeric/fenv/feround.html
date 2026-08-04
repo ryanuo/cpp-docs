@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="client-nojs" lang="zh" dir="ltr">
-<head>
+<!DOCTYPE html><html class="client-nojs" lang="zh" dir="ltr"><head>
 <meta charset="UTF-8">
 <title>fegetround, fesetround</title>
 <script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"7477023ec0dc28e9afc2f4e0","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"c/numeric/fenv/feround","wgTitle":"c/numeric/fenv/feround","wgCurRevisionId":95918,"wgRevisionId":95918,"wgArticleId":1134,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["使用已弃用source标签的页面"],"wgPageViewLanguage":"zh","wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"c/numeric/fenv/feround","wgRelevantArticleId":1134,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
@@ -15,7 +13,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <meta name="robots" content="max-image-preview:standard">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=1120">
-</head>
+<style data-shiki="">
+.shiki{overflow-x:auto;padding:0.5em;border-radius:0.25em;font-size:0.875em;line-height:1.5}
+.shiki,.shiki span{color:var(--shiki-dark);background-color:var(--shiki-dark-bg)}
+.shiki .line{display:inline-block;width:100%}
+@media (prefers-color-scheme:light){
+  .shiki,.shiki span{color:var(--shiki-light);background-color:var(--shiki-light-bg)}
+}
+</style></head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-c_numeric_fenv_feround rootpage-c skin-cppreference2 action-view cpp-navbar"><!-- header -->
 <!-- /header -->
 
@@ -36,7 +41,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
             <div id="contentSub" lang="zh" dir="ltr"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="../../../c.html" title="c">c</a></bdi> | <bdi dir="ltr"><a href="../../numeric.html" title="c/numeric">numeric</a></bdi> | <bdi dir="ltr"><a href="../fenv.html" title="c/numeric/fenv">fenv</a></bdi></div></div></div>
             <!-- /subtitle -->
             <!-- bodycontent -->
-            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
+            <div id="mw-content-text"><div class="mw-content-ltr mw-parser-output" lang="zh" dir="ltr"><div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../../c.html" title="c"> C</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="line-height:1.1em;">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../../compiler_support.html" title="c/compiler support">编译器支持</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../language.html" title="c/language">语言</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../header.html" title="c/header">头文件</a></td></tr>
@@ -54,7 +59,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../../thread.html" title="c/thread">并发支持</a> <span class="t-mark-rev t-since-c11" style="white-space: nowrap;">(C11)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../experimental.html" title="c/experimental">技术规范</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../symbol_index.html" title="c/symbol index">符号索引</a></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../../numeric.html" title="c/numeric">数值</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../../numeric.html" title="c/numeric">数值</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv"><td colspan="5"><a href="../math.html" title="c/numeric/math">常用数学函数</a></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../fenv.html" title="c/numeric/fenv">浮点数环境</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../random.html" title="c/numeric/random">伪随机数生成</a></td></tr>
@@ -62,7 +67,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><a href="../tgmath.html" title="c/numeric/tgmath">泛型数学函数</a> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../numeric.html#%E4%BD%8D%E6%93%8D%E4%BD%9C" title="c/numeric">位操作</a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
 <tr class="t-nv"><td colspan="5"><a href="../../numeric.html#%E5%B8%A6%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E7%AE%97%E6%9C%AF" title="c/numeric">带检查整数算术</a> <span class="t-mark-rev t-since-c23" style="white-space: nowrap;">(C23)</span></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div><div class="t-navbar-head"><a href="../fenv.html" title="c/numeric/fenv">浮点数环境</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="../fenv.html" title="c/numeric/fenv">浮点数环境</a><div class="t-navbar-menu"><div><div><table class="t-nv-begin" cellpadding="0" style="">
 <tbody><tr class="t-nv-h1"><td colspan="5"> 函数</td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="feclearexcept.html" title="c/numeric/fenv/feclearexcept"><span class="t-lines"><span>feclearexcept</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="fetestexcept.html" title="c/numeric/fenv/fetestexcept"><span class="t-lines"><span>fetestexcept</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
@@ -76,7 +81,7 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FE_exceptions.html" title="c/numeric/fenv/FE exceptions"><span class="t-lines"><span>FE_ALL_EXCEPT</span><span>FE_DIVBYZERO</span><span>FE_INEXACT</span><span>FE_INVALID</span><span>FE_OVERFLOW</span><span>FE_UNDERFLOW</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FE_round.html" title="c/numeric/fenv/FE round"><span class="t-lines"><span>FE_DOWNWARD</span><span>FE_TONEAREST</span><span>FE_TOWARDZERO</span><span>FE_UPWARD</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
 <tr class="t-nv"><td colspan="5"><div class="t-nv-ln-table"><div><a href="FE_DFL_ENV.html" title="c/numeric/fenv/FE DFL ENV"><span class="t-lines"><span>FE_DFL_ENV</span></span></a></div><div><span class="t-lines"><span><span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99)</span></span></span></div></div></td></tr>
-</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep"> </div></div>
+</tbody></table></div><div></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
 <table class="t-dcl-begin">
 <tbody><tr class="t-dsc-header">
 <td> <div>在标头 <code><a href="../../header/fenv.html" title="c/header/fenv"><tt>&lt;fenv.h&gt;</tt></a></code> 定义
@@ -85,14 +90,14 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 <td></td>
 </tr>
 <tr class="t-dcl t-since-c99">
-<td> <div><div style="max-width: min(calc(7.68332px * 28 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">fesetround</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">round</span><span class="w"> </span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 28 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> fesetround</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">( </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080"> round</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> );</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (1) </td>
 <td> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span> </td>
 </tr>
 <tr class="t-dcl t-since-c99">
-<td> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">fegetround</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-</pre></div></div></td>
+<td> <div><div style="max-width: min(calc(7.68332px * 21 + 27.1px), 47em); overflow-x: hidden; border-radius: 5px; border-right: 1px solid silver;" class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> fegetround</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"></span></code></pre></div></div></td>
 <td> (2) </td>
 <td> <span class="t-mark-rev t-since-c99" style="white-space: nowrap;">(C99 起)</span> </td>
 </tr>
@@ -120,58 +125,58 @@ RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.option
 </p>
 <h3><span id=".E7.A4.BA.E4.BE.8B"></span><span class="mw-headline" id="示例">示例</span></h3>
 <div class="t-example"><div class="t-example-live-link"><div class="coliru-btn coliru-btn-run-init">运行此代码</div></div>
-<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
-<span class="w"> </span>
-<span class="cp">#pragma STDC FENV_ACCESS ON</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">show_fe_current_rounding_method</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"current rounding method:  "</span><span class="p">);</span>
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">fegetround</span><span class="p">())</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">           </span><span class="k">case</span><span class="w"> </span><span class="no">FE_TONEAREST</span><span class="p">:</span><span class="w">  </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"FE_TONEAREST"</span><span class="p">);</span><span class="w">  </span><span class="k">break</span><span class="p">;</span>
-<span class="w">           </span><span class="k">case</span><span class="w"> </span><span class="no">FE_DOWNWARD</span><span class="p">:</span><span class="w">   </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"FE_DOWNWARD"</span><span class="p">);</span><span class="w">   </span><span class="k">break</span><span class="p">;</span>
-<span class="w">           </span><span class="k">case</span><span class="w"> </span><span class="no">FE_UPWARD</span><span class="p">:</span><span class="w">     </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"FE_UPWARD"</span><span class="p">);</span><span class="w">     </span><span class="k">break</span><span class="p">;</span>
-<span class="w">           </span><span class="k">case</span><span class="w"> </span><span class="no">FE_TOWARDZERO</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"FE_TOWARDZERO"</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">           </span><span class="k">default</span><span class="o">:</span><span class="w">            </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"unknown"</span><span class="p">);</span>
-<span class="w">    </span><span class="p">};</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="w"> </span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="cm">/* 默认舍入方法 */</span>
-<span class="w">    </span><span class="n">show_fe_current_rounding_method</span><span class="p">();</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"+11.5 -&gt; %+4.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="o">+</span><span class="mf">11.5</span><span class="p">));</span><span class="w"> </span><span class="cm">/* 两整数的中央值 */</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"+12.5 -&gt; %+4.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="o">+</span><span class="mf">12.5</span><span class="p">));</span><span class="w"> </span><span class="cm">/* 两整数的中央值 */</span>
-
-<span class="w">    </span><span class="cm">/* 保存舍入方法。 */</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">curr_method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fegetround</span><span class="p">();</span>
-
-<span class="w">    </span><span class="cm">/* 临时更改当前舍入方法。 */</span>
-<span class="w">    </span><span class="n">fesetround</span><span class="p">(</span><span class="n">FE_DOWNWARD</span><span class="p">);</span>
-<span class="w">    </span><span class="n">show_fe_current_rounding_method</span><span class="p">();</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"+11.5 -&gt; %+4.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="o">+</span><span class="mf">11.5</span><span class="p">));</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"+12.5 -&gt; %+4.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="o">+</span><span class="mf">12.5</span><span class="p">));</span>
-
-<span class="w">    </span><span class="cm">/* 恢复舍入方法。 */</span>
-<span class="w">    </span><span class="n">fesetround</span><span class="p">(</span><span class="n">curr_method</span><span class="p">);</span>
-<span class="w">    </span><span class="n">show_fe_current_rounding_method</span><span class="p">();</span><span class="w"> </span>
-<span class="w"> </span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;stdio.h&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;math.h&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#include</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> &lt;fenv.h&gt;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">#pragma</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#E50000"> STDC</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#E50000"> FENV_ACCESS</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#E50000"> ON</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> show_fe_current_rounding_method</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"current rounding method:  "</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    switch</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">fegetround</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">())</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">           case</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> FE_TONEAREST:  </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"FE_TONEAREST"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);  </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">break</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">           case</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> FE_DOWNWARD:   </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"FE_DOWNWARD"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);   </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">break</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">           case</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> FE_UPWARD:     </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"FE_UPWARD"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);     </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">break</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">           case</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> FE_TOWARDZERO: </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"FE_TOWARDZERO"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">); </span><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">break</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">           default</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">:            </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> (</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"unknown"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    };</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">);</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">int</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26"> main</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">void</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    /* 默认舍入方法 */</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_fe_current_rounding_method</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"+11.5 -&gt;&nbsp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%+4.1f</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rint</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(+</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">11.5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /* 两整数的中央值 */</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"+12.5 -&gt;&nbsp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%+4.1f</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rint</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(+</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">12.5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> /* 两整数的中央值 */</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    /* 保存舍入方法。 */</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">    int</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> curr_method = </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">fegetround</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    /* 临时更改当前舍入方法。 */</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    fesetround</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(FE_DOWNWARD);</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_fe_current_rounding_method</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">();</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"+11.5 -&gt;&nbsp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%+4.1f</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rint</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(+</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">11.5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    printf</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"+12.5 -&gt;&nbsp;</span><span style="--shiki-dark:#9CDCFE;--shiki-light:#001080">%+4.1f</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rint</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(+</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">12.5</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">));</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">    /* 恢复舍入方法。 */</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    fesetround</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(curr_method);</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">    show_fe_current_rounding_method</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">(); </span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> </span></span>
+<span class="line"><span style="--shiki-dark:#C586C0;--shiki-light:#AF00DB">    return</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre></div>
 <p>可能的输出：
 </p>
-<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>current rounding method:  FE_TONEAREST
-+11.5 -&gt; +12.0
-+12.5 -&gt; +12.0
-current rounding method:  FE_DOWNWARD
-+11.5 -&gt; +11.0
-+12.5 -&gt; +12.0
-current rounding method:  FE_TONEAREST
-</pre></div> 
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>current rounding method:  FE_TONEAREST</span></span>
+<span class="line"><span>+11.5 -&gt; +12.0</span></span>
+<span class="line"><span>+12.5 -&gt; +12.0</span></span>
+<span class="line"><span>current rounding method:  FE_DOWNWARD</span></span>
+<span class="line"><span>+11.5 -&gt; +11.0</span></span>
+<span class="line"><span>+12.5 -&gt; +12.0</span></span>
+<span class="line"><span>current rounding method:  FE_TONEAREST</span></span>
+<span class="line"><span></span></span></code></pre></div> 
 </div>
 <h3><span id=".E5.BC.95.E7.94.A8"></span><span class="mw-headline" id="引用">引用</span></h3>
 <div class="t-ref-std-11">
@@ -197,7 +202,7 @@ current rounding method:  FE_TONEAREST
 <td>使用当前舍入模式取整到整数，若结果有误则产生异常  <br> <span class="t-mark" style="white-space: nowrap;">(函数)</span> </td></tr>
 
 <tr class="t-dsc">
-<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>fegetround</span>, <span>fesetround</span></span> 的 <span><span><a href="../../../cpp/numeric/fenv/feround.html" title="cpp/numeric/fenv/feround">C++ 文档</a></span></span></div>
+<td colspan="2"><div class="t-dsc-see"><span class="t-dsc-see-tt"><span>fegetround</span>, <span>fesetround</span></span>&nbsp;的 <span><span><a href="../../../cpp/numeric/fenv/feround.html" title="cpp/numeric/fenv/feround">C++ 文档</a></span></span></div>
 </td></tr>
 
 </tbody></table></div>
@@ -257,6 +262,6 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- /footer -->
 
 <script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":749,"wgPageParseReport":{"limitreport":{"cputime":"0.090","walltime":"0.628","ppvisitednodes":{"value":2632,"limit":1000000},"postexpandincludesize":{"value":90051,"limit":4194304},"templateargumentsize":{"value":22194,"limit":4194304},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":6,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":8121,"limit":5000000},"timingprofile":["100.00%  594.137      1 -total"," 78.52%  466.489      1 Template:example"," 78.35%  465.511      2 Template:source","  9.51%   56.520      1 Template:c/numeric/fenv/navbar","  9.38%   55.755      1 Template:navbar","  4.34%   25.791      1 Template:c/numeric/fenv/navbar_content","  4.25%   25.259     35 Template:nv","  2.95%   17.523      2 Template:dsc_inc","  2.57%   15.274     11 Template:nv_ln","  2.45%   14.576      1 Template:c/navbar_content"]},"cachereport":{"timestamp":"20260429050732","ttl":2592000,"transientcontent":false}}});});</script>
-</body>
-<!-- Cached 20260429050732 -->
-</html>
+
+
+</body><!-- Cached 20260429050732 --></html>
