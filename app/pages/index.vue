@@ -62,7 +62,7 @@ const chapters = [
       </a>
 
       <!-- AI 面试 -->
-      <a href="/interview"
+      <a target="_blank" href="/cppinterview/"
         class="flex flex-1 items-center justify-between p-5 rounded-xl border border-violet-200 dark:border-violet-800 bg-violet-50 dark:bg-violet-900/20 hover:bg-violet-100 dark:hover:bg-violet-900/30 transition-colors group">
         <div class="flex items-start gap-3">
           <UIcon name="i-lucide-sparkles" class="w-6 h-6 text-violet-600 dark:text-violet-400 shrink-0 mt-0.5" />
