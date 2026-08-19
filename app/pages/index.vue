@@ -28,8 +28,7 @@ const chapters = [
   <div class="max-w-5xl mx-auto px-6 py-16">
     <div class="text-center mb-16">
       <div
-        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 text-sm font-medium mb-6"
-      >
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 text-sm font-medium mb-6">
         <UIcon name="i-lucide-sparkles" />
         C++2b 标准
       </div>
@@ -40,40 +39,54 @@ const chapters = [
         {{ description }}
       </p>
     </div>
-
-    <div class="mb-12">
-      <a
-        href="/reference"
-        class="flex items-center justify-between p-5 rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors group"
-      >
+    <div class="mb-12 flex gap-2">
+      <!-- C/C++ 参考手册 -->
+      <a href="/reference"
+        class="flex flex-1 items-center justify-between p-5 rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors group">
         <div class="flex items-start gap-3">
-          <UIcon
-            name="i-lucide-book-open"
-            class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5"
-          />
+          <UIcon name="i-lucide-book-open" class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+
           <div>
-            <div class="font-semibold text-blue-900 dark:text-blue-100">C/C++ 参考手册</div>
-            <div class="text-sm text-blue-700 dark:text-blue-300 mt-1">离线版 cppreference.com 文档，涵盖 C/C++ 标准库完整参考。</div>
+            <div class="font-semibold text-blue-900 dark:text-blue-100">
+              看不懂？查参考手册
+            </div>
+
+            <div class="text-sm text-blue-700 dark:text-blue-300 mt-1">
+              C/C++ 标准库完整参考，离线版 cppreference 文档。
+            </div>
           </div>
         </div>
-        <UIcon
-          name="i-lucide-arrow-right"
-          class="w-5 h-5 text-blue-500 dark:text-blue-400 group-hover:translate-x-1 transition-transform"
-        />
+
+        <UIcon name="i-lucide-arrow-right"
+          class="w-5 h-5 text-blue-500 dark:text-blue-400 group-hover:translate-x-1 transition-transform" />
+      </a>
+
+      <!-- AI 面试 -->
+      <a href="/interview"
+        class="flex flex-1 items-center justify-between p-5 rounded-xl border border-violet-200 dark:border-violet-800 bg-violet-50 dark:bg-violet-900/20 hover:bg-violet-100 dark:hover:bg-violet-900/30 transition-colors group">
+        <div class="flex items-start gap-3">
+          <UIcon name="i-lucide-sparkles" class="w-6 h-6 text-violet-600 dark:text-violet-400 shrink-0 mt-0.5" />
+
+          <div>
+            <div class="font-semibold text-violet-900 dark:text-violet-100">
+              AI 面试题
+            </div>
+
+            <div class="text-sm text-violet-700 dark:text-violet-300 mt-1">
+              AI 模拟面试，帮你练习 C/C++ 技术面试题。
+            </div>
+          </div>
+        </div>
+
+        <UIcon name="i-lucide-arrow-right"
+          class="w-5 h-5 text-violet-500 dark:text-violet-400 group-hover:translate-x-1 transition-transform" />
       </a>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-      <NuxtLink
-        v-for="ch in chapters"
-        :key="ch.to"
-        :to="ch.to"
-        class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-green-300 dark:hover:border-green-700 hover:bg-green-50/50 dark:hover:bg-green-900/20 transition-colors"
-      >
-        <UIcon
-          :name="ch.icon"
-          class="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 shrink-0"
-        />
+      <NuxtLink v-for="ch in chapters" :key="ch.to" :to="ch.to"
+        class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-green-300 dark:hover:border-green-700 hover:bg-green-50/50 dark:hover:bg-green-900/20 transition-colors">
+        <UIcon :name="ch.icon" class="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
         <div>
           <div class="font-medium text-gray-900 dark:text-white">{{ ch.title }}</div>
           <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ ch.desc }}</div>
@@ -82,10 +95,7 @@ const chapters = [
     </div>
 
     <div class="flex items-start gap-3 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200">
-      <UIcon
-        name="i-lucide-info"
-        class="w-5 h-5 shrink-0 mt-0.5"
-      />
+      <UIcon name="i-lucide-info" class="w-5 h-5 shrink-0 mt-0.5" />
       <p class="text-sm">
         这份教程基于 <strong>C++2b</strong> 标准编写。建议使用支持 C++11 或更高版本的编译器。
       </p>
